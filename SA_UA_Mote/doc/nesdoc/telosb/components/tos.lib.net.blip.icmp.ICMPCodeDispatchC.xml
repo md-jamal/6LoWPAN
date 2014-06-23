@@ -1,0 +1,91 @@
+<?xml version="1.0" ?><component abstract="" loc="34:/home/jumbo/tinyos-main/tos/lib/net/blip/icmp/ICMPCodeDispatchC.nc" nicename="tos.lib.net.blip.icmp.ICMPCodeDispatchC" qname="ICMPCodeDispatchC">
+      <parameters>
+        <constant loc="34:/home/jumbo/tinyos-main/tos/lib/net/blip/icmp/ICMPCodeDispatchC.nc" name="type" ref="0x4169a570">
+          <component-ref nicename="tos.lib.net.blip.icmp.ICMPCodeDispatchC" qname="ICMPCodeDispatchC"/>
+          <type-int alignment="I:1" cname="unsigned char" size="I:1" unsigned="">
+            <typename><typedef-ref name="uint8_t" ref="0x4003bdc8"/></typename>
+          </type-int>
+        </constant>
+      </parameters>
+      <configuration/>
+      <wiring>
+        <wire loc="40:/home/jumbo/tinyos-main/tos/lib/net/blip/icmp/ICMPCodeDispatchC.nc">
+          <from><interface-ref name="IP" ref="0x4169aab8" scoped=""/></from>
+          <to><interface-ref name="IP" ref="0x416965b0" scoped=""/></to>
+        </wire>
+        <wire loc="41:/home/jumbo/tinyos-main/tos/lib/net/blip/icmp/ICMPCodeDispatchC.nc">
+          <from><interface-ref name="RA" ref="0x416969f8" scoped=""/></from>
+          <to><interface-ref name="ICMP_IP" ref="0x4144b010" scoped=""/>
+          <arguments>
+            <value cst="U:">
+              <type-int alignment="I:1" cname="unsigned char" size="I:1" unsigned="">
+                <typename><typedef-ref name="uint8_t" ref="0x4003bdc8"/></typename>
+              </type-int>
+            </value>
+          </arguments>
+          </to>
+        </wire>
+      </wiring>
+    <specification><interface loc="35:/home/jumbo/tinyos-main/tos/lib/net/blip/icmp/ICMPCodeDispatchC.nc" name="IP" provided="1" ref="0x4169aab8">
+      <component-ref nicename="tos.lib.net.blip.icmp.ICMPCodeDispatchC" qname="ICMPCodeDispatchC"/>
+      <type-interface alignment="I:2" size="I:2"><interface-ref name="IP" ref="0x4169aab8" scoped=""/></type-interface>
+      <instance>
+        <interfacedef-ref nicename="tos.lib.net.blip.interfaces.IP" qname="IP"/>
+      </instance>
+      <interface-parameters>
+        <type-int alignment="I:1" cname="unsigned char" size="I:1" unsigned="">
+          <typename><typedef-ref name="uint8_t" ref="0x4003bdc8"/></typename>
+        </type-int>
+      </interface-parameters>
+      <interface-functions>
+        <function-ref name="send" ref="0x4169ac90" scoped=""/>
+        <function-ref name="recv" ref="0x4169ad70" scoped=""/>
+      </interface-functions>
+    </interface></specification><referenced><interface loc="36:/home/jumbo/tinyos-main/tos/lib/net/blip/icmp/ICMPCodeDispatchP.nc" name="RA" provided="0" ref="0x416969f8">
+      <component-ref nicename="tos.lib.net.blip.icmp.ICMPCodeDispatchP" qname="ICMPCodeDispatchC.ICMPCodeDispatchP"/>
+      <type-interface alignment="I:2" size="I:2"><interface-ref name="RA" ref="0x416969f8" scoped=""/></type-interface>
+      <instance>
+        <interfacedef-ref nicename="tos.lib.net.blip.interfaces.IP" qname="IP"/>
+      </instance>
+      <interface-functions>
+        <function-ref name="send" ref="0x41696bd0" scoped=""/>
+        <function-ref name="recv" ref="0x41696cb0" scoped=""/>
+      </interface-functions>
+    </interface><interface loc="50:/home/jumbo/tinyos-main/tos/lib/net/blip/icmp/ICMPCoreP.nc" name="ICMP_IP" provided="1" ref="0x4144b010">
+      <component-ref nicename="tos.lib.net.blip.icmp.ICMPCoreP" qname="ICMPCoreP"/>
+      <type-interface alignment="I:2" size="I:2"><interface-ref name="ICMP_IP" ref="0x4144b010" scoped=""/></type-interface>
+      <instance>
+        <interfacedef-ref nicename="tos.lib.net.blip.interfaces.IP" qname="IP"/>
+      </instance>
+      <interface-parameters>
+        <type-int alignment="I:1" cname="unsigned char" size="I:1" unsigned="">
+          <typename><typedef-ref name="uint8_t" ref="0x4003bdc8"/></typename>
+        </type-int>
+      </interface-parameters>
+      <interface-functions>
+        <function-ref name="send" ref="0x4144b1e8" scoped=""/>
+        <function-ref name="recv" ref="0x4144b2c8" scoped=""/>
+      </interface-functions>
+    </interface><interface loc="35:/home/jumbo/tinyos-main/tos/lib/net/blip/icmp/ICMPCodeDispatchP.nc" name="IP" provided="1" ref="0x416965b0">
+      <component-ref nicename="tos.lib.net.blip.icmp.ICMPCodeDispatchP" qname="ICMPCodeDispatchC.ICMPCodeDispatchP"/>
+      <type-interface alignment="I:2" size="I:2"><interface-ref name="IP" ref="0x416965b0" scoped=""/></type-interface>
+      <instance>
+        <interfacedef-ref nicename="tos.lib.net.blip.interfaces.IP" qname="IP"/>
+      </instance>
+      <interface-parameters>
+        <type-int alignment="I:1" cname="unsigned char" size="I:1" unsigned="">
+          <typename><typedef-ref name="uint8_t" ref="0x4003bdc8"/></typename>
+        </type-int>
+      </interface-parameters>
+      <interface-functions>
+        <function-ref name="send" ref="0x41696798" scoped=""/>
+        <function-ref name="recv" ref="0x41696878" scoped=""/>
+      </interface-functions>
+    </interface><component abstract="" loc="34(ICMPCodeDispatchC.ICMPCodeDispatchP):/home/jumbo/tinyos-main/tos/lib/net/blip/icmp/ICMPCodeDispatchP.nc" nicename="tos.lib.net.blip.icmp.ICMPCodeDispatchP" qname="ICMPCodeDispatchC.ICMPCodeDispatchP">
+      <instance>
+        <component-ref nicename="tos.lib.net.blip.icmp.ICMPCodeDispatchP" qname="ICMPCodeDispatchP"/>
+      </instance>
+      <module/>
+    </component><component loc="48:/home/jumbo/tinyos-main/tos/lib/net/blip/icmp/ICMPCoreP.nc" nicename="tos.lib.net.blip.icmp.ICMPCoreP" qname="ICMPCoreP">
+      <module/>
+    </component></referenced></component>

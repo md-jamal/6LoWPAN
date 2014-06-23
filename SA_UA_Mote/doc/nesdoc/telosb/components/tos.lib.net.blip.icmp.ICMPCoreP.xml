@@ -1,0 +1,63 @@
+<?xml version="1.0" ?><component loc="48:/home/jumbo/tinyos-main/tos/lib/net/blip/icmp/ICMPCoreP.nc" nicename="tos.lib.net.blip.icmp.ICMPCoreP" qname="ICMPCoreP">
+      <module/>
+    <specification><interface loc="50:/home/jumbo/tinyos-main/tos/lib/net/blip/icmp/ICMPCoreP.nc" name="ICMP_IP" provided="1" ref="0x4144b010">
+      <component-ref nicename="tos.lib.net.blip.icmp.ICMPCoreP" qname="ICMPCoreP"/>
+      <type-interface alignment="I:2" size="I:2"><interface-ref name="ICMP_IP" ref="0x4144b010" scoped=""/></type-interface>
+      <instance>
+        <interfacedef-ref nicename="tos.lib.net.blip.interfaces.IP" qname="IP"/>
+      </instance>
+      <interface-parameters>
+        <type-int alignment="I:1" cname="unsigned char" size="I:1" unsigned="">
+          <typename><typedef-ref name="uint8_t" ref="0x4003bdc8"/></typename>
+        </type-int>
+      </interface-parameters>
+      <interface-functions>
+        <function-ref name="send" ref="0x4144b1e8" scoped=""/>
+        <function-ref name="recv" ref="0x4144b2c8" scoped=""/>
+      </interface-functions>
+    </interface><interface loc="54:/home/jumbo/tinyos-main/tos/lib/net/blip/icmp/ICMPCoreP.nc" name="IPAddress" provided="0" ref="0x4144b8b8">
+      <component-ref nicename="tos.lib.net.blip.icmp.ICMPCoreP" qname="ICMPCoreP"/>
+      <type-interface alignment="I:2" size="I:2"><interface-ref name="IPAddress" ref="0x4144b8b8" scoped=""/></type-interface>
+      <instance>
+        <interfacedef-ref nicename="tos.lib.net.blip.interfaces.IPAddress" qname="IPAddress"/>
+      </instance>
+      <interface-functions>
+        <function-ref name="getLLAddr" ref="0x4144ba90" scoped=""/>
+        <function-ref name="changed" ref="0x4144bb70" scoped=""/>
+        <function-ref name="isLocalAddress" ref="0x4144bc50" scoped=""/>
+        <function-ref name="getGlobalAddr" ref="0x4144bd30" scoped=""/>
+        <function-ref name="setSource" ref="0x4144be10" scoped=""/>
+        <function-ref name="removeAddress" ref="0x4144bef0" scoped=""/>
+        <function-ref name="setAddress" ref="0x4144a010" scoped=""/>
+        <function-ref name="isLLAddress" ref="0x4144a0f0" scoped=""/>
+      </interface-functions>
+    </interface><interface loc="55:/home/jumbo/tinyos-main/tos/lib/net/blip/icmp/ICMPCoreP.nc" name="Leds" provided="0" ref="0x4144a260">
+      <component-ref nicename="tos.lib.net.blip.icmp.ICMPCoreP" qname="ICMPCoreP"/>
+      <type-interface alignment="I:2" size="I:2"><interface-ref name="Leds" ref="0x4144a260" scoped=""/></type-interface>
+      <instance>
+        <interfacedef-ref nicename="tos.interfaces.Leds" qname="Leds"/>
+      </instance>
+      <interface-functions>
+        <function-ref name="led0Off" ref="0x4144a438" scoped=""/>
+        <function-ref name="led0Toggle" ref="0x4144a518" scoped=""/>
+        <function-ref name="led1On" ref="0x4144a5f8" scoped=""/>
+        <function-ref name="led1Toggle" ref="0x4144a6d8" scoped=""/>
+        <function-ref name="led2Toggle" ref="0x4144a7b8" scoped=""/>
+        <function-ref name="get" ref="0x4144a898" scoped=""/>
+        <function-ref name="led1Off" ref="0x4144a978" scoped=""/>
+        <function-ref name="led2Off" ref="0x4144acf8" scoped=""/>
+        <function-ref name="set" ref="0x4144aa58" scoped=""/>
+        <function-ref name="led0On" ref="0x4144ab38" scoped=""/>
+        <function-ref name="led2On" ref="0x4144ac18" scoped=""/>
+      </interface-functions>
+    </interface><interface loc="53:/home/jumbo/tinyos-main/tos/lib/net/blip/icmp/ICMPCoreP.nc" name="IP" provided="0" ref="0x4144b460">
+      <component-ref nicename="tos.lib.net.blip.icmp.ICMPCoreP" qname="ICMPCoreP"/>
+      <type-interface alignment="I:2" size="I:2"><interface-ref name="IP" ref="0x4144b460" scoped=""/></type-interface>
+      <instance>
+        <interfacedef-ref nicename="tos.lib.net.blip.interfaces.IP" qname="IP"/>
+      </instance>
+      <interface-functions>
+        <function-ref name="send" ref="0x4144b638" scoped=""/>
+        <function-ref name="recv" ref="0x4144b718" scoped=""/>
+      </interface-functions>
+    </interface></specification><referenced/></component>

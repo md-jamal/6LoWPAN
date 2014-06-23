@@ -1,0 +1,45 @@
+<?xml version="1.0" ?><interfacedef loc="34:/home/jumbo/jamal/project/CoAP/tinyos-release/tos/lib/net/blip/interfaces/ForwardingTableEvents.nc" nicename="tos.lib.net.blip.interfaces.ForwardingTableEvents" qname="ForwardingTableEvents">
+      <function event="" loc="43:/home/jumbo/jamal/project/CoAP/tinyos-release/tos/lib/net/blip/interfaces/ForwardingTableEvents.nc" name="defaultRouteAdded" provided="0" ref="0x408ab5f8">
+        <documentation loc="36:/home/jumbo/jamal/project/CoAP/tinyos-release/tos/lib/net/blip/interfaces/ForwardingTableEvents.nc">
+          <short>
+ Signaled when a default route is added to the table; that is,
+ when the stack transitions from not having a default route to
+ having one.</short>
+          <long>
+ Signaled when a default route is added to the table; that is,
+ when the stack transitions from not having a default route to
+ having one.
+
+ This event is not signaled again if the default route changes.
+</long>
+        </documentation>
+        <interfacedef-ref nicename="tos.lib.net.blip.interfaces.ForwardingTableEvents" qname="ForwardingTableEvents"/>
+        <type-function alignment="I:1" size="I:1">
+          <type-void alignment="I:1" size="I:1"/>
+          <function-parameters>
+          </function-parameters>
+        </type-function>
+        <parameters>
+        </parameters>
+      </function>
+      <function event="" loc="50:/home/jumbo/jamal/project/CoAP/tinyos-release/tos/lib/net/blip/interfaces/ForwardingTableEvents.nc" name="defaultRouteRemoved" provided="0" ref="0x408abb78">
+        <documentation loc="45:/home/jumbo/jamal/project/CoAP/tinyos-release/tos/lib/net/blip/interfaces/ForwardingTableEvents.nc">
+          <short>
+ Signaled when the default route is removed from the routing
+ table.</short>
+          <long>
+ Signaled when the default route is removed from the routing
+ table.  If the route is removed, defaultRouteAdded() be signeled
+ when the route is re-added.
+</long>
+        </documentation>
+        <interfacedef-ref nicename="tos.lib.net.blip.interfaces.ForwardingTableEvents" qname="ForwardingTableEvents"/>
+        <type-function alignment="I:1" size="I:1">
+          <type-void alignment="I:1" size="I:1"/>
+          <function-parameters>
+          </function-parameters>
+        </type-function>
+        <parameters>
+        </parameters>
+      </function>
+    </interfacedef>

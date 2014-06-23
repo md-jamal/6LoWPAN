@@ -1,0 +1,14 @@
+COMPONENT=TestAppC
+CFLAGS+= -I$(TOSDIR)/lib/printf
+include $(MAKERULES)
+CFLAGS += -DPRINTFUART_ENABLED
+CFLAGS += -DNEW_PRINTF_SEMANTICS
+CFLAGS += -DPRINTF_BUFFER_SIZE=1024
+CFLAGS+=-DRPL_ROUTING -DRPL_STORING_MODE -I$(LOWPAN_ROOT)/tos/lib/net/rpl
+PFLAGS+=-DIN6_PREFIX=\"fec0::\"
+# use short addresses so it's easier to debug
+#setting the node as UA
+#CFLAGS+=-DNODE_UA
+#setting the node as SA
+CFLAGS+=-DNODE_UA 
+CFLAGS+=-DCC2420_DEF_CHANNEL=16

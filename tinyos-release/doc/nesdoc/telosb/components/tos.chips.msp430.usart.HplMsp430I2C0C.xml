@@ -1,0 +1,754 @@
+<?xml version="1.0" ?><component loc="2:/home/jumbo/jamal/project/CoAP/tinyos-release/tos/chips/msp430/usart/HplMsp430I2C0C.nc" nicename="tos.chips.msp430.usart.HplMsp430I2C0C" qname="HplMsp430I2C0C">
+      <configuration/>
+      <wiring>
+        <wire loc="11:/home/jumbo/jamal/project/CoAP/tinyos-release/tos/chips/msp430/usart/HplMsp430I2C0C.nc">
+          <from><interface-ref name="HplMsp430I2C" ref="0x40dcd7f8" scoped=""/></from>
+          <to><interface-ref name="HplI2C" ref="0x40df7bd0" scoped=""/></to>
+        </wire>
+        <wire loc="14:/home/jumbo/jamal/project/CoAP/tinyos-release/tos/chips/msp430/usart/HplMsp430I2C0C.nc">
+          <from><interface-ref name="HplI2C" ref="0x40d391e8" scoped=""/></from>
+          <to><interface-ref name="HplI2C" ref="0x40df7bd0" scoped=""/></to>
+        </wire>
+        <wire loc="15:/home/jumbo/jamal/project/CoAP/tinyos-release/tos/chips/msp430/usart/HplMsp430I2C0C.nc">
+          <from><interface-ref name="HplUsart" ref="0x40df0898" scoped=""/></from>
+          <to><interface-ref name="Usart" ref="0x40d27e40" scoped=""/></to>
+        </wire>
+        <wire loc="18:/home/jumbo/jamal/project/CoAP/tinyos-release/tos/chips/msp430/usart/HplMsp430I2C0C.nc">
+          <from><interface-ref name="SIMO" ref="0x40ded198" scoped=""/></from>
+          <to><interface-ref name="SIMO0" ref="0x40776760" scoped=""/></to>
+        </wire>
+        <wire loc="19:/home/jumbo/jamal/project/CoAP/tinyos-release/tos/chips/msp430/usart/HplMsp430I2C0C.nc">
+          <from><interface-ref name="UCLK" ref="0x40dec358" scoped=""/></from>
+          <to><interface-ref name="UCLK0" ref="0x40773ca0" scoped=""/></to>
+        </wire>
+      </wiring>
+    <specification><interface loc="4:/home/jumbo/jamal/project/CoAP/tinyos-release/tos/chips/msp430/usart/HplMsp430I2C0C.nc" name="HplMsp430I2C" provided="1" ref="0x40dcd7f8">
+      <component-ref nicename="tos.chips.msp430.usart.HplMsp430I2C0C" qname="HplMsp430I2C0C"/>
+      <type-interface alignment="I:2" size="I:2"><interface-ref name="HplMsp430I2C" ref="0x40dcd7f8" scoped=""/></type-interface>
+      <instance>
+        <interfacedef-ref nicename="tos.chips.msp430.usart.HplMsp430I2C" qname="HplMsp430I2C"/>
+      </instance>
+      <interface-functions>
+        <function-ref name="disableOwnAddress" ref="0x40dcd9d0" scoped=""/>
+        <function-ref name="getStartByte" ref="0x40dcdab0" scoped=""/>
+        <function-ref name="setSlaveAddress" ref="0x40dcdb90" scoped=""/>
+        <function-ref name="setMasterMode" ref="0x40dcdc70" scoped=""/>
+        <function-ref name="disableTransmitReady" ref="0x40dcdd50" scoped=""/>
+        <function-ref name="getClockPrescaler" ref="0x40dcde30" scoped=""/>
+        <function-ref name="setTransmitMode" ref="0x40dcdf10" scoped=""/>
+        <function-ref name="getStopBit" ref="0x40dfa010" scoped=""/>
+        <function-ref name="setClockSource" ref="0x40dfa0f0" scoped=""/>
+        <function-ref name="getRepeatMode" ref="0x40dfa1d0" scoped=""/>
+        <function-ref name="getData" ref="0x40dfa2b0" scoped=""/>
+        <function-ref name="enableStartDetect" ref="0x40dfa390" scoped=""/>
+        <function-ref name="enableAccessReady" ref="0x40dfa470" scoped=""/>
+        <function-ref name="getSlaveAddress" ref="0x40dfa5d0" scoped=""/>
+        <function-ref name="isGeneralCallPending" ref="0x40dfa6b0" scoped=""/>
+        <function-ref name="getIV" ref="0x40dfa790" scoped=""/>
+        <function-ref name="enableI2C" ref="0x40dfa870" scoped=""/>
+        <function-ref name="setStartBit" ref="0x40dfa950" scoped=""/>
+        <function-ref name="getTransferByteCount" ref="0x40dfaa30" scoped=""/>
+        <function-ref name="getTransmitReceiveMode" ref="0x40dfab10" scoped=""/>
+        <function-ref name="clearModeI2C" ref="0x40dfabf0" scoped=""/>
+        <function-ref name="setOwnAddress" ref="0x40dfacd0" scoped=""/>
+        <function-ref name="isI2C" ref="0x40dfadb0" scoped=""/>
+        <function-ref name="enableGeneralCall" ref="0x40dfae90" scoped=""/>
+        <function-ref name="enableOwnAddress" ref="0x40df9010" scoped=""/>
+        <function-ref name="isAccessReadyPending" ref="0x40df91f0" scoped=""/>
+        <function-ref name="isArbitrationLostPending" ref="0x40df92d0" scoped=""/>
+        <function-ref name="disableReceiveReady" ref="0x40df93b0" scoped=""/>
+        <function-ref name="disableNoAck" ref="0x40df9490" scoped=""/>
+        <function-ref name="disableStartDetect" ref="0x40df9570" scoped=""/>
+        <function-ref name="enableArbitrationLost" ref="0x40df9650" scoped=""/>
+        <function-ref name="disableI2C" ref="0x40df9730" scoped=""/>
+        <function-ref name="getShiftClock" ref="0x40df9810" scoped=""/>
+        <function-ref name="disableArbitrationLost" ref="0x40df98f0" scoped=""/>
+        <function-ref name="disableAccessReady" ref="0x40df99d0" scoped=""/>
+        <function-ref name="setTransferByteCount" ref="0x40df9ab0" scoped=""/>
+        <function-ref name="isOwnAddressPending" ref="0x40df9b90" scoped=""/>
+        <function-ref name="getOwnAddress" ref="0x40df9c70" scoped=""/>
+        <function-ref name="enableTransmitReady" ref="0x40df9d50" scoped=""/>
+        <function-ref name="setModeI2C" ref="0x40df9e30" scoped=""/>
+        <function-ref name="getStartBit" ref="0x40df9f10" scoped=""/>
+        <function-ref name="setWordMode" ref="0x40df8010" scoped=""/>
+        <function-ref name="setData" ref="0x40df80f0" scoped=""/>
+        <function-ref name="isStartDetectPending" ref="0x40df81d0" scoped=""/>
+        <function-ref name="getClockSource" ref="0x40df82b0" scoped=""/>
+        <function-ref name="getWordMode" ref="0x40df8390" scoped=""/>
+        <function-ref name="setShiftClock" ref="0x40df8470" scoped=""/>
+        <function-ref name="setSlaveMode" ref="0x40df8550" scoped=""/>
+        <function-ref name="enableNoAck" ref="0x40df8630" scoped=""/>
+        <function-ref name="enableReceiveReady" ref="0x40df8910" scoped=""/>
+        <function-ref name="disableGeneralCall" ref="0x40df89f0" scoped=""/>
+        <function-ref name="setClockPrescaler" ref="0x40df8ad0" scoped=""/>
+        <function-ref name="setStopBit" ref="0x40df8bb0" scoped=""/>
+        <function-ref name="setReceiveMode" ref="0x40df8c90" scoped=""/>
+        <function-ref name="isNoAckPending" ref="0x40df8d70" scoped=""/>
+        <function-ref name="setRepeatMode" ref="0x40df8e50" scoped=""/>
+        <function-ref name="isTransmitReadyPending" ref="0x40df7010" scoped=""/>
+        <function-ref name="setStartByte" ref="0x40df70f0" scoped=""/>
+        <function-ref name="isReceiveReadyPending" ref="0x40df71d0" scoped=""/>
+      </interface-functions>
+    </interface></specification><referenced><interface loc="75:/home/jumbo/jamal/project/CoAP/tinyos-release/tos/chips/msp430/usart/HplMsp430Usart0P.nc" name="Usart" provided="1" ref="0x40d27e40">
+      <component-ref nicename="tos.chips.msp430.usart.HplMsp430Usart0P" qname="HplMsp430Usart0P"/>
+      <type-interface alignment="I:2" size="I:2"><interface-ref name="Usart" ref="0x40d27e40" scoped=""/></type-interface>
+      <instance>
+        <interfacedef-ref nicename="tos.chips.msp430.usart.HplMsp430Usart" qname="HplMsp430Usart"/>
+      </instance>
+      <interface-functions>
+        <function-ref name="isTxEmpty" ref="0x40d26050" scoped=""/>
+        <function-ref name="enableUartRx" ref="0x40d26130" scoped=""/>
+        <function-ref name="setUctl" ref="0x40d26210" scoped=""/>
+        <function-ref name="enableUart" ref="0x40d262f0" scoped=""/>
+        <function-ref name="setUrctl" ref="0x40d263d0" scoped=""/>
+        <function-ref name="enableRxIntr" ref="0x40d264b0" scoped=""/>
+        <function-ref name="clrRxIntr" ref="0x40d26590" scoped=""/>
+        <function-ref name="getUtctl" ref="0x40d26670" scoped=""/>
+        <function-ref name="getUrctl" ref="0x40d26750" scoped=""/>
+        <function-ref name="resetUsart" ref="0x40d26830" scoped=""/>
+        <function-ref name="getUmctl" ref="0x40d26910" scoped=""/>
+        <function-ref name="disableIntr" ref="0x40d269f0" scoped=""/>
+        <function-ref name="setUtctl" ref="0x40d26ad0" scoped=""/>
+        <function-ref name="getUbr" ref="0x40d26c30" scoped=""/>
+        <function-ref name="enableTxIntr" ref="0x40d26d10" scoped=""/>
+        <function-ref name="setUmctl" ref="0x40d26df0" scoped=""/>
+        <function-ref name="isUartRx" ref="0x40d26ed0" scoped=""/>
+        <function-ref name="isUart" ref="0x40d25010" scoped=""/>
+        <function-ref name="disableRxIntr" ref="0x40d250f0" scoped=""/>
+        <function-ref name="isSpi" ref="0x40d251d0" scoped=""/>
+        <function-ref name="enableUartTx" ref="0x40d252b0" scoped=""/>
+        <function-ref name="disableTxIntr" ref="0x40d25390" scoped=""/>
+        <function-ref name="disableUartRx" ref="0x40d25470" scoped=""/>
+        <function-ref name="enableIntr" ref="0x40d25550" scoped=""/>
+        <function-ref name="getMode" ref="0x40d25630" scoped=""/>
+        <function-ref name="isTxIntrPending" ref="0x40d25810" scoped=""/>
+        <function-ref name="clrIntr" ref="0x40d258f0" scoped=""/>
+        <function-ref name="setUbr" ref="0x40d259d0" scoped=""/>
+        <function-ref name="tx" ref="0x40d25ab0" scoped=""/>
+        <function-ref name="getUctl" ref="0x40d25b90" scoped=""/>
+        <function-ref name="disableUart" ref="0x40d25c70" scoped=""/>
+        <function-ref name="enableSpi" ref="0x40d25d50" scoped=""/>
+        <function-ref name="setModeUart" ref="0x40d25e30" scoped=""/>
+        <function-ref name="setModeSpi" ref="0x40d25f10" scoped=""/>
+        <function-ref name="rx" ref="0x40d24010" scoped=""/>
+        <function-ref name="isRxIntrPending" ref="0x40d240f0" scoped=""/>
+        <function-ref name="isUartTx" ref="0x40d241d0" scoped=""/>
+        <function-ref name="clrTxIntr" ref="0x40d242b0" scoped=""/>
+        <function-ref name="disableSpi" ref="0x40d24390" scoped=""/>
+        <function-ref name="disableUartTx" ref="0x40d24470" scoped=""/>
+      </interface-functions>
+    </interface><interface loc="42:/home/jumbo/jamal/project/CoAP/tinyos-release/tos/chips/msp430/usart/HplMsp430I2C0P.nc" name="SIMO" provided="0" ref="0x40ded198">
+      <component-ref nicename="tos.chips.msp430.usart.HplMsp430I2C0P" qname="HplMsp430I2C0P"/>
+      <type-interface alignment="I:2" size="I:2"><interface-ref name="SIMO" ref="0x40ded198" scoped=""/></type-interface>
+      <instance>
+        <interfacedef-ref nicename="tos.chips.msp430.pins.HplMsp430GeneralIO" qname="HplMsp430GeneralIO"/>
+      </instance>
+      <interface-functions>
+        <function-ref name="makeInput" ref="0x40ded370" scoped=""/>
+        <function-ref name="isInput" ref="0x40ded450" scoped=""/>
+        <function-ref name="setResistor" ref="0x40ded530" scoped=""/>
+        <function-ref name="toggle" ref="0x40ded610" scoped=""/>
+        <function-ref name="isOutput" ref="0x40ded6f0" scoped=""/>
+        <function-ref name="getResistor" ref="0x40ded7d0" scoped=""/>
+        <function-ref name="makeOutput" ref="0x40ded8b0" scoped=""/>
+        <function-ref name="get" ref="0x40ded990" scoped=""/>
+        <function-ref name="selectIOFunc" ref="0x40deda70" scoped=""/>
+        <function-ref name="getRaw" ref="0x40dedb50" scoped=""/>
+        <function-ref name="set" ref="0x40dedc30" scoped=""/>
+        <function-ref name="selectModuleFunc" ref="0x40dedd10" scoped=""/>
+        <function-ref name="isIOFunc" ref="0x40deddf0" scoped=""/>
+        <function-ref name="isModuleFunc" ref="0x40dec010" scoped=""/>
+        <function-ref name="clr" ref="0x40dec0f0" scoped=""/>
+      </interface-functions>
+    </interface><interface loc="41:/home/jumbo/jamal/project/CoAP/tinyos-release/tos/chips/msp430/usart/HplMsp430I2C0P.nc" name="HplUsart" provided="0" ref="0x40df0898">
+      <component-ref nicename="tos.chips.msp430.usart.HplMsp430I2C0P" qname="HplMsp430I2C0P"/>
+      <type-interface alignment="I:2" size="I:2"><interface-ref name="HplUsart" ref="0x40df0898" scoped=""/></type-interface>
+      <instance>
+        <interfacedef-ref nicename="tos.chips.msp430.usart.HplMsp430Usart" qname="HplMsp430Usart"/>
+      </instance>
+      <interface-functions>
+        <function-ref name="isTxEmpty" ref="0x40df0a70" scoped=""/>
+        <function-ref name="enableUartRx" ref="0x40df0b50" scoped=""/>
+        <function-ref name="setUctl" ref="0x40df0c30" scoped=""/>
+        <function-ref name="enableUart" ref="0x40df0d10" scoped=""/>
+        <function-ref name="setUrctl" ref="0x40df0df0" scoped=""/>
+        <function-ref name="enableRxIntr" ref="0x40df0ed0" scoped=""/>
+        <function-ref name="clrRxIntr" ref="0x40def010" scoped=""/>
+        <function-ref name="getUtctl" ref="0x40def0f0" scoped=""/>
+        <function-ref name="getUrctl" ref="0x40def1d0" scoped=""/>
+        <function-ref name="resetUsart" ref="0x40def2b0" scoped=""/>
+        <function-ref name="getUmctl" ref="0x40def390" scoped=""/>
+        <function-ref name="disableIntr" ref="0x40def470" scoped=""/>
+        <function-ref name="setUtctl" ref="0x40def550" scoped=""/>
+        <function-ref name="getUbr" ref="0x40def6b0" scoped=""/>
+        <function-ref name="enableTxIntr" ref="0x40def790" scoped=""/>
+        <function-ref name="setUmctl" ref="0x40def870" scoped=""/>
+        <function-ref name="isUartRx" ref="0x40def950" scoped=""/>
+        <function-ref name="isUart" ref="0x40defa30" scoped=""/>
+        <function-ref name="disableRxIntr" ref="0x40defb10" scoped=""/>
+        <function-ref name="isSpi" ref="0x40defbf0" scoped=""/>
+        <function-ref name="enableUartTx" ref="0x40defcd0" scoped=""/>
+        <function-ref name="disableTxIntr" ref="0x40defdb0" scoped=""/>
+        <function-ref name="disableUartRx" ref="0x40defe90" scoped=""/>
+        <function-ref name="enableIntr" ref="0x40dee010" scoped=""/>
+        <function-ref name="getMode" ref="0x40dee0f0" scoped=""/>
+        <function-ref name="isTxIntrPending" ref="0x40dee2d0" scoped=""/>
+        <function-ref name="clrIntr" ref="0x40dee3b0" scoped=""/>
+        <function-ref name="setUbr" ref="0x40dee490" scoped=""/>
+        <function-ref name="tx" ref="0x40dee570" scoped=""/>
+        <function-ref name="getUctl" ref="0x40dee650" scoped=""/>
+        <function-ref name="disableUart" ref="0x40dee730" scoped=""/>
+        <function-ref name="enableSpi" ref="0x40dee810" scoped=""/>
+        <function-ref name="setModeUart" ref="0x40dee8f0" scoped=""/>
+        <function-ref name="setModeSpi" ref="0x40dee9d0" scoped=""/>
+        <function-ref name="rx" ref="0x40deeab0" scoped=""/>
+        <function-ref name="isRxIntrPending" ref="0x40deeb90" scoped=""/>
+        <function-ref name="isUartTx" ref="0x40deec70" scoped=""/>
+        <function-ref name="clrTxIntr" ref="0x40deed50" scoped=""/>
+        <function-ref name="disableSpi" ref="0x40deee30" scoped=""/>
+        <function-ref name="disableUartTx" ref="0x40deef10" scoped=""/>
+      </interface-functions>
+    </interface><interface loc="79:/home/jumbo/jamal/project/CoAP/tinyos-release/tos/chips/msp430/usart/HplMsp430Usart0P.nc" name="HplI2C" provided="0" ref="0x40d391e8">
+      <component-ref nicename="tos.chips.msp430.usart.HplMsp430Usart0P" qname="HplMsp430Usart0P"/>
+      <type-interface alignment="I:2" size="I:2"><interface-ref name="HplI2C" ref="0x40d391e8" scoped=""/></type-interface>
+      <instance>
+        <interfacedef-ref nicename="tos.chips.msp430.usart.HplMsp430I2C" qname="HplMsp430I2C"/>
+      </instance>
+      <interface-functions>
+        <function-ref name="disableOwnAddress" ref="0x40d393c0" scoped=""/>
+        <function-ref name="getStartByte" ref="0x40d394a0" scoped=""/>
+        <function-ref name="setSlaveAddress" ref="0x40d39580" scoped=""/>
+        <function-ref name="setMasterMode" ref="0x40d39660" scoped=""/>
+        <function-ref name="disableTransmitReady" ref="0x40d39740" scoped=""/>
+        <function-ref name="getClockPrescaler" ref="0x40d39820" scoped=""/>
+        <function-ref name="setTransmitMode" ref="0x40d39900" scoped=""/>
+        <function-ref name="getStopBit" ref="0x40d399e0" scoped=""/>
+        <function-ref name="setClockSource" ref="0x40d39ac0" scoped=""/>
+        <function-ref name="getRepeatMode" ref="0x40d39ba0" scoped=""/>
+        <function-ref name="getData" ref="0x40d39c80" scoped=""/>
+        <function-ref name="enableStartDetect" ref="0x40d39d60" scoped=""/>
+        <function-ref name="enableAccessReady" ref="0x40d39e40" scoped=""/>
+        <function-ref name="getSlaveAddress" ref="0x40d22010" scoped=""/>
+        <function-ref name="isGeneralCallPending" ref="0x40d220f0" scoped=""/>
+        <function-ref name="getIV" ref="0x40d221d0" scoped=""/>
+        <function-ref name="enableI2C" ref="0x40d222b0" scoped=""/>
+        <function-ref name="setStartBit" ref="0x40d22390" scoped=""/>
+        <function-ref name="getTransferByteCount" ref="0x40d22470" scoped=""/>
+        <function-ref name="getTransmitReceiveMode" ref="0x40d22550" scoped=""/>
+        <function-ref name="clearModeI2C" ref="0x40d22630" scoped=""/>
+        <function-ref name="setOwnAddress" ref="0x40d22710" scoped=""/>
+        <function-ref name="isI2C" ref="0x40d227f0" scoped=""/>
+        <function-ref name="enableGeneralCall" ref="0x40d228d0" scoped=""/>
+        <function-ref name="enableOwnAddress" ref="0x40d229b0" scoped=""/>
+        <function-ref name="isAccessReadyPending" ref="0x40d22b90" scoped=""/>
+        <function-ref name="isArbitrationLostPending" ref="0x40d22c70" scoped=""/>
+        <function-ref name="disableReceiveReady" ref="0x40d22d50" scoped=""/>
+        <function-ref name="disableNoAck" ref="0x40d22e30" scoped=""/>
+        <function-ref name="disableStartDetect" ref="0x40d22f10" scoped=""/>
+        <function-ref name="enableArbitrationLost" ref="0x40d21010" scoped=""/>
+        <function-ref name="disableI2C" ref="0x40d210f0" scoped=""/>
+        <function-ref name="getShiftClock" ref="0x40d211d0" scoped=""/>
+        <function-ref name="disableArbitrationLost" ref="0x40d212b0" scoped=""/>
+        <function-ref name="disableAccessReady" ref="0x40d21390" scoped=""/>
+        <function-ref name="setTransferByteCount" ref="0x40d21470" scoped=""/>
+        <function-ref name="isOwnAddressPending" ref="0x40d21550" scoped=""/>
+        <function-ref name="getOwnAddress" ref="0x40d21630" scoped=""/>
+        <function-ref name="enableTransmitReady" ref="0x40d21710" scoped=""/>
+        <function-ref name="setModeI2C" ref="0x40d217f0" scoped=""/>
+        <function-ref name="getStartBit" ref="0x40d218d0" scoped=""/>
+        <function-ref name="setWordMode" ref="0x40d219b0" scoped=""/>
+        <function-ref name="setData" ref="0x40d21a90" scoped=""/>
+        <function-ref name="isStartDetectPending" ref="0x40d21b70" scoped=""/>
+        <function-ref name="getClockSource" ref="0x40d21c50" scoped=""/>
+        <function-ref name="getWordMode" ref="0x40d21d30" scoped=""/>
+        <function-ref name="setShiftClock" ref="0x40d21e10" scoped=""/>
+        <function-ref name="setSlaveMode" ref="0x40d21ef0" scoped=""/>
+        <function-ref name="enableNoAck" ref="0x40d38010" scoped=""/>
+        <function-ref name="enableReceiveReady" ref="0x40d382f0" scoped=""/>
+        <function-ref name="disableGeneralCall" ref="0x40d383d0" scoped=""/>
+        <function-ref name="setClockPrescaler" ref="0x40d384b0" scoped=""/>
+        <function-ref name="setStopBit" ref="0x40d38590" scoped=""/>
+        <function-ref name="setReceiveMode" ref="0x40d38670" scoped=""/>
+        <function-ref name="isNoAckPending" ref="0x40d38750" scoped=""/>
+        <function-ref name="setRepeatMode" ref="0x40d38830" scoped=""/>
+        <function-ref name="isTransmitReadyPending" ref="0x40d38910" scoped=""/>
+        <function-ref name="setStartByte" ref="0x40d389f0" scoped=""/>
+        <function-ref name="isReceiveReadyPending" ref="0x40d38ad0" scoped=""/>
+      </interface-functions>
+    </interface><interface loc="147:/home/jumbo/jamal/project/CoAP/tinyos-release/tos/chips/msp430/pins/HplMsp430GeneralIOC.nc" name="UCLK0" provided="1" ref="0x40773ca0">
+      <component-ref nicename="tos.chips.msp430.pins.HplMsp430GeneralIOC" qname="HplMsp430GeneralIOC"/>
+      <type-interface alignment="I:2" size="I:2"><interface-ref name="UCLK0" ref="0x40773ca0" scoped=""/></type-interface>
+      <instance>
+        <interfacedef-ref nicename="tos.chips.msp430.pins.HplMsp430GeneralIO" qname="HplMsp430GeneralIO"/>
+      </instance>
+      <interface-functions>
+        <function-ref name="makeInput" ref="0x40773e78" scoped=""/>
+        <function-ref name="isInput" ref="0x40772010" scoped=""/>
+        <function-ref name="setResistor" ref="0x407720f0" scoped=""/>
+        <function-ref name="toggle" ref="0x407721d0" scoped=""/>
+        <function-ref name="isOutput" ref="0x407722b0" scoped=""/>
+        <function-ref name="getResistor" ref="0x40772390" scoped=""/>
+        <function-ref name="makeOutput" ref="0x40772470" scoped=""/>
+        <function-ref name="get" ref="0x40772550" scoped=""/>
+        <function-ref name="selectIOFunc" ref="0x40772630" scoped=""/>
+        <function-ref name="getRaw" ref="0x40772710" scoped=""/>
+        <function-ref name="set" ref="0x407727f0" scoped=""/>
+        <function-ref name="selectModuleFunc" ref="0x407728d0" scoped=""/>
+        <function-ref name="isIOFunc" ref="0x407729b0" scoped=""/>
+        <function-ref name="isModuleFunc" ref="0x40772b10" scoped=""/>
+        <function-ref name="clr" ref="0x40772bf0" scoped=""/>
+      </interface-functions>
+    </interface><interface loc="43:/home/jumbo/jamal/project/CoAP/tinyos-release/tos/chips/msp430/usart/HplMsp430I2C0P.nc" name="UCLK" provided="0" ref="0x40dec358">
+      <component-ref nicename="tos.chips.msp430.usart.HplMsp430I2C0P" qname="HplMsp430I2C0P"/>
+      <type-interface alignment="I:2" size="I:2"><interface-ref name="UCLK" ref="0x40dec358" scoped=""/></type-interface>
+      <instance>
+        <interfacedef-ref nicename="tos.chips.msp430.pins.HplMsp430GeneralIO" qname="HplMsp430GeneralIO"/>
+      </instance>
+      <interface-functions>
+        <function-ref name="makeInput" ref="0x40dec530" scoped=""/>
+        <function-ref name="isInput" ref="0x40dec610" scoped=""/>
+        <function-ref name="setResistor" ref="0x40dec6f0" scoped=""/>
+        <function-ref name="toggle" ref="0x40dec7d0" scoped=""/>
+        <function-ref name="isOutput" ref="0x40dec8b0" scoped=""/>
+        <function-ref name="getResistor" ref="0x40dec990" scoped=""/>
+        <function-ref name="makeOutput" ref="0x40deca70" scoped=""/>
+        <function-ref name="get" ref="0x40decb50" scoped=""/>
+        <function-ref name="selectIOFunc" ref="0x40decc30" scoped=""/>
+        <function-ref name="getRaw" ref="0x40decd10" scoped=""/>
+        <function-ref name="set" ref="0x40decdf0" scoped=""/>
+        <function-ref name="selectModuleFunc" ref="0x40deced0" scoped=""/>
+        <function-ref name="isIOFunc" ref="0x40deb010" scoped=""/>
+        <function-ref name="isModuleFunc" ref="0x40deb170" scoped=""/>
+        <function-ref name="clr" ref="0x40deb250" scoped=""/>
+      </interface-functions>
+    </interface><interface loc="39:/home/jumbo/jamal/project/CoAP/tinyos-release/tos/chips/msp430/usart/HplMsp430I2C0P.nc" name="HplI2C" provided="1" ref="0x40df7bd0">
+      <component-ref nicename="tos.chips.msp430.usart.HplMsp430I2C0P" qname="HplMsp430I2C0P"/>
+      <type-interface alignment="I:2" size="I:2"><interface-ref name="HplI2C" ref="0x40df7bd0" scoped=""/></type-interface>
+      <instance>
+        <interfacedef-ref nicename="tos.chips.msp430.usart.HplMsp430I2C" qname="HplMsp430I2C"/>
+      </instance>
+      <interface-functions>
+        <function-ref name="disableOwnAddress" ref="0x40df7da8" scoped=""/>
+        <function-ref name="getStartByte" ref="0x40df7e88" scoped=""/>
+        <function-ref name="setSlaveAddress" ref="0x40df3010" scoped=""/>
+        <function-ref name="setMasterMode" ref="0x40df30f0" scoped=""/>
+        <function-ref name="disableTransmitReady" ref="0x40df31d0" scoped=""/>
+        <function-ref name="getClockPrescaler" ref="0x40df32b0" scoped=""/>
+        <function-ref name="setTransmitMode" ref="0x40df3390" scoped=""/>
+        <function-ref name="getStopBit" ref="0x40df3470" scoped=""/>
+        <function-ref name="setClockSource" ref="0x40df3550" scoped=""/>
+        <function-ref name="getRepeatMode" ref="0x40df3630" scoped=""/>
+        <function-ref name="getData" ref="0x40df3710" scoped=""/>
+        <function-ref name="enableStartDetect" ref="0x40df37f0" scoped=""/>
+        <function-ref name="enableAccessReady" ref="0x40df38d0" scoped=""/>
+        <function-ref name="getSlaveAddress" ref="0x40df3a30" scoped=""/>
+        <function-ref name="isGeneralCallPending" ref="0x40df3b10" scoped=""/>
+        <function-ref name="getIV" ref="0x40df3bf0" scoped=""/>
+        <function-ref name="enableI2C" ref="0x40df3cd0" scoped=""/>
+        <function-ref name="setStartBit" ref="0x40df3db0" scoped=""/>
+        <function-ref name="getTransferByteCount" ref="0x40df3e90" scoped=""/>
+        <function-ref name="getTransmitReceiveMode" ref="0x40df2010" scoped=""/>
+        <function-ref name="clearModeI2C" ref="0x40df20f0" scoped=""/>
+        <function-ref name="setOwnAddress" ref="0x40df21d0" scoped=""/>
+        <function-ref name="isI2C" ref="0x40df22b0" scoped=""/>
+        <function-ref name="enableGeneralCall" ref="0x40df2390" scoped=""/>
+        <function-ref name="enableOwnAddress" ref="0x40df2470" scoped=""/>
+        <function-ref name="isAccessReadyPending" ref="0x40df2650" scoped=""/>
+        <function-ref name="isArbitrationLostPending" ref="0x40df2730" scoped=""/>
+        <function-ref name="disableReceiveReady" ref="0x40df2810" scoped=""/>
+        <function-ref name="disableNoAck" ref="0x40df28f0" scoped=""/>
+        <function-ref name="disableStartDetect" ref="0x40df29d0" scoped=""/>
+        <function-ref name="enableArbitrationLost" ref="0x40df2ab0" scoped=""/>
+        <function-ref name="disableI2C" ref="0x40df2b90" scoped=""/>
+        <function-ref name="getShiftClock" ref="0x40df2c70" scoped=""/>
+        <function-ref name="disableArbitrationLost" ref="0x40df2d50" scoped=""/>
+        <function-ref name="disableAccessReady" ref="0x40df2e30" scoped=""/>
+        <function-ref name="setTransferByteCount" ref="0x40df2f10" scoped=""/>
+        <function-ref name="isOwnAddressPending" ref="0x40df1010" scoped=""/>
+        <function-ref name="getOwnAddress" ref="0x40df10f0" scoped=""/>
+        <function-ref name="enableTransmitReady" ref="0x40df11d0" scoped=""/>
+        <function-ref name="setModeI2C" ref="0x40df12b0" scoped=""/>
+        <function-ref name="getStartBit" ref="0x40df1390" scoped=""/>
+        <function-ref name="setWordMode" ref="0x40df1470" scoped=""/>
+        <function-ref name="setData" ref="0x40df1550" scoped=""/>
+        <function-ref name="isStartDetectPending" ref="0x40df1630" scoped=""/>
+        <function-ref name="getClockSource" ref="0x40df1710" scoped=""/>
+        <function-ref name="getWordMode" ref="0x40df17f0" scoped=""/>
+        <function-ref name="setShiftClock" ref="0x40df18d0" scoped=""/>
+        <function-ref name="setSlaveMode" ref="0x40df19b0" scoped=""/>
+        <function-ref name="enableNoAck" ref="0x40df1a90" scoped=""/>
+        <function-ref name="enableReceiveReady" ref="0x40df1d70" scoped=""/>
+        <function-ref name="disableGeneralCall" ref="0x40df1e50" scoped=""/>
+        <function-ref name="setClockPrescaler" ref="0x40df0010" scoped=""/>
+        <function-ref name="setStopBit" ref="0x40df00f0" scoped=""/>
+        <function-ref name="setReceiveMode" ref="0x40df01d0" scoped=""/>
+        <function-ref name="isNoAckPending" ref="0x40df02b0" scoped=""/>
+        <function-ref name="setRepeatMode" ref="0x40df0390" scoped=""/>
+        <function-ref name="isTransmitReadyPending" ref="0x40df0470" scoped=""/>
+        <function-ref name="setStartByte" ref="0x40df0550" scoped=""/>
+        <function-ref name="isReceiveReadyPending" ref="0x40df0630" scoped=""/>
+      </interface-functions>
+    </interface><interface loc="144:/home/jumbo/jamal/project/CoAP/tinyos-release/tos/chips/msp430/pins/HplMsp430GeneralIOC.nc" name="SIMO0" provided="1" ref="0x40776760">
+      <component-ref nicename="tos.chips.msp430.pins.HplMsp430GeneralIOC" qname="HplMsp430GeneralIOC"/>
+      <type-interface alignment="I:2" size="I:2"><interface-ref name="SIMO0" ref="0x40776760" scoped=""/></type-interface>
+      <instance>
+        <interfacedef-ref nicename="tos.chips.msp430.pins.HplMsp430GeneralIO" qname="HplMsp430GeneralIO"/>
+      </instance>
+      <interface-functions>
+        <function-ref name="makeInput" ref="0x40776938" scoped=""/>
+        <function-ref name="isInput" ref="0x40776a18" scoped=""/>
+        <function-ref name="setResistor" ref="0x40776af8" scoped=""/>
+        <function-ref name="toggle" ref="0x40776bd8" scoped=""/>
+        <function-ref name="isOutput" ref="0x40776cb8" scoped=""/>
+        <function-ref name="getResistor" ref="0x40776d98" scoped=""/>
+        <function-ref name="makeOutput" ref="0x40776e78" scoped=""/>
+        <function-ref name="get" ref="0x40775010" scoped=""/>
+        <function-ref name="selectIOFunc" ref="0x407750f0" scoped=""/>
+        <function-ref name="getRaw" ref="0x407751d0" scoped=""/>
+        <function-ref name="set" ref="0x407752b0" scoped=""/>
+        <function-ref name="selectModuleFunc" ref="0x40775390" scoped=""/>
+        <function-ref name="isIOFunc" ref="0x40775470" scoped=""/>
+        <function-ref name="isModuleFunc" ref="0x407755d0" scoped=""/>
+        <function-ref name="clr" ref="0x407756b0" scoped=""/>
+      </interface-functions>
+    </interface><component loc="45:/home/jumbo/jamal/project/CoAP/tinyos-release/tos/chips/msp430/pins/HplMsp430GeneralIOC.nc" nicename="tos.chips.msp430.pins.HplMsp430GeneralIOC" qname="HplMsp430GeneralIOC">
+      <documentation loc="35:/home/jumbo/jamal/project/CoAP/tinyos-release/tos/chips/msp430/pins/HplMsp430GeneralIOC.nc">
+        <short>
+ HPL for the TI MSP430 family of microprocessors.</short>
+        <long>
+ HPL for the TI MSP430 family of microprocessors. This provides an
+ abstraction for general-purpose I/O.
+
+ @author Joe Polastre
+ @author Xavier Orduna &lt;xorduna@dexmatech.com&gt;
+ @author Peter A. Bigot &lt;pab@peoplepowerco.com&gt;
+ @author Eric B. Decker &lt;cire831@gmail.com&gt;
+</long>
+      </documentation>
+      <configuration/>
+      <wiring>
+        <wire loc="442:/home/jumbo/jamal/project/CoAP/tinyos-release/tos/chips/msp430/pins/HplMsp430GeneralIOC.nc">
+          <from><interface-ref name="Port14" ref="0x4073b4c8" scoped=""/></from>
+          <to><interface-ref name="IO" ref="0x407af5c8" scoped=""/></to>
+        </wire>
+        <wire loc="455:/home/jumbo/jamal/project/CoAP/tinyos-release/tos/chips/msp430/pins/HplMsp430GeneralIOC.nc">
+          <from><interface-ref name="Port26" ref="0x40746768" scoped=""/></from>
+          <to><interface-ref name="IO" ref="0x407c55c8" scoped=""/></to>
+        </wire>
+        <wire loc="531:/home/jumbo/jamal/project/CoAP/tinyos-release/tos/chips/msp430/pins/HplMsp430GeneralIOC.nc">
+          <from><interface-ref name="SDA" ref="0x40775908" scoped=""/></from>
+          <to><interface-ref name="IO" ref="0x407d6d68" scoped=""/></to>
+        </wire>
+        <wire loc="551:/home/jumbo/jamal/project/CoAP/tinyos-release/tos/chips/msp430/pins/HplMsp430GeneralIOC.nc">
+          <from><interface-ref name="ADC6" ref="0x4078f598" scoped=""/></from>
+          <to><interface-ref name="IO" ref="0x4081f5c8" scoped=""/></to>
+        </wire>
+        <wire loc="532:/home/jumbo/jamal/project/CoAP/tinyos-release/tos/chips/msp430/pins/HplMsp430GeneralIOC.nc">
+          <from><interface-ref name="SOMI0" ref="0x40774ae0" scoped=""/></from>
+          <to><interface-ref name="IO" ref="0x407d35c8" scoped=""/></to>
+        </wire>
+        <wire loc="460:/home/jumbo/jamal/project/CoAP/tinyos-release/tos/chips/msp430/pins/HplMsp430GeneralIOC.nc">
+          <from><interface-ref name="Port30" ref="0x4075aae8" scoped=""/></from>
+          <to><interface-ref name="IO" ref="0x407d85c8" scoped=""/></to>
+        </wire>
+        <wire loc="473:/home/jumbo/jamal/project/CoAP/tinyos-release/tos/chips/msp430/pins/HplMsp430GeneralIOC.nc">
+          <from><interface-ref name="Port42" ref="0x40765ca8" scoped=""/></from>
+          <to><interface-ref name="IO" ref="0x407ee5c8" scoped=""/></to>
+        </wire>
+        <wire loc="486:/home/jumbo/jamal/project/CoAP/tinyos-release/tos/chips/msp430/pins/HplMsp430GeneralIOC.nc">
+          <from><interface-ref name="Port54" ref="0x4076fd88" scoped=""/></from>
+          <to><interface-ref name="IO" ref="0x408055c8" scoped=""/></to>
+        </wire>
+        <wire loc="497:/home/jumbo/jamal/project/CoAP/tinyos-release/tos/chips/msp430/pins/HplMsp430GeneralIOC.nc">
+          <from><interface-ref name="Port64" ref="0x4077cbc8" scoped=""/></from>
+          <to><interface-ref name="IO" ref="0x408255c8" scoped=""/></to>
+        </wire>
+        <wire loc="535:/home/jumbo/jamal/project/CoAP/tinyos-release/tos/chips/msp430/pins/HplMsp430GeneralIOC.nc">
+          <from><interface-ref name="UTXD0" ref="0x40787010" scoped=""/></from>
+          <to><interface-ref name="IO" ref="0x407e55c8" scoped=""/></to>
+        </wire>
+        <wire loc="545:/home/jumbo/jamal/project/CoAP/tinyos-release/tos/chips/msp430/pins/HplMsp430GeneralIOC.nc">
+          <from><interface-ref name="ADC0" ref="0x4077fc98" scoped=""/></from>
+          <to><interface-ref name="IO" ref="0x408155c8" scoped=""/></to>
+        </wire>
+        <wire loc="557:/home/jumbo/jamal/project/CoAP/tinyos-release/tos/chips/msp430/pins/HplMsp430GeneralIOC.nc">
+          <from><interface-ref name="SVSIN" ref="0x4078bca0" scoped=""/></from>
+          <to><interface-ref name="IO" ref="0x4081dd68" scoped=""/></to>
+        </wire>
+        <wire loc="445:/home/jumbo/jamal/project/CoAP/tinyos-release/tos/chips/msp430/pins/HplMsp430GeneralIOC.nc">
+          <from><interface-ref name="Port17" ref="0x4074ea08" scoped=""/></from>
+          <to><interface-ref name="IO" ref="0x407bfd68" scoped=""/></to>
+        </wire>
+        <wire loc="536:/home/jumbo/jamal/project/CoAP/tinyos-release/tos/chips/msp430/pins/HplMsp430GeneralIOC.nc">
+          <from><interface-ref name="URXD0" ref="0x40786170" scoped=""/></from>
+          <to><interface-ref name="IO" ref="0x407e3d68" scoped=""/></to>
+        </wire>
+        <wire loc="450:/home/jumbo/jamal/project/CoAP/tinyos-release/tos/chips/msp430/pins/HplMsp430GeneralIOC.nc">
+          <from><interface-ref name="Port21" ref="0x4074cd88" scoped=""/></from>
+          <to><interface-ref name="IO" ref="0x407bad68" scoped=""/></to>
+        </wire>
+        <wire loc="463:/home/jumbo/jamal/project/CoAP/tinyos-release/tos/chips/msp430/pins/HplMsp430GeneralIOC.nc">
+          <from><interface-ref name="Port33" ref="0x40756010" scoped=""/></from>
+          <to><interface-ref name="IO" ref="0x407e8d68" scoped=""/></to>
+        </wire>
+        <wire loc="476:/home/jumbo/jamal/project/CoAP/tinyos-release/tos/chips/msp430/pins/HplMsp430GeneralIOC.nc">
+          <from><interface-ref name="Port45" ref="0x40760178" scoped=""/></from>
+          <to><interface-ref name="IO" ref="0x407ffd68" scoped=""/></to>
+        </wire>
+        <wire loc="489:/home/jumbo/jamal/project/CoAP/tinyos-release/tos/chips/msp430/pins/HplMsp430GeneralIOC.nc">
+          <from><interface-ref name="Port57" ref="0x4076b368" scoped=""/></from>
+          <to><interface-ref name="IO" ref="0x40818d68" scoped=""/></to>
+        </wire>
+        <wire loc="500:/home/jumbo/jamal/project/CoAP/tinyos-release/tos/chips/msp430/pins/HplMsp430GeneralIOC.nc">
+          <from><interface-ref name="Port67" ref="0x40778178" scoped=""/></from>
+          <to><interface-ref name="IO" ref="0x4081dd68" scoped=""/></to>
+        </wire>
+        <wire loc="440:/home/jumbo/jamal/project/CoAP/tinyos-release/tos/chips/msp430/pins/HplMsp430GeneralIOC.nc">
+          <from><interface-ref name="Port12" ref="0x4073d178" scoped=""/></from>
+          <to><interface-ref name="IO" ref="0x407b45f8" scoped=""/></to>
+        </wire>
+        <wire loc="453:/home/jumbo/jamal/project/CoAP/tinyos-release/tos/chips/msp430/pins/HplMsp430GeneralIOC.nc">
+          <from><interface-ref name="Port24" ref="0x40748368" scoped=""/></from>
+          <to><interface-ref name="IO" ref="0x407ca6f8" scoped=""/></to>
+        </wire>
+        <wire loc="466:/home/jumbo/jamal/project/CoAP/tinyos-release/tos/chips/msp430/pins/HplMsp430GeneralIOC.nc">
+          <from><interface-ref name="Port36" ref="0x407534c8" scoped=""/></from>
+          <to><interface-ref name="IO" ref="0x407e05c8" scoped=""/></to>
+        </wire>
+        <wire loc="530:/home/jumbo/jamal/project/CoAP/tinyos-release/tos/chips/msp430/pins/HplMsp430GeneralIOC.nc">
+          <from><interface-ref name="SIMO0" ref="0x40776760" scoped=""/></from>
+          <to><interface-ref name="IO" ref="0x407d6d68" scoped=""/></to>
+        </wire>
+        <wire loc="548:/home/jumbo/jamal/project/CoAP/tinyos-release/tos/chips/msp430/pins/HplMsp430GeneralIOC.nc">
+          <from><interface-ref name="ADC3" ref="0x40792168" scoped=""/></from>
+          <to><interface-ref name="IO" ref="0x4080ed68" scoped=""/></to>
+        </wire>
+        <wire loc="555:/home/jumbo/jamal/project/CoAP/tinyos-release/tos/chips/msp430/pins/HplMsp430GeneralIOC.nc">
+          <from><interface-ref name="DAC1" ref="0x4078cad8" scoped=""/></from>
+          <to><interface-ref name="IO" ref="0x4081dd68" scoped=""/></to>
+        </wire>
+        <wire loc="541:/home/jumbo/jamal/project/CoAP/tinyos-release/tos/chips/msp430/pins/HplMsp430GeneralIOC.nc">
+          <from><interface-ref name="UCLK1" ref="0x40782760" scoped=""/></from>
+          <to><interface-ref name="IO" ref="0x40808d68" scoped=""/></to>
+        </wire>
+        <wire loc="471:/home/jumbo/jamal/project/CoAP/tinyos-release/tos/chips/msp430/pins/HplMsp430GeneralIOC.nc">
+          <from><interface-ref name="Port40" ref="0x40751848" scoped=""/></from>
+          <to><interface-ref name="IO" ref="0x407f36f8" scoped=""/></to>
+        </wire>
+        <wire loc="484:/home/jumbo/jamal/project/CoAP/tinyos-release/tos/chips/msp430/pins/HplMsp430GeneralIOC.nc">
+          <from><interface-ref name="Port52" ref="0x40771a08" scoped=""/></from>
+          <to><interface-ref name="IO" ref="0x4080a5c8" scoped=""/></to>
+        </wire>
+        <wire loc="495:/home/jumbo/jamal/project/CoAP/tinyos-release/tos/chips/msp430/pins/HplMsp430GeneralIOC.nc">
+          <from><interface-ref name="Port62" ref="0x40768848" scoped=""/></from>
+          <to><interface-ref name="IO" ref="0x408105c8" scoped=""/></to>
+        </wire>
+        <wire loc="549:/home/jumbo/jamal/project/CoAP/tinyos-release/tos/chips/msp430/pins/HplMsp430GeneralIOC.nc">
+          <from><interface-ref name="ADC4" ref="0x40791280" scoped=""/></from>
+          <to><interface-ref name="IO" ref="0x408255c8" scoped=""/></to>
+        </wire>
+        <wire loc="538:/home/jumbo/jamal/project/CoAP/tinyos-release/tos/chips/msp430/pins/HplMsp430GeneralIOC.nc">
+          <from><interface-ref name="STE1" ref="0x40785280" scoped=""/></from>
+          <to><interface-ref name="IO" ref="0x407f65c8" scoped=""/></to>
+        </wire>
+        <wire loc="443:/home/jumbo/jamal/project/CoAP/tinyos-release/tos/chips/msp430/pins/HplMsp430GeneralIOC.nc">
+          <from><interface-ref name="Port15" ref="0x40750688" scoped=""/></from>
+          <to><interface-ref name="IO" ref="0x407add68" scoped=""/></to>
+        </wire>
+        <wire loc="456:/home/jumbo/jamal/project/CoAP/tinyos-release/tos/chips/msp430/pins/HplMsp430GeneralIOC.nc">
+          <from><interface-ref name="Port27" ref="0x4075b928" scoped=""/></from>
+          <to><interface-ref name="IO" ref="0x407dbd68" scoped=""/></to>
+        </wire>
+        <wire loc="493:/home/jumbo/jamal/project/CoAP/tinyos-release/tos/chips/msp430/pins/HplMsp430GeneralIOC.nc">
+          <from><interface-ref name="Port60" ref="0x4076a4c8" scoped=""/></from>
+          <to><interface-ref name="IO" ref="0x408155c8" scoped=""/></to>
+        </wire>
+        <wire loc="461:/home/jumbo/jamal/project/CoAP/tinyos-release/tos/chips/msp430/pins/HplMsp430GeneralIOC.nc">
+          <from><interface-ref name="Port31" ref="0x40759ca8" scoped=""/></from>
+          <to><interface-ref name="IO" ref="0x407d6d68" scoped=""/></to>
+        </wire>
+        <wire loc="474:/home/jumbo/jamal/project/CoAP/tinyos-release/tos/chips/msp430/pins/HplMsp430GeneralIOC.nc">
+          <from><interface-ref name="Port43" ref="0x40763e68" scoped=""/></from>
+          <to><interface-ref name="IO" ref="0x407ecd68" scoped=""/></to>
+        </wire>
+        <wire loc="487:/home/jumbo/jamal/project/CoAP/tinyos-release/tos/chips/msp430/pins/HplMsp430GeneralIOC.nc">
+          <from><interface-ref name="Port55" ref="0x4076d010" scoped=""/></from>
+          <to><interface-ref name="IO" ref="0x40803d68" scoped=""/></to>
+        </wire>
+        <wire loc="498:/home/jumbo/jamal/project/CoAP/tinyos-release/tos/chips/msp430/pins/HplMsp430GeneralIOC.nc">
+          <from><interface-ref name="Port65" ref="0x4077bd88" scoped=""/></from>
+          <to><interface-ref name="IO" ref="0x40822d68" scoped=""/></to>
+        </wire>
+        <wire loc="540:/home/jumbo/jamal/project/CoAP/tinyos-release/tos/chips/msp430/pins/HplMsp430GeneralIOC.nc">
+          <from><interface-ref name="SOMI1" ref="0x407835a0" scoped=""/></from>
+          <to><interface-ref name="IO" ref="0x4080a5c8" scoped=""/></to>
+        </wire>
+        <wire loc="438:/home/jumbo/jamal/project/CoAP/tinyos-release/tos/chips/msp430/pins/HplMsp430GeneralIOC.nc">
+          <from><interface-ref name="Port10" ref="0x4073ee50" scoped=""/></from>
+          <to><interface-ref name="IO" ref="0x4079f7c0" scoped=""/></to>
+        </wire>
+        <wire loc="451:/home/jumbo/jamal/project/CoAP/tinyos-release/tos/chips/msp430/pins/HplMsp430GeneralIOC.nc">
+          <from><interface-ref name="Port22" ref="0x4074a010" scoped=""/></from>
+          <to><interface-ref name="IO" ref="0x407cf5c8" scoped=""/></to>
+        </wire>
+        <wire loc="464:/home/jumbo/jamal/project/CoAP/tinyos-release/tos/chips/msp430/pins/HplMsp430GeneralIOC.nc">
+          <from><interface-ref name="Port34" ref="0x40755178" scoped=""/></from>
+          <to><interface-ref name="IO" ref="0x407e55c8" scoped=""/></to>
+        </wire>
+        <wire loc="477:/home/jumbo/jamal/project/CoAP/tinyos-release/tos/chips/msp430/pins/HplMsp430GeneralIOC.nc">
+          <from><interface-ref name="Port46" ref="0x4075f368" scoped=""/></from>
+          <to><interface-ref name="IO" ref="0x407fc5c8" scoped=""/></to>
+        </wire>
+        <wire loc="542:/home/jumbo/jamal/project/CoAP/tinyos-release/tos/chips/msp430/pins/HplMsp430GeneralIOC.nc">
+          <from><interface-ref name="UTXD1" ref="0x40781920" scoped=""/></from>
+          <to><interface-ref name="IO" ref="0x407e05c8" scoped=""/></to>
+        </wire>
+        <wire loc="546:/home/jumbo/jamal/project/CoAP/tinyos-release/tos/chips/msp430/pins/HplMsp430GeneralIOC.nc">
+          <from><interface-ref name="ADC1" ref="0x4077ee58" scoped=""/></from>
+          <to><interface-ref name="IO" ref="0x40813d68" scoped=""/></to>
+        </wire>
+        <wire loc="552:/home/jumbo/jamal/project/CoAP/tinyos-release/tos/chips/msp430/pins/HplMsp430GeneralIOC.nc">
+          <from><interface-ref name="ADC7" ref="0x4078e758" scoped=""/></from>
+          <to><interface-ref name="IO" ref="0x4081dd68" scoped=""/></to>
+        </wire>
+        <wire loc="482:/home/jumbo/jamal/project/CoAP/tinyos-release/tos/chips/msp430/pins/HplMsp430GeneralIOC.nc">
+          <from><interface-ref name="Port50" ref="0x4075d688" scoped=""/></from>
+          <to><interface-ref name="IO" ref="0x407f65c8" scoped=""/></to>
+        </wire>
+        <wire loc="543:/home/jumbo/jamal/project/CoAP/tinyos-release/tos/chips/msp430/pins/HplMsp430GeneralIOC.nc">
+          <from><interface-ref name="URXD1" ref="0x40780ae0" scoped=""/></from>
+          <to><interface-ref name="IO" ref="0x407ded68" scoped=""/></to>
+        </wire>
+        <wire loc="441:/home/jumbo/jamal/project/CoAP/tinyos-release/tos/chips/msp430/pins/HplMsp430GeneralIOC.nc">
+          <from><interface-ref name="Port13" ref="0x4073c368" scoped=""/></from>
+          <to><interface-ref name="IO" ref="0x407b2d68" scoped=""/></to>
+        </wire>
+        <wire loc="454:/home/jumbo/jamal/project/CoAP/tinyos-release/tos/chips/msp430/pins/HplMsp430GeneralIOC.nc">
+          <from><interface-ref name="Port25" ref="0x407475a8" scoped=""/></from>
+          <to><interface-ref name="IO" ref="0x407c8df8" scoped=""/></to>
+        </wire>
+        <wire loc="467:/home/jumbo/jamal/project/CoAP/tinyos-release/tos/chips/msp430/pins/HplMsp430GeneralIOC.nc">
+          <from><interface-ref name="Port37" ref="0x40752688" scoped=""/></from>
+          <to><interface-ref name="IO" ref="0x407ded68" scoped=""/></to>
+        </wire>
+        <wire loc="539:/home/jumbo/jamal/project/CoAP/tinyos-release/tos/chips/msp430/pins/HplMsp430GeneralIOC.nc">
+          <from><interface-ref name="SIMO1" ref="0x407843e0" scoped=""/></from>
+          <to><interface-ref name="IO" ref="0x4080dd68" scoped=""/></to>
+        </wire>
+        <wire loc="550:/home/jumbo/jamal/project/CoAP/tinyos-release/tos/chips/msp430/pins/HplMsp430GeneralIOC.nc">
+          <from><interface-ref name="ADC5" ref="0x407903d8" scoped=""/></from>
+          <to><interface-ref name="IO" ref="0x40822d68" scoped=""/></to>
+        </wire>
+        <wire loc="472:/home/jumbo/jamal/project/CoAP/tinyos-release/tos/chips/msp430/pins/HplMsp430GeneralIOC.nc">
+          <from><interface-ref name="Port41" ref="0x40766ae8" scoped=""/></from>
+          <to><interface-ref name="IO" ref="0x407f1df8" scoped=""/></to>
+        </wire>
+        <wire loc="485:/home/jumbo/jamal/project/CoAP/tinyos-release/tos/chips/msp430/pins/HplMsp430GeneralIOC.nc">
+          <from><interface-ref name="Port53" ref="0x40770bc8" scoped=""/></from>
+          <to><interface-ref name="IO" ref="0x40808d68" scoped=""/></to>
+        </wire>
+        <wire loc="496:/home/jumbo/jamal/project/CoAP/tinyos-release/tos/chips/msp430/pins/HplMsp430GeneralIOC.nc">
+          <from><interface-ref name="Port63" ref="0x40767a08" scoped=""/></from>
+          <to><interface-ref name="IO" ref="0x4080ed68" scoped=""/></to>
+        </wire>
+        <wire loc="444:/home/jumbo/jamal/project/CoAP/tinyos-release/tos/chips/msp430/pins/HplMsp430GeneralIOC.nc">
+          <from><interface-ref name="Port16" ref="0x4074f848" scoped=""/></from>
+          <to><interface-ref name="IO" ref="0x407c15c8" scoped=""/></to>
+        </wire>
+        <wire loc="494:/home/jumbo/jamal/project/CoAP/tinyos-release/tos/chips/msp430/pins/HplMsp430GeneralIOC.nc">
+          <from><interface-ref name="Port61" ref="0x40769688" scoped=""/></from>
+          <to><interface-ref name="IO" ref="0x40813d68" scoped=""/></to>
+        </wire>
+        <wire loc="449:/home/jumbo/jamal/project/CoAP/tinyos-release/tos/chips/msp430/pins/HplMsp430GeneralIOC.nc">
+          <from><interface-ref name="Port20" ref="0x4074dbc8" scoped=""/></from>
+          <to><interface-ref name="IO" ref="0x407bc5c8" scoped=""/></to>
+        </wire>
+        <wire loc="462:/home/jumbo/jamal/project/CoAP/tinyos-release/tos/chips/msp430/pins/HplMsp430GeneralIOC.nc">
+          <from><interface-ref name="Port32" ref="0x40758e68" scoped=""/></from>
+          <to><interface-ref name="IO" ref="0x407d35c8" scoped=""/></to>
+        </wire>
+        <wire loc="475:/home/jumbo/jamal/project/CoAP/tinyos-release/tos/chips/msp430/pins/HplMsp430GeneralIOC.nc">
+          <from><interface-ref name="Port44" ref="0x40761010" scoped=""/></from>
+          <to><interface-ref name="IO" ref="0x407e95c8" scoped=""/></to>
+        </wire>
+        <wire loc="488:/home/jumbo/jamal/project/CoAP/tinyos-release/tos/chips/msp430/pins/HplMsp430GeneralIOC.nc">
+          <from><interface-ref name="Port56" ref="0x4076c178" scoped=""/></from>
+          <to><interface-ref name="IO" ref="0x4081a5c8" scoped=""/></to>
+        </wire>
+        <wire loc="499:/home/jumbo/jamal/project/CoAP/tinyos-release/tos/chips/msp430/pins/HplMsp430GeneralIOC.nc">
+          <from><interface-ref name="Port66" ref="0x40779010" scoped=""/></from>
+          <to><interface-ref name="IO" ref="0x4081f5c8" scoped=""/></to>
+        </wire>
+        <wire loc="439:/home/jumbo/jamal/project/CoAP/tinyos-release/tos/chips/msp430/pins/HplMsp430GeneralIOC.nc">
+          <from><interface-ref name="Port11" ref="0x40743010" scoped=""/></from>
+          <to><interface-ref name="IO" ref="0x407b7ee8" scoped=""/></to>
+        </wire>
+        <wire loc="452:/home/jumbo/jamal/project/CoAP/tinyos-release/tos/chips/msp430/pins/HplMsp430GeneralIOC.nc">
+          <from><interface-ref name="Port23" ref="0x40749178" scoped=""/></from>
+          <to><interface-ref name="IO" ref="0x407cdd68" scoped=""/></to>
+        </wire>
+        <wire loc="465:/home/jumbo/jamal/project/CoAP/tinyos-release/tos/chips/msp430/pins/HplMsp430GeneralIOC.nc">
+          <from><interface-ref name="Port35" ref="0x40754368" scoped=""/></from>
+          <to><interface-ref name="IO" ref="0x407e3d68" scoped=""/></to>
+        </wire>
+        <wire loc="478:/home/jumbo/jamal/project/CoAP/tinyos-release/tos/chips/msp430/pins/HplMsp430GeneralIOC.nc">
+          <from><interface-ref name="Port47" ref="0x4075e4c8" scoped=""/></from>
+          <to><interface-ref name="IO" ref="0x407fad68" scoped=""/></to>
+        </wire>
+        <wire loc="534:/home/jumbo/jamal/project/CoAP/tinyos-release/tos/chips/msp430/pins/HplMsp430GeneralIOC.nc">
+          <from><interface-ref name="SCL" ref="0x40772e48" scoped=""/></from>
+          <to><interface-ref name="IO" ref="0x407e8d68" scoped=""/></to>
+        </wire>
+        <wire loc="547:/home/jumbo/jamal/project/CoAP/tinyos-release/tos/chips/msp430/pins/HplMsp430GeneralIOC.nc">
+          <from><interface-ref name="ADC2" ref="0x40794010" scoped=""/></from>
+          <to><interface-ref name="IO" ref="0x408105c8" scoped=""/></to>
+        </wire>
+        <wire loc="533:/home/jumbo/jamal/project/CoAP/tinyos-release/tos/chips/msp430/pins/HplMsp430GeneralIOC.nc">
+          <from><interface-ref name="UCLK0" ref="0x40773ca0" scoped=""/></from>
+          <to><interface-ref name="IO" ref="0x407e8d68" scoped=""/></to>
+        </wire>
+        <wire loc="483:/home/jumbo/jamal/project/CoAP/tinyos-release/tos/chips/msp430/pins/HplMsp430GeneralIOC.nc">
+          <from><interface-ref name="Port51" ref="0x4075c848" scoped=""/></from>
+          <to><interface-ref name="IO" ref="0x4080dd68" scoped=""/></to>
+        </wire>
+        <wire loc="554:/home/jumbo/jamal/project/CoAP/tinyos-release/tos/chips/msp430/pins/HplMsp430GeneralIOC.nc">
+          <from><interface-ref name="DAC0" ref="0x4078d918" scoped=""/></from>
+          <to><interface-ref name="IO" ref="0x4081f5c8" scoped=""/></to>
+        </wire>
+        <wire loc="558:/home/jumbo/jamal/project/CoAP/tinyos-release/tos/chips/msp430/pins/HplMsp430GeneralIOC.nc">
+          <from><interface-ref name="SVSOUT" ref="0x4078ae68" scoped=""/></from>
+          <to><interface-ref name="IO" ref="0x40818d68" scoped=""/></to>
+        </wire>
+        <wire loc="529:/home/jumbo/jamal/project/CoAP/tinyos-release/tos/chips/msp430/pins/HplMsp430GeneralIOC.nc">
+          <from><interface-ref name="STE0" ref="0x40777388" scoped=""/></from>
+          <to><interface-ref name="IO" ref="0x407d85c8" scoped=""/></to>
+        </wire>
+      </wiring>
+    </component><component loc="74:/home/jumbo/jamal/project/CoAP/tinyos-release/tos/chips/msp430/usart/HplMsp430Usart0P.nc" nicename="tos.chips.msp430.usart.HplMsp430Usart0P" qname="HplMsp430Usart0P" safe="">
+      <documentation loc="62:/home/jumbo/jamal/project/CoAP/tinyos-release/tos/chips/msp430/usart/HplMsp430Usart0P.nc">
+        <short>
+ Implementation of USART0 lowlevel functionality - stateless.</short>
+        <long>
+ Implementation of USART0 lowlevel functionality - stateless.
+ Setting a mode will by default disable USART-Interrupts.
+
+ @author: Jan Hauer &lt;hauer@tkn.tu-berlin.de&gt;
+ @author: Jonathan Hui &lt;jhui@archedrock.com&gt;
+ @author: Vlado Handziski &lt;handzisk@tkn.tu-berlin.de&gt;
+ @author: Joe Polastre
+ @author: Philipp Huppertz &lt;huppertz@tkn.tu-berlin.de&gt;
+ @version $Revision: 1.8 $ $Date: 2010-06-04 22:30:21 $
+</long>
+      </documentation>
+      <module/>
+    </component><component loc="37:/home/jumbo/jamal/project/CoAP/tinyos-release/tos/chips/msp430/usart/HplMsp430I2C0P.nc" nicename="tos.chips.msp430.usart.HplMsp430I2C0P" qname="HplMsp430I2C0P" safe="">
+      <documentation loc="32:/home/jumbo/jamal/project/CoAP/tinyos-release/tos/chips/msp430/usart/HplMsp430I2C0P.nc">
+        <short>
+ </short>
+        <long>
+ @author Jonathan Hui &lt;jhui@archrock.com&gt;
+ @version $Revision: 1.5 $ $Date: 2008-06-24 05:32:31 $
+</long>
+      </documentation>
+      <module/>
+    </component></referenced></component>

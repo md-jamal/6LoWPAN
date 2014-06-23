@@ -1,0 +1,329 @@
+<?xml version="1.0" ?><component loc="4:/home/jumbo/tinyos-main/tos/lib/net/blip/UdpC.nc" nicename="tos.lib.net.blip.UdpC" qname="UdpC">
+      <configuration/>
+      <wiring>
+        <wire loc="11:/home/jumbo/tinyos-main/tos/lib/net/blip/UdpC.nc">
+          <from><interface-ref name="BlipStatistics" ref="0x414625d8" scoped=""/></from>
+          <to><interface-ref name="BlipStatistics" ref="0x414a86a0" scoped=""/></to>
+        </wire>
+        <wire loc="10:/home/jumbo/tinyos-main/tos/lib/net/blip/UdpC.nc">
+          <from><interface-ref name="UDP" ref="0x41465db0" scoped=""/></from>
+          <to><interface-ref name="UDP" ref="0x41460af8" scoped=""/></to>
+        </wire>
+        <wire loc="13:/home/jumbo/tinyos-main/tos/lib/net/blip/UdpC.nc">
+          <from><interface-ref name="SoftwareInit" ref="0x40692258" scoped=""/></from>
+          <to><interface-ref name="Init" ref="0x414a81a0" scoped=""/></to>
+        </wire>
+        <wire loc="14:/home/jumbo/tinyos-main/tos/lib/net/blip/UdpC.nc">
+          <from><interface-ref name="IP" ref="0x414a7258" scoped=""/></from>
+          <to><interface-ref name="IP" ref="0x409a7918" scoped=""/>
+          <arguments>
+            <value cst="I:17">
+              <type-int alignment="I:2" cname="int" size="I:2"/>
+            </value>
+          </arguments>
+          </to>
+        </wire>
+        <wire loc="15:/home/jumbo/tinyos-main/tos/lib/net/blip/UdpC.nc">
+          <from><interface-ref name="IPAddress" ref="0x414a76d0" scoped=""/></from>
+          <to><interface-ref name="IPAddress" ref="0x40a51ce0" scoped=""/></to>
+        </wire>
+      </wiring>
+    <specification><interface loc="6:/home/jumbo/tinyos-main/tos/lib/net/blip/UdpC.nc" name="BlipStatistics" provided="1" ref="0x414625d8">
+      <component-ref nicename="tos.lib.net.blip.UdpC" qname="UdpC"/>
+      <type-interface alignment="I:2" size="I:2"><interface-ref name="BlipStatistics" ref="0x414625d8" scoped=""/></type-interface>
+      <instance>
+        <interfacedef-ref nicename="tos.lib.net.blip.interfaces.BlipStatistics" qname="BlipStatistics"/>
+        <arguments>
+          <type-tag alignment="I:1" size="I:6"><nx_struct-ref ref="0x40f85290"/>
+            <typename><typedef-ref name="udp_statistics_t" ref="0x40f85d18"/></typename>
+          </type-tag>
+        </arguments>
+      </instance>
+      <interface-functions>
+        <function-ref name="clear" ref="0x41462ea0" scoped=""/>
+        <function-ref name="get" ref="0x41462c00" scoped=""/>
+      </interface-functions>
+    </interface><interface loc="5:/home/jumbo/tinyos-main/tos/lib/net/blip/UdpC.nc" name="UDP" provided="1" ref="0x41465db0">
+      <component-ref nicename="tos.lib.net.blip.UdpC" qname="UdpC"/>
+      <type-interface alignment="I:2" size="I:2"><interface-ref name="UDP" ref="0x41465db0" scoped=""/></type-interface>
+      <instance>
+        <interfacedef-ref nicename="tos.lib.net.blip.interfaces.UDP" qname="UDP"/>
+      </instance>
+      <interface-parameters>
+        <type-int alignment="I:1" cname="unsigned char" size="I:1" unsigned="">
+          <typename><typedef-ref name="uint8_t" ref="0x4003bdc8"/></typename>
+        </type-int>
+      </interface-parameters>
+      <interface-functions>
+        <function-ref name="sendto" ref="0x41462010" scoped=""/>
+        <function-ref name="bind" ref="0x414620f0" scoped=""/>
+        <function-ref name="sendtov" ref="0x414621d0" scoped=""/>
+        <function-ref name="recvfrom" ref="0x414622b0" scoped=""/>
+      </interface-functions>
+    </interface></specification><referenced><interface loc="13:/home/jumbo/tinyos-main/tos/lib/net/blip/UdpP.nc" name="IP" provided="0" ref="0x414a7258">
+      <component-ref nicename="tos.lib.net.blip.UdpP" qname="UdpP"/>
+      <type-interface alignment="I:2" size="I:2"><interface-ref name="IP" ref="0x414a7258" scoped=""/></type-interface>
+      <instance>
+        <interfacedef-ref nicename="tos.lib.net.blip.interfaces.IP" qname="IP"/>
+      </instance>
+      <interface-functions>
+        <function-ref name="send" ref="0x414a7430" scoped=""/>
+        <function-ref name="recv" ref="0x414a7510" scoped=""/>
+      </interface-functions>
+    </interface><interface loc="32:/home/jumbo/tinyos-main/tos/lib/net/blip/IPStackC.nc" name="IP" provided="1" ref="0x409a7918">
+      <component-ref nicename="tos.lib.net.blip.IPStackC" qname="IPStackC"/>
+      <type-interface alignment="I:2" size="I:2"><interface-ref name="IP" ref="0x409a7918" scoped=""/></type-interface>
+      <instance>
+        <interfacedef-ref nicename="tos.lib.net.blip.interfaces.IP" qname="IP"/>
+      </instance>
+      <interface-parameters>
+        <type-int alignment="I:1" cname="unsigned char" size="I:1" unsigned="">
+          <typename><typedef-ref name="uint8_t" ref="0x4003bdc8"/></typename>
+        </type-int>
+      </interface-parameters>
+      <interface-functions>
+        <function-ref name="send" ref="0x409a7af0" scoped=""/>
+        <function-ref name="recv" ref="0x409a7bd0" scoped=""/>
+      </interface-functions>
+    </interface><interface loc="11:/home/jumbo/tinyos-main/tos/lib/net/blip/UdpP.nc" name="Init" provided="1" ref="0x414a81a0">
+      <component-ref nicename="tos.lib.net.blip.UdpP" qname="UdpP"/>
+      <type-interface alignment="I:2" size="I:2"><interface-ref name="Init" ref="0x414a81a0" scoped=""/></type-interface>
+      <instance>
+        <interfacedef-ref nicename="tos.interfaces.Init" qname="Init"/>
+      </instance>
+      <interface-functions>
+        <function-ref name="init" ref="0x414a8378" scoped=""/>
+      </interface-functions>
+    </interface><interface loc="10:/home/jumbo/tinyos-main/tos/lib/net/blip/UdpP.nc" name="UDP" provided="1" ref="0x41460af8">
+      <component-ref nicename="tos.lib.net.blip.UdpP" qname="UdpP"/>
+      <type-interface alignment="I:2" size="I:2"><interface-ref name="UDP" ref="0x41460af8" scoped=""/></type-interface>
+      <instance>
+        <interfacedef-ref nicename="tos.lib.net.blip.interfaces.UDP" qname="UDP"/>
+      </instance>
+      <interface-parameters>
+        <type-int alignment="I:1" cname="unsigned char" size="I:1" unsigned="">
+          <typename><typedef-ref name="uint8_t" ref="0x4003bdc8"/></typename>
+        </type-int>
+      </interface-parameters>
+      <interface-functions>
+        <function-ref name="sendto" ref="0x41460cd0" scoped=""/>
+        <function-ref name="bind" ref="0x41460db0" scoped=""/>
+        <function-ref name="sendtov" ref="0x41460e90" scoped=""/>
+        <function-ref name="recvfrom" ref="0x414a8010" scoped=""/>
+      </interface-functions>
+    </interface><interface loc="12:/home/jumbo/tinyos-main/tos/lib/net/blip/UdpP.nc" name="BlipStatistics" provided="1" ref="0x414a86a0">
+      <component-ref nicename="tos.lib.net.blip.UdpP" qname="UdpP"/>
+      <type-interface alignment="I:2" size="I:2"><interface-ref name="BlipStatistics" ref="0x414a86a0" scoped=""/></type-interface>
+      <instance>
+        <interfacedef-ref nicename="tos.lib.net.blip.interfaces.BlipStatistics" qname="BlipStatistics"/>
+        <arguments>
+          <type-tag alignment="I:1" size="I:6"><nx_struct-ref ref="0x40f85290"/>
+            <typename><typedef-ref name="udp_statistics_t" ref="0x40f85d18"/></typename>
+          </type-tag>
+        </arguments>
+      </instance>
+      <interface-functions>
+        <function-ref name="clear" ref="0x414a7010" scoped=""/>
+        <function-ref name="get" ref="0x414a8cc8" scoped=""/>
+      </interface-functions>
+    </interface><interface loc="14:/home/jumbo/tinyos-main/tos/lib/net/blip/UdpP.nc" name="IPAddress" provided="0" ref="0x414a76d0">
+      <component-ref nicename="tos.lib.net.blip.UdpP" qname="UdpP"/>
+      <type-interface alignment="I:2" size="I:2"><interface-ref name="IPAddress" ref="0x414a76d0" scoped=""/></type-interface>
+      <instance>
+        <interfacedef-ref nicename="tos.lib.net.blip.interfaces.IPAddress" qname="IPAddress"/>
+      </instance>
+      <interface-functions>
+        <function-ref name="getLLAddr" ref="0x414a78a8" scoped=""/>
+        <function-ref name="changed" ref="0x414a7988" scoped=""/>
+        <function-ref name="isLocalAddress" ref="0x414a7a68" scoped=""/>
+        <function-ref name="getGlobalAddr" ref="0x414a7b48" scoped=""/>
+        <function-ref name="setSource" ref="0x414a7c28" scoped=""/>
+        <function-ref name="removeAddress" ref="0x414a7d08" scoped=""/>
+        <function-ref name="setAddress" ref="0x414a7de8" scoped=""/>
+        <function-ref name="isLLAddress" ref="0x414a7ec8" scoped=""/>
+      </interface-functions>
+    </interface><interface loc="58:/home/jumbo/tinyos-main/tos/system/MainC.nc" name="SoftwareInit" provided="0" ref="0x40692258">
+      <component-ref nicename="tos.system.MainC" qname="MainC"/>
+      <type-interface alignment="I:2" size="I:2"><interface-ref name="SoftwareInit" ref="0x40692258" scoped=""/></type-interface>
+      <instance>
+        <interfacedef-ref nicename="tos.interfaces.Init" qname="Init"/>
+      </instance>
+      <interface-functions>
+        <function-ref name="init" ref="0x40692430" scoped=""/>
+      </interface-functions>
+    </interface><interface loc="25:/home/jumbo/tinyos-main/tos/lib/net/blip/IPAddressC.nc" name="IPAddress" provided="1" ref="0x40a51ce0">
+      <component-ref nicename="tos.lib.net.blip.IPAddressC" qname="IPAddressC"/>
+      <type-interface alignment="I:2" size="I:2"><interface-ref name="IPAddress" ref="0x40a51ce0" scoped=""/></type-interface>
+      <instance>
+        <interfacedef-ref nicename="tos.lib.net.blip.interfaces.IPAddress" qname="IPAddress"/>
+      </instance>
+      <interface-functions>
+        <function-ref name="getLLAddr" ref="0x40a51eb8" scoped=""/>
+        <function-ref name="changed" ref="0x40a74010" scoped=""/>
+        <function-ref name="isLocalAddress" ref="0x40a740f0" scoped=""/>
+        <function-ref name="getGlobalAddr" ref="0x40a741d0" scoped=""/>
+        <function-ref name="setSource" ref="0x40a742b0" scoped=""/>
+        <function-ref name="removeAddress" ref="0x40a74390" scoped=""/>
+        <function-ref name="setAddress" ref="0x40a74470" scoped=""/>
+        <function-ref name="isLLAddress" ref="0x40a74550" scoped=""/>
+      </interface-functions>
+    </interface><component loc="29:/home/jumbo/tinyos-main/tos/lib/net/blip/IPStackC.nc" nicename="tos.lib.net.blip.IPStackC" qname="IPStackC">
+      <configuration/>
+      <wiring>
+        <wire loc="50:/home/jumbo/tinyos-main/tos/lib/net/blip/IPStackC.nc">
+          <from><interface-ref name="SplitControl" ref="0x409acc18" scoped=""/></from>
+          <to><interface-ref name="SplitControl" ref="0x41417010" scoped=""/></to>
+        </wire>
+        <wire loc="57:/home/jumbo/tinyos-main/tos/lib/net/blip/IPStackC.nc">
+          <from><interface-ref name="ForwardingEvents" ref="0x409a6228" scoped=""/></from>
+          <to><interface-ref name="ForwardingEvents" ref="0x409fe5e8" scoped=""/></to>
+        </wire>
+        <wire loc="56:/home/jumbo/tinyos-main/tos/lib/net/blip/IPStackC.nc">
+          <from><interface-ref name="ForwardingTableEvents" ref="0x409c0348" scoped=""/></from>
+          <to><interface-ref name="ForwardingTableEvents" ref="0x409f1d80" scoped=""/></to>
+        </wire>
+        <wire loc="66:/home/jumbo/tinyos-main/tos/lib/net/blip/IPStackC.nc">
+          <from><interface-ref name="IPRaw" ref="0x409a7d80" scoped=""/></from>
+          <to><interface-ref name="IPRaw" ref="0x409fc010" scoped=""/></to>
+        </wire>
+        <wire loc="55:/home/jumbo/tinyos-main/tos/lib/net/blip/IPStackC.nc">
+          <from><interface-ref name="ForwardingTable" ref="0x409a4dc0" scoped=""/></from>
+          <to><interface-ref name="ForwardingTable" ref="0x409f1610" scoped=""/></to>
+        </wire>
+        <wire loc="60:/home/jumbo/tinyos-main/tos/lib/net/blip/IPStackC.nc">
+          <from><interface-ref name="IP" ref="0x409a7918" scoped=""/></from>
+          <to><interface-ref name="IP" ref="0x409c1930" scoped=""/></to>
+        </wire>
+        <wire loc="51:/home/jumbo/tinyos-main/tos/lib/net/blip/IPStackC.nc">
+          <from><interface-ref name="StdControl" ref="0x41417660" scoped=""/></from>
+          <to><interface-ref name="StdControl" ref="0x409f07c0" scoped=""/></to>
+        </wire>
+        <wire loc="52:/home/jumbo/tinyos-main/tos/lib/net/blip/IPStackC.nc">
+          <from><interface-ref name="RoutingControl" ref="0x41417b70" scoped=""/></from>
+          <to><interface-ref name="RoutingControl" ref="0x409f0cd0" scoped=""/></to>
+        </wire>
+        <wire loc="53:/home/jumbo/tinyos-main/tos/lib/net/blip/IPStackC.nc">
+          <from><interface-ref name="SubSplitControl" ref="0x414160c8" scoped=""/></from>
+          <to><interface-ref name="SplitControl" ref="0x40f84010" scoped=""/></to>
+        </wire>
+        <wire loc="61:/home/jumbo/tinyos-main/tos/lib/net/blip/IPStackC.nc">
+          <from><interface-ref name="SubIP" ref="0x409ee7e0" scoped=""/></from>
+          <to><interface-ref name="IP" ref="0x409fead8" scoped=""/></to>
+        </wire>
+        <wire loc="63:/home/jumbo/tinyos-main/tos/lib/net/blip/IPStackC.nc">
+          <from><interface-ref name="IPForward" ref="0x40a19798" scoped=""/>
+          <arguments>
+            <value cst="I:1">
+              <type-int alignment="I:2" cname="int" size="I:2"/>
+            </value>
+          </arguments>
+          </from>
+          <to><interface-ref name="IPForward" ref="0x40a53b10" scoped=""/></to>
+        </wire>
+        <wire loc="64:/home/jumbo/tinyos-main/tos/lib/net/blip/IPStackC.nc">
+          <from><interface-ref name="IPLower" ref="0x40a50d20" scoped=""/></from>
+          <to><interface-ref name="IPLower" ref="0x40f84610" scoped=""/></to>
+        </wire>
+        <wire loc="72:/home/jumbo/tinyos-main/tos/lib/net/blip/IPStackC.nc">
+          <from><interface-ref name="IP" ref="0x4144b460" scoped=""/></from>
+          <to><interface-ref name="IP" ref="0x409c1930" scoped=""/>
+          <arguments>
+            <value cst="I:58">
+              <type-int alignment="I:2" cname="int" size="I:2"/>
+            </value>
+          </arguments>
+          </to>
+        </wire>
+        <wire loc="73:/home/jumbo/tinyos-main/tos/lib/net/blip/IPStackC.nc">
+          <from><interface-ref name="Leds" ref="0x4144a260" scoped=""/></from>
+          <to><interface-ref name="Leds" ref="0x40683a90" scoped=""/></to>
+        </wire>
+        <wire loc="74:/home/jumbo/tinyos-main/tos/lib/net/blip/IPStackC.nc">
+          <from><interface-ref name="IPAddress" ref="0x4144b8b8" scoped=""/></from>
+          <to><interface-ref name="IPAddress" ref="0x40a51ce0" scoped=""/></to>
+        </wire>
+        <wire loc="76:/home/jumbo/tinyos-main/tos/lib/net/blip/IPStackC.nc">
+          <from><interface-ref name="IPAddress" ref="0x40a19cd0" scoped=""/></from>
+          <to><interface-ref name="IPAddress" ref="0x40a51ce0" scoped=""/></to>
+        </wire>
+        <wire loc="77:/home/jumbo/tinyos-main/tos/lib/net/blip/IPStackC.nc">
+          <from><interface-ref name="IPPacket" ref="0x409fb6e8" scoped=""/></from>
+          <to><interface-ref name="IPPacket" ref="0x41455a90" scoped=""/></to>
+        </wire>
+        <wire loc="78:/home/jumbo/tinyos-main/tos/lib/net/blip/IPStackC.nc">
+          <from><interface-ref name="IPPacket" ref="0x409e9c50" scoped=""/></from>
+          <to><interface-ref name="IPPacket" ref="0x41455a90" scoped=""/></to>
+        </wire>
+        <wire loc="79:/home/jumbo/tinyos-main/tos/lib/net/blip/IPStackC.nc">
+          <from><interface-ref name="IPAddress" ref="0x414166e0" scoped=""/></from>
+          <to><interface-ref name="IPAddress" ref="0x40a51ce0" scoped=""/></to>
+        </wire>
+        <wire loc="81:/home/jumbo/tinyos-main/tos/lib/net/blip/IPStackC.nc">
+          <from><interface-ref name="Leds" ref="0x409fa9b0" scoped=""/></from>
+          <to><interface-ref name="Leds" ref="0x40683a90" scoped=""/></to>
+        </wire>
+        <wire loc="84:/home/jumbo/tinyos-main/tos/lib/net/blip/IPStackC.nc">
+          <from><interface-ref name="Pool" ref="0x40a144c0" scoped=""/></from>
+          <to><interface-ref name="Pool" ref="0x414823d0" scoped=""/></to>
+        </wire>
+        <wire loc="87:/home/jumbo/tinyos-main/tos/lib/net/blip/IPStackC.nc">
+          <from><interface-ref name="Boot" ref="0x4146f438" scoped=""/></from>
+          <to><interface-ref name="Boot" ref="0x4060e610" scoped=""/></to>
+        </wire>
+        <wire loc="88:/home/jumbo/tinyos-main/tos/lib/net/blip/IPStackC.nc">
+          <from><interface-ref name="IPAddress" ref="0x4146f7b0" scoped=""/></from>
+          <to><interface-ref name="IPAddress" ref="0x40a51ce0" scoped=""/></to>
+        </wire>
+      </wiring>
+    </component><component loc="56:/home/jumbo/tinyos-main/tos/system/MainC.nc" nicename="tos.system.MainC" qname="MainC">
+      <documentation loc="45:/home/jumbo/tinyos-main/tos/system/MainC.nc">
+        <short>
+ MainC is the system interface the TinyOS boot sequence.</short>
+        <long>
+ MainC is the system interface the TinyOS boot sequence. It wires the
+ boot sequence implementation to the scheduler and hardware resources.
+
+ @author Philip Levis
+ @date   August 6 2005
+ @see    TEP 107: Boot Sequence
+</long>
+      </documentation>
+      <configuration/>
+      <wiring>
+        <wire loc="72:/home/jumbo/tinyos-main/tos/system/MainC.nc">
+          <from><interface-ref name="Boot" ref="0x4060e610" scoped=""/></from>
+          <to><interface-ref name="Boot" ref="0x4068bdf8" scoped=""/></to>
+        </wire>
+        <wire loc="67:/home/jumbo/tinyos-main/tos/system/MainC.nc">
+          <from><interface-ref name="Scheduler" ref="0x406a61d0" scoped=""/></from>
+          <to><interface-ref name="Scheduler" ref="0x40387010" scoped=""/></to>
+        </wire>
+        <wire loc="68:/home/jumbo/tinyos-main/tos/system/MainC.nc">
+          <from><interface-ref name="PlatformInit" ref="0x406a6798" scoped=""/></from>
+          <to><interface-ref name="Init" ref="0x40692aa0" scoped=""/></to>
+        </wire>
+        <wire loc="71:/home/jumbo/tinyos-main/tos/system/MainC.nc">
+          <from><interface-ref name="SoftwareInit" ref="0x406a6ba0" scoped=""/></from>
+          <to><interface-ref name="SoftwareInit" ref="0x40692258" scoped=""/></to>
+        </wire>
+      </wiring>
+    </component><component loc="24:/home/jumbo/tinyos-main/tos/lib/net/blip/IPAddressC.nc" nicename="tos.lib.net.blip.IPAddressC" qname="IPAddressC">
+      <configuration/>
+      <wiring>
+        <wire loc="30:/home/jumbo/tinyos-main/tos/lib/net/blip/IPAddressC.nc">
+          <from><interface-ref name="IPAddress" ref="0x40a51ce0" scoped=""/></from>
+          <to><interface-ref name="IPAddress" ref="0x40a9c0d0" scoped=""/></to>
+        </wire>
+        <wire loc="31:/home/jumbo/tinyos-main/tos/lib/net/blip/IPAddressC.nc">
+          <from><interface-ref name="Ieee154Address" ref="0x40a9cad8" scoped=""/></from>
+          <to><interface-ref name="Ieee154Address" ref="0x40abd010" scoped=""/></to>
+        </wire>
+      </wiring>
+    </component><component loc="9:/home/jumbo/tinyos-main/tos/lib/net/blip/UdpP.nc" nicename="tos.lib.net.blip.UdpP" qname="UdpP">
+      <documentation loc="1:/home/jumbo/tinyos-main/tos/lib/net/blip/UdpP.nc">
+        <short>
+ File: UdpP.nc
+</short>
+      </documentation>
+      <module/>
+    </component></referenced></component>

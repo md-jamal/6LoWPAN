@@ -1,0 +1,124 @@
+<html>
+  <head>
+    <LINK rel="stylesheet" href="nesdoc.css" type="text/css" media="screen"><title>Interface: tos.lib.net.blip.interfaces.IPAddress</title>
+  </head>
+  <body>
+    <h2>Interface: tos.lib.net.blip.interfaces.IPAddress</h2>
+    <b>interface IPAddress</b><p><p><div id=heading>Commands</div><div id=funcsig><span id=funcnameshort>command bool <a href="#getGlobalAddr">getGlobalAddr</a>(struct in6_addr *addr)
+      </span><menu> 
+ Get the preferred global IPv6 address for this node
+
+      </menu>
+    </div><div id=funcsig><span id=funcnameshort>command bool <a href="#getLLAddr">getLLAddr</a>(struct in6_addr *addr)
+      </span><menu>
+ Get the preferred link-local interface for this node
+
+      </menu>
+    </div><div id=funcsig><span id=funcnameshort>command bool <a href="#isLLAddress">isLLAddress</a>(struct in6_addr *addr)
+      </span><menu>
+ 
+      </menu>
+    </div><div id=funcsig><span id=funcnameshort>command bool <a href="#isLocalAddress">isLocalAddress</a>(struct in6_addr *addr)
+      </span><menu>
+ 
+      </menu>
+    </div><div id=funcsig><span id=funcnameshort>command error_t <a href="#removeAddress">removeAddress</a>()
+      </span></div><div id=funcsig><span id=funcnameshort>command error_t <a href="#setAddress">setAddress</a>(struct in6_addr *addr)
+      </span></div><div id=funcsig><span id=funcnameshort>command bool <a href="#setSource">setSource</a>(struct ip6_hdr *hdr)
+      </span><menu>
+ Choose a source address for a packet originating at this node.
+      </menu>
+    </div><p><div id=heading>Events</div><div id=funcsig><span id=funcnameshort>event void <a href="#changed">changed</a>(bool valid)
+      </span></div><p><div id=heading>Commands - Details</div>
+    <a name="getGlobalAddr"></a>
+    <h4>getGlobalAddr
+    </h4>
+    <span id=funcnameshort>command bool <b>getGlobalAddr</b>(struct in6_addr *addr)
+    </span>
+    <p>
+    <menu>
+       
+ Get the preferred global IPv6 address for this node
+
+    </menu>
+    <hr>
+    <a name="getLLAddr"></a>
+    <h4>getLLAddr
+    </h4>
+    <span id=funcnameshort>command bool <b>getLLAddr</b>(struct in6_addr *addr)
+    </span>
+    <p>
+    <menu>
+      
+ Get the preferred link-local interface for this node
+
+    </menu>
+    <hr>
+    <a name="isLLAddress"></a>
+    <h4>isLLAddress
+    </h4>
+    <span id=funcnameshort>command bool <b>isLLAddress</b>(struct in6_addr *addr)
+    </span>
+    <p>
+    <menu>
+      
+ 
+      <p>
+      <dl>
+        <dt><b>Returns:</b>
+        <dd>
+          TRUE of the address is a link local address not requiring
+ routing.
+
+        </dd>
+      </dl>
+    </menu>
+    <hr>
+    <a name="isLocalAddress"></a>
+    <h4>isLocalAddress
+    </h4>
+    <span id=funcnameshort>command bool <b>isLocalAddress</b>(struct in6_addr *addr)
+    </span>
+    <p>
+    <menu>
+      
+ 
+      <p>
+      <dl>
+        <dt><b>Returns:</b>
+        <dd>
+          TRUE if the address is assigned to a local interface
+
+        </dd>
+      </dl>
+    </menu>
+    <hr>
+    <a name="removeAddress"></a>
+    <h4>removeAddress
+    </h4>
+    <span id=funcnameshort>command error_t <b>removeAddress</b>()
+    </span><hr>
+    <a name="setAddress"></a>
+    <h4>setAddress
+    </h4>
+    <span id=funcnameshort>command error_t <b>setAddress</b>(struct in6_addr *addr)
+    </span><hr>
+    <a name="setSource"></a>
+    <h4>setSource
+    </h4>
+    <span id=funcnameshort>command bool <b>setSource</b>(struct ip6_hdr *hdr)
+    </span>
+    <p>
+    <menu>
+      
+ Choose a source address for a packet originating at this node.
+
+    </menu>
+    <p><div id=heading>Events - Details</div>
+    <a name="changed"></a>
+    <h4>changed
+    </h4>
+    <span id=funcnameshort>event void <b>changed</b>(bool valid)
+    </span>
+  </body>
+</html>

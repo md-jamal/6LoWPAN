@@ -1,0 +1,70 @@
+<?xml version="1.0" ?><component loc="7:/home/jumbo/jamal/project/CoAP/tinyos-release/tos/lib/net/blip/UdpP.nc" nicename="tos.lib.net.blip.UdpP" qname="UdpP">
+      <module/>
+    <specification><interface loc="10:/home/jumbo/jamal/project/CoAP/tinyos-release/tos/lib/net/blip/UdpP.nc" name="BlipStatistics" provided="1" ref="0x4138c6a0">
+      <component-ref nicename="tos.lib.net.blip.UdpP" qname="UdpP"/>
+      <type-interface alignment="I:2" size="I:2"><interface-ref name="BlipStatistics" ref="0x4138c6a0" scoped=""/></type-interface>
+      <instance>
+        <interfacedef-ref nicename="tos.lib.net.blip.interfaces.BlipStatistics" qname="BlipStatistics"/>
+        <arguments>
+          <type-tag alignment="I:1" size="I:6"><nx_struct-ref ref="0x40ec6ba8"/>
+            <typename><typedef-ref name="udp_statistics_t" ref="0x40ec6e30"/></typename>
+          </type-tag>
+        </arguments>
+      </instance>
+      <interface-functions>
+        <function-ref name="clear" ref="0x4138b010" scoped=""/>
+        <function-ref name="get" ref="0x4138ccc8" scoped=""/>
+      </interface-functions>
+    </interface><interface loc="9:/home/jumbo/jamal/project/CoAP/tinyos-release/tos/lib/net/blip/UdpP.nc" name="Init" provided="1" ref="0x4138c1a0">
+      <component-ref nicename="tos.lib.net.blip.UdpP" qname="UdpP"/>
+      <type-interface alignment="I:2" size="I:2"><interface-ref name="Init" ref="0x4138c1a0" scoped=""/></type-interface>
+      <instance>
+        <interfacedef-ref nicename="tos.interfaces.Init" qname="Init"/>
+      </instance>
+      <interface-functions>
+        <function-ref name="init" ref="0x4138c378" scoped=""/>
+      </interface-functions>
+    </interface><interface loc="12:/home/jumbo/jamal/project/CoAP/tinyos-release/tos/lib/net/blip/UdpP.nc" name="IPAddress" provided="0" ref="0x4138b6d0">
+      <component-ref nicename="tos.lib.net.blip.UdpP" qname="UdpP"/>
+      <type-interface alignment="I:2" size="I:2"><interface-ref name="IPAddress" ref="0x4138b6d0" scoped=""/></type-interface>
+      <instance>
+        <interfacedef-ref nicename="tos.lib.net.blip.interfaces.IPAddress" qname="IPAddress"/>
+      </instance>
+      <interface-functions>
+        <function-ref name="getLLAddr" ref="0x4138b8a8" scoped=""/>
+        <function-ref name="changed" ref="0x4138b988" scoped=""/>
+        <function-ref name="isLocalAddress" ref="0x4138ba68" scoped=""/>
+        <function-ref name="getGlobalAddr" ref="0x4138bb48" scoped=""/>
+        <function-ref name="setSource" ref="0x4138bc28" scoped=""/>
+        <function-ref name="removeAddress" ref="0x4138bd08" scoped=""/>
+        <function-ref name="setAddress" ref="0x4138bde8" scoped=""/>
+        <function-ref name="isLLAddress" ref="0x4138bec8" scoped=""/>
+      </interface-functions>
+    </interface><interface loc="8:/home/jumbo/jamal/project/CoAP/tinyos-release/tos/lib/net/blip/UdpP.nc" name="UDP" provided="1" ref="0x41390ae0">
+      <component-ref nicename="tos.lib.net.blip.UdpP" qname="UdpP"/>
+      <type-interface alignment="I:2" size="I:2"><interface-ref name="UDP" ref="0x41390ae0" scoped=""/></type-interface>
+      <instance>
+        <interfacedef-ref nicename="tos.lib.net.blip.interfaces.UDP" qname="UDP"/>
+      </instance>
+      <interface-parameters>
+        <type-int alignment="I:1" cname="unsigned char" size="I:1" unsigned="">
+          <typename><typedef-ref name="uint8_t" ref="0x4003adc8"/></typename>
+        </type-int>
+      </interface-parameters>
+      <interface-functions>
+        <function-ref name="sendto" ref="0x41390cb8" scoped=""/>
+        <function-ref name="bind" ref="0x41390d98" scoped=""/>
+        <function-ref name="sendtov" ref="0x41390e78" scoped=""/>
+        <function-ref name="recvfrom" ref="0x4138c010" scoped=""/>
+      </interface-functions>
+    </interface><interface loc="11:/home/jumbo/jamal/project/CoAP/tinyos-release/tos/lib/net/blip/UdpP.nc" name="IP" provided="0" ref="0x4138b258">
+      <component-ref nicename="tos.lib.net.blip.UdpP" qname="UdpP"/>
+      <type-interface alignment="I:2" size="I:2"><interface-ref name="IP" ref="0x4138b258" scoped=""/></type-interface>
+      <instance>
+        <interfacedef-ref nicename="tos.lib.net.blip.interfaces.IP" qname="IP"/>
+      </instance>
+      <interface-functions>
+        <function-ref name="send" ref="0x4138b430" scoped=""/>
+        <function-ref name="recv" ref="0x4138b510" scoped=""/>
+      </interface-functions>
+    </interface></specification><referenced/></component>

@@ -1,0 +1,20 @@
+digraph "tos.lib.net.rpl.RPLRoutingC" {
+  n0x414be010 [shape=ellipse, style=filled, label="RootControl", fontsize=12];
+  "RPLRoutingEngineC" [fontsize=12, shape=box,peripheries=2, URL="../chtml/tos.lib.net.rpl.RPLRoutingEngineC.html"];
+  n0x414c2c50 [shape=ellipse, style=filled, label="StdControl", fontsize=12];
+  "RPLDAORoutingEngineC" [fontsize=12, shape=box,peripheries=2, URL="../chtml/tos.lib.net.rpl.RPLDAORoutingEngineC.html"];
+  "RPLRankC" [fontsize=12, shape=box,peripheries=2, URL="../chtml/tos.lib.net.rpl.RPLRankC.html"];
+  "RPLRoutingEngineC" [fontsize=12, shape=box,peripheries=2, URL="../chtml/tos.lib.net.rpl.RPLRoutingEngineC.html"];
+  "RPLRankC" [fontsize=12, shape=box,peripheries=2, URL="../chtml/tos.lib.net.rpl.RPLRankC.html"];
+  "RPLRoutingC.ICMP_RA" [fontsize=12, shape=box,peripheries=2, style=dashed, label="ICMPCodeDispatchC\n(ICMP_RA)", URL="../chtml/tos.lib.net.blip.icmp.ICMPCodeDispatchC.html"];
+  "RPLDAORoutingEngineC" [fontsize=12, shape=box,peripheries=2, URL="../chtml/tos.lib.net.rpl.RPLDAORoutingEngineC.html"];
+  "IPStackC" [fontsize=12, shape=box,peripheries=2, URL="../chtml/tos.lib.net.blip.IPStackC.html"];
+  "n0x414be010" -> "RPLRoutingEngineC" [label="RootControl", URL="../ihtml/tos.lib.net.RootControl.html", fontsize=10];
+  "n0x414c2c50" -> "RPLDAORoutingEngineC" [label="StdControl", URL="../ihtml/tos.interfaces.StdControl.html", fontsize=10];
+  "n0x414c2c50" -> "RPLRankC" [label="StdControl", URL="../ihtml/tos.interfaces.StdControl.html", fontsize=10];
+  "n0x414c2c50" -> "RPLRoutingEngineC" [label="StdControl", URL="../ihtml/tos.interfaces.StdControl.html", fontsize=10];
+  "RPLRankC" -> "RPLRoutingC.ICMP_RA" [label="IP[uint8_t]", style=bold, URL="../ihtml/tos.lib.net.blip.interfaces.IP.html", fontsize=10];
+  "RPLDAORoutingEngineC" -> "RPLRoutingC.ICMP_RA" [label="IP[uint8_t]", style=bold, URL="../ihtml/tos.lib.net.blip.interfaces.IP.html", fontsize=10];
+  "IPStackC" -> "RPLDAORoutingEngineC" [label="StdControl", URL="../ihtml/tos.interfaces.StdControl.html", fontsize=10];
+  "IPStackC" -> "RPLRoutingEngineC" [label="StdControl", URL="../ihtml/tos.interfaces.StdControl.html", fontsize=10];
+}

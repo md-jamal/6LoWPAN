@@ -1,0 +1,5 @@
+digraph "tos.lib.net.blip.UdpSocketC" {
+  n0x41395100 [shape=ellipse, style=filled, label="UDP", fontsize=12];
+  "UdpC" [fontsize=12, shape=box,peripheries=2, URL="../chtml/tos.lib.net.blip.UdpC.html"];
+  "n0x41395100" -> "UdpC" [label="UDP", URL="../ihtml/tos.lib.net.blip.interfaces.UDP.html", fontsize=10];
+}

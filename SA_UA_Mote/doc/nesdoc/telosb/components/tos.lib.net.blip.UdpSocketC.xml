@@ -1,0 +1,76 @@
+<?xml version="1.0" ?><component abstract="" loc="2:/home/jumbo/tinyos-main/tos/lib/net/blip/UdpSocketC.nc" nicename="tos.lib.net.blip.UdpSocketC" qname="UdpSocketC">
+      <parameters>
+      </parameters>
+      <configuration/>
+      <wiring>
+        <wire loc="8:/home/jumbo/tinyos-main/tos/lib/net/blip/UdpSocketC.nc">
+          <from><interface-ref name="UDP" ref="0x414650f0" scoped=""/></from>
+          <to><interface-ref name="UDP" ref="0x41465db0" scoped=""/>
+          <arguments>
+            <value cst="U:">
+              <type-int alignment="I:2" cname="unsigned int" size="I:2" unsigned=""/>
+            </value>
+          </arguments>
+          </to>
+        </wire>
+      </wiring>
+    <specification><interface loc="3:/home/jumbo/tinyos-main/tos/lib/net/blip/UdpSocketC.nc" name="UDP" provided="1" ref="0x414650f0">
+      <component-ref nicename="tos.lib.net.blip.UdpSocketC" qname="UdpSocketC"/>
+      <type-interface alignment="I:2" size="I:2"><interface-ref name="UDP" ref="0x414650f0" scoped=""/></type-interface>
+      <instance>
+        <interfacedef-ref nicename="tos.lib.net.blip.interfaces.UDP" qname="UDP"/>
+      </instance>
+      <interface-functions>
+        <function-ref name="sendto" ref="0x414652c8" scoped=""/>
+        <function-ref name="bind" ref="0x414653a8" scoped=""/>
+        <function-ref name="sendtov" ref="0x41465488" scoped=""/>
+        <function-ref name="recvfrom" ref="0x41465568" scoped=""/>
+      </interface-functions>
+    </interface></specification><referenced><interface loc="5:/home/jumbo/tinyos-main/tos/lib/net/blip/UdpC.nc" name="UDP" provided="1" ref="0x41465db0">
+      <component-ref nicename="tos.lib.net.blip.UdpC" qname="UdpC"/>
+      <type-interface alignment="I:2" size="I:2"><interface-ref name="UDP" ref="0x41465db0" scoped=""/></type-interface>
+      <instance>
+        <interfacedef-ref nicename="tos.lib.net.blip.interfaces.UDP" qname="UDP"/>
+      </instance>
+      <interface-parameters>
+        <type-int alignment="I:1" cname="unsigned char" size="I:1" unsigned="">
+          <typename><typedef-ref name="uint8_t" ref="0x4003bdc8"/></typename>
+        </type-int>
+      </interface-parameters>
+      <interface-functions>
+        <function-ref name="sendto" ref="0x41462010" scoped=""/>
+        <function-ref name="bind" ref="0x414620f0" scoped=""/>
+        <function-ref name="sendtov" ref="0x414621d0" scoped=""/>
+        <function-ref name="recvfrom" ref="0x414622b0" scoped=""/>
+      </interface-functions>
+    </interface><component loc="4:/home/jumbo/tinyos-main/tos/lib/net/blip/UdpC.nc" nicename="tos.lib.net.blip.UdpC" qname="UdpC">
+      <configuration/>
+      <wiring>
+        <wire loc="11:/home/jumbo/tinyos-main/tos/lib/net/blip/UdpC.nc">
+          <from><interface-ref name="BlipStatistics" ref="0x414625d8" scoped=""/></from>
+          <to><interface-ref name="BlipStatistics" ref="0x414a86a0" scoped=""/></to>
+        </wire>
+        <wire loc="10:/home/jumbo/tinyos-main/tos/lib/net/blip/UdpC.nc">
+          <from><interface-ref name="UDP" ref="0x41465db0" scoped=""/></from>
+          <to><interface-ref name="UDP" ref="0x41460af8" scoped=""/></to>
+        </wire>
+        <wire loc="13:/home/jumbo/tinyos-main/tos/lib/net/blip/UdpC.nc">
+          <from><interface-ref name="SoftwareInit" ref="0x40692258" scoped=""/></from>
+          <to><interface-ref name="Init" ref="0x414a81a0" scoped=""/></to>
+        </wire>
+        <wire loc="14:/home/jumbo/tinyos-main/tos/lib/net/blip/UdpC.nc">
+          <from><interface-ref name="IP" ref="0x414a7258" scoped=""/></from>
+          <to><interface-ref name="IP" ref="0x409a7918" scoped=""/>
+          <arguments>
+            <value cst="I:17">
+              <type-int alignment="I:2" cname="int" size="I:2"/>
+            </value>
+          </arguments>
+          </to>
+        </wire>
+        <wire loc="15:/home/jumbo/tinyos-main/tos/lib/net/blip/UdpC.nc">
+          <from><interface-ref name="IPAddress" ref="0x414a76d0" scoped=""/></from>
+          <to><interface-ref name="IPAddress" ref="0x40a51ce0" scoped=""/></to>
+        </wire>
+      </wiring>
+    </component></referenced></component>

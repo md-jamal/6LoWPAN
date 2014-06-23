@@ -1,0 +1,64 @@
+<?xml version="1.0" ?><interfacedef loc="4:/home/jumbo/jamal/project/CoAP/tinyos-release/tos/lib/net/blip/interfaces/IP.nc" nicename="tos.lib.net.blip.interfaces.IP" qname="IP">
+      <function command="" loc="17:/home/jumbo/jamal/project/CoAP/tinyos-release/tos/lib/net/blip/interfaces/IP.nc" name="send" provided="0" ref="0x408c5488">
+        <interfacedef-ref nicename="tos.lib.net.blip.interfaces.IP" qname="IP"/>
+        <type-function alignment="I:1" size="I:1">
+          <type-int alignment="I:1" cname="unsigned char" size="I:1" unsigned="">
+            <typename><typedef-ref name="error_t" ref="0x4038a828"/></typename>
+          </type-int>
+          <function-parameters>
+            <type-pointer alignment="I:2" size="I:2">
+              <type-tag alignment="I:2" size="I:44"><struct-ref name="ip6_packet" ref="0x408951c8"/></type-tag>
+            </type-pointer>
+          </function-parameters>
+        </type-function>
+        <parameters>
+          <variable loc="17:/home/jumbo/jamal/project/CoAP/tinyos-release/tos/lib/net/blip/interfaces/IP.nc" name="msg" ref="0x408c5330">
+            <type-pointer alignment="I:2" size="I:2">
+              <type-tag alignment="I:2" size="I:44"><struct-ref name="ip6_packet" ref="0x408951c8"/></type-tag>
+            </type-pointer>
+          </variable>
+        </parameters>
+      </function>
+      <function event="" loc="23:/home/jumbo/jamal/project/CoAP/tinyos-release/tos/lib/net/blip/interfaces/IP.nc" name="recv" provided="0" ref="0x408c4038">
+        <interfacedef-ref nicename="tos.lib.net.blip.interfaces.IP" qname="IP"/>
+        <type-function alignment="I:1" size="I:1">
+          <type-void alignment="I:1" size="I:1"/>
+          <function-parameters>
+            <type-pointer alignment="I:2" size="I:2">
+              <type-tag alignment="I:1" size="I:40"><struct-ref name="ip6_hdr" ref="0x40884328"/></type-tag>
+            </type-pointer>
+            <type-pointer alignment="I:2" size="I:2">
+              <type-void alignment="I:1" size="I:1"/>
+            </type-pointer>
+            <type-int alignment="I:2" cname="unsigned int" size="I:2" unsigned="">
+              <typename><typedef-ref name="size_t" ref="0x400334b8"/></typename>
+            </type-int>
+            <type-pointer alignment="I:2" size="I:2">
+              <type-tag alignment="I:2" size="I:12"><struct-ref name="ip6_metadata" ref="0x40897a98"/></type-tag>
+            </type-pointer>
+          </function-parameters>
+        </type-function>
+        <parameters>
+          <variable loc="23:/home/jumbo/jamal/project/CoAP/tinyos-release/tos/lib/net/blip/interfaces/IP.nc" name="hdr" ref="0x408c5880">
+            <type-pointer alignment="I:2" size="I:2">
+              <type-tag alignment="I:1" size="I:40"><struct-ref name="ip6_hdr" ref="0x40884328"/></type-tag>
+            </type-pointer>
+          </variable>
+          <variable loc="23:/home/jumbo/jamal/project/CoAP/tinyos-release/tos/lib/net/blip/interfaces/IP.nc" name="packet" ref="0x408c5a58">
+            <type-pointer alignment="I:2" size="I:2">
+              <type-void alignment="I:1" size="I:1"/>
+            </type-pointer>
+          </variable>
+          <variable loc="24:/home/jumbo/jamal/project/CoAP/tinyos-release/tos/lib/net/blip/interfaces/IP.nc" name="len" ref="0x408c5c40">
+            <type-int alignment="I:2" cname="unsigned int" size="I:2" unsigned="">
+              <typename><typedef-ref name="size_t" ref="0x400334b8"/></typename>
+            </type-int>
+          </variable>
+          <variable loc="24:/home/jumbo/jamal/project/CoAP/tinyos-release/tos/lib/net/blip/interfaces/IP.nc" name="meta" ref="0x408c5eb8">
+            <type-pointer alignment="I:2" size="I:2">
+              <type-tag alignment="I:2" size="I:12"><struct-ref name="ip6_metadata" ref="0x40897a98"/></type-tag>
+            </type-pointer>
+          </variable>
+        </parameters>
+      </function>
+    </interfacedef>

@@ -1,0 +1,476 @@
+<?xml version="1.0" ?><component loc="37:/home/jumbo/jamal/project/CoAP/tinyos-release/tos/chips/cc2420/spi/CC2420SpiWireC.nc" nicename="tos.chips.cc2420.spi.CC2420SpiWireC" qname="CC2420SpiWireC">
+      <documentation loc="32:/home/jumbo/jamal/project/CoAP/tinyos-release/tos/chips/cc2420/spi/CC2420SpiWireC.nc">
+        <short>
+ </short>
+        <long>
+ @author Jonathan Hui &lt;jhui@archrock.com&gt;
+ @version $Revision: 1.1 $ $Date: 2007-07-04 00:37:16 $
+</long>
+      </documentation>
+      <configuration/>
+      <wiring>
+        <wire loc="52:/home/jumbo/jamal/project/CoAP/tinyos-release/tos/chips/cc2420/spi/CC2420SpiWireC.nc">
+          <from><interface-ref name="Fifo" ref="0x40c108d0" scoped=""/></from>
+          <to><interface-ref name="Fifo" ref="0x40c33158" scoped=""/></to>
+        </wire>
+        <wire loc="56:/home/jumbo/jamal/project/CoAP/tinyos-release/tos/chips/cc2420/spi/CC2420SpiWireC.nc">
+          <from><interface-ref name="ChipSpiResource" ref="0x40c10040" scoped=""/></from>
+          <to><interface-ref name="ChipSpiResource" ref="0x40c37ea0" scoped=""/></to>
+        </wire>
+        <wire loc="53:/home/jumbo/jamal/project/CoAP/tinyos-release/tos/chips/cc2420/spi/CC2420SpiWireC.nc">
+          <from><interface-ref name="Ram" ref="0x40c38340" scoped=""/></from>
+          <to><interface-ref name="Ram" ref="0x40c33b80" scoped=""/></to>
+        </wire>
+        <wire loc="54:/home/jumbo/jamal/project/CoAP/tinyos-release/tos/chips/cc2420/spi/CC2420SpiWireC.nc">
+          <from><interface-ref name="Reg" ref="0x40c38b08" scoped=""/></from>
+          <to><interface-ref name="Reg" ref="0x40c32360" scoped=""/></to>
+        </wire>
+        <wire loc="51:/home/jumbo/jamal/project/CoAP/tinyos-release/tos/chips/cc2420/spi/CC2420SpiWireC.nc">
+          <from><interface-ref name="Resource" ref="0x40c188d8" scoped=""/></from>
+          <to><interface-ref name="Resource" ref="0x40c346f8" scoped=""/></to>
+        </wire>
+        <wire loc="55:/home/jumbo/jamal/project/CoAP/tinyos-release/tos/chips/cc2420/spi/CC2420SpiWireC.nc">
+          <from><interface-ref name="Strobe" ref="0x40c37310" scoped=""/></from>
+          <to><interface-ref name="Strobe" ref="0x40c32b18" scoped=""/></to>
+        </wire>
+        <wire loc="59:/home/jumbo/jamal/project/CoAP/tinyos-release/tos/chips/cc2420/spi/CC2420SpiWireC.nc">
+          <from><interface-ref name="WorkingState" ref="0x40c26ae0" scoped=""/></from>
+          <to><interface-ref name="State" ref="0x40c707f8" scoped=""/></to>
+        </wire>
+        <wire loc="62:/home/jumbo/jamal/project/CoAP/tinyos-release/tos/chips/cc2420/spi/CC2420SpiWireC.nc">
+          <from><interface-ref name="SpiResource" ref="0x40c30010" scoped=""/></from>
+          <to><interface-ref name="Resource" ref="0x40e59db0" scoped=""/></to>
+        </wire>
+        <wire loc="63:/home/jumbo/jamal/project/CoAP/tinyos-release/tos/chips/cc2420/spi/CC2420SpiWireC.nc">
+          <from><interface-ref name="SpiByte" ref="0x40c2f010" scoped=""/></from>
+          <to><interface-ref name="SpiByte" ref="0x40c6c4f0" scoped=""/></to>
+        </wire>
+        <wire loc="64:/home/jumbo/jamal/project/CoAP/tinyos-release/tos/chips/cc2420/spi/CC2420SpiWireC.nc">
+          <from><interface-ref name="SpiPacket" ref="0x40c27368" scoped=""/></from>
+          <to><interface-ref name="SpiPacket" ref="0x40c6c828" scoped=""/></to>
+        </wire>
+        <wire loc="67:/home/jumbo/jamal/project/CoAP/tinyos-release/tos/chips/cc2420/spi/CC2420SpiWireC.nc">
+          <from><interface-ref name="Leds" ref="0x40c2e340" scoped=""/></from>
+          <to><interface-ref name="Leds" ref="0x4071e9e0" scoped=""/></to>
+        </wire>
+      </wiring>
+    <specification><interface loc="41:/home/jumbo/jamal/project/CoAP/tinyos-release/tos/chips/cc2420/spi/CC2420SpiWireC.nc" name="Fifo" provided="1" ref="0x40c108d0">
+      <component-ref nicename="tos.chips.cc2420.spi.CC2420SpiWireC" qname="CC2420SpiWireC"/>
+      <type-interface alignment="I:2" size="I:2"><interface-ref name="Fifo" ref="0x40c108d0" scoped=""/></type-interface>
+      <instance>
+        <interfacedef-ref nicename="tos.chips.cc2420.interfaces.CC2420Fifo" qname="CC2420Fifo"/>
+      </instance>
+      <interface-parameters>
+        <type-int alignment="I:1" cname="unsigned char" size="I:1" unsigned="">
+          <typename><typedef-ref name="uint8_t" ref="0x4003adc8"/></typename>
+        </type-int>
+      </interface-parameters>
+      <interface-functions>
+        <function-ref name="continueRead" ref="0x40c10aa8" scoped=""/>
+        <function-ref name="writeDone" ref="0x40c10b88" scoped=""/>
+        <function-ref name="write" ref="0x40c10c68" scoped=""/>
+        <function-ref name="beginRead" ref="0x40c10d48" scoped=""/>
+        <function-ref name="readDone" ref="0x40c10e28" scoped=""/>
+      </interface-functions>
+    </interface><interface loc="40:/home/jumbo/jamal/project/CoAP/tinyos-release/tos/chips/cc2420/spi/CC2420SpiWireC.nc" name="ChipSpiResource" provided="1" ref="0x40c10040">
+      <component-ref nicename="tos.chips.cc2420.spi.CC2420SpiWireC" qname="CC2420SpiWireC"/>
+      <type-interface alignment="I:2" size="I:2"><interface-ref name="ChipSpiResource" ref="0x40c10040" scoped=""/></type-interface>
+      <instance>
+        <interfacedef-ref nicename="tos.chips.cc2420.interfaces.ChipSpiResource" qname="ChipSpiResource"/>
+      </instance>
+      <interface-functions>
+        <function-ref name="releasing" ref="0x40c10218" scoped=""/>
+        <function-ref name="abortRelease" ref="0x40c102f8" scoped=""/>
+        <function-ref name="attemptRelease" ref="0x40c103d8" scoped=""/>
+      </interface-functions>
+    </interface><interface loc="42:/home/jumbo/jamal/project/CoAP/tinyos-release/tos/chips/cc2420/spi/CC2420SpiWireC.nc" name="Ram" provided="1" ref="0x40c38340">
+      <component-ref nicename="tos.chips.cc2420.spi.CC2420SpiWireC" qname="CC2420SpiWireC"/>
+      <type-interface alignment="I:2" size="I:2"><interface-ref name="Ram" ref="0x40c38340" scoped=""/></type-interface>
+      <instance>
+        <interfacedef-ref nicename="tos.chips.cc2420.interfaces.CC2420Ram" qname="CC2420Ram"/>
+      </instance>
+      <interface-parameters>
+        <type-int alignment="I:2" cname="unsigned int" size="I:2" unsigned="">
+          <typename><typedef-ref name="uint16_t" ref="0x4003c010"/></typename>
+        </type-int>
+      </interface-parameters>
+      <interface-functions>
+        <function-ref name="read" ref="0x40c38518" scoped=""/>
+        <function-ref name="write" ref="0x40c385f8" scoped=""/>
+      </interface-functions>
+    </interface><interface loc="43:/home/jumbo/jamal/project/CoAP/tinyos-release/tos/chips/cc2420/spi/CC2420SpiWireC.nc" name="Reg" provided="1" ref="0x40c38b08">
+      <component-ref nicename="tos.chips.cc2420.spi.CC2420SpiWireC" qname="CC2420SpiWireC"/>
+      <type-interface alignment="I:2" size="I:2"><interface-ref name="Reg" ref="0x40c38b08" scoped=""/></type-interface>
+      <instance>
+        <interfacedef-ref nicename="tos.chips.cc2420.interfaces.CC2420Register" qname="CC2420Register"/>
+      </instance>
+      <interface-parameters>
+        <type-int alignment="I:1" cname="unsigned char" size="I:1" unsigned="">
+          <typename><typedef-ref name="uint8_t" ref="0x4003adc8"/></typename>
+        </type-int>
+      </interface-parameters>
+      <interface-functions>
+        <function-ref name="read" ref="0x40c38ce0" scoped=""/>
+        <function-ref name="write" ref="0x40c38dc0" scoped=""/>
+      </interface-functions>
+    </interface><interface loc="39:/home/jumbo/jamal/project/CoAP/tinyos-release/tos/chips/cc2420/spi/CC2420SpiWireC.nc" name="Resource" provided="1" ref="0x40c188d8">
+      <component-ref nicename="tos.chips.cc2420.spi.CC2420SpiWireC" qname="CC2420SpiWireC"/>
+      <type-interface alignment="I:2" size="I:2"><interface-ref name="Resource" ref="0x40c188d8" scoped=""/></type-interface>
+      <instance>
+        <interfacedef-ref nicename="tos.interfaces.Resource" qname="Resource"/>
+      </instance>
+      <interface-parameters>
+        <type-int alignment="I:1" cname="unsigned char" size="I:1" unsigned="">
+          <typename><typedef-ref name="uint8_t" ref="0x4003adc8"/></typename>
+        </type-int>
+      </interface-parameters>
+      <interface-functions>
+        <function-ref name="release" ref="0x40c18ab0" scoped=""/>
+        <function-ref name="immediateRequest" ref="0x40c18b90" scoped=""/>
+        <function-ref name="request" ref="0x40c18c70" scoped=""/>
+        <function-ref name="granted" ref="0x40c18d50" scoped=""/>
+        <function-ref name="isOwner" ref="0x40c18e30" scoped=""/>
+      </interface-functions>
+    </interface><interface loc="44:/home/jumbo/jamal/project/CoAP/tinyos-release/tos/chips/cc2420/spi/CC2420SpiWireC.nc" name="Strobe" provided="1" ref="0x40c37310">
+      <component-ref nicename="tos.chips.cc2420.spi.CC2420SpiWireC" qname="CC2420SpiWireC"/>
+      <type-interface alignment="I:2" size="I:2"><interface-ref name="Strobe" ref="0x40c37310" scoped=""/></type-interface>
+      <instance>
+        <interfacedef-ref nicename="tos.chips.cc2420.interfaces.CC2420Strobe" qname="CC2420Strobe"/>
+      </instance>
+      <interface-parameters>
+        <type-int alignment="I:1" cname="unsigned char" size="I:1" unsigned="">
+          <typename><typedef-ref name="uint8_t" ref="0x4003adc8"/></typename>
+        </type-int>
+      </interface-parameters>
+      <interface-functions>
+        <function-ref name="strobe" ref="0x40c374e8" scoped=""/>
+      </interface-functions>
+    </interface></specification><referenced><interface loc="67:/home/jumbo/jamal/project/CoAP/tinyos-release/tos/system/StateC.nc" name="State" provided="1" ref="0x40c707f8">
+      <component-ref nicename="tos.system.StateC" qname="CC2420SpiWireC.WorkingStateC"/>
+      <type-interface alignment="I:2" size="I:2"><interface-ref name="State" ref="0x40c707f8" scoped=""/></type-interface>
+      <instance>
+        <interfacedef-ref nicename="tos.interfaces.State" qname="State"/>
+      </instance>
+      <interface-functions>
+        <function-ref name="getState" ref="0x40c709d0" scoped=""/>
+        <function-ref name="toIdle" ref="0x40c70ab0" scoped=""/>
+        <function-ref name="isState" ref="0x40c70b90" scoped=""/>
+        <function-ref name="isIdle" ref="0x40c70c70" scoped=""/>
+        <function-ref name="requestState" ref="0x40c70d50" scoped=""/>
+        <function-ref name="forceState" ref="0x40c70e30" scoped=""/>
+      </interface-functions>
+    </interface><interface loc="46:/home/jumbo/jamal/project/CoAP/tinyos-release/tos/chips/cc2420/spi/CC2420SpiP.nc" name="Fifo" provided="1" ref="0x40c33158">
+      <component-ref nicename="tos.chips.cc2420.spi.CC2420SpiP" qname="CC2420SpiP"/>
+      <type-interface alignment="I:2" size="I:2"><interface-ref name="Fifo" ref="0x40c33158" scoped=""/></type-interface>
+      <instance>
+        <interfacedef-ref nicename="tos.chips.cc2420.interfaces.CC2420Fifo" qname="CC2420Fifo"/>
+      </instance>
+      <interface-parameters>
+        <type-int alignment="I:1" cname="unsigned char" size="I:1" unsigned="">
+          <typename><typedef-ref name="uint8_t" ref="0x4003adc8"/></typename>
+        </type-int>
+      </interface-parameters>
+      <interface-functions>
+        <function-ref name="continueRead" ref="0x40c33330" scoped=""/>
+        <function-ref name="writeDone" ref="0x40c33410" scoped=""/>
+        <function-ref name="write" ref="0x40c334f0" scoped=""/>
+        <function-ref name="beginRead" ref="0x40c335d0" scoped=""/>
+        <function-ref name="readDone" ref="0x40c336b0" scoped=""/>
+      </interface-functions>
+    </interface><interface loc="56:/home/jumbo/jamal/project/CoAP/tinyos-release/tos/chips/cc2420/spi/CC2420SpiP.nc" name="WorkingState" provided="0" ref="0x40c26ae0">
+      <component-ref nicename="tos.chips.cc2420.spi.CC2420SpiP" qname="CC2420SpiP"/>
+      <type-interface alignment="I:2" size="I:2"><interface-ref name="WorkingState" ref="0x40c26ae0" scoped=""/></type-interface>
+      <instance>
+        <interfacedef-ref nicename="tos.interfaces.State" qname="State"/>
+      </instance>
+      <interface-functions>
+        <function-ref name="getState" ref="0x40c26cb8" scoped=""/>
+        <function-ref name="toIdle" ref="0x40c26d98" scoped=""/>
+        <function-ref name="isState" ref="0x40c26e78" scoped=""/>
+        <function-ref name="isIdle" ref="0x40c2e010" scoped=""/>
+        <function-ref name="requestState" ref="0x40c2e0f0" scoped=""/>
+        <function-ref name="forceState" ref="0x40c2e1d0" scoped=""/>
+      </interface-functions>
+    </interface><interface loc="44:/home/jumbo/jamal/project/CoAP/tinyos-release/tos/chips/cc2420/spi/CC2420SpiP.nc" name="ChipSpiResource" provided="1" ref="0x40c37ea0">
+      <component-ref nicename="tos.chips.cc2420.spi.CC2420SpiP" qname="CC2420SpiP"/>
+      <type-interface alignment="I:2" size="I:2"><interface-ref name="ChipSpiResource" ref="0x40c37ea0" scoped=""/></type-interface>
+      <instance>
+        <interfacedef-ref nicename="tos.chips.cc2420.interfaces.ChipSpiResource" qname="ChipSpiResource"/>
+      </instance>
+      <interface-functions>
+        <function-ref name="releasing" ref="0x40c340c0" scoped=""/>
+        <function-ref name="abortRelease" ref="0x40c341a0" scoped=""/>
+        <function-ref name="attemptRelease" ref="0x40c34280" scoped=""/>
+      </interface-functions>
+    </interface><interface loc="43:/home/jumbo/jamal/project/CoAP/tinyos-release/tos/platforms/telosa/chips/cc2420/HplCC2420SpiC.nc" name="SpiByte" provided="1" ref="0x40c6c4f0">
+      <component-ref nicename="tos.platforms.telosa.chips.cc2420.HplCC2420SpiC" qname="CC2420SpiWireC.HplCC2420SpiC"/>
+      <type-interface alignment="I:2" size="I:2"><interface-ref name="SpiByte" ref="0x40c6c4f0" scoped=""/></type-interface>
+      <instance>
+        <interfacedef-ref nicename="tos.interfaces.SpiByte" qname="SpiByte"/>
+      </instance>
+      <interface-functions>
+        <function-ref name="write" ref="0x40c6c6c8" scoped=""/>
+      </interface-functions>
+    </interface><interface loc="49:/home/jumbo/jamal/project/CoAP/tinyos-release/tos/chips/cc2420/spi/CC2420SpiP.nc" name="Strobe" provided="1" ref="0x40c32b18">
+      <component-ref nicename="tos.chips.cc2420.spi.CC2420SpiP" qname="CC2420SpiP"/>
+      <type-interface alignment="I:2" size="I:2"><interface-ref name="Strobe" ref="0x40c32b18" scoped=""/></type-interface>
+      <instance>
+        <interfacedef-ref nicename="tos.chips.cc2420.interfaces.CC2420Strobe" qname="CC2420Strobe"/>
+      </instance>
+      <interface-parameters>
+        <type-int alignment="I:1" cname="unsigned char" size="I:1" unsigned="">
+          <typename><typedef-ref name="uint8_t" ref="0x4003adc8"/></typename>
+        </type-int>
+      </interface-parameters>
+      <interface-functions>
+        <function-ref name="strobe" ref="0x40c32cf0" scoped=""/>
+      </interface-functions>
+    </interface><interface loc="48:/home/jumbo/jamal/project/CoAP/tinyos-release/tos/chips/cc2420/spi/CC2420SpiP.nc" name="Reg" provided="1" ref="0x40c32360">
+      <component-ref nicename="tos.chips.cc2420.spi.CC2420SpiP" qname="CC2420SpiP"/>
+      <type-interface alignment="I:2" size="I:2"><interface-ref name="Reg" ref="0x40c32360" scoped=""/></type-interface>
+      <instance>
+        <interfacedef-ref nicename="tos.chips.cc2420.interfaces.CC2420Register" qname="CC2420Register"/>
+      </instance>
+      <interface-parameters>
+        <type-int alignment="I:1" cname="unsigned char" size="I:1" unsigned="">
+          <typename><typedef-ref name="uint8_t" ref="0x4003adc8"/></typename>
+        </type-int>
+      </interface-parameters>
+      <interface-functions>
+        <function-ref name="read" ref="0x40c32538" scoped=""/>
+        <function-ref name="write" ref="0x40c32618" scoped=""/>
+      </interface-functions>
+    </interface><interface loc="55:/home/jumbo/jamal/project/CoAP/tinyos-release/tos/chips/cc2420/spi/CC2420SpiP.nc" name="SpiPacket" provided="0" ref="0x40c27368">
+      <component-ref nicename="tos.chips.cc2420.spi.CC2420SpiP" qname="CC2420SpiP"/>
+      <type-interface alignment="I:2" size="I:2"><interface-ref name="SpiPacket" ref="0x40c27368" scoped=""/></type-interface>
+      <instance>
+        <interfacedef-ref nicename="tos.interfaces.SpiPacket" qname="SpiPacket"/>
+      </instance>
+      <interface-functions>
+        <function-ref name="send" ref="0x40c27540" scoped=""/>
+        <function-ref name="sendDone" ref="0x40c27620" scoped=""/>
+      </interface-functions>
+    </interface><interface loc="47:/home/jumbo/jamal/project/CoAP/tinyos-release/tos/chips/cc2420/spi/CC2420SpiP.nc" name="Ram" provided="1" ref="0x40c33b80">
+      <component-ref nicename="tos.chips.cc2420.spi.CC2420SpiP" qname="CC2420SpiP"/>
+      <type-interface alignment="I:2" size="I:2"><interface-ref name="Ram" ref="0x40c33b80" scoped=""/></type-interface>
+      <instance>
+        <interfacedef-ref nicename="tos.chips.cc2420.interfaces.CC2420Ram" qname="CC2420Ram"/>
+      </instance>
+      <interface-parameters>
+        <type-int alignment="I:2" cname="unsigned int" size="I:2" unsigned="">
+          <typename><typedef-ref name="uint16_t" ref="0x4003c010"/></typename>
+        </type-int>
+      </interface-parameters>
+      <interface-functions>
+        <function-ref name="read" ref="0x40c33d58" scoped=""/>
+        <function-ref name="write" ref="0x40c33e38" scoped=""/>
+      </interface-functions>
+    </interface><interface loc="45:/home/jumbo/jamal/project/CoAP/tinyos-release/tos/chips/cc2420/spi/CC2420SpiP.nc" name="Resource" provided="1" ref="0x40c346f8">
+      <component-ref nicename="tos.chips.cc2420.spi.CC2420SpiP" qname="CC2420SpiP"/>
+      <type-interface alignment="I:2" size="I:2"><interface-ref name="Resource" ref="0x40c346f8" scoped=""/></type-interface>
+      <instance>
+        <interfacedef-ref nicename="tos.interfaces.Resource" qname="Resource"/>
+      </instance>
+      <interface-parameters>
+        <type-int alignment="I:1" cname="unsigned char" size="I:1" unsigned="">
+          <typename><typedef-ref name="uint8_t" ref="0x4003adc8"/></typename>
+        </type-int>
+      </interface-parameters>
+      <interface-functions>
+        <function-ref name="release" ref="0x40c348d0" scoped=""/>
+        <function-ref name="immediateRequest" ref="0x40c349b0" scoped=""/>
+        <function-ref name="request" ref="0x40c34a90" scoped=""/>
+        <function-ref name="granted" ref="0x40c34b70" scoped=""/>
+        <function-ref name="isOwner" ref="0x40c34c50" scoped=""/>
+      </interface-functions>
+    </interface><interface loc="42:/home/jumbo/jamal/project/CoAP/tinyos-release/tos/platforms/telosa/chips/cc2420/HplCC2420SpiC.nc" name="Resource" provided="1" ref="0x40e59db0">
+      <component-ref nicename="tos.platforms.telosa.chips.cc2420.HplCC2420SpiC" qname="CC2420SpiWireC.HplCC2420SpiC"/>
+      <type-interface alignment="I:2" size="I:2"><interface-ref name="Resource" ref="0x40e59db0" scoped=""/></type-interface>
+      <instance>
+        <interfacedef-ref nicename="tos.interfaces.Resource" qname="Resource"/>
+      </instance>
+      <interface-functions>
+        <function-ref name="release" ref="0x40c6c010" scoped=""/>
+        <function-ref name="immediateRequest" ref="0x40c6c0f0" scoped=""/>
+        <function-ref name="request" ref="0x40c6c1d0" scoped=""/>
+        <function-ref name="granted" ref="0x40c6c2b0" scoped=""/>
+        <function-ref name="isOwner" ref="0x40c6c390" scoped=""/>
+      </interface-functions>
+    </interface><interface loc="53:/home/jumbo/jamal/project/CoAP/tinyos-release/tos/chips/cc2420/spi/CC2420SpiP.nc" name="SpiResource" provided="0" ref="0x40c30010">
+      <component-ref nicename="tos.chips.cc2420.spi.CC2420SpiP" qname="CC2420SpiP"/>
+      <type-interface alignment="I:2" size="I:2"><interface-ref name="SpiResource" ref="0x40c30010" scoped=""/></type-interface>
+      <instance>
+        <interfacedef-ref nicename="tos.interfaces.Resource" qname="Resource"/>
+      </instance>
+      <interface-functions>
+        <function-ref name="release" ref="0x40c301e8" scoped=""/>
+        <function-ref name="immediateRequest" ref="0x40c302c8" scoped=""/>
+        <function-ref name="request" ref="0x40c303a8" scoped=""/>
+        <function-ref name="granted" ref="0x40c30488" scoped=""/>
+        <function-ref name="isOwner" ref="0x40c30568" scoped=""/>
+      </interface-functions>
+    </interface><interface loc="54:/home/jumbo/jamal/project/CoAP/tinyos-release/tos/chips/cc2420/spi/CC2420SpiP.nc" name="SpiByte" provided="0" ref="0x40c2f010">
+      <component-ref nicename="tos.chips.cc2420.spi.CC2420SpiP" qname="CC2420SpiP"/>
+      <type-interface alignment="I:2" size="I:2"><interface-ref name="SpiByte" ref="0x40c2f010" scoped=""/></type-interface>
+      <instance>
+        <interfacedef-ref nicename="tos.interfaces.SpiByte" qname="SpiByte"/>
+      </instance>
+      <interface-functions>
+        <function-ref name="write" ref="0x40c2f1e8" scoped=""/>
+      </interface-functions>
+    </interface><interface loc="44:/home/jumbo/jamal/project/CoAP/tinyos-release/tos/platforms/telosa/chips/cc2420/HplCC2420SpiC.nc" name="SpiPacket" provided="1" ref="0x40c6c828">
+      <component-ref nicename="tos.platforms.telosa.chips.cc2420.HplCC2420SpiC" qname="CC2420SpiWireC.HplCC2420SpiC"/>
+      <type-interface alignment="I:2" size="I:2"><interface-ref name="SpiPacket" ref="0x40c6c828" scoped=""/></type-interface>
+      <instance>
+        <interfacedef-ref nicename="tos.interfaces.SpiPacket" qname="SpiPacket"/>
+      </instance>
+      <interface-functions>
+        <function-ref name="send" ref="0x40c6ca00" scoped=""/>
+        <function-ref name="sendDone" ref="0x40c6cae0" scoped=""/>
+      </interface-functions>
+    </interface><interface loc="46:/home/jumbo/jamal/project/CoAP/tinyos-release/tos/system/LedsC.nc" name="Leds" provided="1" ref="0x4071e9e0">
+      <component-ref nicename="tos.system.LedsC" qname="LedsC"/>
+      <type-interface alignment="I:2" size="I:2"><interface-ref name="Leds" ref="0x4071e9e0" scoped=""/></type-interface>
+      <instance>
+        <interfacedef-ref nicename="tos.interfaces.Leds" qname="Leds"/>
+      </instance>
+      <interface-functions>
+        <function-ref name="led0Off" ref="0x4071ebb8" scoped=""/>
+        <function-ref name="led0Toggle" ref="0x4071ec98" scoped=""/>
+        <function-ref name="led1On" ref="0x4071ed78" scoped=""/>
+        <function-ref name="led1Toggle" ref="0x4071ee58" scoped=""/>
+        <function-ref name="led2Toggle" ref="0x4070f010" scoped=""/>
+        <function-ref name="get" ref="0x4070f0f0" scoped=""/>
+        <function-ref name="led1Off" ref="0x4070f1d0" scoped=""/>
+        <function-ref name="led2Off" ref="0x4070f550" scoped=""/>
+        <function-ref name="set" ref="0x4070f2b0" scoped=""/>
+        <function-ref name="led0On" ref="0x4070f390" scoped=""/>
+        <function-ref name="led2On" ref="0x4070f470" scoped=""/>
+      </interface-functions>
+    </interface><interface loc="57:/home/jumbo/jamal/project/CoAP/tinyos-release/tos/chips/cc2420/spi/CC2420SpiP.nc" name="Leds" provided="0" ref="0x40c2e340">
+      <component-ref nicename="tos.chips.cc2420.spi.CC2420SpiP" qname="CC2420SpiP"/>
+      <type-interface alignment="I:2" size="I:2"><interface-ref name="Leds" ref="0x40c2e340" scoped=""/></type-interface>
+      <instance>
+        <interfacedef-ref nicename="tos.interfaces.Leds" qname="Leds"/>
+      </instance>
+      <interface-functions>
+        <function-ref name="led0Off" ref="0x40c2e518" scoped=""/>
+        <function-ref name="led0Toggle" ref="0x40c2e5f8" scoped=""/>
+        <function-ref name="led1On" ref="0x40c2e6d8" scoped=""/>
+        <function-ref name="led1Toggle" ref="0x40c2e7b8" scoped=""/>
+        <function-ref name="led2Toggle" ref="0x40c2e898" scoped=""/>
+        <function-ref name="get" ref="0x40c2e978" scoped=""/>
+        <function-ref name="led1Off" ref="0x40c2ea58" scoped=""/>
+        <function-ref name="led2Off" ref="0x40c2edd8" scoped=""/>
+        <function-ref name="set" ref="0x40c2eb38" scoped=""/>
+        <function-ref name="led0On" ref="0x40c2ec18" scoped=""/>
+        <function-ref name="led2On" ref="0x40c2ecf8" scoped=""/>
+      </interface-functions>
+    </interface><component loc="41:/home/jumbo/jamal/project/CoAP/tinyos-release/tos/chips/cc2420/spi/CC2420SpiP.nc" nicename="tos.chips.cc2420.spi.CC2420SpiP" qname="CC2420SpiP" safe="">
+      <documentation loc="32:/home/jumbo/jamal/project/CoAP/tinyos-release/tos/chips/cc2420/spi/CC2420SpiP.nc">
+        <short>
+ </short>
+        <long>
+ @author Jonathan Hui &lt;jhui@archrock.com&gt;
+ @author David Moss
+ @author Roman Lim
+ @author Razvan Musaloie-E.
+ @author Jeonggil Ko
+ @version $Revision: 1.4 $ $Date: 2008-06-23 20:25:15 $
+</long>
+      </documentation>
+      <module/>
+    </component><component loc="40(CC2420SpiWireC.HplCC2420SpiC):/home/jumbo/jamal/project/CoAP/tinyos-release/tos/platforms/telosa/chips/cc2420/HplCC2420SpiC.nc" nicename="tos.platforms.telosa.chips.cc2420.HplCC2420SpiC" qname="CC2420SpiWireC.HplCC2420SpiC">
+      <documentation loc="32:/home/jumbo/jamal/project/CoAP/tinyos-release/tos/platforms/telosa/chips/cc2420/HplCC2420SpiC.nc">
+        <short>
+ HPL implementation of the SPI bus for the ChipCon CC2420 radio
+ connected to a TI MSP430 processor.</short>
+        <long>
+ HPL implementation of the SPI bus for the ChipCon CC2420 radio
+ connected to a TI MSP430 processor.
+
+ @author Jonathan Hui &lt;jhui@archrock.com&gt;
+ @version $Revision: 1.4 $ $Date: 2006-12-12 18:23:44 $
+</long>
+      </documentation>
+      <instance number="0">
+        <component-ref nicename="tos.platforms.telosa.chips.cc2420.HplCC2420SpiC" qname="HplCC2420SpiC"/>
+      </instance>
+      <configuration/>
+      <wiring>
+        <wire loc="54:/home/jumbo/jamal/project/CoAP/tinyos-release/tos/platforms/telosa/chips/cc2420/HplCC2420SpiC.nc">
+          <from><interface-ref name="SpiPacket" ref="0x40c6c828" scoped=""/></from>
+          <to><interface-ref name="SpiPacket" ref="0x41710828" scoped=""/></to>
+        </wire>
+        <wire loc="53:/home/jumbo/jamal/project/CoAP/tinyos-release/tos/platforms/telosa/chips/cc2420/HplCC2420SpiC.nc">
+          <from><interface-ref name="SpiByte" ref="0x40c6c4f0" scoped=""/></from>
+          <to><interface-ref name="SpiByte" ref="0x41711f08" scoped=""/></to>
+        </wire>
+        <wire loc="52:/home/jumbo/jamal/project/CoAP/tinyos-release/tos/platforms/telosa/chips/cc2420/HplCC2420SpiC.nc">
+          <from><interface-ref name="Resource" ref="0x40e59db0" scoped=""/></from>
+          <to><interface-ref name="Resource" ref="0x41711438" scoped=""/></to>
+        </wire>
+      </wiring>
+    </component><component loc="45:/home/jumbo/jamal/project/CoAP/tinyos-release/tos/system/LedsC.nc" nicename="tos.system.LedsC" qname="LedsC">
+      <documentation loc="34:/home/jumbo/jamal/project/CoAP/tinyos-release/tos/system/LedsC.nc">
+        <short>
+
+ The basic TinyOS LEDs abstraction.</short>
+        <long>
+
+ The basic TinyOS LEDs abstraction.
+
+ @author Phil Buonadonna
+ @author David Gay
+ @author Philip Levis
+ @author Joe Polastre
+</long>
+      </documentation>
+      <configuration/>
+      <wiring>
+        <wire loc="51:/home/jumbo/jamal/project/CoAP/tinyos-release/tos/system/LedsC.nc">
+          <from><interface-ref name="Leds" ref="0x4071e9e0" scoped=""/></from>
+          <to><interface-ref name="Leds" ref="0x4071c180" scoped=""/></to>
+        </wire>
+        <wire loc="53:/home/jumbo/jamal/project/CoAP/tinyos-release/tos/system/LedsC.nc">
+          <from><interface-ref name="Init" ref="0x40732c88" scoped=""/></from>
+          <to><interface-ref name="Init" ref="0x4070fdf0" scoped=""/></to>
+        </wire>
+        <wire loc="54:/home/jumbo/jamal/project/CoAP/tinyos-release/tos/system/LedsC.nc">
+          <from><interface-ref name="Led0" ref="0x4071b010" scoped=""/></from>
+          <to><interface-ref name="Led0" ref="0x40724e10" scoped=""/></to>
+        </wire>
+        <wire loc="55:/home/jumbo/jamal/project/CoAP/tinyos-release/tos/system/LedsC.nc">
+          <from><interface-ref name="Led1" ref="0x4071b9f8" scoped=""/></from>
+          <to><interface-ref name="Led1" ref="0x40733840" scoped=""/></to>
+        </wire>
+        <wire loc="56:/home/jumbo/jamal/project/CoAP/tinyos-release/tos/system/LedsC.nc">
+          <from><interface-ref name="Led2" ref="0x4071a4a0" scoped=""/></from>
+          <to><interface-ref name="Led2" ref="0x40732300" scoped=""/></to>
+        </wire>
+      </wiring>
+    </component><component loc="65(CC2420SpiWireC.WorkingStateC):/home/jumbo/jamal/project/CoAP/tinyos-release/tos/system/StateC.nc" nicename="tos.system.StateC" qname="CC2420SpiWireC.WorkingStateC">
+      <documentation loc="32:/home/jumbo/jamal/project/CoAP/tinyos-release/tos/types/State.h">
+        <short>
+ </short>
+        <long>
+ @author David Moss
+</long>
+      </documentation>
+      <instance number="0">
+        <component-ref nicename="tos.system.StateC" qname="StateC"/>
+      </instance>
+      <configuration/>
+      <wiring>
+        <wire loc="74:/home/jumbo/jamal/project/CoAP/tinyos-release/tos/system/StateC.nc">
+          <from><interface-ref name="State" ref="0x40c707f8" scoped=""/></from>
+          <to><interface-ref name="State" ref="0x40c6ebf8" scoped=""/>
+          <arguments>
+            <value cst="I:0">
+              <type-int alignment="I:2" cname="unsigned int" size="I:2" unsigned=""/>
+            </value>
+          </arguments>
+          </to>
+        </wire>
+      </wiring>
+    </component></referenced></component>

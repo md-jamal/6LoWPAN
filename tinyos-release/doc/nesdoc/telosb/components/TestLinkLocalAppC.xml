@@ -1,0 +1,399 @@
+<?xml version="1.0" ?><component loc="3:TestLinkLocalAppC.nc" nicename="TestLinkLocalAppC" qname="TestLinkLocalAppC">
+      <documentation loc="1:TestLinkLocalAppC.nc">
+        <short> Test the link-local communication in the blip stack
+</short>
+      </documentation>
+      <configuration/>
+      <wiring>
+        <wire loc="12:TestLinkLocalAppC.nc">
+          <from><interface-ref name="Boot" ref="0x40894a18" scoped=""/></from>
+          <to><interface-ref name="Boot" ref="0x4060c800" scoped=""/></to>
+        </wire>
+        <wire loc="13:TestLinkLocalAppC.nc">
+          <from><interface-ref name="SplitControl" ref="0x40890e68" scoped=""/></from>
+          <to><interface-ref name="SplitControl" ref="0x408ad7e8" scoped=""/></to>
+        </wire>
+        <wire loc="14:TestLinkLocalAppC.nc">
+          <from><interface-ref name="Sock" ref="0x408a8b98" scoped=""/></from>
+          <to><interface-ref name="UDP" ref="0x41397840" scoped=""/></to>
+        </wire>
+        <wire loc="15:TestLinkLocalAppC.nc">
+          <from><interface-ref name="Timer" ref="0x408a0e40" scoped=""/></from>
+          <to><interface-ref name="Timer" ref="0x4139b5a8" scoped=""/></to>
+        </wire>
+        <wire loc="16:TestLinkLocalAppC.nc">
+          <from><interface-ref name="Leds" ref="0x4089e090" scoped=""/></from>
+          <to><interface-ref name="Leds" ref="0x4071e9e0" scoped=""/></to>
+        </wire>
+      </wiring>
+    <specification/><referenced><interface loc="7:TestLinkLocalC.nc" name="Boot" provided="0" ref="0x40894a18">
+      <component-ref nicename="TestLinkLocalC" qname="TestLinkLocalC"/>
+      <type-interface alignment="I:2" size="I:2"><interface-ref name="Boot" ref="0x40894a18" scoped=""/></type-interface>
+      <instance>
+        <interfacedef-ref nicename="tos.interfaces.Boot" qname="Boot"/>
+      </instance>
+      <interface-functions>
+        <function-ref name="booted" ref="0x40894bf0" scoped=""/>
+      </interface-functions>
+    </interface><interface loc="10:TestLinkLocalC.nc" name="Timer" provided="0" ref="0x408a0e40">
+      <component-ref nicename="TestLinkLocalC" qname="TestLinkLocalC"/>
+      <type-interface alignment="I:2" size="I:2"><interface-ref name="Timer" ref="0x408a0e40" scoped=""/></type-interface>
+      <instance>
+        <interfacedef-ref nicename="tos.lib.timer.Timer" qname="Timer"/>
+        <arguments>
+          <type-tag alignment="I:2" size="I:2"><struct-ref ref="0x40892a08"/>
+            <typename><typedef-ref name="TMilli" ref="0x40892bd0"/></typename>
+          </type-tag>
+        </arguments>
+      </instance>
+      <interface-functions>
+        <function-ref name="getNow" ref="0x408a7988" scoped=""/>
+        <function-ref name="fired" ref="0x4088ec10" scoped=""/>
+        <function-ref name="startPeriodicAt" ref="0x408a7348" scoped=""/>
+        <function-ref name="isOneShot" ref="0x408a70f0" scoped=""/>
+        <function-ref name="getdt" ref="0x408a7e38" scoped=""/>
+        <function-ref name="gett0" ref="0x408a7be0" scoped=""/>
+        <function-ref name="isRunning" ref="0x4088ee68" scoped=""/>
+        <function-ref name="startPeriodic" ref="0x4088e4b8" scoped=""/>
+        <function-ref name="startOneShotAt" ref="0x408a7668" scoped=""/>
+        <function-ref name="startOneShot" ref="0x4088e738" scoped=""/>
+        <function-ref name="stop" ref="0x4088e9b8" scoped=""/>
+      </interface-functions>
+    </interface><interface loc="3:/home/jumbo/jamal/project/CoAP/tinyos-release/tos/lib/net/blip/UdpSocketC.nc" name="UDP" provided="1" ref="0x41397840">
+      <component-ref nicename="tos.lib.net.blip.UdpSocketC" qname="TestLinkLocalAppC.UdpSocketC"/>
+      <type-interface alignment="I:2" size="I:2"><interface-ref name="UDP" ref="0x41397840" scoped=""/></type-interface>
+      <instance>
+        <interfacedef-ref nicename="tos.lib.net.blip.interfaces.UDP" qname="UDP"/>
+      </instance>
+      <interface-functions>
+        <function-ref name="sendto" ref="0x41397a18" scoped=""/>
+        <function-ref name="bind" ref="0x41397af8" scoped=""/>
+        <function-ref name="sendtov" ref="0x41397bd8" scoped=""/>
+        <function-ref name="recvfrom" ref="0x41397cb8" scoped=""/>
+      </interface-functions>
+    </interface><interface loc="31:/home/jumbo/jamal/project/CoAP/tinyos-release/tos/lib/net/blip/IPStackC.nc" name="SplitControl" provided="1" ref="0x408ad7e8">
+      <component-ref nicename="tos.lib.net.blip.IPStackC" qname="IPStackC"/>
+      <type-interface alignment="I:2" size="I:2"><interface-ref name="SplitControl" ref="0x408ad7e8" scoped=""/></type-interface>
+      <instance>
+        <interfacedef-ref nicename="tos.interfaces.SplitControl" qname="SplitControl"/>
+      </instance>
+      <interface-functions>
+        <function-ref name="startDone" ref="0x408ad9c0" scoped=""/>
+        <function-ref name="stopDone" ref="0x408adaa0" scoped=""/>
+        <function-ref name="start" ref="0x408adb80" scoped=""/>
+        <function-ref name="stop" ref="0x408adc60" scoped=""/>
+      </interface-functions>
+    </interface><interface loc="57:/home/jumbo/jamal/project/CoAP/tinyos-release/tos/system/MainC.nc" name="Boot" provided="1" ref="0x4060c800">
+      <component-ref nicename="tos.system.MainC" qname="MainC"/>
+      <type-interface alignment="I:2" size="I:2"><interface-ref name="Boot" ref="0x4060c800" scoped=""/></type-interface>
+      <instance>
+        <interfacedef-ref nicename="tos.interfaces.Boot" qname="Boot"/>
+      </instance>
+      <interface-functions>
+        <function-ref name="booted" ref="0x4060c9d8" scoped=""/>
+      </interface-functions>
+    </interface><interface loc="11:TestLinkLocalC.nc" name="Leds" provided="0" ref="0x4089e090">
+      <component-ref nicename="TestLinkLocalC" qname="TestLinkLocalC"/>
+      <type-interface alignment="I:2" size="I:2"><interface-ref name="Leds" ref="0x4089e090" scoped=""/></type-interface>
+      <instance>
+        <interfacedef-ref nicename="tos.interfaces.Leds" qname="Leds"/>
+      </instance>
+      <interface-functions>
+        <function-ref name="led0Off" ref="0x4089e268" scoped=""/>
+        <function-ref name="led0Toggle" ref="0x4089e348" scoped=""/>
+        <function-ref name="led1On" ref="0x4089e428" scoped=""/>
+        <function-ref name="led1Toggle" ref="0x4089e508" scoped=""/>
+        <function-ref name="led2Toggle" ref="0x4089e5e8" scoped=""/>
+        <function-ref name="get" ref="0x4089e6c8" scoped=""/>
+        <function-ref name="led1Off" ref="0x4089e7a8" scoped=""/>
+        <function-ref name="led2Off" ref="0x4089eb28" scoped=""/>
+        <function-ref name="set" ref="0x4089e888" scoped=""/>
+        <function-ref name="led0On" ref="0x4089e968" scoped=""/>
+        <function-ref name="led2On" ref="0x4089ea48" scoped=""/>
+      </interface-functions>
+    </interface><interface loc="8:TestLinkLocalC.nc" name="SplitControl" provided="0" ref="0x40890e68">
+      <component-ref nicename="TestLinkLocalC" qname="TestLinkLocalC"/>
+      <type-interface alignment="I:2" size="I:2"><interface-ref name="SplitControl" ref="0x40890e68" scoped=""/></type-interface>
+      <instance>
+        <interfacedef-ref nicename="tos.interfaces.SplitControl" qname="SplitControl"/>
+      </instance>
+      <interface-functions>
+        <function-ref name="startDone" ref="0x40893050" scoped=""/>
+        <function-ref name="stopDone" ref="0x40893130" scoped=""/>
+        <function-ref name="start" ref="0x40893210" scoped=""/>
+        <function-ref name="stop" ref="0x408932f0" scoped=""/>
+      </interface-functions>
+    </interface><interface loc="45:/home/jumbo/jamal/project/CoAP/tinyos-release/tos/system/TimerMilliC.nc" name="Timer" provided="1" ref="0x4139b5a8">
+      <component-ref nicename="tos.system.TimerMilliC" qname="TestLinkLocalAppC.TimerMilliC"/>
+      <type-interface alignment="I:2" size="I:2"><interface-ref name="Timer" ref="0x4139b5a8" scoped=""/></type-interface>
+      <instance>
+        <interfacedef-ref nicename="tos.lib.timer.Timer" qname="Timer"/>
+        <arguments>
+          <type-tag alignment="I:2" size="I:2"><struct-ref ref="0x40892a08"/>
+            <typename><typedef-ref name="TMilli" ref="0x40892bd0"/></typename>
+          </type-tag>
+        </arguments>
+      </instance>
+      <interface-functions>
+        <function-ref name="getNow" ref="0x413980d8" scoped=""/>
+        <function-ref name="fired" ref="0x41399368" scoped=""/>
+        <function-ref name="startPeriodicAt" ref="0x41399a70" scoped=""/>
+        <function-ref name="isOneShot" ref="0x41399818" scoped=""/>
+        <function-ref name="getdt" ref="0x41398588" scoped=""/>
+        <function-ref name="gett0" ref="0x41398330" scoped=""/>
+        <function-ref name="isRunning" ref="0x413995c0" scoped=""/>
+        <function-ref name="startPeriodic" ref="0x4139bbd0" scoped=""/>
+        <function-ref name="startOneShotAt" ref="0x41399d90" scoped=""/>
+        <function-ref name="startOneShot" ref="0x4139be50" scoped=""/>
+        <function-ref name="stop" ref="0x41399110" scoped=""/>
+      </interface-functions>
+    </interface><interface loc="9:TestLinkLocalC.nc" name="Sock" provided="0" ref="0x408a8b98">
+      <component-ref nicename="TestLinkLocalC" qname="TestLinkLocalC"/>
+      <type-interface alignment="I:2" size="I:2"><interface-ref name="Sock" ref="0x408a8b98" scoped=""/></type-interface>
+      <instance>
+        <interfacedef-ref nicename="tos.lib.net.blip.interfaces.UDP" qname="UDP"/>
+      </instance>
+      <interface-functions>
+        <function-ref name="sendto" ref="0x408a8d70" scoped=""/>
+        <function-ref name="bind" ref="0x408a8e50" scoped=""/>
+        <function-ref name="sendtov" ref="0x40892010" scoped=""/>
+        <function-ref name="recvfrom" ref="0x408920f0" scoped=""/>
+      </interface-functions>
+    </interface><interface loc="46:/home/jumbo/jamal/project/CoAP/tinyos-release/tos/system/LedsC.nc" name="Leds" provided="1" ref="0x4071e9e0">
+      <component-ref nicename="tos.system.LedsC" qname="LedsC"/>
+      <type-interface alignment="I:2" size="I:2"><interface-ref name="Leds" ref="0x4071e9e0" scoped=""/></type-interface>
+      <instance>
+        <interfacedef-ref nicename="tos.interfaces.Leds" qname="Leds"/>
+      </instance>
+      <interface-functions>
+        <function-ref name="led0Off" ref="0x4071ebb8" scoped=""/>
+        <function-ref name="led0Toggle" ref="0x4071ec98" scoped=""/>
+        <function-ref name="led1On" ref="0x4071ed78" scoped=""/>
+        <function-ref name="led1Toggle" ref="0x4071ee58" scoped=""/>
+        <function-ref name="led2Toggle" ref="0x4070f010" scoped=""/>
+        <function-ref name="get" ref="0x4070f0f0" scoped=""/>
+        <function-ref name="led1Off" ref="0x4070f1d0" scoped=""/>
+        <function-ref name="led2Off" ref="0x4070f550" scoped=""/>
+        <function-ref name="set" ref="0x4070f2b0" scoped=""/>
+        <function-ref name="led0On" ref="0x4070f390" scoped=""/>
+        <function-ref name="led2On" ref="0x4070f470" scoped=""/>
+      </interface-functions>
+    </interface><component loc="44(TestLinkLocalAppC.TimerMilliC):/home/jumbo/jamal/project/CoAP/tinyos-release/tos/system/TimerMilliC.nc" nicename="tos.system.TimerMilliC" qname="TestLinkLocalAppC.TimerMilliC">
+      <documentation loc="33:/home/jumbo/jamal/project/CoAP/tinyos-release/tos/system/TimerMilliC.nc">
+        <short>
+ The virtualized millisecond timer abstraction.</short>
+        <long>
+ The virtualized millisecond timer abstraction. Instantiating this 
+ component gives an independent millisecond granularity timer.
+
+ @author Philip Levis
+ @date   January 16 2006
+ @see    TEP 102: Timers
+</long>
+      </documentation>
+      <instance number="3">
+        <component-ref nicename="tos.system.TimerMilliC" qname="TimerMilliC"/>
+      </instance>
+      <configuration/>
+      <wiring>
+        <wire loc="52:/home/jumbo/jamal/project/CoAP/tinyos-release/tos/system/TimerMilliC.nc">
+          <from><interface-ref name="Timer" ref="0x4139b5a8" scoped=""/></from>
+          <to><interface-ref name="TimerMilli" ref="0x412483f0" scoped=""/>
+          <arguments>
+            <value cst="I:3">
+              <type-int alignment="I:2" cname="unsigned int" size="I:2" unsigned=""/>
+            </value>
+          </arguments>
+          </to>
+        </wire>
+      </wiring>
+    </component><component loc="29:/home/jumbo/jamal/project/CoAP/tinyos-release/tos/lib/net/blip/IPStackC.nc" nicename="tos.lib.net.blip.IPStackC" qname="IPStackC">
+      <configuration/>
+      <wiring>
+        <wire loc="50:/home/jumbo/jamal/project/CoAP/tinyos-release/tos/lib/net/blip/IPStackC.nc">
+          <from><interface-ref name="SplitControl" ref="0x408ad7e8" scoped=""/></from>
+          <to><interface-ref name="SplitControl" ref="0x4134a010" scoped=""/></to>
+        </wire>
+        <wire loc="57:/home/jumbo/jamal/project/CoAP/tinyos-release/tos/lib/net/blip/IPStackC.nc">
+          <from><interface-ref name="ForwardingEvents" ref="0x408f8970" scoped=""/></from>
+          <to><interface-ref name="ForwardingEvents" ref="0x40916010" scoped=""/></to>
+        </wire>
+        <wire loc="56:/home/jumbo/jamal/project/CoAP/tinyos-release/tos/lib/net/blip/IPStackC.nc">
+          <from><interface-ref name="ForwardingTableEvents" ref="0x408abdc8" scoped=""/></from>
+          <to><interface-ref name="ForwardingTableEvents" ref="0x40917780" scoped=""/></to>
+        </wire>
+        <wire loc="66:/home/jumbo/jamal/project/CoAP/tinyos-release/tos/lib/net/blip/IPStackC.nc">
+          <from><interface-ref name="IPRaw" ref="0x408c4928" scoped=""/></from>
+          <to><interface-ref name="IPRaw" ref="0x40916968" scoped=""/></to>
+        </wire>
+        <wire loc="55:/home/jumbo/jamal/project/CoAP/tinyos-release/tos/lib/net/blip/IPStackC.nc">
+          <from><interface-ref name="ForwardingTable" ref="0x408c08b0" scoped=""/></from>
+          <to><interface-ref name="ForwardingTable" ref="0x40917010" scoped=""/></to>
+        </wire>
+        <wire loc="60:/home/jumbo/jamal/project/CoAP/tinyos-release/tos/lib/net/blip/IPStackC.nc">
+          <from><interface-ref name="IP" ref="0x408c44c0" scoped=""/></from>
+          <to><interface-ref name="IP" ref="0x40908028" scoped=""/></to>
+        </wire>
+        <wire loc="51:/home/jumbo/jamal/project/CoAP/tinyos-release/tos/lib/net/blip/IPStackC.nc">
+          <from><interface-ref name="StdControl" ref="0x4134a660" scoped=""/></from>
+          <to><interface-ref name="StdControl" ref="0x408f5198" scoped=""/></to>
+        </wire>
+        <wire loc="52:/home/jumbo/jamal/project/CoAP/tinyos-release/tos/lib/net/blip/IPStackC.nc">
+          <from><interface-ref name="RoutingControl" ref="0x4134ab70" scoped=""/></from>
+          <to><interface-ref name="RoutingControl" ref="0x408f56a8" scoped=""/></to>
+        </wire>
+        <wire loc="53:/home/jumbo/jamal/project/CoAP/tinyos-release/tos/lib/net/blip/IPStackC.nc">
+          <from><interface-ref name="SubSplitControl" ref="0x413490c8" scoped=""/></from>
+          <to><interface-ref name="SplitControl" ref="0x40ec50e0" scoped=""/></to>
+        </wire>
+        <wire loc="61:/home/jumbo/jamal/project/CoAP/tinyos-release/tos/lib/net/blip/IPStackC.nc">
+          <from><interface-ref name="SubIP" ref="0x40907068" scoped=""/></from>
+          <to><interface-ref name="IP" ref="0x40916500" scoped=""/></to>
+        </wire>
+        <wire loc="63:/home/jumbo/jamal/project/CoAP/tinyos-release/tos/lib/net/blip/IPStackC.nc">
+          <from><interface-ref name="IPForward" ref="0x409141c0" scoped=""/>
+          <arguments>
+            <value cst="I:1">
+              <type-int alignment="I:2" cname="int" size="I:2"/>
+            </value>
+          </arguments>
+          </from>
+          <to><interface-ref name="IPForward" ref="0x4097a3b0" scoped=""/></to>
+        </wire>
+        <wire loc="64:/home/jumbo/jamal/project/CoAP/tinyos-release/tos/lib/net/blip/IPStackC.nc">
+          <from><interface-ref name="IPLower" ref="0x409745b0" scoped=""/></from>
+          <to><interface-ref name="IPLower" ref="0x40ec56e0" scoped=""/></to>
+        </wire>
+        <wire loc="72:/home/jumbo/jamal/project/CoAP/tinyos-release/tos/lib/net/blip/IPStackC.nc">
+          <from><interface-ref name="IP" ref="0x4137b460" scoped=""/></from>
+          <to><interface-ref name="IP" ref="0x40908028" scoped=""/>
+          <arguments>
+            <value cst="I:58">
+              <type-int alignment="I:2" cname="int" size="I:2"/>
+            </value>
+          </arguments>
+          </to>
+        </wire>
+        <wire loc="73:/home/jumbo/jamal/project/CoAP/tinyos-release/tos/lib/net/blip/IPStackC.nc">
+          <from><interface-ref name="Leds" ref="0x4137a260" scoped=""/></from>
+          <to><interface-ref name="Leds" ref="0x4071e9e0" scoped=""/></to>
+        </wire>
+        <wire loc="74:/home/jumbo/jamal/project/CoAP/tinyos-release/tos/lib/net/blip/IPStackC.nc">
+          <from><interface-ref name="IPAddress" ref="0x4137b8b8" scoped=""/></from>
+          <to><interface-ref name="IPAddress" ref="0x409795c8" scoped=""/></to>
+        </wire>
+        <wire loc="76:/home/jumbo/jamal/project/CoAP/tinyos-release/tos/lib/net/blip/IPStackC.nc">
+          <from><interface-ref name="IPAddress" ref="0x409146f8" scoped=""/></from>
+          <to><interface-ref name="IPAddress" ref="0x409795c8" scoped=""/></to>
+        </wire>
+        <wire loc="77:/home/jumbo/jamal/project/CoAP/tinyos-release/tos/lib/net/blip/IPStackC.nc">
+          <from><interface-ref name="IPPacket" ref="0x409130b8" scoped=""/></from>
+          <to><interface-ref name="IPPacket" ref="0x41384a20" scoped=""/></to>
+        </wire>
+        <wire loc="78:/home/jumbo/jamal/project/CoAP/tinyos-release/tos/lib/net/blip/IPStackC.nc">
+          <from><interface-ref name="IPPacket" ref="0x408fe4e0" scoped=""/></from>
+          <to><interface-ref name="IPPacket" ref="0x41384a20" scoped=""/></to>
+        </wire>
+        <wire loc="79:/home/jumbo/jamal/project/CoAP/tinyos-release/tos/lib/net/blip/IPStackC.nc">
+          <from><interface-ref name="IPAddress" ref="0x413496e0" scoped=""/></from>
+          <to><interface-ref name="IPAddress" ref="0x409795c8" scoped=""/></to>
+        </wire>
+        <wire loc="81:/home/jumbo/jamal/project/CoAP/tinyos-release/tos/lib/net/blip/IPStackC.nc">
+          <from><interface-ref name="Leds" ref="0x4092d1c0" scoped=""/></from>
+          <to><interface-ref name="Leds" ref="0x4071e9e0" scoped=""/></to>
+        </wire>
+        <wire loc="84:/home/jumbo/jamal/project/CoAP/tinyos-release/tos/lib/net/blip/IPStackC.nc">
+          <from><interface-ref name="Pool" ref="0x4092ad00" scoped=""/></from>
+          <to><interface-ref name="Pool" ref="0x413673d0" scoped=""/></to>
+        </wire>
+      </wiring>
+    </component><component loc="5:TestLinkLocalC.nc" nicename="TestLinkLocalC" qname="TestLinkLocalC">
+      <module/>
+    </component><component loc="45:/home/jumbo/jamal/project/CoAP/tinyos-release/tos/system/LedsC.nc" nicename="tos.system.LedsC" qname="LedsC">
+      <documentation loc="34:/home/jumbo/jamal/project/CoAP/tinyos-release/tos/system/LedsC.nc">
+        <short>
+
+ The basic TinyOS LEDs abstraction.</short>
+        <long>
+
+ The basic TinyOS LEDs abstraction.
+
+ @author Phil Buonadonna
+ @author David Gay
+ @author Philip Levis
+ @author Joe Polastre
+</long>
+      </documentation>
+      <configuration/>
+      <wiring>
+        <wire loc="51:/home/jumbo/jamal/project/CoAP/tinyos-release/tos/system/LedsC.nc">
+          <from><interface-ref name="Leds" ref="0x4071e9e0" scoped=""/></from>
+          <to><interface-ref name="Leds" ref="0x4071c180" scoped=""/></to>
+        </wire>
+        <wire loc="53:/home/jumbo/jamal/project/CoAP/tinyos-release/tos/system/LedsC.nc">
+          <from><interface-ref name="Init" ref="0x40732c88" scoped=""/></from>
+          <to><interface-ref name="Init" ref="0x4070fdf0" scoped=""/></to>
+        </wire>
+        <wire loc="54:/home/jumbo/jamal/project/CoAP/tinyos-release/tos/system/LedsC.nc">
+          <from><interface-ref name="Led0" ref="0x4071b010" scoped=""/></from>
+          <to><interface-ref name="Led0" ref="0x40724e10" scoped=""/></to>
+        </wire>
+        <wire loc="55:/home/jumbo/jamal/project/CoAP/tinyos-release/tos/system/LedsC.nc">
+          <from><interface-ref name="Led1" ref="0x4071b9f8" scoped=""/></from>
+          <to><interface-ref name="Led1" ref="0x40733840" scoped=""/></to>
+        </wire>
+        <wire loc="56:/home/jumbo/jamal/project/CoAP/tinyos-release/tos/system/LedsC.nc">
+          <from><interface-ref name="Led2" ref="0x4071a4a0" scoped=""/></from>
+          <to><interface-ref name="Led2" ref="0x40732300" scoped=""/></to>
+        </wire>
+      </wiring>
+    </component><component loc="56:/home/jumbo/jamal/project/CoAP/tinyos-release/tos/system/MainC.nc" nicename="tos.system.MainC" qname="MainC">
+      <documentation loc="45:/home/jumbo/jamal/project/CoAP/tinyos-release/tos/system/MainC.nc">
+        <short>
+ MainC is the system interface the TinyOS boot sequence.</short>
+        <long>
+ MainC is the system interface the TinyOS boot sequence. It wires the
+ boot sequence implementation to the scheduler and hardware resources.
+
+ @author Philip Levis
+ @date   August 6 2005
+ @see    TEP 107: Boot Sequence
+</long>
+      </documentation>
+      <configuration/>
+      <wiring>
+        <wire loc="72:/home/jumbo/jamal/project/CoAP/tinyos-release/tos/system/MainC.nc">
+          <from><interface-ref name="Boot" ref="0x4060c800" scoped=""/></from>
+          <to><interface-ref name="Boot" ref="0x40619e10" scoped=""/></to>
+        </wire>
+        <wire loc="67:/home/jumbo/jamal/project/CoAP/tinyos-release/tos/system/MainC.nc">
+          <from><interface-ref name="Scheduler" ref="0x406181d0" scoped=""/></from>
+          <to><interface-ref name="Scheduler" ref="0x40384068" scoped=""/></to>
+        </wire>
+        <wire loc="68:/home/jumbo/jamal/project/CoAP/tinyos-release/tos/system/MainC.nc">
+          <from><interface-ref name="PlatformInit" ref="0x40618798" scoped=""/></from>
+          <to><interface-ref name="Init" ref="0x4061bd58" scoped=""/></to>
+        </wire>
+        <wire loc="71:/home/jumbo/jamal/project/CoAP/tinyos-release/tos/system/MainC.nc">
+          <from><interface-ref name="SoftwareInit" ref="0x40618ba0" scoped=""/></from>
+          <to><interface-ref name="SoftwareInit" ref="0x4061b480" scoped=""/></to>
+        </wire>
+      </wiring>
+    </component><component loc="2(TestLinkLocalAppC.UdpSocketC):/home/jumbo/jamal/project/CoAP/tinyos-release/tos/lib/net/blip/UdpSocketC.nc" nicename="tos.lib.net.blip.UdpSocketC" qname="TestLinkLocalAppC.UdpSocketC">
+      <instance number="0">
+        <component-ref nicename="tos.lib.net.blip.UdpSocketC" qname="UdpSocketC"/>
+      </instance>
+      <configuration/>
+      <wiring>
+        <wire loc="8:/home/jumbo/jamal/project/CoAP/tinyos-release/tos/lib/net/blip/UdpSocketC.nc">
+          <from><interface-ref name="UDP" ref="0x41397840" scoped=""/></from>
+          <to><interface-ref name="UDP" ref="0x41395dd0" scoped=""/>
+          <arguments>
+            <value cst="I:0">
+              <type-int alignment="I:2" cname="unsigned int" size="I:2" unsigned=""/>
+            </value>
+          </arguments>
+          </to>
+        </wire>
+      </wiring>
+    </component></referenced></component>

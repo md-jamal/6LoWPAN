@@ -1,0 +1,104 @@
+<?xml version="1.0" ?><interfacedef loc="4:/home/jumbo/tinyos-main/tos/lib/net/blip/interfaces/NeighborDiscovery.nc" nicename="tos.lib.net.blip.interfaces.NeighborDiscovery" qname="NeighborDiscovery">
+      <function command="" loc="11:/home/jumbo/tinyos-main/tos/lib/net/blip/interfaces/NeighborDiscovery.nc" name="resolveAddress" provided="0" ref="0x40a543f8">
+        <documentation loc="6:/home/jumbo/tinyos-main/tos/lib/net/blip/interfaces/NeighborDiscovery.nc">
+          <short>
+ Map the IPv6 address to a link-layer address.</short>
+          <long>
+ Map the IPv6 address to a link-layer address.
+ @return FAIL if the address cannot be resolved, either becasue 
+ it is not known or because the given IPv6 address is not on the link.
+</long>
+        </documentation>
+        <interfacedef-ref nicename="tos.lib.net.blip.interfaces.NeighborDiscovery" qname="NeighborDiscovery"/>
+        <type-function alignment="I:1" size="I:1">
+          <type-int alignment="I:1" cname="unsigned char" size="I:1" unsigned="">
+            <typename><typedef-ref name="error_t" ref="0x4038a718"/></typename>
+          </type-int>
+          <function-parameters>
+            <type-pointer alignment="I:2" size="I:2">
+              <type-tag alignment="I:2" size="I:16"><struct-ref name="in6_addr" ref="0x40635908"/></type-tag>
+            </type-pointer>
+            <type-pointer alignment="I:2" size="I:2">
+              <type-tag alignment="I:2" size="I:10"><struct-ref ref="0x40615a90"/>
+                <typename><typedef-ref name="ieee154_addr_t" ref="0x40615cb8"/></typename>
+              </type-tag>
+            </type-pointer>
+          </function-parameters>
+        </type-function>
+        <parameters>
+          <variable loc="11:/home/jumbo/tinyos-main/tos/lib/net/blip/interfaces/NeighborDiscovery.nc" name="addr" ref="0x40a54010">
+            <type-pointer alignment="I:2" size="I:2">
+              <type-tag alignment="I:2" size="I:16"><struct-ref name="in6_addr" ref="0x40635908"/></type-tag>
+            </type-pointer>
+          </variable>
+          <variable loc="11:/home/jumbo/tinyos-main/tos/lib/net/blip/interfaces/NeighborDiscovery.nc" name="link_addr" ref="0x40a54298">
+            <type-pointer alignment="I:2" size="I:2">
+              <type-tag alignment="I:2" size="I:10"><struct-ref ref="0x40615a90"/>
+                <typename><typedef-ref name="ieee154_addr_t" ref="0x40615cb8"/></typename>
+              </type-tag>
+            </type-pointer>
+          </variable>
+        </parameters>
+      </function>
+      <function command="" loc="16:/home/jumbo/tinyos-main/tos/lib/net/blip/interfaces/NeighborDiscovery.nc" name="matchContext" provided="0" ref="0x40a54cb0">
+        <documentation loc="13:/home/jumbo/tinyos-main/tos/lib/net/blip/interfaces/NeighborDiscovery.nc">
+          <short>
+ Match 
+</short>
+        </documentation>
+        <interfacedef-ref nicename="tos.lib.net.blip.interfaces.NeighborDiscovery" qname="NeighborDiscovery"/>
+        <type-function alignment="I:1" size="I:1">
+          <type-int alignment="I:2" cname="int" size="I:2"/>
+          <function-parameters>
+            <type-pointer alignment="I:2" size="I:2">
+              <type-tag alignment="I:2" size="I:16"><struct-ref name="in6_addr" ref="0x40635908"/></type-tag>
+            </type-pointer>
+            <type-pointer alignment="I:2" size="I:2">
+              <type-int alignment="I:1" cname="unsigned char" size="I:1" unsigned="">
+                <typename><typedef-ref name="uint8_t" ref="0x4003bdc8"/></typename>
+              </type-int>
+            </type-pointer>
+          </function-parameters>
+        </type-function>
+        <parameters>
+          <variable loc="16:/home/jumbo/tinyos-main/tos/lib/net/blip/interfaces/NeighborDiscovery.nc" name="addr" ref="0x40a54950">
+            <type-pointer alignment="I:2" size="I:2">
+              <type-tag alignment="I:2" size="I:16"><struct-ref name="in6_addr" ref="0x40635908"/></type-tag>
+            </type-pointer>
+          </variable>
+          <variable loc="16:/home/jumbo/tinyos-main/tos/lib/net/blip/interfaces/NeighborDiscovery.nc" name="ctx" ref="0x40a54b50">
+            <type-pointer alignment="I:2" size="I:2">
+              <type-int alignment="I:1" cname="unsigned char" size="I:1" unsigned="">
+                <typename><typedef-ref name="uint8_t" ref="0x4003bdc8"/></typename>
+              </type-int>
+            </type-pointer>
+          </variable>
+        </parameters>
+      </function>
+      <function command="" loc="17:/home/jumbo/tinyos-main/tos/lib/net/blip/interfaces/NeighborDiscovery.nc" name="getContext" provided="0" ref="0x40a53470">
+        <interfacedef-ref nicename="tos.lib.net.blip.interfaces.NeighborDiscovery" qname="NeighborDiscovery"/>
+        <type-function alignment="I:1" size="I:1">
+          <type-int alignment="I:2" cname="int" size="I:2"/>
+          <function-parameters>
+            <type-int alignment="I:1" cname="unsigned char" size="I:1" unsigned="">
+              <typename><typedef-ref name="uint8_t" ref="0x4003bdc8"/></typename>
+            </type-int>
+            <type-pointer alignment="I:2" size="I:2">
+              <type-tag alignment="I:2" size="I:16"><struct-ref name="in6_addr" ref="0x40635908"/></type-tag>
+            </type-pointer>
+          </function-parameters>
+        </type-function>
+        <parameters>
+          <variable loc="17:/home/jumbo/tinyos-main/tos/lib/net/blip/interfaces/NeighborDiscovery.nc" name="context" ref="0x40a530d0">
+            <type-int alignment="I:1" cname="unsigned char" size="I:1" unsigned="">
+              <typename><typedef-ref name="uint8_t" ref="0x4003bdc8"/></typename>
+            </type-int>
+          </variable>
+          <variable loc="17:/home/jumbo/tinyos-main/tos/lib/net/blip/interfaces/NeighborDiscovery.nc" name="ctx" ref="0x40a53310">
+            <type-pointer alignment="I:2" size="I:2">
+              <type-tag alignment="I:2" size="I:16"><struct-ref name="in6_addr" ref="0x40635908"/></type-tag>
+            </type-pointer>
+          </variable>
+        </parameters>
+      </function>
+    </interfacedef>

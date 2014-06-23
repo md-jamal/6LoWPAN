@@ -1,0 +1,27 @@
+<?xml version="1.0" ?><component loc="8:/home/jumbo/tinyos-main/tos/lib/net/blip/platform/CC2420ReadLqiC.nc" nicename="tos.lib.net.blip.platform.CC2420ReadLqiC" qname="CC2420ReadLqiC">
+      <module/>
+    <specification><interface loc="10:/home/jumbo/tinyos-main/tos/lib/net/blip/platform/CC2420ReadLqiC.nc" name="CC2420Packet" provided="0" ref="0x41408380">
+      <component-ref nicename="tos.lib.net.blip.platform.CC2420ReadLqiC" qname="CC2420ReadLqiC"/>
+      <type-interface alignment="I:2" size="I:2"><interface-ref name="CC2420Packet" ref="0x41408380" scoped=""/></type-interface>
+      <instance>
+        <interfacedef-ref nicename="tos.chips.cc2420.interfaces.CC2420Packet" qname="CC2420Packet"/>
+      </instance>
+      <interface-functions>
+        <function-ref name="setPower" ref="0x41408558" scoped=""/>
+        <function-ref name="setNetwork" ref="0x41408638" scoped=""/>
+        <function-ref name="getRssi" ref="0x41408718" scoped=""/>
+        <function-ref name="getNetwork" ref="0x414087f8" scoped=""/>
+        <function-ref name="getPower" ref="0x414088d8" scoped=""/>
+        <function-ref name="getLqi" ref="0x414089b8" scoped=""/>
+      </interface-functions>
+    </interface><interface loc="9:/home/jumbo/tinyos-main/tos/lib/net/blip/platform/CC2420ReadLqiC.nc" name="ReadLqi" provided="1" ref="0x41409eb8">
+      <component-ref nicename="tos.lib.net.blip.platform.CC2420ReadLqiC" qname="CC2420ReadLqiC"/>
+      <type-interface alignment="I:2" size="I:2"><interface-ref name="ReadLqi" ref="0x41409eb8" scoped=""/></type-interface>
+      <instance>
+        <interfacedef-ref nicename="tos.lib.net.blip.interfaces.ReadLqi" qname="ReadLqi"/>
+      </instance>
+      <interface-functions>
+        <function-ref name="readRssi" ref="0x414080c0" scoped=""/>
+        <function-ref name="readLqi" ref="0x414081a0" scoped=""/>
+      </interface-functions>
+    </interface></specification><referenced/></component>

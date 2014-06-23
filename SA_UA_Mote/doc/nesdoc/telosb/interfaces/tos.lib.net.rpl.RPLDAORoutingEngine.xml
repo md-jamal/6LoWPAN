@@ -1,0 +1,43 @@
+<?xml version="1.0" ?><interfacedef loc="39:/home/jumbo/tinyos-main/tos/lib/net/rpl/RPLDAORoutingEngine.nc" nicename="tos.lib.net.rpl.RPLDAORoutingEngine" qname="RPLDAORoutingEngine">
+      <documentation loc="68:/home/jumbo/tinyos-main/tos/lib/net/rpl/RPL.h">
+        <short>
+ </short>
+        <long>
+ @author Yiwei Yao &lt;yaoyiwei@stanford.edu&gt;
+</long>
+      </documentation>
+      <function command="" loc="42:/home/jumbo/tinyos-main/tos/lib/net/rpl/RPLDAORoutingEngine.nc" name="newParent" provided="0" ref="0x41576eb8">
+        <interfacedef-ref nicename="tos.lib.net.rpl.RPLDAORoutingEngine" qname="RPLDAORoutingEngine"/>
+        <type-function alignment="I:1" size="I:1">
+          <type-void alignment="I:1" size="I:1"/>
+          <function-parameters>
+          </function-parameters>
+        </type-function>
+        <parameters>
+        </parameters>
+      </function>
+      <function command="" loc="41:/home/jumbo/tinyos-main/tos/lib/net/rpl/RPLDAORoutingEngine.nc" name="getStoreState" provided="0" ref="0x41576b08">
+        <interfacedef-ref nicename="tos.lib.net.rpl.RPLDAORoutingEngine" qname="RPLDAORoutingEngine"/>
+        <type-function alignment="I:1" size="I:1">
+          <type-int alignment="I:1" cname="unsigned char" size="I:1" unsigned="">
+            <typename><typedef-ref name="bool" ref="0x4037f928"/></typename>
+          </type-int>
+          <function-parameters>
+          </function-parameters>
+        </type-function>
+        <parameters>
+        </parameters>
+      </function>
+      <function command="" loc="40:/home/jumbo/tinyos-main/tos/lib/net/rpl/RPLDAORoutingEngine.nc" name="startDAO" provided="0" ref="0x41576700">
+        <interfacedef-ref nicename="tos.lib.net.rpl.RPLDAORoutingEngine" qname="RPLDAORoutingEngine"/>
+        <type-function alignment="I:1" size="I:1">
+          <type-int alignment="I:1" cname="unsigned char" size="I:1" unsigned="">
+            <typename><typedef-ref name="error_t" ref="0x4038a718"/></typename>
+          </type-int>
+          <function-parameters>
+          </function-parameters>
+        </type-function>
+        <parameters>
+        </parameters>
+      </function>
+    </interfacedef>

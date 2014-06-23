@@ -1,0 +1,116 @@
+<?xml version="1.0" ?><component loc="11:/home/jumbo/jamal/project/CoAP/tinyos-release/tos/lib/net/blip/ReadLqiC.nc" nicename="tos.lib.net.blip.ReadLqiC" qname="ReadLqiC">
+      <configuration/>
+      <wiring>
+        <wire loc="21:/home/jumbo/jamal/project/CoAP/tinyos-release/tos/lib/net/blip/ReadLqiC.nc">
+          <from><interface-ref name="ReadLqi" ref="0x412ff3c8" scoped=""/></from>
+          <to><interface-ref name="ReadLqi" ref="0x4133e168" scoped=""/></to>
+        </wire>
+        <wire loc="22:/home/jumbo/jamal/project/CoAP/tinyos-release/tos/lib/net/blip/ReadLqiC.nc">
+          <from><interface-ref name="CC2420Packet" ref="0x4133e600" scoped=""/></from>
+          <to><interface-ref name="CC2420Packet" ref="0x411830e0" scoped=""/></to>
+        </wire>
+      </wiring>
+    <specification><interface loc="12:/home/jumbo/jamal/project/CoAP/tinyos-release/tos/lib/net/blip/ReadLqiC.nc" name="ReadLqi" provided="1" ref="0x412ff3c8">
+      <component-ref nicename="tos.lib.net.blip.ReadLqiC" qname="ReadLqiC"/>
+      <type-interface alignment="I:2" size="I:2"><interface-ref name="ReadLqi" ref="0x412ff3c8" scoped=""/></type-interface>
+      <instance>
+        <interfacedef-ref nicename="tos.lib.net.blip.interfaces.ReadLqi" qname="ReadLqi"/>
+      </instance>
+      <interface-functions>
+        <function-ref name="readRssi" ref="0x412ff5a0" scoped=""/>
+        <function-ref name="readLqi" ref="0x412ff680" scoped=""/>
+      </interface-functions>
+    </interface></specification><referenced><interface loc="41:/home/jumbo/jamal/project/CoAP/tinyos-release/tos/chips/cc2420/packet/CC2420PacketC.nc" name="CC2420Packet" provided="1" ref="0x411830e0">
+      <component-ref nicename="tos.chips.cc2420.packet.CC2420PacketC" qname="CC2420PacketC"/>
+      <type-interface alignment="I:2" size="I:2"><interface-ref name="CC2420Packet" ref="0x411830e0" scoped=""/></type-interface>
+      <instance>
+        <interfacedef-ref nicename="tos.chips.cc2420.interfaces.CC2420Packet" qname="CC2420Packet"/>
+      </instance>
+      <interface-functions>
+        <function-ref name="setPower" ref="0x411832b8" scoped=""/>
+        <function-ref name="setNetwork" ref="0x41183398" scoped=""/>
+        <function-ref name="getRssi" ref="0x41183478" scoped=""/>
+        <function-ref name="getNetwork" ref="0x41183558" scoped=""/>
+        <function-ref name="getPower" ref="0x41183638" scoped=""/>
+        <function-ref name="getLqi" ref="0x41183718" scoped=""/>
+      </interface-functions>
+    </interface><interface loc="10:/home/jumbo/jamal/project/CoAP/tinyos-release/tos/lib/net/blip/platform/CC2420ReadLqiC.nc" name="CC2420Packet" provided="0" ref="0x4133e600">
+      <component-ref nicename="tos.lib.net.blip.platform.CC2420ReadLqiC" qname="CC2420ReadLqiC"/>
+      <type-interface alignment="I:2" size="I:2"><interface-ref name="CC2420Packet" ref="0x4133e600" scoped=""/></type-interface>
+      <instance>
+        <interfacedef-ref nicename="tos.chips.cc2420.interfaces.CC2420Packet" qname="CC2420Packet"/>
+      </instance>
+      <interface-functions>
+        <function-ref name="setPower" ref="0x4133e7d8" scoped=""/>
+        <function-ref name="setNetwork" ref="0x4133e8b8" scoped=""/>
+        <function-ref name="getRssi" ref="0x4133e998" scoped=""/>
+        <function-ref name="getNetwork" ref="0x4133ea78" scoped=""/>
+        <function-ref name="getPower" ref="0x4133eb58" scoped=""/>
+        <function-ref name="getLqi" ref="0x4133ec38" scoped=""/>
+      </interface-functions>
+    </interface><interface loc="9:/home/jumbo/jamal/project/CoAP/tinyos-release/tos/lib/net/blip/platform/CC2420ReadLqiC.nc" name="ReadLqi" provided="1" ref="0x4133e168">
+      <component-ref nicename="tos.lib.net.blip.platform.CC2420ReadLqiC" qname="CC2420ReadLqiC"/>
+      <type-interface alignment="I:2" size="I:2"><interface-ref name="ReadLqi" ref="0x4133e168" scoped=""/></type-interface>
+      <instance>
+        <interfacedef-ref nicename="tos.lib.net.blip.interfaces.ReadLqi" qname="ReadLqi"/>
+      </instance>
+      <interface-functions>
+        <function-ref name="readRssi" ref="0x4133e340" scoped=""/>
+        <function-ref name="readLqi" ref="0x4133e420" scoped=""/>
+      </interface-functions>
+    </interface><component loc="38:/home/jumbo/jamal/project/CoAP/tinyos-release/tos/chips/cc2420/packet/CC2420PacketC.nc" nicename="tos.chips.cc2420.packet.CC2420PacketC" qname="CC2420PacketC">
+      <documentation loc="32:/home/jumbo/jamal/project/CoAP/tinyos-release/tos/chips/cc2420/packet/CC2420PacketC.nc">
+        <short>
+ </short>
+        <long>
+ @author Jonathan Hui &lt;jhui@archrock.com&gt;
+ @author David Moss
+ @author Chad Metcalf
+</long>
+      </documentation>
+      <configuration/>
+      <wiring>
+        <wire loc="58:/home/jumbo/jamal/project/CoAP/tinyos-release/tos/chips/cc2420/packet/CC2420PacketC.nc">
+          <from><interface-ref name="LinkPacketMetadata" ref="0x411824a8" scoped=""/></from>
+          <to><interface-ref name="LinkPacketMetadata" ref="0x41179010" scoped=""/></to>
+        </wire>
+        <wire loc="55:/home/jumbo/jamal/project/CoAP/tinyos-release/tos/chips/cc2420/packet/CC2420PacketC.nc">
+          <from><interface-ref name="CC2420Packet" ref="0x411830e0" scoped=""/></from>
+          <to><interface-ref name="CC2420Packet" ref="0x4117db38" scoped=""/></to>
+        </wire>
+        <wire loc="59:/home/jumbo/jamal/project/CoAP/tinyos-release/tos/chips/cc2420/packet/CC2420PacketC.nc">
+          <from><interface-ref name="PacketTimeStamp32khz" ref="0x41182b00" scoped=""/></from>
+          <to><interface-ref name="PacketTimeStamp32khz" ref="0x41179668" scoped=""/></to>
+        </wire>
+        <wire loc="57:/home/jumbo/jamal/project/CoAP/tinyos-release/tos/chips/cc2420/packet/CC2420PacketC.nc">
+          <from><interface-ref name="CC2420PacketBody" ref="0x41183f08" scoped=""/></from>
+          <to><interface-ref name="CC2420PacketBody" ref="0x4117a9c0" scoped=""/></to>
+        </wire>
+        <wire loc="61:/home/jumbo/jamal/project/CoAP/tinyos-release/tos/chips/cc2420/packet/CC2420PacketC.nc">
+          <from><interface-ref name="PacketTimeSyncOffset" ref="0x4117ecb0" scoped=""/></from>
+          <to><interface-ref name="PacketTimeSyncOffset" ref="0x41175888" scoped=""/></to>
+        </wire>
+        <wire loc="60:/home/jumbo/jamal/project/CoAP/tinyos-release/tos/chips/cc2420/packet/CC2420PacketC.nc">
+          <from><interface-ref name="PacketTimeStampMilli" ref="0x41180578" scoped=""/></from>
+          <to><interface-ref name="PacketTimeStampMilli" ref="0x41176100" scoped=""/></to>
+        </wire>
+        <wire loc="56:/home/jumbo/jamal/project/CoAP/tinyos-release/tos/chips/cc2420/packet/CC2420PacketC.nc">
+          <from><interface-ref name="Acks" ref="0x41183988" scoped=""/></from>
+          <to><interface-ref name="Acks" ref="0x4117a440" scoped=""/></to>
+        </wire>
+        <wire loc="64:/home/jumbo/jamal/project/CoAP/tinyos-release/tos/chips/cc2420/packet/CC2420PacketC.nc">
+          <from><interface-ref name="Counter" ref="0x411bd360" scoped=""/></from>
+          <to><interface-ref name="Counter" ref="0x40af2c48" scoped=""/></to>
+        </wire>
+        <wire loc="65:/home/jumbo/jamal/project/CoAP/tinyos-release/tos/chips/cc2420/packet/CC2420PacketC.nc">
+          <from><interface-ref name="LocalTime32khz" ref="0x411b0478" scoped=""/></from>
+          <to><interface-ref name="LocalTime" ref="0x411c3940" scoped=""/></to>
+        </wire>
+        <wire loc="69:/home/jumbo/jamal/project/CoAP/tinyos-release/tos/chips/cc2420/packet/CC2420PacketC.nc">
+          <from><interface-ref name="LocalTimeMilli" ref="0x411b0ed0" scoped=""/></from>
+          <to><interface-ref name="LocalTime" ref="0x411b5010" scoped=""/></to>
+        </wire>
+      </wiring>
+    </component><component loc="8:/home/jumbo/jamal/project/CoAP/tinyos-release/tos/lib/net/blip/platform/CC2420ReadLqiC.nc" nicename="tos.lib.net.blip.platform.CC2420ReadLqiC" qname="CC2420ReadLqiC">
+      <module/>
+    </component></referenced></component>

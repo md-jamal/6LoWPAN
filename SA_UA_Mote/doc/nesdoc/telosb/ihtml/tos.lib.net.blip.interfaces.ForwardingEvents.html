@@ -1,0 +1,84 @@
+<html>
+  <head>
+    <LINK rel="stylesheet" href="nesdoc.css" type="text/css" media="screen"><title>Interface: tos.lib.net.blip.interfaces.ForwardingEvents</title>
+  </head>
+  <body>
+    <h2>Interface: tos.lib.net.blip.interfaces.ForwardingEvents</h2>
+    <b>interface ForwardingEvents</b><p><p><div id=heading>Events</div><div id=funcsig><span id=funcnameshort>event bool <a href="#approve">approve</a>(struct ip6_packet *pkt, struct in6_addr *next_hop)
+      </span><menu>
+ Signaled for each packet being forwarded.
+      </menu>
+    </div><div id=funcsig><span id=funcnameshort>event bool <a href="#initiate">initiate</a>(struct ip6_packet *pkt, struct in6_addr *next_hop)
+      </span><menu>
+ Signaled when initiating a new flow (not forwarding).
+      </menu>
+    </div><div id=funcsig><span id=funcnameshort>event void <a href="#linkResult">linkResult</a>(struct in6_addr *dest, struct send_info *info)
+      </span><menu>
+ Signaled once per packet.
+      </menu>
+    </div><p><div id=heading>Events - Details</div>
+    <a name="approve"></a>
+    <h4>approve
+    </h4>
+    <span id=funcnameshort>event bool <b>approve</b>(struct ip6_packet *pkt, struct in6_addr *next_hop)
+    </span>
+    <p>
+    <menu>
+      
+ Signaled for each packet being forwarded.
+
+ For datapath validation.  Allows the routing protocol to look at
+ a packet as it flows through.  If the event returns FALSE the
+ packet is dropped.  The routing protocol may change fields in the
+ packet header such as the flow label.
+
+ 
+      <p>
+      <dl>
+        <dt><b>Pkt:</b>
+        <dd>
+          the packet being forwarded
+ 
+        </dd>
+        <dt><b>Next_hop:</b>
+        <dd>
+          the ipv6 address of the next hop, as determined by the 
+    forwarding engine.
+
+        </dd>
+      </dl>
+    </menu>
+    <hr>
+    <a name="initiate"></a>
+    <h4>initiate
+    </h4>
+    <span id=funcnameshort>event bool <b>initiate</b>(struct ip6_packet *pkt, struct in6_addr *next_hop)
+    </span>
+    <p>
+    <menu>
+      
+ Signaled when initiating a new flow (not forwarding).
+
+ This allows higher-layer components to modify the payload or
+ insert new headers before the packet is sent.
+
+    </menu>
+    <hr>
+    <a name="linkResult"></a>
+    <h4>linkResult
+    </h4>
+    <span id=funcnameshort>event void <b>linkResult</b>(struct in6_addr *dest, struct send_info *info)
+    </span>
+    <p>
+    <menu>
+      
+ Signaled once per packet.  The send_info structure allows upper
+ layers to see how many fragments were attempted, and how many
+ transmissions were required.
+
+ Allows a higher-level component to maintain
+ statistics on the link behavior of their routes.
+
+    </menu>
+  </body>
+</html>

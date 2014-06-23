@@ -1,0 +1,148 @@
+<?xml version="1.0" ?><interfacedef loc="4:/home/jumbo/jamal/project/CoAP/tinyos-release/tos/lib/net/blip/interfaces/ForwardingTable.nc" nicename="tos.lib.net.blip.interfaces.ForwardingTable" qname="ForwardingTable">
+      <function command="" loc="22:/home/jumbo/jamal/project/CoAP/tinyos-release/tos/lib/net/blip/interfaces/ForwardingTable.nc" name="getTable" provided="0" ref="0x408c0748">
+        <interfacedef-ref nicename="tos.lib.net.blip.interfaces.ForwardingTable" qname="ForwardingTable"/>
+        <type-function alignment="I:1" size="I:1">
+          <type-pointer alignment="I:2" size="I:2">
+            <type-tag alignment="I:2" size="I:40"><struct-ref name="route_entry" ref="0x408aeb00"/></type-tag>
+          </type-pointer>
+          <function-parameters>
+            <type-pointer alignment="I:2" size="I:2">
+              <type-int alignment="I:2" cname="int" size="I:2"/>
+            </type-pointer>
+          </function-parameters>
+        </type-function>
+        <parameters>
+          <variable loc="22:/home/jumbo/jamal/project/CoAP/tinyos-release/tos/lib/net/blip/interfaces/ForwardingTable.nc" name="size" ref="0x408c05d0">
+            <type-pointer alignment="I:2" size="I:2">
+              <type-int alignment="I:2" cname="int" size="I:2"/>
+            </type-pointer>
+          </variable>
+        </parameters>
+      </function>
+      <function command="" loc="18:/home/jumbo/jamal/project/CoAP/tinyos-release/tos/lib/net/blip/interfaces/ForwardingTable.nc" name="lookupRoute" provided="0" ref="0x408c2ab0">
+        <interfacedef-ref nicename="tos.lib.net.blip.interfaces.ForwardingTable" qname="ForwardingTable"/>
+        <type-function alignment="I:1" size="I:1">
+          <type-pointer alignment="I:2" size="I:2">
+            <type-tag alignment="I:2" size="I:40"><struct-ref name="route_entry" ref="0x408aeb00"/></type-tag>
+          </type-pointer>
+          <function-parameters>
+            <type-pointer alignment="I:2" size="I:2">
+              <type-qualified const="">
+                  <typename><typedef-ref name="uint8_t" ref="0x4003adc8"/></typename>
+                <type-int alignment="I:1" cname="unsigned char" size="I:1" unsigned=""/>
+              </type-qualified>
+            </type-pointer>
+            <type-int alignment="I:2" cname="int" size="I:2"/>
+          </function-parameters>
+        </type-function>
+        <parameters>
+          <variable loc="18:/home/jumbo/jamal/project/CoAP/tinyos-release/tos/lib/net/blip/interfaces/ForwardingTable.nc" name="prefix" ref="0x408c2720">
+            <type-pointer alignment="I:2" size="I:2">
+              <type-qualified const="">
+                  <typename><typedef-ref name="uint8_t" ref="0x4003adc8"/></typename>
+                <type-int alignment="I:1" cname="unsigned char" size="I:1" unsigned=""/>
+              </type-qualified>
+            </type-pointer>
+          </variable>
+          <variable loc="18:/home/jumbo/jamal/project/CoAP/tinyos-release/tos/lib/net/blip/interfaces/ForwardingTable.nc" name="prefix_len_bits" ref="0x408c2930">
+            <type-int alignment="I:2" cname="int" size="I:2"/>
+          </variable>
+        </parameters>
+      </function>
+      <function command="" loc="16:/home/jumbo/jamal/project/CoAP/tinyos-release/tos/lib/net/blip/interfaces/ForwardingTable.nc" name="delRoute" provided="0" ref="0x408c2200">
+        <documentation loc="13:/home/jumbo/jamal/project/CoAP/tinyos-release/tos/lib/net/blip/interfaces/ForwardingTable.nc">
+          <short>
+ Remove a routing table entry previously inserted using addRoute
+</short>
+        </documentation>
+        <interfacedef-ref nicename="tos.lib.net.blip.interfaces.ForwardingTable" qname="ForwardingTable"/>
+        <type-function alignment="I:1" size="I:1">
+          <type-int alignment="I:1" cname="unsigned char" size="I:1" unsigned="">
+            <typename><typedef-ref name="error_t" ref="0x4038a828"/></typename>
+          </type-int>
+          <function-parameters>
+            <type-int alignment="I:2" cname="int" size="I:2">
+              <typename><typedef-ref name="route_key_t" ref="0x408ae508"/></typename>
+            </type-int>
+          </function-parameters>
+        </type-function>
+        <parameters>
+          <variable loc="16:/home/jumbo/jamal/project/CoAP/tinyos-release/tos/lib/net/blip/interfaces/ForwardingTable.nc" name="key" ref="0x408c20a8">
+            <type-int alignment="I:2" cname="int" size="I:2">
+              <typename><typedef-ref name="route_key_t" ref="0x408ae508"/></typename>
+            </type-int>
+          </variable>
+        </parameters>
+      </function>
+      <function command="" loc="20:/home/jumbo/jamal/project/CoAP/tinyos-release/tos/lib/net/blip/interfaces/ForwardingTable.nc" name="lookupRouteKey" provided="0" ref="0x408c0188">
+        <interfacedef-ref nicename="tos.lib.net.blip.interfaces.ForwardingTable" qname="ForwardingTable"/>
+        <type-function alignment="I:1" size="I:1">
+          <type-pointer alignment="I:2" size="I:2">
+            <type-tag alignment="I:2" size="I:40"><struct-ref name="route_entry" ref="0x408aeb00"/></type-tag>
+          </type-pointer>
+          <function-parameters>
+            <type-int alignment="I:2" cname="int" size="I:2">
+              <typename><typedef-ref name="route_key_t" ref="0x408ae508"/></typename>
+            </type-int>
+          </function-parameters>
+        </type-function>
+        <parameters>
+          <variable loc="20:/home/jumbo/jamal/project/CoAP/tinyos-release/tos/lib/net/blip/interfaces/ForwardingTable.nc" name="key" ref="0x408c0010">
+            <type-int alignment="I:2" cname="int" size="I:2">
+              <typename><typedef-ref name="route_key_t" ref="0x408ae508"/></typename>
+            </type-int>
+          </variable>
+        </parameters>
+      </function>
+      <function command="" loc="10:/home/jumbo/jamal/project/CoAP/tinyos-release/tos/lib/net/blip/interfaces/ForwardingTable.nc" name="addRoute" provided="0" ref="0x408c3be0">
+        <documentation loc="6:/home/jumbo/jamal/project/CoAP/tinyos-release/tos/lib/net/blip/interfaces/ForwardingTable.nc">
+          <short>
+ Insert a forwarding-table mapping for the given prefix, with the
+ given next-hop.</short>
+        </documentation>
+        <interfacedef-ref nicename="tos.lib.net.blip.interfaces.ForwardingTable" qname="ForwardingTable"/>
+        <type-function alignment="I:1" size="I:1">
+          <type-int alignment="I:2" cname="int" size="I:2">
+            <typename><typedef-ref name="route_key_t" ref="0x408ae508"/></typename>
+          </type-int>
+          <function-parameters>
+            <type-pointer alignment="I:2" size="I:2">
+              <type-qualified const="">
+                  <typename><typedef-ref name="uint8_t" ref="0x4003adc8"/></typename>
+                <type-int alignment="I:1" cname="unsigned char" size="I:1" unsigned=""/>
+              </type-qualified>
+            </type-pointer>
+            <type-int alignment="I:2" cname="int" size="I:2"/>
+            <type-pointer alignment="I:2" size="I:2">
+              <type-tag alignment="I:2" size="I:16"><struct-ref name="in6_addr" ref="0x408871e8"/></type-tag>
+            </type-pointer>
+            <type-int alignment="I:1" cname="unsigned char" size="I:1" unsigned="">
+              <typename><typedef-ref name="uint8_t" ref="0x4003adc8"/></typename>
+            </type-int>
+          </function-parameters>
+        </type-function>
+        <parameters>
+          <variable loc="10:/home/jumbo/jamal/project/CoAP/tinyos-release/tos/lib/net/blip/interfaces/ForwardingTable.nc" name="prefix" ref="0x408c33d0">
+            <type-pointer alignment="I:2" size="I:2">
+              <type-qualified const="">
+                  <typename><typedef-ref name="uint8_t" ref="0x4003adc8"/></typename>
+                <type-int alignment="I:1" cname="unsigned char" size="I:1" unsigned=""/>
+              </type-qualified>
+            </type-pointer>
+          </variable>
+          <variable loc="10:/home/jumbo/jamal/project/CoAP/tinyos-release/tos/lib/net/blip/interfaces/ForwardingTable.nc" name="prefix_len_bits" ref="0x408c35e0">
+            <type-int alignment="I:2" cname="int" size="I:2"/>
+          </variable>
+          <variable loc="11:/home/jumbo/jamal/project/CoAP/tinyos-release/tos/lib/net/blip/interfaces/ForwardingTable.nc" name="next_hop" ref="0x408c3868">
+            <type-pointer alignment="I:2" size="I:2">
+              <type-tag alignment="I:2" size="I:16"><struct-ref name="in6_addr" ref="0x408871e8"/></type-tag>
+            </type-pointer>
+          </variable>
+          <variable loc="11:/home/jumbo/jamal/project/CoAP/tinyos-release/tos/lib/net/blip/interfaces/ForwardingTable.nc" name="ifindex" ref="0x408c3a70">
+            <type-int alignment="I:1" cname="unsigned char" size="I:1" unsigned="">
+              <typename><typedef-ref name="uint8_t" ref="0x4003adc8"/></typename>
+            </type-int>
+          </variable>
+        </parameters>
+      </function>
+    </interfacedef>

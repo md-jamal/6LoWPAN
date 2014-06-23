@@ -1,0 +1,56 @@
+<html>
+  <head>
+    <LINK rel="stylesheet" href="nesdoc.css" type="text/css" media="screen"><title>Interface: tos.lib.net.blip.interfaces.NeighborDiscovery</title>
+  </head>
+  <body>
+    <h2>Interface: tos.lib.net.blip.interfaces.NeighborDiscovery</h2>
+    <b>interface NeighborDiscovery</b><p><p><div id=heading>Commands</div><div id=funcsig><span id=funcnameshort>command int <a href="#getContext">getContext</a>(uint8_t context, struct in6_addr *ctx)
+      </span></div><div id=funcsig><span id=funcnameshort>command int <a href="#matchContext">matchContext</a>(struct in6_addr *addr, uint8_t *ctx)
+      </span><menu>
+ Match 
+
+      </menu>
+    </div><div id=funcsig><span id=funcnameshort>command error_t <a href="#resolveAddress">resolveAddress</a>(struct in6_addr *addr, ieee154_addr_t *link_addr)
+      </span><menu>
+ Map the IPv6 address to a link-layer address.
+      </menu>
+    </div><p><div id=heading>Commands - Details</div>
+    <a name="getContext"></a>
+    <h4>getContext
+    </h4>
+    <span id=funcnameshort>command int <b>getContext</b>(uint8_t context, struct in6_addr *ctx)
+    </span><hr>
+    <a name="matchContext"></a>
+    <h4>matchContext
+    </h4>
+    <span id=funcnameshort>command int <b>matchContext</b>(struct in6_addr *addr, uint8_t *ctx)
+    </span>
+    <p>
+    <menu>
+      
+ Match 
+
+    </menu>
+    <hr>
+    <a name="resolveAddress"></a>
+    <h4>resolveAddress
+    </h4>
+    <span id=funcnameshort>command error_t <b>resolveAddress</b>(struct in6_addr *addr, ieee154_addr_t *link_addr)
+    </span>
+    <p>
+    <menu>
+      
+ Map the IPv6 address to a link-layer address.
+ 
+      <p>
+      <dl>
+        <dt><b>Returns:</b>
+        <dd>
+          FAIL if the address cannot be resolved, either becasue 
+ it is not known or because the given IPv6 address is not on the link.
+
+        </dd>
+      </dl>
+    </menu>
+  </body>
+</html>

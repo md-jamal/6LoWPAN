@@ -1,0 +1,38 @@
+<?xml version="1.0" ?><component loc="64:/home/jumbo/jamal/project/CoAP/tinyos-release/tos/system/StateImplP.nc" nicename="tos.system.StateImplP" qname="StateImplP" safe="">
+      <documentation loc="32:/home/jumbo/jamal/project/CoAP/tinyos-release/tos/types/State.h">
+        <short>
+ </short>
+        <long>
+ @author David Moss
+</long>
+      </documentation>
+      <module/>
+    <specification><interface loc="66:/home/jumbo/jamal/project/CoAP/tinyos-release/tos/system/StateImplP.nc" name="Init" provided="1" ref="0x40c6bca0">
+      <component-ref nicename="tos.system.StateImplP" qname="StateImplP"/>
+      <type-interface alignment="I:2" size="I:2"><interface-ref name="Init" ref="0x40c6bca0" scoped=""/></type-interface>
+      <instance>
+        <interfacedef-ref nicename="tos.interfaces.Init" qname="Init"/>
+      </instance>
+      <interface-functions>
+        <function-ref name="init" ref="0x40c6be78" scoped=""/>
+      </interface-functions>
+    </interface><interface loc="67:/home/jumbo/jamal/project/CoAP/tinyos-release/tos/system/StateImplP.nc" name="State" provided="1" ref="0x40c682f0">
+      <component-ref nicename="tos.system.StateImplP" qname="StateImplP"/>
+      <type-interface alignment="I:2" size="I:2"><interface-ref name="State" ref="0x40c682f0" scoped=""/></type-interface>
+      <instance>
+        <interfacedef-ref nicename="tos.interfaces.State" qname="State"/>
+      </instance>
+      <interface-parameters>
+        <type-int alignment="I:1" cname="unsigned char" size="I:1" unsigned="">
+          <typename><typedef-ref name="uint8_t" ref="0x4003adc8"/></typename>
+        </type-int>
+      </interface-parameters>
+      <interface-functions>
+        <function-ref name="getState" ref="0x40c684c8" scoped=""/>
+        <function-ref name="toIdle" ref="0x40c685a8" scoped=""/>
+        <function-ref name="isState" ref="0x40c68688" scoped=""/>
+        <function-ref name="isIdle" ref="0x40c68768" scoped=""/>
+        <function-ref name="requestState" ref="0x40c68848" scoped=""/>
+        <function-ref name="forceState" ref="0x40c68928" scoped=""/>
+      </interface-functions>
+    </interface></specification><referenced/></component>

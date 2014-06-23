@@ -1,0 +1,414 @@
+<?xml version="1.0" ?><component loc="43:/home/jumbo/tinyos-main/tos/chips/msp430/timer/HilTimerMilliC.nc" nicename="tos.chips.msp430.timer.HilTimerMilliC" qname="HilTimerMilliC">
+      <documentation loc="33:/home/jumbo/tinyos-main/tos/chips/msp430/timer/HilTimerMilliC.nc">
+        <short>
+ HilTimerMilliC provides a parameterized interface to a virtualized
+ millisecond timer.</short>
+        <long>
+ HilTimerMilliC provides a parameterized interface to a virtualized
+ millisecond timer.  TimerMilliC in tos/system/ uses this component to
+ allocate new timers.
+
+ @author Cory Sharp &lt;cssharp@eecs.berkeley.edu&gt;
+ @see  Please refer to TEP 102 for more information about this component and its
+          intended use.
+</long>
+      </documentation>
+      <configuration/>
+      <wiring>
+        <wire loc="58:/home/jumbo/tinyos-main/tos/chips/msp430/timer/HilTimerMilliC.nc">
+          <from><interface-ref name="TimerMilli" ref="0x412a1100" scoped=""/></from>
+          <to><interface-ref name="Timer" ref="0x412eff00" scoped=""/></to>
+        </wire>
+        <wire loc="59:/home/jumbo/tinyos-main/tos/chips/msp430/timer/HilTimerMilliC.nc">
+          <from><interface-ref name="LocalTime" ref="0x4129f418" scoped=""/></from>
+          <to><interface-ref name="LocalTime" ref="0x41307a18" scoped=""/></to>
+        </wire>
+        <wire loc="57:/home/jumbo/tinyos-main/tos/chips/msp430/timer/HilTimerMilliC.nc">
+          <from><interface-ref name="Init" ref="0x412a58f8" scoped=""/></from>
+          <to><interface-ref name="Init" ref="0x4129cd98" scoped=""/></to>
+        </wire>
+        <wire loc="61:/home/jumbo/tinyos-main/tos/chips/msp430/timer/HilTimerMilliC.nc">
+          <from><interface-ref name="TimerFrom" ref="0x4130a338" scoped=""/></from>
+          <to><interface-ref name="Timer" ref="0x412c6cb0" scoped=""/></to>
+        </wire>
+        <wire loc="62:/home/jumbo/tinyos-main/tos/chips/msp430/timer/HilTimerMilliC.nc">
+          <from><interface-ref name="Alarm" ref="0x412f2010" scoped=""/></from>
+          <to><interface-ref name="Alarm" ref="0x4129b290" scoped=""/></to>
+        </wire>
+        <wire loc="63:/home/jumbo/tinyos-main/tos/chips/msp430/timer/HilTimerMilliC.nc">
+          <from><interface-ref name="Counter" ref="0x413053d8" scoped=""/></from>
+          <to><interface-ref name="Counter" ref="0x412d7468" scoped=""/></to>
+        </wire>
+      </wiring>
+    <specification><interface loc="46:/home/jumbo/tinyos-main/tos/chips/msp430/timer/HilTimerMilliC.nc" name="TimerMilli" provided="1" ref="0x412a1100">
+      <component-ref nicename="tos.chips.msp430.timer.HilTimerMilliC" qname="HilTimerMilliC"/>
+      <type-interface alignment="I:2" size="I:2"><interface-ref name="TimerMilli" ref="0x412a1100" scoped=""/></type-interface>
+      <instance>
+        <interfacedef-ref nicename="tos.lib.timer.Timer" qname="Timer"/>
+        <arguments>
+          <type-tag alignment="I:2" size="I:2"><struct-ref ref="0x40648d90"/>
+            <typename><typedef-ref name="TMilli" ref="0x4064d010"/></typename>
+          </type-tag>
+        </arguments>
+      </instance>
+      <interface-parameters>
+        <type-int alignment="I:1" cname="unsigned char" size="I:1" unsigned="">
+          <typename><typedef-ref name="uint8_t" ref="0x4003bdc8"/></typename>
+        </type-int>
+      </interface-parameters>
+      <interface-functions>
+        <function-ref name="getNow" ref="0x412a0be0" scoped=""/>
+        <function-ref name="fired" ref="0x412a1e80" scoped=""/>
+        <function-ref name="startPeriodicAt" ref="0x412a05a0" scoped=""/>
+        <function-ref name="isOneShot" ref="0x412a0348" scoped=""/>
+        <function-ref name="getdt" ref="0x4129f0b8" scoped=""/>
+        <function-ref name="gett0" ref="0x412a0e38" scoped=""/>
+        <function-ref name="isRunning" ref="0x412a00f0" scoped=""/>
+        <function-ref name="startPeriodic" ref="0x412a1728" scoped=""/>
+        <function-ref name="startOneShotAt" ref="0x412a08c0" scoped=""/>
+        <function-ref name="startOneShot" ref="0x412a19a8" scoped=""/>
+        <function-ref name="stop" ref="0x412a1c28" scoped=""/>
+      </interface-functions>
+    </interface><interface loc="47:/home/jumbo/tinyos-main/tos/chips/msp430/timer/HilTimerMilliC.nc" name="LocalTime" provided="1" ref="0x4129f418">
+      <component-ref nicename="tos.chips.msp430.timer.HilTimerMilliC" qname="HilTimerMilliC"/>
+      <type-interface alignment="I:2" size="I:2"><interface-ref name="LocalTime" ref="0x4129f418" scoped=""/></type-interface>
+      <instance>
+        <interfacedef-ref nicename="tos.lib.timer.LocalTime" qname="LocalTime"/>
+        <arguments>
+          <type-tag alignment="I:2" size="I:2"><struct-ref ref="0x40648d90"/>
+            <typename><typedef-ref name="TMilli" ref="0x4064d010"/></typename>
+          </type-tag>
+        </arguments>
+      </instance>
+      <interface-functions>
+        <function-ref name="get" ref="0x4129fa60" scoped=""/>
+      </interface-functions>
+    </interface><interface loc="45:/home/jumbo/tinyos-main/tos/chips/msp430/timer/HilTimerMilliC.nc" name="Init" provided="1" ref="0x412a58f8">
+      <component-ref nicename="tos.chips.msp430.timer.HilTimerMilliC" qname="HilTimerMilliC"/>
+      <type-interface alignment="I:2" size="I:2"><interface-ref name="Init" ref="0x412a58f8" scoped=""/></type-interface>
+      <instance>
+        <interfacedef-ref nicename="tos.interfaces.Init" qname="Init"/>
+      </instance>
+      <interface-functions>
+        <function-ref name="init" ref="0x412a5ad0" scoped=""/>
+      </interface-functions>
+    </interface></specification><referenced><interface loc="48:/home/jumbo/tinyos-main/tos/lib/timer/CounterToLocalTimeC.nc" name="LocalTime" provided="1" ref="0x41307a18">
+      <component-ref nicename="tos.lib.timer.CounterToLocalTimeC" qname="HilTimerMilliC.CounterToLocalTimeC"/>
+      <type-interface alignment="I:2" size="I:2"><interface-ref name="LocalTime" ref="0x41307a18" scoped=""/></type-interface>
+      <instance>
+        <interfacedef-ref nicename="tos.lib.timer.LocalTime" qname="LocalTime"/>
+        <arguments>
+          <type-tag alignment="I:2" size="I:2"><struct-ref ref="0x40648d90"/>
+            <typename><typedef-ref name="TMilli" ref="0x4064d010"/></typename>
+          </type-tag>
+        </arguments>
+      </instance>
+      <interface-functions>
+        <function-ref name="get" ref="0x41305088" scoped=""/>
+      </interface-functions>
+    </interface><interface loc="43:/home/jumbo/tinyos-main/tos/chips/msp430/timer/CounterMilli32C.nc" name="Counter" provided="1" ref="0x412d7468">
+      <component-ref nicename="tos.chips.msp430.timer.CounterMilli32C" qname="CounterMilli32C"/>
+      <type-interface alignment="I:2" size="I:2"><interface-ref name="Counter" ref="0x412d7468" scoped=""/></type-interface>
+      <instance>
+        <interfacedef-ref nicename="tos.lib.timer.Counter" qname="Counter"/>
+        <arguments>
+          <type-tag alignment="I:2" size="I:2"><struct-ref ref="0x40648d90"/>
+            <typename><typedef-ref name="TMilli" ref="0x4064d010"/></typename>
+          </type-tag>
+          <type-int alignment="I:2" cname="unsigned long" size="I:4" unsigned="">
+            <typename><typedef-ref name="uint32_t" ref="0x4003c250"/></typename>
+          </type-int>
+        </arguments>
+      </instance>
+      <interface-functions>
+        <function-ref name="get" ref="0x412d7bb8" scoped=""/>
+        <function-ref name="clearOverflow" ref="0x412d60d8" scoped=""/>
+        <function-ref name="isOverflowPending" ref="0x412d7e30" scoped=""/>
+        <function-ref name="overflow" ref="0x412d6350" scoped=""/>
+      </interface-functions>
+    </interface><interface loc="49:/home/jumbo/tinyos-main/tos/lib/timer/CounterToLocalTimeC.nc" name="Counter" provided="0" ref="0x413053d8">
+      <component-ref nicename="tos.lib.timer.CounterToLocalTimeC" qname="HilTimerMilliC.CounterToLocalTimeC"/>
+      <type-interface alignment="I:2" size="I:2"><interface-ref name="Counter" ref="0x413053d8" scoped=""/></type-interface>
+      <instance>
+        <interfacedef-ref nicename="tos.lib.timer.Counter" qname="Counter"/>
+        <arguments>
+          <type-tag alignment="I:2" size="I:2"><struct-ref ref="0x40648d90"/>
+            <typename><typedef-ref name="TMilli" ref="0x4064d010"/></typename>
+          </type-tag>
+          <type-int alignment="I:2" cname="unsigned long" size="I:4" unsigned="">
+            <typename><typedef-ref name="uint32_t" ref="0x4003c250"/></typename>
+          </type-int>
+        </arguments>
+      </instance>
+      <interface-functions>
+        <function-ref name="get" ref="0x41305b28" scoped=""/>
+        <function-ref name="clearOverflow" ref="0x41304048" scoped=""/>
+        <function-ref name="isOverflowPending" ref="0x41305da0" scoped=""/>
+        <function-ref name="overflow" ref="0x413042c0" scoped=""/>
+      </interface-functions>
+    </interface><interface loc="43:/home/jumbo/tinyos-main/tos/chips/msp430/timer/AlarmMilli32C.nc" name="Init" provided="1" ref="0x4129cd98">
+      <component-ref nicename="tos.chips.msp430.timer.AlarmMilli32C" qname="HilTimerMilliC.AlarmMilli32C"/>
+      <type-interface alignment="I:2" size="I:2"><interface-ref name="Init" ref="0x4129cd98" scoped=""/></type-interface>
+      <instance>
+        <interfacedef-ref nicename="tos.interfaces.Init" qname="Init"/>
+      </instance>
+      <interface-functions>
+        <function-ref name="init" ref="0x4129b010" scoped=""/>
+      </interface-functions>
+    </interface><interface loc="49:/home/jumbo/tinyos-main/tos/lib/timer/VirtualizeTimerC.nc" name="TimerFrom" provided="0" ref="0x4130a338">
+      <component-ref nicename="tos.lib.timer.VirtualizeTimerC" qname="HilTimerMilliC.VirtualizeTimerC"/>
+      <type-interface alignment="I:2" size="I:2"><interface-ref name="TimerFrom" ref="0x4130a338" scoped=""/></type-interface>
+      <instance>
+        <interfacedef-ref nicename="tos.lib.timer.Timer" qname="Timer"/>
+        <arguments>
+          <type-tag alignment="I:2" size="I:2"><struct-ref ref="0x40648d90"/>
+            <typename><typedef-ref name="TMilli" ref="0x4064d010"/></typename>
+          </type-tag>
+        </arguments>
+      </instance>
+      <interface-functions>
+        <function-ref name="getNow" ref="0x41309e38" scoped=""/>
+        <function-ref name="fired" ref="0x413090f0" scoped=""/>
+        <function-ref name="startPeriodicAt" ref="0x413097f8" scoped=""/>
+        <function-ref name="isOneShot" ref="0x413095a0" scoped=""/>
+        <function-ref name="getdt" ref="0x41308310" scoped=""/>
+        <function-ref name="gett0" ref="0x413080b8" scoped=""/>
+        <function-ref name="isRunning" ref="0x41309348" scoped=""/>
+        <function-ref name="startPeriodic" ref="0x4130a960" scoped=""/>
+        <function-ref name="startOneShotAt" ref="0x41309b18" scoped=""/>
+        <function-ref name="startOneShot" ref="0x4130abe0" scoped=""/>
+        <function-ref name="stop" ref="0x4130ae60" scoped=""/>
+      </interface-functions>
+    </interface><interface loc="49:/home/jumbo/tinyos-main/tos/lib/timer/AlarmToTimerC.nc" name="Alarm" provided="0" ref="0x412f2010">
+      <component-ref nicename="tos.lib.timer.AlarmToTimerC" qname="HilTimerMilliC.AlarmToTimerC"/>
+      <type-interface alignment="I:2" size="I:2"><interface-ref name="Alarm" ref="0x412f2010" scoped=""/></type-interface>
+      <instance>
+        <interfacedef-ref nicename="tos.lib.timer.Alarm" qname="Alarm"/>
+        <arguments>
+          <type-tag alignment="I:2" size="I:2"><struct-ref ref="0x40648d90"/>
+            <typename><typedef-ref name="TMilli" ref="0x4064d010"/></typename>
+          </type-tag>
+          <type-int alignment="I:2" cname="unsigned long" size="I:4" unsigned="">
+            <typename><typedef-ref name="uint32_t" ref="0x4003c250"/></typename>
+          </type-int>
+        </arguments>
+      </instance>
+      <interface-functions>
+        <function-ref name="getNow" ref="0x412f14e0" scoped=""/>
+        <function-ref name="fired" ref="0x412f2c78" scoped=""/>
+        <function-ref name="startAt" ref="0x412f11a0" scoped=""/>
+        <function-ref name="isRunning" ref="0x412f2ef0" scoped=""/>
+        <function-ref name="getAlarm" ref="0x412f1758" scoped=""/>
+        <function-ref name="start" ref="0x412f2760" scoped=""/>
+        <function-ref name="stop" ref="0x412f2a00" scoped=""/>
+      </interface-functions>
+    </interface><interface loc="48:/home/jumbo/tinyos-main/tos/lib/timer/AlarmToTimerC.nc" name="Timer" provided="1" ref="0x412c6cb0">
+      <component-ref nicename="tos.lib.timer.AlarmToTimerC" qname="HilTimerMilliC.AlarmToTimerC"/>
+      <type-interface alignment="I:2" size="I:2"><interface-ref name="Timer" ref="0x412c6cb0" scoped=""/></type-interface>
+      <instance>
+        <interfacedef-ref nicename="tos.lib.timer.Timer" qname="Timer"/>
+        <arguments>
+          <type-tag alignment="I:2" size="I:2"><struct-ref ref="0x40648d90"/>
+            <typename><typedef-ref name="TMilli" ref="0x4064d010"/></typename>
+          </type-tag>
+        </arguments>
+      </instance>
+      <interface-functions>
+        <function-ref name="getNow" ref="0x412f47c0" scoped=""/>
+        <function-ref name="fired" ref="0x412c5a40" scoped=""/>
+        <function-ref name="startPeriodicAt" ref="0x412f4180" scoped=""/>
+        <function-ref name="isOneShot" ref="0x412c5ef0" scoped=""/>
+        <function-ref name="getdt" ref="0x412f4c70" scoped=""/>
+        <function-ref name="gett0" ref="0x412f4a18" scoped=""/>
+        <function-ref name="isRunning" ref="0x412c5c98" scoped=""/>
+        <function-ref name="startPeriodic" ref="0x412c52e8" scoped=""/>
+        <function-ref name="startOneShotAt" ref="0x412f44a0" scoped=""/>
+        <function-ref name="startOneShot" ref="0x412c5568" scoped=""/>
+        <function-ref name="stop" ref="0x412c57e8" scoped=""/>
+      </interface-functions>
+    </interface><interface loc="48:/home/jumbo/tinyos-main/tos/lib/timer/VirtualizeTimerC.nc" name="Timer" provided="1" ref="0x412eff00">
+      <component-ref nicename="tos.lib.timer.VirtualizeTimerC" qname="HilTimerMilliC.VirtualizeTimerC"/>
+      <type-interface alignment="I:2" size="I:2"><interface-ref name="Timer" ref="0x412eff00" scoped=""/></type-interface>
+      <instance>
+        <interfacedef-ref nicename="tos.lib.timer.Timer" qname="Timer"/>
+        <arguments>
+          <type-tag alignment="I:2" size="I:2"><struct-ref ref="0x40648d90"/>
+            <typename><typedef-ref name="TMilli" ref="0x4064d010"/></typename>
+          </type-tag>
+        </arguments>
+      </instance>
+      <interface-parameters>
+        <type-int alignment="I:1" cname="unsigned char" size="I:1" unsigned="">
+          <typename><typedef-ref name="uint8_t" ref="0x4003bdc8"/></typename>
+        </type-int>
+      </interface-parameters>
+      <interface-functions>
+        <function-ref name="getNow" ref="0x4130cb40" scoped=""/>
+        <function-ref name="fired" ref="0x4130dce0" scoped=""/>
+        <function-ref name="startPeriodicAt" ref="0x4130c4e0" scoped=""/>
+        <function-ref name="isOneShot" ref="0x4130c278" scoped=""/>
+        <function-ref name="getdt" ref="0x4130a048" scoped=""/>
+        <function-ref name="gett0" ref="0x4130cda8" scoped=""/>
+        <function-ref name="isRunning" ref="0x4130c010" scoped=""/>
+        <function-ref name="startPeriodic" ref="0x4130d558" scoped=""/>
+        <function-ref name="startOneShotAt" ref="0x4130c810" scoped=""/>
+        <function-ref name="startOneShot" ref="0x4130d7e8" scoped=""/>
+        <function-ref name="stop" ref="0x4130da78" scoped=""/>
+      </interface-functions>
+    </interface><interface loc="44:/home/jumbo/tinyos-main/tos/chips/msp430/timer/AlarmMilli32C.nc" name="Alarm" provided="1" ref="0x4129b290">
+      <component-ref nicename="tos.chips.msp430.timer.AlarmMilli32C" qname="HilTimerMilliC.AlarmMilli32C"/>
+      <type-interface alignment="I:2" size="I:2"><interface-ref name="Alarm" ref="0x4129b290" scoped=""/></type-interface>
+      <instance>
+        <interfacedef-ref nicename="tos.lib.timer.Alarm" qname="Alarm"/>
+        <arguments>
+          <type-tag alignment="I:2" size="I:2"><struct-ref ref="0x40648d90"/>
+            <typename><typedef-ref name="TMilli" ref="0x4064d010"/></typename>
+          </type-tag>
+          <type-int alignment="I:2" cname="unsigned long" size="I:4" unsigned="">
+            <typename><typedef-ref name="uint32_t" ref="0x4003c250"/></typename>
+          </type-int>
+        </arguments>
+      </instance>
+      <interface-functions>
+        <function-ref name="getNow" ref="0x412c8758" scoped=""/>
+        <function-ref name="fired" ref="0x4129bef8" scoped=""/>
+        <function-ref name="startAt" ref="0x412c8418" scoped=""/>
+        <function-ref name="isRunning" ref="0x412c81a0" scoped=""/>
+        <function-ref name="getAlarm" ref="0x412c89d0" scoped=""/>
+        <function-ref name="start" ref="0x4129b9e0" scoped=""/>
+        <function-ref name="stop" ref="0x4129bc80" scoped=""/>
+      </interface-functions>
+    </interface><component loc="46(HilTimerMilliC.AlarmToTimerC):/home/jumbo/tinyos-main/tos/lib/timer/AlarmToTimerC.nc" nicename="tos.lib.timer.AlarmToTimerC" qname="HilTimerMilliC.AlarmToTimerC">
+      <documentation loc="36:/home/jumbo/tinyos-main/tos/lib/timer/AlarmToTimerC.nc">
+        <short>
+ AlarmToTimerC converts a 32-bit Alarm to a Timer.</short>
+        <long>
+ AlarmToTimerC converts a 32-bit Alarm to a Timer.  
+
+ &lt;p&gt;See TEP102 for more details.
+ @param precision_tag A type indicating the precision of the Alarm and
+ Timer being converted.
+
+ @author Cory Sharp &lt;cssharp@eecs.berkeley.edu&gt;
+</long>
+      </documentation>
+      <instance number="0">
+        <component-ref nicename="tos.lib.timer.AlarmToTimerC" qname="AlarmToTimerC"/>
+        <arguments>
+          <type-tag alignment="I:2" size="I:2"><struct-ref ref="0x40648d90"/>
+            <typename><typedef-ref name="TMilli" ref="0x4064d010"/></typename>
+          </type-tag>
+        </arguments>
+      </instance>
+      <module/>
+    </component><component loc="46(HilTimerMilliC.CounterToLocalTimeC):/home/jumbo/tinyos-main/tos/lib/timer/CounterToLocalTimeC.nc" nicename="tos.lib.timer.CounterToLocalTimeC" qname="HilTimerMilliC.CounterToLocalTimeC">
+      <documentation loc="36:/home/jumbo/tinyos-main/tos/lib/timer/CounterToLocalTimeC.nc">
+        <short>
+ CounterToLocalTimeC converts a 32-bit LocalTime to a Counter.</short>
+        <long>
+ CounterToLocalTimeC converts a 32-bit LocalTime to a Counter.  
+
+ &lt;p&gt;See TEP102 for more details.
+ @param precision_tag A type indicating the precision of the LocalTime and
+ Counter being converted.
+
+ @author Cory Sharp &lt;cssharp@eecs.berkeley.edu&gt;
+</long>
+      </documentation>
+      <instance number="1">
+        <component-ref nicename="tos.lib.timer.CounterToLocalTimeC" qname="CounterToLocalTimeC"/>
+        <arguments>
+          <type-tag alignment="I:2" size="I:2"><struct-ref ref="0x40648d90"/>
+            <typename><typedef-ref name="TMilli" ref="0x4064d010"/></typename>
+          </type-tag>
+        </arguments>
+      </instance>
+      <module/>
+    </component><component loc="41:/home/jumbo/tinyos-main/tos/chips/msp430/timer/CounterMilli32C.nc" nicename="tos.chips.msp430.timer.CounterMilli32C" qname="CounterMilli32C">
+      <documentation loc="33:/home/jumbo/tinyos-main/tos/chips/msp430/timer/CounterMilli32C.nc">
+        <short>
+ CounterMilli32C provides at 32-bit counter at 1024 ticks per second.</short>
+        <long>
+ CounterMilli32C provides at 32-bit counter at 1024 ticks per second.
+
+ @author Cory Sharp &lt;cssharp@eecs.berkeley.edu&gt;
+ @see  Please refer to TEP 102 for more information about this component and its
+          intended use.
+</long>
+      </documentation>
+      <configuration/>
+      <wiring>
+        <wire loc="50:/home/jumbo/tinyos-main/tos/chips/msp430/timer/CounterMilli32C.nc">
+          <from><interface-ref name="Counter" ref="0x412d7468" scoped=""/></from>
+          <to><interface-ref name="Counter" ref="0x412d5d60" scoped=""/></to>
+        </wire>
+        <wire loc="52:/home/jumbo/tinyos-main/tos/chips/msp430/timer/CounterMilli32C.nc">
+          <from><interface-ref name="CounterFrom" ref="0x412d2010" scoped=""/></from>
+          <to><interface-ref name="Msp430Counter32khz" ref="0x40bd5e98" scoped=""/></to>
+        </wire>
+      </wiring>
+    </component><component loc="41(HilTimerMilliC.AlarmMilli32C):/home/jumbo/tinyos-main/tos/chips/msp430/timer/AlarmMilli32C.nc" nicename="tos.chips.msp430.timer.AlarmMilli32C" qname="HilTimerMilliC.AlarmMilli32C">
+      <documentation loc="33:/home/jumbo/tinyos-main/tos/chips/msp430/timer/AlarmMilli32C.nc">
+        <short>
+ AlarmMilliC is the alarm for async millisecond alarms
+
+ </short>
+        <long>
+ AlarmMilliC is the alarm for async millisecond alarms
+
+ @author Cory Sharp &lt;cssharp@eecs.berkeley.edu&gt;
+ @see  Please refer to TEP 102 for more information about this component and its
+          intended use.
+</long>
+      </documentation>
+      <instance number="0">
+        <component-ref nicename="tos.chips.msp430.timer.AlarmMilli32C" qname="AlarmMilli32C"/>
+      </instance>
+      <configuration/>
+      <wiring>
+        <wire loc="53:/home/jumbo/tinyos-main/tos/chips/msp430/timer/AlarmMilli32C.nc">
+          <from><interface-ref name="Alarm" ref="0x4129b290" scoped=""/></from>
+          <to><interface-ref name="Alarm" ref="0x41ac65a0" scoped=""/></to>
+        </wire>
+        <wire loc="52:/home/jumbo/tinyos-main/tos/chips/msp430/timer/AlarmMilli32C.nc">
+          <from><interface-ref name="Init" ref="0x4129cd98" scoped=""/></from>
+          <to><interface-ref name="Init" ref="0x41ac95f8" scoped=""/></to>
+        </wire>
+        <wire loc="55:/home/jumbo/tinyos-main/tos/chips/msp430/timer/AlarmMilli32C.nc">
+          <from><interface-ref name="AlarmFrom" ref="0x41ac2380" scoped=""/></from>
+          <to><interface-ref name="Alarm" ref="0x41ac9a50" scoped=""/></to>
+        </wire>
+        <wire loc="56:/home/jumbo/tinyos-main/tos/chips/msp430/timer/AlarmMilli32C.nc">
+          <from><interface-ref name="Counter" ref="0x41ac30a0" scoped=""/></from>
+          <to><interface-ref name="Counter" ref="0x412d7468" scoped=""/></to>
+        </wire>
+      </wiring>
+    </component><component loc="46(HilTimerMilliC.VirtualizeTimerC):/home/jumbo/tinyos-main/tos/lib/timer/VirtualizeTimerC.nc" nicename="tos.lib.timer.VirtualizeTimerC" qname="HilTimerMilliC.VirtualizeTimerC">
+      <documentation loc="34:/home/jumbo/tinyos-main/tos/lib/timer/VirtualizeTimerC.nc">
+        <short>
+ VirtualizeTimerC uses a single Timer to create up to 255 virtual timers.</short>
+        <long>
+ VirtualizeTimerC uses a single Timer to create up to 255 virtual timers.
+
+ &lt;p&gt;See TEP102 for more details.
+
+ @param precision_tag A type indicating the precision of the Timer being 
+   virtualized.
+ @param max_timers Number of virtual timers to create.
+
+ @author Cory Sharp &lt;cssharp@eecs.berkeley.edu&gt;
+</long>
+      </documentation>
+      <instance number="0">
+        <component-ref nicename="tos.lib.timer.VirtualizeTimerC" qname="VirtualizeTimerC"/>
+        <arguments>
+          <type-tag alignment="I:2" size="I:2"><struct-ref ref="0x40648d90"/>
+            <typename><typedef-ref name="TMilli" ref="0x4064d010"/></typename>
+          </type-tag>
+          <value cst="I:14">
+            <type-int alignment="I:2" cname="unsigned int" size="I:2" unsigned=""/>
+          </value>
+        </arguments>
+      </instance>
+      <module/>
+    </component></referenced></component>

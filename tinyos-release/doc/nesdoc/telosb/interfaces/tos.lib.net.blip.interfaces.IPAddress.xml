@@ -1,0 +1,184 @@
+<?xml version="1.0" ?><interfacedef loc="24:/home/jumbo/jamal/project/CoAP/tinyos-release/tos/lib/net/blip/interfaces/IPAddress.nc" nicename="tos.lib.net.blip.interfaces.IPAddress" qname="IPAddress">
+      <function command="" loc="29:/home/jumbo/jamal/project/CoAP/tinyos-release/tos/lib/net/blip/interfaces/IPAddress.nc" name="getLLAddr" provided="0" ref="0x40908bd0">
+        <documentation loc="26:/home/jumbo/jamal/project/CoAP/tinyos-release/tos/lib/net/blip/interfaces/IPAddress.nc">
+          <short>
+ Get the preferred link-local interface for this node
+</short>
+        </documentation>
+        <interfacedef-ref nicename="tos.lib.net.blip.interfaces.IPAddress" qname="IPAddress"/>
+        <type-function alignment="I:1" size="I:1">
+          <type-int alignment="I:1" cname="unsigned char" size="I:1" unsigned="">
+            <typename><typedef-ref name="bool" ref="0x4037f928"/></typename>
+          </type-int>
+          <function-parameters>
+            <type-pointer alignment="I:2" size="I:2">
+              <type-tag alignment="I:2" size="I:16"><struct-ref name="in6_addr" ref="0x408871e8"/></type-tag>
+            </type-pointer>
+          </function-parameters>
+        </type-function>
+        <parameters>
+          <variable loc="29:/home/jumbo/jamal/project/CoAP/tinyos-release/tos/lib/net/blip/interfaces/IPAddress.nc" name="addr" ref="0x40908a78">
+            <type-pointer alignment="I:2" size="I:2">
+              <type-tag alignment="I:2" size="I:16"><struct-ref name="in6_addr" ref="0x408871e8"/></type-tag>
+            </type-pointer>
+          </variable>
+        </parameters>
+      </function>
+      <function event="" loc="56:/home/jumbo/jamal/project/CoAP/tinyos-release/tos/lib/net/blip/interfaces/IPAddress.nc" name="changed" provided="0" ref="0x40902518">
+        <interfacedef-ref nicename="tos.lib.net.blip.interfaces.IPAddress" qname="IPAddress"/>
+        <type-function alignment="I:1" size="I:1">
+          <type-void alignment="I:1" size="I:1"/>
+          <function-parameters>
+            <type-int alignment="I:1" cname="unsigned char" size="I:1" unsigned="">
+              <typename><typedef-ref name="bool" ref="0x4037f928"/></typename>
+            </type-int>
+          </function-parameters>
+        </type-function>
+        <parameters>
+          <variable loc="56:/home/jumbo/jamal/project/CoAP/tinyos-release/tos/lib/net/blip/interfaces/IPAddress.nc" name="valid" ref="0x409023c0">
+            <type-int alignment="I:1" cname="unsigned char" size="I:1" unsigned="">
+              <typename><typedef-ref name="bool" ref="0x4037f928"/></typename>
+            </type-int>
+          </variable>
+        </parameters>
+      </function>
+      <function command="" loc="44:/home/jumbo/jamal/project/CoAP/tinyos-release/tos/lib/net/blip/interfaces/IPAddress.nc" name="isLocalAddress" provided="0" ref="0x40905ea8">
+        <documentation loc="41:/home/jumbo/jamal/project/CoAP/tinyos-release/tos/lib/net/blip/interfaces/IPAddress.nc">
+          <short>
+ </short>
+          <long>
+ @return TRUE if the address is assigned to a local interface
+</long>
+        </documentation>
+        <interfacedef-ref nicename="tos.lib.net.blip.interfaces.IPAddress" qname="IPAddress"/>
+        <type-function alignment="I:1" size="I:1">
+          <type-int alignment="I:1" cname="unsigned char" size="I:1" unsigned="">
+            <typename><typedef-ref name="bool" ref="0x4037f928"/></typename>
+          </type-int>
+          <function-parameters>
+            <type-pointer alignment="I:2" size="I:2">
+              <type-tag alignment="I:2" size="I:16"><struct-ref name="in6_addr" ref="0x408871e8"/></type-tag>
+            </type-pointer>
+          </function-parameters>
+        </type-function>
+        <parameters>
+          <variable loc="44:/home/jumbo/jamal/project/CoAP/tinyos-release/tos/lib/net/blip/interfaces/IPAddress.nc" name="addr" ref="0x40905d50">
+            <type-pointer alignment="I:2" size="I:2">
+              <type-tag alignment="I:2" size="I:16"><struct-ref name="in6_addr" ref="0x408871e8"/></type-tag>
+            </type-pointer>
+          </variable>
+        </parameters>
+      </function>
+      <function command="" loc="34:/home/jumbo/jamal/project/CoAP/tinyos-release/tos/lib/net/blip/interfaces/IPAddress.nc" name="getGlobalAddr" provided="0" ref="0x40905230">
+        <documentation loc="31:/home/jumbo/jamal/project/CoAP/tinyos-release/tos/lib/net/blip/interfaces/IPAddress.nc">
+          <short> 
+ Get the preferred global IPv6 address for this node
+</short>
+        </documentation>
+        <interfacedef-ref nicename="tos.lib.net.blip.interfaces.IPAddress" qname="IPAddress"/>
+        <type-function alignment="I:1" size="I:1">
+          <type-int alignment="I:1" cname="unsigned char" size="I:1" unsigned="">
+            <typename><typedef-ref name="bool" ref="0x4037f928"/></typename>
+          </type-int>
+          <function-parameters>
+            <type-pointer alignment="I:2" size="I:2">
+              <type-tag alignment="I:2" size="I:16"><struct-ref name="in6_addr" ref="0x408871e8"/></type-tag>
+            </type-pointer>
+          </function-parameters>
+        </type-function>
+        <parameters>
+          <variable loc="34:/home/jumbo/jamal/project/CoAP/tinyos-release/tos/lib/net/blip/interfaces/IPAddress.nc" name="addr" ref="0x409050d8">
+            <type-pointer alignment="I:2" size="I:2">
+              <type-tag alignment="I:2" size="I:16"><struct-ref name="in6_addr" ref="0x408871e8"/></type-tag>
+            </type-pointer>
+          </variable>
+        </parameters>
+      </function>
+      <function command="" loc="39:/home/jumbo/jamal/project/CoAP/tinyos-release/tos/lib/net/blip/interfaces/IPAddress.nc" name="setSource" provided="0" ref="0x40905818">
+        <documentation loc="36:/home/jumbo/jamal/project/CoAP/tinyos-release/tos/lib/net/blip/interfaces/IPAddress.nc">
+          <short>
+ Choose a source address for a packet originating at this node.</short>
+          <long>
+ Choose a source address for a packet originating at this node.
+</long>
+        </documentation>
+        <interfacedef-ref nicename="tos.lib.net.blip.interfaces.IPAddress" qname="IPAddress"/>
+        <type-function alignment="I:1" size="I:1">
+          <type-int alignment="I:1" cname="unsigned char" size="I:1" unsigned="">
+            <typename><typedef-ref name="bool" ref="0x4037f928"/></typename>
+          </type-int>
+          <function-parameters>
+            <type-pointer alignment="I:2" size="I:2">
+              <type-tag alignment="I:1" size="I:40"><struct-ref name="ip6_hdr" ref="0x40884328"/></type-tag>
+            </type-pointer>
+          </function-parameters>
+        </type-function>
+        <parameters>
+          <variable loc="39:/home/jumbo/jamal/project/CoAP/tinyos-release/tos/lib/net/blip/interfaces/IPAddress.nc" name="hdr" ref="0x409056c0">
+            <type-pointer alignment="I:2" size="I:2">
+              <type-tag alignment="I:1" size="I:40"><struct-ref name="ip6_hdr" ref="0x40884328"/></type-tag>
+            </type-pointer>
+          </variable>
+        </parameters>
+      </function>
+      <function command="" loc="54:/home/jumbo/jamal/project/CoAP/tinyos-release/tos/lib/net/blip/interfaces/IPAddress.nc" name="removeAddress" provided="0" ref="0x40902010">
+        <interfacedef-ref nicename="tos.lib.net.blip.interfaces.IPAddress" qname="IPAddress"/>
+        <type-function alignment="I:1" size="I:1">
+          <type-int alignment="I:1" cname="unsigned char" size="I:1" unsigned="">
+            <typename><typedef-ref name="error_t" ref="0x4038a828"/></typename>
+          </type-int>
+          <function-parameters>
+          </function-parameters>
+        </type-function>
+        <parameters>
+        </parameters>
+      </function>
+      <function command="" loc="52:/home/jumbo/jamal/project/CoAP/tinyos-release/tos/lib/net/blip/interfaces/IPAddress.nc" name="setAddress" provided="0" ref="0x40903b28">
+        <interfacedef-ref nicename="tos.lib.net.blip.interfaces.IPAddress" qname="IPAddress"/>
+        <type-function alignment="I:1" size="I:1">
+          <type-int alignment="I:1" cname="unsigned char" size="I:1" unsigned="">
+            <typename><typedef-ref name="error_t" ref="0x4038a828"/></typename>
+          </type-int>
+          <function-parameters>
+            <type-pointer alignment="I:2" size="I:2">
+              <type-tag alignment="I:2" size="I:16"><struct-ref name="in6_addr" ref="0x408871e8"/></type-tag>
+            </type-pointer>
+          </function-parameters>
+        </type-function>
+        <parameters>
+          <variable loc="52:/home/jumbo/jamal/project/CoAP/tinyos-release/tos/lib/net/blip/interfaces/IPAddress.nc" name="addr" ref="0x409039d0">
+            <type-pointer alignment="I:2" size="I:2">
+              <type-tag alignment="I:2" size="I:16"><struct-ref name="in6_addr" ref="0x408871e8"/></type-tag>
+            </type-pointer>
+          </variable>
+        </parameters>
+      </function>
+      <function command="" loc="50:/home/jumbo/jamal/project/CoAP/tinyos-release/tos/lib/net/blip/interfaces/IPAddress.nc" name="isLLAddress" provided="0" ref="0x409034f0">
+        <documentation loc="46:/home/jumbo/jamal/project/CoAP/tinyos-release/tos/lib/net/blip/interfaces/IPAddress.nc">
+          <short>
+ </short>
+          <long>
+ @return TRUE of the address is a link local address not requiring
+ routing.
+</long>
+        </documentation>
+        <interfacedef-ref nicename="tos.lib.net.blip.interfaces.IPAddress" qname="IPAddress"/>
+        <type-function alignment="I:1" size="I:1">
+          <type-int alignment="I:1" cname="unsigned char" size="I:1" unsigned="">
+            <typename><typedef-ref name="bool" ref="0x4037f928"/></typename>
+          </type-int>
+          <function-parameters>
+            <type-pointer alignment="I:2" size="I:2">
+              <type-tag alignment="I:2" size="I:16"><struct-ref name="in6_addr" ref="0x408871e8"/></type-tag>
+            </type-pointer>
+          </function-parameters>
+        </type-function>
+        <parameters>
+          <variable loc="50:/home/jumbo/jamal/project/CoAP/tinyos-release/tos/lib/net/blip/interfaces/IPAddress.nc" name="addr" ref="0x40903398">
+            <type-pointer alignment="I:2" size="I:2">
+              <type-tag alignment="I:2" size="I:16"><struct-ref name="in6_addr" ref="0x408871e8"/></type-tag>
+            </type-pointer>
+          </variable>
+        </parameters>
+      </function>
+    </interfacedef>

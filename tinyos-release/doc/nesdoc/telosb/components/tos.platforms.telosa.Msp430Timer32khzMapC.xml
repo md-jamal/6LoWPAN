@@ -1,0 +1,783 @@
+<?xml version="1.0" ?><component loc="48:/home/jumbo/jamal/project/CoAP/tinyos-release/tos/platforms/telosa/Msp430Timer32khzMapC.nc" nicename="tos.platforms.telosa.Msp430Timer32khzMapC" qname="Msp430Timer32khzMapC">
+      <documentation loc="34:/home/jumbo/jamal/project/CoAP/tinyos-release/tos/platforms/telosa/Msp430Timer32khzMapC.nc">
+        <short>
+ MSP430Timer32khzMapC presents as paramaterized interfaces all of
+ the 32khz hardware timers on the MSP430 that are available for
+ compile time allocation by &quot;new Alarm32khz16C()&quot;, &quot;new
+ AlarmMilli32C()&quot;, and so on.</short>
+        <long>
+ MSP430Timer32khzMapC presents as paramaterized interfaces all of
+ the 32khz hardware timers on the MSP430 that are available for
+ compile time allocation by &quot;new Alarm32khz16C()&quot;, &quot;new
+ AlarmMilli32C()&quot;, and so on.  
+
+ Platforms based on the MSP430 are * encouraged to copy in and
+ override this file, presenting only the * hardware timers that are
+ available for allocation on that platform.
+
+ @author Cory Sharp &lt;cssharp@eecs.berkeley.edu&gt;
+ @version $Revision: 1.5 $ $Date: 2010-06-29 22:07:55 $
+</long>
+      </documentation>
+      <configuration/>
+      <wiring>
+        <wire loc="58:/home/jumbo/jamal/project/CoAP/tinyos-release/tos/platforms/telosa/Msp430Timer32khzMapC.nc">
+          <from><interface-ref name="Msp430Timer" ref="0x40ad7ef0" scoped=""/>
+          <arguments>
+            <value cst="I:0">
+              <type-int alignment="I:2" cname="int" size="I:2"/>
+            </value>
+          </arguments>
+          </from>
+          <to><interface-ref name="TimerB" ref="0x4066a4e0" scoped=""/></to>
+        </wire>
+        <wire loc="59:/home/jumbo/jamal/project/CoAP/tinyos-release/tos/platforms/telosa/Msp430Timer32khzMapC.nc">
+          <from><interface-ref name="Msp430TimerControl" ref="0x40ad4e98" scoped=""/>
+          <arguments>
+            <value cst="I:0">
+              <type-int alignment="I:2" cname="int" size="I:2"/>
+            </value>
+          </arguments>
+          </from>
+          <to><interface-ref name="ControlB0" ref="0x406662a8" scoped=""/></to>
+        </wire>
+        <wire loc="60:/home/jumbo/jamal/project/CoAP/tinyos-release/tos/platforms/telosa/Msp430Timer32khzMapC.nc">
+          <from><interface-ref name="Msp430Compare" ref="0x40ad3c88" scoped=""/>
+          <arguments>
+            <value cst="I:0">
+              <type-int alignment="I:2" cname="int" size="I:2"/>
+            </value>
+          </arguments>
+          </from>
+          <to><interface-ref name="CompareB0" ref="0x40673438" scoped=""/></to>
+        </wire>
+        <wire loc="66:/home/jumbo/jamal/project/CoAP/tinyos-release/tos/platforms/telosa/Msp430Timer32khzMapC.nc">
+          <from><interface-ref name="Msp430Timer" ref="0x40ad7ef0" scoped=""/>
+          <arguments>
+            <value cst="I:1">
+              <type-int alignment="I:2" cname="int" size="I:2"/>
+            </value>
+          </arguments>
+          </from>
+          <to><interface-ref name="TimerB" ref="0x4066a4e0" scoped=""/></to>
+        </wire>
+        <wire loc="67:/home/jumbo/jamal/project/CoAP/tinyos-release/tos/platforms/telosa/Msp430Timer32khzMapC.nc">
+          <from><interface-ref name="Msp430TimerControl" ref="0x40ad4e98" scoped=""/>
+          <arguments>
+            <value cst="I:1">
+              <type-int alignment="I:2" cname="int" size="I:2"/>
+            </value>
+          </arguments>
+          </from>
+          <to><interface-ref name="ControlB2" ref="0x40665a58" scoped=""/></to>
+        </wire>
+        <wire loc="68:/home/jumbo/jamal/project/CoAP/tinyos-release/tos/platforms/telosa/Msp430Timer32khzMapC.nc">
+          <from><interface-ref name="Msp430Compare" ref="0x40ad3c88" scoped=""/>
+          <arguments>
+            <value cst="I:1">
+              <type-int alignment="I:2" cname="int" size="I:2"/>
+            </value>
+          </arguments>
+          </from>
+          <to><interface-ref name="CompareB2" ref="0x40672438" scoped=""/></to>
+        </wire>
+        <wire loc="70:/home/jumbo/jamal/project/CoAP/tinyos-release/tos/platforms/telosa/Msp430Timer32khzMapC.nc">
+          <from><interface-ref name="Msp430Timer" ref="0x40ad7ef0" scoped=""/>
+          <arguments>
+            <value cst="I:2">
+              <type-int alignment="I:2" cname="int" size="I:2"/>
+            </value>
+          </arguments>
+          </from>
+          <to><interface-ref name="TimerB" ref="0x4066a4e0" scoped=""/></to>
+        </wire>
+        <wire loc="71:/home/jumbo/jamal/project/CoAP/tinyos-release/tos/platforms/telosa/Msp430Timer32khzMapC.nc">
+          <from><interface-ref name="Msp430TimerControl" ref="0x40ad4e98" scoped=""/>
+          <arguments>
+            <value cst="I:2">
+              <type-int alignment="I:2" cname="int" size="I:2"/>
+            </value>
+          </arguments>
+          </from>
+          <to><interface-ref name="ControlB3" ref="0x40676628" scoped=""/></to>
+        </wire>
+        <wire loc="72:/home/jumbo/jamal/project/CoAP/tinyos-release/tos/platforms/telosa/Msp430Timer32khzMapC.nc">
+          <from><interface-ref name="Msp430Compare" ref="0x40ad3c88" scoped=""/>
+          <arguments>
+            <value cst="I:2">
+              <type-int alignment="I:2" cname="int" size="I:2"/>
+            </value>
+          </arguments>
+          </from>
+          <to><interface-ref name="CompareB3" ref="0x40672bf8" scoped=""/></to>
+        </wire>
+        <wire loc="74:/home/jumbo/jamal/project/CoAP/tinyos-release/tos/platforms/telosa/Msp430Timer32khzMapC.nc">
+          <from><interface-ref name="Msp430Timer" ref="0x40ad7ef0" scoped=""/>
+          <arguments>
+            <value cst="I:3">
+              <type-int alignment="I:2" cname="int" size="I:2"/>
+            </value>
+          </arguments>
+          </from>
+          <to><interface-ref name="TimerB" ref="0x4066a4e0" scoped=""/></to>
+        </wire>
+        <wire loc="75:/home/jumbo/jamal/project/CoAP/tinyos-release/tos/platforms/telosa/Msp430Timer32khzMapC.nc">
+          <from><interface-ref name="Msp430TimerControl" ref="0x40ad4e98" scoped=""/>
+          <arguments>
+            <value cst="I:3">
+              <type-int alignment="I:2" cname="int" size="I:2"/>
+            </value>
+          </arguments>
+          </from>
+          <to><interface-ref name="ControlB4" ref="0x406751c8" scoped=""/></to>
+        </wire>
+        <wire loc="76:/home/jumbo/jamal/project/CoAP/tinyos-release/tos/platforms/telosa/Msp430Timer32khzMapC.nc">
+          <from><interface-ref name="Msp430Compare" ref="0x40ad3c88" scoped=""/>
+          <arguments>
+            <value cst="I:3">
+              <type-int alignment="I:2" cname="int" size="I:2"/>
+            </value>
+          </arguments>
+          </from>
+          <to><interface-ref name="CompareB4" ref="0x40671438" scoped=""/></to>
+        </wire>
+        <wire loc="78:/home/jumbo/jamal/project/CoAP/tinyos-release/tos/platforms/telosa/Msp430Timer32khzMapC.nc">
+          <from><interface-ref name="Msp430Timer" ref="0x40ad7ef0" scoped=""/>
+          <arguments>
+            <value cst="I:4">
+              <type-int alignment="I:2" cname="int" size="I:2"/>
+            </value>
+          </arguments>
+          </from>
+          <to><interface-ref name="TimerB" ref="0x4066a4e0" scoped=""/></to>
+        </wire>
+        <wire loc="79:/home/jumbo/jamal/project/CoAP/tinyos-release/tos/platforms/telosa/Msp430Timer32khzMapC.nc">
+          <from><interface-ref name="Msp430TimerControl" ref="0x40ad4e98" scoped=""/>
+          <arguments>
+            <value cst="I:4">
+              <type-int alignment="I:2" cname="int" size="I:2"/>
+            </value>
+          </arguments>
+          </from>
+          <to><interface-ref name="ControlB5" ref="0x40675d38" scoped=""/></to>
+        </wire>
+        <wire loc="80:/home/jumbo/jamal/project/CoAP/tinyos-release/tos/platforms/telosa/Msp430Timer32khzMapC.nc">
+          <from><interface-ref name="Msp430Compare" ref="0x40ad3c88" scoped=""/>
+          <arguments>
+            <value cst="I:4">
+              <type-int alignment="I:2" cname="int" size="I:2"/>
+            </value>
+          </arguments>
+          </from>
+          <to><interface-ref name="CompareB5" ref="0x40671bf8" scoped=""/></to>
+        </wire>
+        <wire loc="82:/home/jumbo/jamal/project/CoAP/tinyos-release/tos/platforms/telosa/Msp430Timer32khzMapC.nc">
+          <from><interface-ref name="Msp430Timer" ref="0x40ad7ef0" scoped=""/>
+          <arguments>
+            <value cst="I:5">
+              <type-int alignment="I:2" cname="int" size="I:2"/>
+            </value>
+          </arguments>
+          </from>
+          <to><interface-ref name="TimerB" ref="0x4066a4e0" scoped=""/></to>
+        </wire>
+        <wire loc="83:/home/jumbo/jamal/project/CoAP/tinyos-release/tos/platforms/telosa/Msp430Timer32khzMapC.nc">
+          <from><interface-ref name="Msp430TimerControl" ref="0x40ad4e98" scoped=""/>
+          <arguments>
+            <value cst="I:5">
+              <type-int alignment="I:2" cname="int" size="I:2"/>
+            </value>
+          </arguments>
+          </from>
+          <to><interface-ref name="ControlB6" ref="0x406748c8" scoped=""/></to>
+        </wire>
+        <wire loc="84:/home/jumbo/jamal/project/CoAP/tinyos-release/tos/platforms/telosa/Msp430Timer32khzMapC.nc">
+          <from><interface-ref name="Msp430Compare" ref="0x40ad3c88" scoped=""/>
+          <arguments>
+            <value cst="I:5">
+              <type-int alignment="I:2" cname="int" size="I:2"/>
+            </value>
+          </arguments>
+          </from>
+          <to><interface-ref name="CompareB6" ref="0x40670438" scoped=""/></to>
+        </wire>
+      </wiring>
+    <specification><interface loc="52:/home/jumbo/jamal/project/CoAP/tinyos-release/tos/platforms/telosa/Msp430Timer32khzMapC.nc" name="Msp430Compare" provided="1" ref="0x40ad3c88">
+      <component-ref nicename="tos.platforms.telosa.Msp430Timer32khzMapC" qname="Msp430Timer32khzMapC"/>
+      <type-interface alignment="I:2" size="I:2"><interface-ref name="Msp430Compare" ref="0x40ad3c88" scoped=""/></type-interface>
+      <instance>
+        <interfacedef-ref nicename="tos.chips.msp430.timer.Msp430Compare" qname="Msp430Compare"/>
+      </instance>
+      <interface-parameters>
+        <type-int alignment="I:1" cname="unsigned char" size="I:1" unsigned="">
+          <typename><typedef-ref name="uint8_t" ref="0x4003adc8"/></typename>
+        </type-int>
+      </interface-parameters>
+      <interface-functions>
+        <function-ref name="getEvent" ref="0x40ad3e60" scoped=""/>
+        <function-ref name="setEvent" ref="0x40ad1010" scoped=""/>
+        <function-ref name="setEventFromPrev" ref="0x40ad10f0" scoped=""/>
+        <function-ref name="setEventFromNow" ref="0x40ad11d0" scoped=""/>
+        <function-ref name="fired" ref="0x40ad12b0" scoped=""/>
+      </interface-functions>
+    </interface><interface loc="50:/home/jumbo/jamal/project/CoAP/tinyos-release/tos/platforms/telosa/Msp430Timer32khzMapC.nc" name="Msp430Timer" provided="1" ref="0x40ad7ef0">
+      <component-ref nicename="tos.platforms.telosa.Msp430Timer32khzMapC" qname="Msp430Timer32khzMapC"/>
+      <type-interface alignment="I:2" size="I:2"><interface-ref name="Msp430Timer" ref="0x40ad7ef0" scoped=""/></type-interface>
+      <instance>
+        <interfacedef-ref nicename="tos.chips.msp430.timer.Msp430Timer" qname="Msp430Timer"/>
+      </instance>
+      <interface-parameters>
+        <type-int alignment="I:1" cname="unsigned char" size="I:1" unsigned="">
+          <typename><typedef-ref name="uint8_t" ref="0x4003adc8"/></typename>
+        </type-int>
+      </interface-parameters>
+      <interface-functions>
+        <function-ref name="clear" ref="0x40ad40e0" scoped=""/>
+        <function-ref name="setClockSource" ref="0x40ad41c0" scoped=""/>
+        <function-ref name="enableEvents" ref="0x40ad42a0" scoped=""/>
+        <function-ref name="get" ref="0x40ad4380" scoped=""/>
+        <function-ref name="disableEvents" ref="0x40ad4460" scoped=""/>
+        <function-ref name="clearOverflow" ref="0x40ad4540" scoped=""/>
+        <function-ref name="getMode" ref="0x40ad4620" scoped=""/>
+        <function-ref name="isOverflowPending" ref="0x40ad4700" scoped=""/>
+        <function-ref name="overflow" ref="0x40ad47e0" scoped=""/>
+        <function-ref name="setMode" ref="0x40ad48c0" scoped=""/>
+        <function-ref name="setInputDivider" ref="0x40ad49a0" scoped=""/>
+      </interface-functions>
+    </interface><interface loc="51:/home/jumbo/jamal/project/CoAP/tinyos-release/tos/platforms/telosa/Msp430Timer32khzMapC.nc" name="Msp430TimerControl" provided="1" ref="0x40ad4e98">
+      <component-ref nicename="tos.platforms.telosa.Msp430Timer32khzMapC" qname="Msp430Timer32khzMapC"/>
+      <type-interface alignment="I:2" size="I:2"><interface-ref name="Msp430TimerControl" ref="0x40ad4e98" scoped=""/></type-interface>
+      <instance>
+        <interfacedef-ref nicename="tos.chips.msp430.timer.Msp430TimerControl" qname="Msp430TimerControl"/>
+      </instance>
+      <interface-parameters>
+        <type-int alignment="I:1" cname="unsigned char" size="I:1" unsigned="">
+          <typename><typedef-ref name="uint8_t" ref="0x4003adc8"/></typename>
+        </type-int>
+      </interface-parameters>
+      <interface-functions>
+        <function-ref name="setControlAsCapture" ref="0x40ad30c0" scoped=""/>
+        <function-ref name="getControl" ref="0x40ad31a0" scoped=""/>
+        <function-ref name="enableEvents" ref="0x40ad3280" scoped=""/>
+        <function-ref name="areEventsEnabled" ref="0x40ad3360" scoped=""/>
+        <function-ref name="setControlAsCompare" ref="0x40ad3440" scoped=""/>
+        <function-ref name="disableEvents" ref="0x40ad3520" scoped=""/>
+        <function-ref name="isInterruptPending" ref="0x40ad3600" scoped=""/>
+        <function-ref name="clearPendingInterrupt" ref="0x40ad36e0" scoped=""/>
+        <function-ref name="setControl" ref="0x40ad37c0" scoped=""/>
+      </interface-functions>
+    </interface></specification><referenced><interface loc="55:/home/jumbo/jamal/project/CoAP/tinyos-release/tos/chips/msp430/timer/Msp430TimerC.nc" name="ControlB4" provided="1" ref="0x406751c8">
+      <component-ref nicename="tos.chips.msp430.timer.Msp430TimerC" qname="Msp430TimerC"/>
+      <type-interface alignment="I:2" size="I:2"><interface-ref name="ControlB4" ref="0x406751c8" scoped=""/></type-interface>
+      <instance>
+        <interfacedef-ref nicename="tos.chips.msp430.timer.Msp430TimerControl" qname="Msp430TimerControl"/>
+      </instance>
+      <interface-functions>
+        <function-ref name="setControlAsCapture" ref="0x406753a0" scoped=""/>
+        <function-ref name="getControl" ref="0x40675480" scoped=""/>
+        <function-ref name="enableEvents" ref="0x40675560" scoped=""/>
+        <function-ref name="areEventsEnabled" ref="0x40675640" scoped=""/>
+        <function-ref name="setControlAsCompare" ref="0x40675720" scoped=""/>
+        <function-ref name="disableEvents" ref="0x40675800" scoped=""/>
+        <function-ref name="isInterruptPending" ref="0x406758e0" scoped=""/>
+        <function-ref name="clearPendingInterrupt" ref="0x406759c0" scoped=""/>
+        <function-ref name="setControl" ref="0x40675aa0" scoped=""/>
+      </interface-functions>
+    </interface><interface loc="57:/home/jumbo/jamal/project/CoAP/tinyos-release/tos/chips/msp430/timer/Msp430TimerC.nc" name="ControlB6" provided="1" ref="0x406748c8">
+      <component-ref nicename="tos.chips.msp430.timer.Msp430TimerC" qname="Msp430TimerC"/>
+      <type-interface alignment="I:2" size="I:2"><interface-ref name="ControlB6" ref="0x406748c8" scoped=""/></type-interface>
+      <instance>
+        <interfacedef-ref nicename="tos.chips.msp430.timer.Msp430TimerControl" qname="Msp430TimerControl"/>
+      </instance>
+      <interface-functions>
+        <function-ref name="setControlAsCapture" ref="0x40674aa0" scoped=""/>
+        <function-ref name="getControl" ref="0x40674b80" scoped=""/>
+        <function-ref name="enableEvents" ref="0x40674c60" scoped=""/>
+        <function-ref name="areEventsEnabled" ref="0x40674d40" scoped=""/>
+        <function-ref name="setControlAsCompare" ref="0x40674e20" scoped=""/>
+        <function-ref name="disableEvents" ref="0x40674f00" scoped=""/>
+        <function-ref name="isInterruptPending" ref="0x40673010" scoped=""/>
+        <function-ref name="clearPendingInterrupt" ref="0x406730f0" scoped=""/>
+        <function-ref name="setControl" ref="0x406731d0" scoped=""/>
+      </interface-functions>
+    </interface><interface loc="53:/home/jumbo/jamal/project/CoAP/tinyos-release/tos/chips/msp430/timer/Msp430TimerC.nc" name="ControlB2" provided="1" ref="0x40665a58">
+      <component-ref nicename="tos.chips.msp430.timer.Msp430TimerC" qname="Msp430TimerC"/>
+      <type-interface alignment="I:2" size="I:2"><interface-ref name="ControlB2" ref="0x40665a58" scoped=""/></type-interface>
+      <instance>
+        <interfacedef-ref nicename="tos.chips.msp430.timer.Msp430TimerControl" qname="Msp430TimerControl"/>
+      </instance>
+      <interface-functions>
+        <function-ref name="setControlAsCapture" ref="0x40665c30" scoped=""/>
+        <function-ref name="getControl" ref="0x40665d10" scoped=""/>
+        <function-ref name="enableEvents" ref="0x40665df0" scoped=""/>
+        <function-ref name="areEventsEnabled" ref="0x40665ed0" scoped=""/>
+        <function-ref name="setControlAsCompare" ref="0x40676010" scoped=""/>
+        <function-ref name="disableEvents" ref="0x406760f0" scoped=""/>
+        <function-ref name="isInterruptPending" ref="0x406761d0" scoped=""/>
+        <function-ref name="clearPendingInterrupt" ref="0x406762b0" scoped=""/>
+        <function-ref name="setControl" ref="0x40676390" scoped=""/>
+      </interface-functions>
+    </interface><interface loc="60:/home/jumbo/jamal/project/CoAP/tinyos-release/tos/chips/msp430/timer/Msp430TimerC.nc" name="CompareB2" provided="1" ref="0x40672438">
+      <component-ref nicename="tos.chips.msp430.timer.Msp430TimerC" qname="Msp430TimerC"/>
+      <type-interface alignment="I:2" size="I:2"><interface-ref name="CompareB2" ref="0x40672438" scoped=""/></type-interface>
+      <instance>
+        <interfacedef-ref nicename="tos.chips.msp430.timer.Msp430Compare" qname="Msp430Compare"/>
+      </instance>
+      <interface-functions>
+        <function-ref name="getEvent" ref="0x40672610" scoped=""/>
+        <function-ref name="setEvent" ref="0x406726f0" scoped=""/>
+        <function-ref name="setEventFromPrev" ref="0x406727d0" scoped=""/>
+        <function-ref name="setEventFromNow" ref="0x406728b0" scoped=""/>
+        <function-ref name="fired" ref="0x40672990" scoped=""/>
+      </interface-functions>
+    </interface><interface loc="51:/home/jumbo/jamal/project/CoAP/tinyos-release/tos/chips/msp430/timer/Msp430TimerC.nc" name="ControlB0" provided="1" ref="0x406662a8">
+      <component-ref nicename="tos.chips.msp430.timer.Msp430TimerC" qname="Msp430TimerC"/>
+      <type-interface alignment="I:2" size="I:2"><interface-ref name="ControlB0" ref="0x406662a8" scoped=""/></type-interface>
+      <instance>
+        <interfacedef-ref nicename="tos.chips.msp430.timer.Msp430TimerControl" qname="Msp430TimerControl"/>
+      </instance>
+      <interface-functions>
+        <function-ref name="setControlAsCapture" ref="0x40666480" scoped=""/>
+        <function-ref name="getControl" ref="0x40666560" scoped=""/>
+        <function-ref name="enableEvents" ref="0x40666640" scoped=""/>
+        <function-ref name="areEventsEnabled" ref="0x40666720" scoped=""/>
+        <function-ref name="setControlAsCompare" ref="0x40666800" scoped=""/>
+        <function-ref name="disableEvents" ref="0x406668e0" scoped=""/>
+        <function-ref name="isInterruptPending" ref="0x406669c0" scoped=""/>
+        <function-ref name="clearPendingInterrupt" ref="0x40666aa0" scoped=""/>
+        <function-ref name="setControl" ref="0x40666b80" scoped=""/>
+      </interface-functions>
+    </interface><interface loc="63:/home/jumbo/jamal/project/CoAP/tinyos-release/tos/chips/msp430/timer/Msp430TimerC.nc" name="CompareB5" provided="1" ref="0x40671bf8">
+      <component-ref nicename="tos.chips.msp430.timer.Msp430TimerC" qname="Msp430TimerC"/>
+      <type-interface alignment="I:2" size="I:2"><interface-ref name="CompareB5" ref="0x40671bf8" scoped=""/></type-interface>
+      <instance>
+        <interfacedef-ref nicename="tos.chips.msp430.timer.Msp430Compare" qname="Msp430Compare"/>
+      </instance>
+      <interface-functions>
+        <function-ref name="getEvent" ref="0x40671dd0" scoped=""/>
+        <function-ref name="setEvent" ref="0x40671eb0" scoped=""/>
+        <function-ref name="setEventFromPrev" ref="0x40670010" scoped=""/>
+        <function-ref name="setEventFromNow" ref="0x406700f0" scoped=""/>
+        <function-ref name="fired" ref="0x406701d0" scoped=""/>
+      </interface-functions>
+    </interface><interface loc="54:/home/jumbo/jamal/project/CoAP/tinyos-release/tos/chips/msp430/timer/Msp430TimerC.nc" name="ControlB3" provided="1" ref="0x40676628">
+      <component-ref nicename="tos.chips.msp430.timer.Msp430TimerC" qname="Msp430TimerC"/>
+      <type-interface alignment="I:2" size="I:2"><interface-ref name="ControlB3" ref="0x40676628" scoped=""/></type-interface>
+      <instance>
+        <interfacedef-ref nicename="tos.chips.msp430.timer.Msp430TimerControl" qname="Msp430TimerControl"/>
+      </instance>
+      <interface-functions>
+        <function-ref name="setControlAsCapture" ref="0x40676800" scoped=""/>
+        <function-ref name="getControl" ref="0x406768e0" scoped=""/>
+        <function-ref name="enableEvents" ref="0x406769c0" scoped=""/>
+        <function-ref name="areEventsEnabled" ref="0x40676aa0" scoped=""/>
+        <function-ref name="setControlAsCompare" ref="0x40676b80" scoped=""/>
+        <function-ref name="disableEvents" ref="0x40676c60" scoped=""/>
+        <function-ref name="isInterruptPending" ref="0x40676d40" scoped=""/>
+        <function-ref name="clearPendingInterrupt" ref="0x40676e20" scoped=""/>
+        <function-ref name="setControl" ref="0x40676f00" scoped=""/>
+      </interface-functions>
+    </interface><interface loc="50:/home/jumbo/jamal/project/CoAP/tinyos-release/tos/chips/msp430/timer/Msp430TimerC.nc" name="TimerB" provided="1" ref="0x4066a4e0">
+      <component-ref nicename="tos.chips.msp430.timer.Msp430TimerC" qname="Msp430TimerC"/>
+      <type-interface alignment="I:2" size="I:2"><interface-ref name="TimerB" ref="0x4066a4e0" scoped=""/></type-interface>
+      <instance>
+        <interfacedef-ref nicename="tos.chips.msp430.timer.Msp430Timer" qname="Msp430Timer"/>
+      </instance>
+      <interface-functions>
+        <function-ref name="clear" ref="0x4066a6b8" scoped=""/>
+        <function-ref name="setClockSource" ref="0x4066a798" scoped=""/>
+        <function-ref name="enableEvents" ref="0x4066a878" scoped=""/>
+        <function-ref name="get" ref="0x4066a958" scoped=""/>
+        <function-ref name="disableEvents" ref="0x4066aa38" scoped=""/>
+        <function-ref name="clearOverflow" ref="0x4066ab18" scoped=""/>
+        <function-ref name="getMode" ref="0x4066abf8" scoped=""/>
+        <function-ref name="isOverflowPending" ref="0x4066acd8" scoped=""/>
+        <function-ref name="overflow" ref="0x4066adb8" scoped=""/>
+        <function-ref name="setMode" ref="0x4066ae98" scoped=""/>
+        <function-ref name="setInputDivider" ref="0x40666010" scoped=""/>
+      </interface-functions>
+    </interface><interface loc="61:/home/jumbo/jamal/project/CoAP/tinyos-release/tos/chips/msp430/timer/Msp430TimerC.nc" name="CompareB3" provided="1" ref="0x40672bf8">
+      <component-ref nicename="tos.chips.msp430.timer.Msp430TimerC" qname="Msp430TimerC"/>
+      <type-interface alignment="I:2" size="I:2"><interface-ref name="CompareB3" ref="0x40672bf8" scoped=""/></type-interface>
+      <instance>
+        <interfacedef-ref nicename="tos.chips.msp430.timer.Msp430Compare" qname="Msp430Compare"/>
+      </instance>
+      <interface-functions>
+        <function-ref name="getEvent" ref="0x40672dd0" scoped=""/>
+        <function-ref name="setEvent" ref="0x40672eb0" scoped=""/>
+        <function-ref name="setEventFromPrev" ref="0x40671010" scoped=""/>
+        <function-ref name="setEventFromNow" ref="0x406710f0" scoped=""/>
+        <function-ref name="fired" ref="0x406711d0" scoped=""/>
+      </interface-functions>
+    </interface><interface loc="64:/home/jumbo/jamal/project/CoAP/tinyos-release/tos/chips/msp430/timer/Msp430TimerC.nc" name="CompareB6" provided="1" ref="0x40670438">
+      <component-ref nicename="tos.chips.msp430.timer.Msp430TimerC" qname="Msp430TimerC"/>
+      <type-interface alignment="I:2" size="I:2"><interface-ref name="CompareB6" ref="0x40670438" scoped=""/></type-interface>
+      <instance>
+        <interfacedef-ref nicename="tos.chips.msp430.timer.Msp430Compare" qname="Msp430Compare"/>
+      </instance>
+      <interface-functions>
+        <function-ref name="getEvent" ref="0x40670710" scoped=""/>
+        <function-ref name="setEvent" ref="0x406707f0" scoped=""/>
+        <function-ref name="setEventFromPrev" ref="0x406708d0" scoped=""/>
+        <function-ref name="setEventFromNow" ref="0x406709b0" scoped=""/>
+        <function-ref name="fired" ref="0x40670a90" scoped=""/>
+      </interface-functions>
+    </interface><interface loc="58:/home/jumbo/jamal/project/CoAP/tinyos-release/tos/chips/msp430/timer/Msp430TimerC.nc" name="CompareB0" provided="1" ref="0x40673438">
+      <component-ref nicename="tos.chips.msp430.timer.Msp430TimerC" qname="Msp430TimerC"/>
+      <type-interface alignment="I:2" size="I:2"><interface-ref name="CompareB0" ref="0x40673438" scoped=""/></type-interface>
+      <instance>
+        <interfacedef-ref nicename="tos.chips.msp430.timer.Msp430Compare" qname="Msp430Compare"/>
+      </instance>
+      <interface-functions>
+        <function-ref name="getEvent" ref="0x40673610" scoped=""/>
+        <function-ref name="setEvent" ref="0x406736f0" scoped=""/>
+        <function-ref name="setEventFromPrev" ref="0x406737d0" scoped=""/>
+        <function-ref name="setEventFromNow" ref="0x406738b0" scoped=""/>
+        <function-ref name="fired" ref="0x40673990" scoped=""/>
+      </interface-functions>
+    </interface><interface loc="56:/home/jumbo/jamal/project/CoAP/tinyos-release/tos/chips/msp430/timer/Msp430TimerC.nc" name="ControlB5" provided="1" ref="0x40675d38">
+      <component-ref nicename="tos.chips.msp430.timer.Msp430TimerC" qname="Msp430TimerC"/>
+      <type-interface alignment="I:2" size="I:2"><interface-ref name="ControlB5" ref="0x40675d38" scoped=""/></type-interface>
+      <instance>
+        <interfacedef-ref nicename="tos.chips.msp430.timer.Msp430TimerControl" qname="Msp430TimerControl"/>
+      </instance>
+      <interface-functions>
+        <function-ref name="setControlAsCapture" ref="0x40675f10" scoped=""/>
+        <function-ref name="getControl" ref="0x40674010" scoped=""/>
+        <function-ref name="enableEvents" ref="0x406740f0" scoped=""/>
+        <function-ref name="areEventsEnabled" ref="0x406741d0" scoped=""/>
+        <function-ref name="setControlAsCompare" ref="0x406742b0" scoped=""/>
+        <function-ref name="disableEvents" ref="0x40674390" scoped=""/>
+        <function-ref name="isInterruptPending" ref="0x40674470" scoped=""/>
+        <function-ref name="clearPendingInterrupt" ref="0x40674550" scoped=""/>
+        <function-ref name="setControl" ref="0x40674630" scoped=""/>
+      </interface-functions>
+    </interface><interface loc="62:/home/jumbo/jamal/project/CoAP/tinyos-release/tos/chips/msp430/timer/Msp430TimerC.nc" name="CompareB4" provided="1" ref="0x40671438">
+      <component-ref nicename="tos.chips.msp430.timer.Msp430TimerC" qname="Msp430TimerC"/>
+      <type-interface alignment="I:2" size="I:2"><interface-ref name="CompareB4" ref="0x40671438" scoped=""/></type-interface>
+      <instance>
+        <interfacedef-ref nicename="tos.chips.msp430.timer.Msp430Compare" qname="Msp430Compare"/>
+      </instance>
+      <interface-functions>
+        <function-ref name="getEvent" ref="0x40671610" scoped=""/>
+        <function-ref name="setEvent" ref="0x406716f0" scoped=""/>
+        <function-ref name="setEventFromPrev" ref="0x406717d0" scoped=""/>
+        <function-ref name="setEventFromNow" ref="0x406718b0" scoped=""/>
+        <function-ref name="fired" ref="0x40671990" scoped=""/>
+      </interface-functions>
+    </interface><component loc="37:/home/jumbo/jamal/project/CoAP/tinyos-release/tos/chips/msp430/timer/Msp430TimerC.nc" nicename="tos.chips.msp430.timer.Msp430TimerC" qname="Msp430TimerC">
+      <documentation loc="33:/home/jumbo/jamal/project/CoAP/tinyos-release/tos/chips/msp430/timer/Msp430TimerC.nc">
+        <short>
+ </short>
+        <long>
+ @author Cory Sharp &lt;cssharp@eecs.berkeley.edu&gt;
+</long>
+      </documentation>
+      <configuration/>
+      <wiring>
+        <wire loc="113:/home/jumbo/jamal/project/CoAP/tinyos-release/tos/chips/msp430/timer/Msp430TimerC.nc">
+          <from><interface-ref name="ControlA2" ref="0x40663468" scoped=""/></from>
+          <to><interface-ref name="Control" ref="0x406c8870" scoped=""/></to>
+        </wire>
+        <wire loc="126:/home/jumbo/jamal/project/CoAP/tinyos-release/tos/chips/msp430/timer/Msp430TimerC.nc">
+          <from><interface-ref name="ControlB0" ref="0x406662a8" scoped=""/></from>
+          <to><interface-ref name="Control" ref="0x406d7700" scoped=""/></to>
+        </wire>
+        <wire loc="108:/home/jumbo/jamal/project/CoAP/tinyos-release/tos/chips/msp430/timer/Msp430TimerC.nc">
+          <from><interface-ref name="CaptureA1" ref="0x4066b358" scoped=""/></from>
+          <to><interface-ref name="Capture" ref="0x406cbb08" scoped=""/></to>
+        </wire>
+        <wire loc="149:/home/jumbo/jamal/project/CoAP/tinyos-release/tos/chips/msp430/timer/Msp430TimerC.nc">
+          <from><interface-ref name="CaptureB3" ref="0x4066e788" scoped=""/></from>
+          <to><interface-ref name="Capture" ref="0x406dd430" scoped=""/></to>
+        </wire>
+        <wire loc="107:/home/jumbo/jamal/project/CoAP/tinyos-release/tos/chips/msp430/timer/Msp430TimerC.nc">
+          <from><interface-ref name="CompareA1" ref="0x4065d438" scoped=""/></from>
+          <to><interface-ref name="Compare" ref="0x406cb430" scoped=""/></to>
+        </wire>
+        <wire loc="148:/home/jumbo/jamal/project/CoAP/tinyos-release/tos/chips/msp430/timer/Msp430TimerC.nc">
+          <from><interface-ref name="CompareB3" ref="0x40672bf8" scoped=""/></from>
+          <to><interface-ref name="Compare" ref="0x406dfc78" scoped=""/></to>
+        </wire>
+        <wire loc="170:/home/jumbo/jamal/project/CoAP/tinyos-release/tos/chips/msp430/timer/Msp430TimerC.nc">
+          <from><interface-ref name="CaptureB6" ref="0x4067d278" scoped=""/></from>
+          <to><interface-ref name="Capture" ref="0x406e5010" scoped=""/></to>
+        </wire>
+        <wire loc="154:/home/jumbo/jamal/project/CoAP/tinyos-release/tos/chips/msp430/timer/Msp430TimerC.nc">
+          <from><interface-ref name="ControlB4" ref="0x406751c8" scoped=""/></from>
+          <to><interface-ref name="Control" ref="0x406da120" scoped=""/></to>
+        </wire>
+        <wire loc="99:/home/jumbo/jamal/project/CoAP/tinyos-release/tos/chips/msp430/timer/Msp430TimerC.nc">
+          <from><interface-ref name="ControlA0" ref="0x4065fcc8" scoped=""/></from>
+          <to><interface-ref name="Control" ref="0x406a7a10" scoped=""/></to>
+        </wire>
+        <wire loc="135:/home/jumbo/jamal/project/CoAP/tinyos-release/tos/chips/msp430/timer/Msp430TimerC.nc">
+          <from><interface-ref name="CaptureB1" ref="0x4066f5f8" scoped=""/></from>
+          <to><interface-ref name="Capture" ref="0x406d26e8" scoped=""/></to>
+        </wire>
+        <wire loc="134:/home/jumbo/jamal/project/CoAP/tinyos-release/tos/chips/msp430/timer/Msp430TimerC.nc">
+          <from><interface-ref name="CompareB1" ref="0x40673bf8" scoped=""/></from>
+          <to><interface-ref name="Compare" ref="0x406d2010" scoped=""/></to>
+        </wire>
+        <wire loc="133:/home/jumbo/jamal/project/CoAP/tinyos-release/tos/chips/msp430/timer/Msp430TimerC.nc">
+          <from><interface-ref name="ControlB1" ref="0x40666e18" scoped=""/></from>
+          <to><interface-ref name="Control" ref="0x406d3588" scoped=""/></to>
+        </wire>
+        <wire loc="115:/home/jumbo/jamal/project/CoAP/tinyos-release/tos/chips/msp430/timer/Msp430TimerC.nc">
+          <from><interface-ref name="CaptureA2" ref="0x4066bbf8" scoped=""/></from>
+          <to><interface-ref name="Capture" ref="0x406c7a28" scoped=""/></to>
+        </wire>
+        <wire loc="156:/home/jumbo/jamal/project/CoAP/tinyos-release/tos/chips/msp430/timer/Msp430TimerC.nc">
+          <from><interface-ref name="CaptureB4" ref="0x4067e090" scoped=""/></from>
+          <to><interface-ref name="Capture" ref="0x406ed270" scoped=""/></to>
+        </wire>
+        <wire loc="140:/home/jumbo/jamal/project/CoAP/tinyos-release/tos/chips/msp430/timer/Msp430TimerC.nc">
+          <from><interface-ref name="ControlB2" ref="0x40665a58" scoped=""/></from>
+          <to><interface-ref name="Control" ref="0x406e3430" scoped=""/></to>
+        </wire>
+        <wire loc="114:/home/jumbo/jamal/project/CoAP/tinyos-release/tos/chips/msp430/timer/Msp430TimerC.nc">
+          <from><interface-ref name="CompareA2" ref="0x4065dbf8" scoped=""/></from>
+          <to><interface-ref name="Compare" ref="0x406c7350" scoped=""/></to>
+        </wire>
+        <wire loc="93:/home/jumbo/jamal/project/CoAP/tinyos-release/tos/chips/msp430/timer/Msp430TimerC.nc">
+          <from><interface-ref name="TimerA" ref="0x406570b0" scoped=""/></from>
+          <to><interface-ref name="Timer" ref="0x4067a010" scoped=""/></to>
+        </wire>
+        <wire loc="155:/home/jumbo/jamal/project/CoAP/tinyos-release/tos/chips/msp430/timer/Msp430TimerC.nc">
+          <from><interface-ref name="CompareB4" ref="0x40671438" scoped=""/></from>
+          <to><interface-ref name="Compare" ref="0x406dab78" scoped=""/></to>
+        </wire>
+        <wire loc="106:/home/jumbo/jamal/project/CoAP/tinyos-release/tos/chips/msp430/timer/Msp430TimerC.nc">
+          <from><interface-ref name="ControlA1" ref="0x406568c8" scoped=""/></from>
+          <to><interface-ref name="Control" ref="0x406cc8f8" scoped=""/></to>
+        </wire>
+        <wire loc="161:/home/jumbo/jamal/project/CoAP/tinyos-release/tos/chips/msp430/timer/Msp430TimerC.nc">
+          <from><interface-ref name="ControlB5" ref="0x40675d38" scoped=""/></from>
+          <to><interface-ref name="Control" ref="0x406ea010" scoped=""/></to>
+        </wire>
+        <wire loc="101:/home/jumbo/jamal/project/CoAP/tinyos-release/tos/chips/msp430/timer/Msp430TimerC.nc">
+          <from><interface-ref name="CaptureA0" ref="0x406679d8" scoped=""/></from>
+          <to><interface-ref name="Capture" ref="0x406a6be8" scoped=""/></to>
+        </wire>
+        <wire loc="142:/home/jumbo/jamal/project/CoAP/tinyos-release/tos/chips/msp430/timer/Msp430TimerC.nc">
+          <from><interface-ref name="CaptureB2" ref="0x4066fe98" scoped=""/></from>
+          <to><interface-ref name="Capture" ref="0x406e2570" scoped=""/></to>
+        </wire>
+        <wire loc="100:/home/jumbo/jamal/project/CoAP/tinyos-release/tos/chips/msp430/timer/Msp430TimerC.nc">
+          <from><interface-ref name="CompareA0" ref="0x4066cbc8" scoped=""/></from>
+          <to><interface-ref name="Compare" ref="0x406a6510" scoped=""/></to>
+        </wire>
+        <wire loc="141:/home/jumbo/jamal/project/CoAP/tinyos-release/tos/chips/msp430/timer/Msp430TimerC.nc">
+          <from><interface-ref name="CompareB2" ref="0x40672438" scoped=""/></from>
+          <to><interface-ref name="Compare" ref="0x406e3e88" scoped=""/></to>
+        </wire>
+        <wire loc="163:/home/jumbo/jamal/project/CoAP/tinyos-release/tos/chips/msp430/timer/Msp430TimerC.nc">
+          <from><interface-ref name="CaptureB5" ref="0x4067e930" scoped=""/></from>
+          <to><interface-ref name="Capture" ref="0x406e9190" scoped=""/></to>
+        </wire>
+        <wire loc="147:/home/jumbo/jamal/project/CoAP/tinyos-release/tos/chips/msp430/timer/Msp430TimerC.nc">
+          <from><interface-ref name="ControlB3" ref="0x40676628" scoped=""/></from>
+          <to><interface-ref name="Control" ref="0x406df220" scoped=""/></to>
+        </wire>
+        <wire loc="120:/home/jumbo/jamal/project/CoAP/tinyos-release/tos/chips/msp430/timer/Msp430TimerC.nc">
+          <from><interface-ref name="TimerB" ref="0x4066a4e0" scoped=""/></from>
+          <to><interface-ref name="Timer" ref="0x406979c0" scoped=""/></to>
+        </wire>
+        <wire loc="162:/home/jumbo/jamal/project/CoAP/tinyos-release/tos/chips/msp430/timer/Msp430TimerC.nc">
+          <from><interface-ref name="CompareB5" ref="0x40671bf8" scoped=""/></from>
+          <to><interface-ref name="Compare" ref="0x406eaa68" scoped=""/></to>
+        </wire>
+        <wire loc="128:/home/jumbo/jamal/project/CoAP/tinyos-release/tos/chips/msp430/timer/Msp430TimerC.nc">
+          <from><interface-ref name="CaptureB0" ref="0x40670cf8" scoped=""/></from>
+          <to><interface-ref name="Capture" ref="0x406d6868" scoped=""/></to>
+        </wire>
+        <wire loc="169:/home/jumbo/jamal/project/CoAP/tinyos-release/tos/chips/msp430/timer/Msp430TimerC.nc">
+          <from><interface-ref name="CompareB6" ref="0x40670438" scoped=""/></from>
+          <to><interface-ref name="Compare" ref="0x406e68d0" scoped=""/></to>
+        </wire>
+        <wire loc="127:/home/jumbo/jamal/project/CoAP/tinyos-release/tos/chips/msp430/timer/Msp430TimerC.nc">
+          <from><interface-ref name="CompareB0" ref="0x40673438" scoped=""/></from>
+          <to><interface-ref name="Compare" ref="0x406d6190" scoped=""/></to>
+        </wire>
+        <wire loc="168:/home/jumbo/jamal/project/CoAP/tinyos-release/tos/chips/msp430/timer/Msp430TimerC.nc">
+          <from><interface-ref name="ControlB6" ref="0x406748c8" scoped=""/></from>
+          <to><interface-ref name="Control" ref="0x406e7e68" scoped=""/></to>
+        </wire>
+        <wire loc="94:/home/jumbo/jamal/project/CoAP/tinyos-release/tos/chips/msp430/timer/Msp430TimerC.nc">
+          <from><interface-ref name="Overflow" ref="0x40699050" scoped=""/></from>
+          <to><interface-ref name="Event" ref="0x4067acc0" scoped=""/>
+          <arguments>
+            <value cst="I:5">
+              <type-int alignment="I:2" cname="int" size="I:2"/>
+            </value>
+          </arguments>
+          </to>
+        </wire>
+        <wire loc="95:/home/jumbo/jamal/project/CoAP/tinyos-release/tos/chips/msp430/timer/Msp430TimerC.nc">
+          <from><interface-ref name="VectorTimerX0" ref="0x406993a8" scoped=""/></from>
+          <to><interface-ref name="VectorTimerA0" ref="0x406f69a8" scoped=""/></to>
+        </wire>
+        <wire loc="96:/home/jumbo/jamal/project/CoAP/tinyos-release/tos/chips/msp430/timer/Msp430TimerC.nc">
+          <from><interface-ref name="VectorTimerX1" ref="0x40699700" scoped=""/></from>
+          <to><interface-ref name="VectorTimerA1" ref="0x406f6e30" scoped=""/></to>
+        </wire>
+        <wire loc="102:/home/jumbo/jamal/project/CoAP/tinyos-release/tos/chips/msp430/timer/Msp430TimerC.nc">
+          <from><interface-ref name="Timer" ref="0x406ce430" scoped=""/></from>
+          <to><interface-ref name="Timer" ref="0x4067a010" scoped=""/></to>
+        </wire>
+        <wire loc="103:/home/jumbo/jamal/project/CoAP/tinyos-release/tos/chips/msp430/timer/Msp430TimerC.nc">
+          <from><interface-ref name="Event" ref="0x406cd080" scoped=""/></from>
+          <to><interface-ref name="Event" ref="0x4067acc0" scoped=""/>
+          <arguments>
+            <value cst="I:0">
+              <type-int alignment="I:2" cname="int" size="I:2"/>
+            </value>
+          </arguments>
+          </to>
+        </wire>
+        <wire loc="109:/home/jumbo/jamal/project/CoAP/tinyos-release/tos/chips/msp430/timer/Msp430TimerC.nc">
+          <from><interface-ref name="Timer" ref="0x406ca350" scoped=""/></from>
+          <to><interface-ref name="Timer" ref="0x4067a010" scoped=""/></to>
+        </wire>
+        <wire loc="110:/home/jumbo/jamal/project/CoAP/tinyos-release/tos/chips/msp430/timer/Msp430TimerC.nc">
+          <from><interface-ref name="Event" ref="0x406c9010" scoped=""/></from>
+          <to><interface-ref name="Event" ref="0x4067acc0" scoped=""/>
+          <arguments>
+            <value cst="I:1">
+              <type-int alignment="I:2" cname="int" size="I:2"/>
+            </value>
+          </arguments>
+          </to>
+        </wire>
+        <wire loc="116:/home/jumbo/jamal/project/CoAP/tinyos-release/tos/chips/msp430/timer/Msp430TimerC.nc">
+          <from><interface-ref name="Timer" ref="0x406c6270" scoped=""/></from>
+          <to><interface-ref name="Timer" ref="0x4067a010" scoped=""/></to>
+        </wire>
+        <wire loc="117:/home/jumbo/jamal/project/CoAP/tinyos-release/tos/chips/msp430/timer/Msp430TimerC.nc">
+          <from><interface-ref name="Event" ref="0x406c6e88" scoped=""/></from>
+          <to><interface-ref name="Event" ref="0x4067acc0" scoped=""/>
+          <arguments>
+            <value cst="I:2">
+              <type-int alignment="I:2" cname="int" size="I:2"/>
+            </value>
+          </arguments>
+          </to>
+        </wire>
+        <wire loc="121:/home/jumbo/jamal/project/CoAP/tinyos-release/tos/chips/msp430/timer/Msp430TimerC.nc">
+          <from><interface-ref name="Overflow" ref="0x406969f0" scoped=""/></from>
+          <to><interface-ref name="Event" ref="0x40696688" scoped=""/>
+          <arguments>
+            <value cst="I:7">
+              <type-int alignment="I:2" cname="int" size="I:2"/>
+            </value>
+          </arguments>
+          </to>
+        </wire>
+        <wire loc="122:/home/jumbo/jamal/project/CoAP/tinyos-release/tos/chips/msp430/timer/Msp430TimerC.nc">
+          <from><interface-ref name="VectorTimerX0" ref="0x40696d48" scoped=""/></from>
+          <to><interface-ref name="VectorTimerB0" ref="0x406f3300" scoped=""/></to>
+        </wire>
+        <wire loc="123:/home/jumbo/jamal/project/CoAP/tinyos-release/tos/chips/msp430/timer/Msp430TimerC.nc">
+          <from><interface-ref name="VectorTimerX1" ref="0x406950b8" scoped=""/></from>
+          <to><interface-ref name="VectorTimerB1" ref="0x406f3788" scoped=""/></to>
+        </wire>
+        <wire loc="129:/home/jumbo/jamal/project/CoAP/tinyos-release/tos/chips/msp430/timer/Msp430TimerC.nc">
+          <from><interface-ref name="Timer" ref="0x406d5050" scoped=""/></from>
+          <to><interface-ref name="Timer" ref="0x406979c0" scoped=""/></to>
+        </wire>
+        <wire loc="130:/home/jumbo/jamal/project/CoAP/tinyos-release/tos/chips/msp430/timer/Msp430TimerC.nc">
+          <from><interface-ref name="Event" ref="0x406d5c68" scoped=""/></from>
+          <to><interface-ref name="Event" ref="0x40696688" scoped=""/>
+          <arguments>
+            <value cst="I:0">
+              <type-int alignment="I:2" cname="int" size="I:2"/>
+            </value>
+          </arguments>
+          </to>
+        </wire>
+        <wire loc="136:/home/jumbo/jamal/project/CoAP/tinyos-release/tos/chips/msp430/timer/Msp430TimerC.nc">
+          <from><interface-ref name="Timer" ref="0x406d2ea0" scoped=""/></from>
+          <to><interface-ref name="Timer" ref="0x406979c0" scoped=""/></to>
+        </wire>
+        <wire loc="137:/home/jumbo/jamal/project/CoAP/tinyos-release/tos/chips/msp430/timer/Msp430TimerC.nc">
+          <from><interface-ref name="Event" ref="0x406d1b00" scoped=""/></from>
+          <to><interface-ref name="Event" ref="0x40696688" scoped=""/>
+          <arguments>
+            <value cst="I:1">
+              <type-int alignment="I:2" cname="int" size="I:2"/>
+            </value>
+          </arguments>
+          </to>
+        </wire>
+        <wire loc="143:/home/jumbo/jamal/project/CoAP/tinyos-release/tos/chips/msp430/timer/Msp430TimerC.nc">
+          <from><interface-ref name="Timer" ref="0x406e2d28" scoped=""/></from>
+          <to><interface-ref name="Timer" ref="0x406979c0" scoped=""/></to>
+        </wire>
+        <wire loc="144:/home/jumbo/jamal/project/CoAP/tinyos-release/tos/chips/msp430/timer/Msp430TimerC.nc">
+          <from><interface-ref name="Event" ref="0x406e1970" scoped=""/></from>
+          <to><interface-ref name="Event" ref="0x40696688" scoped=""/>
+          <arguments>
+            <value cst="I:2">
+              <type-int alignment="I:2" cname="int" size="I:2"/>
+            </value>
+          </arguments>
+          </to>
+        </wire>
+        <wire loc="150:/home/jumbo/jamal/project/CoAP/tinyos-release/tos/chips/msp430/timer/Msp430TimerC.nc">
+          <from><interface-ref name="Timer" ref="0x406ddbe8" scoped=""/></from>
+          <to><interface-ref name="Timer" ref="0x406979c0" scoped=""/></to>
+        </wire>
+        <wire loc="151:/home/jumbo/jamal/project/CoAP/tinyos-release/tos/chips/msp430/timer/Msp430TimerC.nc">
+          <from><interface-ref name="Event" ref="0x406dc890" scoped=""/></from>
+          <to><interface-ref name="Event" ref="0x40696688" scoped=""/>
+          <arguments>
+            <value cst="I:3">
+              <type-int alignment="I:2" cname="int" size="I:2"/>
+            </value>
+          </arguments>
+          </to>
+        </wire>
+        <wire loc="157:/home/jumbo/jamal/project/CoAP/tinyos-release/tos/chips/msp430/timer/Msp430TimerC.nc">
+          <from><interface-ref name="Timer" ref="0x406eda28" scoped=""/></from>
+          <to><interface-ref name="Timer" ref="0x406979c0" scoped=""/></to>
+        </wire>
+        <wire loc="158:/home/jumbo/jamal/project/CoAP/tinyos-release/tos/chips/msp430/timer/Msp430TimerC.nc">
+          <from><interface-ref name="Event" ref="0x406ec6d0" scoped=""/></from>
+          <to><interface-ref name="Event" ref="0x40696688" scoped=""/>
+          <arguments>
+            <value cst="I:4">
+              <type-int alignment="I:2" cname="int" size="I:2"/>
+            </value>
+          </arguments>
+          </to>
+        </wire>
+        <wire loc="164:/home/jumbo/jamal/project/CoAP/tinyos-release/tos/chips/msp430/timer/Msp430TimerC.nc">
+          <from><interface-ref name="Timer" ref="0x406e9948" scoped=""/></from>
+          <to><interface-ref name="Timer" ref="0x406979c0" scoped=""/></to>
+        </wire>
+        <wire loc="165:/home/jumbo/jamal/project/CoAP/tinyos-release/tos/chips/msp430/timer/Msp430TimerC.nc">
+          <from><interface-ref name="Event" ref="0x406e85f0" scoped=""/></from>
+          <to><interface-ref name="Event" ref="0x40696688" scoped=""/>
+          <arguments>
+            <value cst="I:5">
+              <type-int alignment="I:2" cname="int" size="I:2"/>
+            </value>
+          </arguments>
+          </to>
+        </wire>
+        <wire loc="171:/home/jumbo/jamal/project/CoAP/tinyos-release/tos/chips/msp430/timer/Msp430TimerC.nc">
+          <from><interface-ref name="Timer" ref="0x406e57c8" scoped=""/></from>
+          <to><interface-ref name="Timer" ref="0x406979c0" scoped=""/></to>
+        </wire>
+        <wire loc="172:/home/jumbo/jamal/project/CoAP/tinyos-release/tos/chips/msp430/timer/Msp430TimerC.nc">
+          <from><interface-ref name="Event" ref="0x406f7430" scoped=""/></from>
+          <to><interface-ref name="Event" ref="0x40696688" scoped=""/>
+          <arguments>
+            <value cst="I:6">
+              <type-int alignment="I:2" cname="int" size="I:2"/>
+            </value>
+          </arguments>
+          </to>
+        </wire>
+      </wiring>
+    </component></referenced></component>

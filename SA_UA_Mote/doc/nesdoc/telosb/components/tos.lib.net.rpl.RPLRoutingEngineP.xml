@@ -1,0 +1,283 @@
+<?xml version="1.0" ?><component abstract="" loc="44:/home/jumbo/tinyos-main/tos/lib/net/rpl/RPLRoutingEngineP.nc" nicename="tos.lib.net.rpl.RPLRoutingEngineP" qname="RPLRoutingEngineP">
+      <documentation loc="68:/home/jumbo/tinyos-main/tos/lib/net/rpl/RPL.h">
+        <short>
+ </short>
+        <long>
+ @author Yiwei Yao &lt;yaoyiwei@stanford.edu&gt;
+</long>
+      </documentation>
+      <parameters>
+      </parameters>
+      <module/>
+    <specification><interface loc="46:/home/jumbo/tinyos-main/tos/lib/net/rpl/RPLRoutingEngineP.nc" name="RootControl" provided="1" ref="0x41584390">
+      <component-ref nicename="tos.lib.net.rpl.RPLRoutingEngineP" qname="RPLRoutingEngineP"/>
+      <type-interface alignment="I:2" size="I:2"><interface-ref name="RootControl" ref="0x41584390" scoped=""/></type-interface>
+      <instance>
+        <interfacedef-ref nicename="tos.lib.net.RootControl" qname="RootControl"/>
+      </instance>
+      <interface-functions>
+        <function-ref name="isRoot" ref="0x41584568" scoped=""/>
+        <function-ref name="setRoot" ref="0x41584648" scoped=""/>
+        <function-ref name="unsetRoot" ref="0x41584728" scoped=""/>
+      </interface-functions>
+    </interface><interface loc="52:/home/jumbo/tinyos-main/tos/lib/net/rpl/RPLRoutingEngineP.nc" name="IP_DIS" provided="0" ref="0x41582030">
+      <component-ref nicename="tos.lib.net.rpl.RPLRoutingEngineP" qname="RPLRoutingEngineP"/>
+      <type-interface alignment="I:2" size="I:2"><interface-ref name="IP_DIS" ref="0x41582030" scoped=""/></type-interface>
+      <instance>
+        <interfacedef-ref nicename="tos.lib.net.blip.interfaces.IP" qname="IP"/>
+      </instance>
+      <interface-functions>
+        <function-ref name="send" ref="0x41582208" scoped=""/>
+        <function-ref name="recv" ref="0x415822e8" scoped=""/>
+      </interface-functions>
+    </interface><interface loc="62:/home/jumbo/tinyos-main/tos/lib/net/rpl/RPLRoutingEngineP.nc" name="RPLDAORoutingEngine" provided="0" ref="0x41575040">
+      <component-ref nicename="tos.lib.net.rpl.RPLRoutingEngineP" qname="RPLRoutingEngineP"/>
+      <type-interface alignment="I:2" size="I:2"><interface-ref name="RPLDAORoutingEngine" ref="0x41575040" scoped=""/></type-interface>
+      <instance>
+        <interfacedef-ref nicename="tos.lib.net.rpl.RPLDAORoutingEngine" qname="RPLDAORoutingEngine"/>
+      </instance>
+      <interface-functions>
+        <function-ref name="newParent" ref="0x41575218" scoped=""/>
+        <function-ref name="getStoreState" ref="0x415752f8" scoped=""/>
+        <function-ref name="startDAO" ref="0x415753d8" scoped=""/>
+      </interface-functions>
+    </interface><interface loc="167:/home/jumbo/tinyos-main/tos/lib/net/rpl/RPLRoutingEngineP.nc" name="computeRemaining" provided="0" ref="0x415b3bb8">
+      <component-ref nicename="tos.lib.net.rpl.RPLRoutingEngineP" qname="RPLRoutingEngineP"/>
+      <type-interface alignment="I:2" size="I:2"><interface-ref name="computeRemaining" ref="0x415b3bb8" scoped=""/></type-interface>
+      <instance>
+        <interfacedef-ref nicename="tos.interfaces.TaskBasic" qname="TaskBasic"/>
+      </instance>
+      <interface-functions>
+        <function-ref name="postTask" ref="0x415b3d90" scoped=""/>
+        <function-ref name="runTask" ref="0x415b3e70" scoped=""/>
+      </interface-functions>
+    </interface><interface loc="55:/home/jumbo/tinyos-main/tos/lib/net/rpl/RPLRoutingEngineP.nc" name="InitDISTimer" provided="0" ref="0x41580940">
+      <component-ref nicename="tos.lib.net.rpl.RPLRoutingEngineP" qname="RPLRoutingEngineP"/>
+      <type-interface alignment="I:2" size="I:2"><interface-ref name="InitDISTimer" ref="0x41580940" scoped=""/></type-interface>
+      <instance>
+        <interfacedef-ref nicename="tos.lib.timer.Timer" qname="Timer"/>
+        <arguments>
+          <type-tag alignment="I:2" size="I:2"><struct-ref ref="0x40648d90"/>
+            <typename><typedef-ref name="TMilli" ref="0x4064d010"/></typename>
+          </type-tag>
+        </arguments>
+      </instance>
+      <interface-functions>
+        <function-ref name="getNow" ref="0x4157d4c8" scoped=""/>
+        <function-ref name="fired" ref="0x4157e768" scoped=""/>
+        <function-ref name="startPeriodicAt" ref="0x4157ee70" scoped=""/>
+        <function-ref name="isOneShot" ref="0x4157ec18" scoped=""/>
+        <function-ref name="getdt" ref="0x4157d978" scoped=""/>
+        <function-ref name="gett0" ref="0x4157d720" scoped=""/>
+        <function-ref name="isRunning" ref="0x4157e9c0" scoped=""/>
+        <function-ref name="startPeriodic" ref="0x4157e010" scoped=""/>
+        <function-ref name="startOneShotAt" ref="0x4157d1a8" scoped=""/>
+        <function-ref name="startOneShot" ref="0x4157e290" scoped=""/>
+        <function-ref name="stop" ref="0x4157e510" scoped=""/>
+      </interface-functions>
+    </interface><interface loc="57:/home/jumbo/tinyos-main/tos/lib/net/rpl/RPLRoutingEngineP.nc" name="Random" provided="0" ref="0x41579010">
+      <component-ref nicename="tos.lib.net.rpl.RPLRoutingEngineP" qname="RPLRoutingEngineP"/>
+      <type-interface alignment="I:2" size="I:2"><interface-ref name="Random" ref="0x41579010" scoped=""/></type-interface>
+      <instance>
+        <interfacedef-ref nicename="tos.interfaces.Random" qname="Random"/>
+      </instance>
+      <interface-functions>
+        <function-ref name="rand16" ref="0x415791e8" scoped=""/>
+        <function-ref name="rand32" ref="0x415792c8" scoped=""/>
+      </interface-functions>
+    </interface><interface loc="54:/home/jumbo/tinyos-main/tos/lib/net/rpl/RPLRoutingEngineP.nc" name="TrickleTimer" provided="0" ref="0x415825d0">
+      <component-ref nicename="tos.lib.net.rpl.RPLRoutingEngineP" qname="RPLRoutingEngineP"/>
+      <type-interface alignment="I:2" size="I:2"><interface-ref name="TrickleTimer" ref="0x415825d0" scoped=""/></type-interface>
+      <instance>
+        <interfacedef-ref nicename="tos.lib.timer.Timer" qname="Timer"/>
+        <arguments>
+          <type-tag alignment="I:2" size="I:2"><struct-ref ref="0x40648d90"/>
+            <typename><typedef-ref name="TMilli" ref="0x4064d010"/></typename>
+          </type-tag>
+        </arguments>
+      </instance>
+      <interface-functions>
+        <function-ref name="getNow" ref="0x415800d8" scoped=""/>
+        <function-ref name="fired" ref="0x41581368" scoped=""/>
+        <function-ref name="startPeriodicAt" ref="0x41581a70" scoped=""/>
+        <function-ref name="isOneShot" ref="0x41581818" scoped=""/>
+        <function-ref name="getdt" ref="0x41580588" scoped=""/>
+        <function-ref name="gett0" ref="0x41580330" scoped=""/>
+        <function-ref name="isRunning" ref="0x415815c0" scoped=""/>
+        <function-ref name="startPeriodic" ref="0x41582bf8" scoped=""/>
+        <function-ref name="startOneShotAt" ref="0x41581d90" scoped=""/>
+        <function-ref name="startOneShot" ref="0x41582e78" scoped=""/>
+        <function-ref name="stop" ref="0x41581110" scoped=""/>
+      </interface-functions>
+    </interface><interface loc="121:/home/jumbo/tinyos-main/tos/lib/net/rpl/RPLRoutingEngineP.nc" name="init" provided="0" ref="0x415b9040">
+      <component-ref nicename="tos.lib.net.rpl.RPLRoutingEngineP" qname="RPLRoutingEngineP"/>
+      <type-interface alignment="I:2" size="I:2"><interface-ref name="init" ref="0x415b9040" scoped=""/></type-interface>
+      <instance>
+        <interfacedef-ref nicename="tos.interfaces.TaskBasic" qname="TaskBasic"/>
+      </instance>
+      <interface-functions>
+        <function-ref name="postTask" ref="0x415b9218" scoped=""/>
+        <function-ref name="runTask" ref="0x415b92f8" scoped=""/>
+      </interface-functions>
+    </interface><interface loc="59:/home/jumbo/tinyos-main/tos/lib/net/rpl/RPLRoutingEngineP.nc" name="IPAddress" provided="0" ref="0x415784d0">
+      <component-ref nicename="tos.lib.net.rpl.RPLRoutingEngineP" qname="RPLRoutingEngineP"/>
+      <type-interface alignment="I:2" size="I:2"><interface-ref name="IPAddress" ref="0x415784d0" scoped=""/></type-interface>
+      <instance>
+        <interfacedef-ref nicename="tos.lib.net.blip.interfaces.IPAddress" qname="IPAddress"/>
+      </instance>
+      <interface-functions>
+        <function-ref name="getLLAddr" ref="0x415786a8" scoped=""/>
+        <function-ref name="changed" ref="0x41578788" scoped=""/>
+        <function-ref name="isLocalAddress" ref="0x41578868" scoped=""/>
+        <function-ref name="getGlobalAddr" ref="0x41578948" scoped=""/>
+        <function-ref name="setSource" ref="0x41578a28" scoped=""/>
+        <function-ref name="removeAddress" ref="0x41578b08" scoped=""/>
+        <function-ref name="setAddress" ref="0x41578be8" scoped=""/>
+        <function-ref name="isLLAddress" ref="0x41578cc8" scoped=""/>
+      </interface-functions>
+    </interface><interface loc="120:/home/jumbo/tinyos-main/tos/lib/net/rpl/RPLRoutingEngineP.nc" name="sendDISTask" provided="0" ref="0x4156b878">
+      <component-ref nicename="tos.lib.net.rpl.RPLRoutingEngineP" qname="RPLRoutingEngineP"/>
+      <type-interface alignment="I:2" size="I:2"><interface-ref name="sendDISTask" ref="0x4156b878" scoped=""/></type-interface>
+      <instance>
+        <interfacedef-ref nicename="tos.interfaces.TaskBasic" qname="TaskBasic"/>
+      </instance>
+      <interface-functions>
+        <function-ref name="postTask" ref="0x4156ba50" scoped=""/>
+        <function-ref name="runTask" ref="0x4156bb30" scoped=""/>
+      </interface-functions>
+    </interface><interface loc="51:/home/jumbo/tinyos-main/tos/lib/net/rpl/RPLRoutingEngineP.nc" name="IP_DIO" provided="0" ref="0x41583ba8">
+      <component-ref nicename="tos.lib.net.rpl.RPLRoutingEngineP" qname="RPLRoutingEngineP"/>
+      <type-interface alignment="I:2" size="I:2"><interface-ref name="IP_DIO" ref="0x41583ba8" scoped=""/></type-interface>
+      <instance>
+        <interfacedef-ref nicename="tos.lib.net.blip.interfaces.IP" qname="IP"/>
+      </instance>
+      <interface-functions>
+        <function-ref name="send" ref="0x41583d80" scoped=""/>
+        <function-ref name="recv" ref="0x41583e60" scoped=""/>
+      </interface-functions>
+    </interface><interface loc="58:/home/jumbo/tinyos-main/tos/lib/net/rpl/RPLRoutingEngineP.nc" name="RPLRankInfo" provided="0" ref="0x415794e0">
+      <component-ref nicename="tos.lib.net.rpl.RPLRoutingEngineP" qname="RPLRoutingEngineP"/>
+      <type-interface alignment="I:2" size="I:2"><interface-ref name="RPLRankInfo" ref="0x415794e0" scoped=""/></type-interface>
+      <instance>
+        <interfacedef-ref nicename="tos.lib.net.rpl.RPLRank" qname="RPLRank"/>
+      </instance>
+      <interface-functions>
+        <function-ref name="parentRankChange" ref="0x415796b8" scoped=""/>
+        <function-ref name="isRoot" ref="0x41579798" scoped=""/>
+        <function-ref name="setQueuingDelay" ref="0x41579878" scoped=""/>
+        <function-ref name="hasParent" ref="0x41579958" scoped=""/>
+        <function-ref name="validInstance" ref="0x41579a38" scoped=""/>
+        <function-ref name="declareRoot" ref="0x41579b18" scoped=""/>
+        <function-ref name="getRank" ref="0x41579bf8" scoped=""/>
+        <function-ref name="getEtx" ref="0x41579cd8" scoped=""/>
+        <function-ref name="isLeaf" ref="0x41579db8" scoped=""/>
+        <function-ref name="compareAddr" ref="0x41579e98" scoped=""/>
+        <function-ref name="isParent" ref="0x41578010" scoped=""/>
+        <function-ref name="inconsistencyDetected" ref="0x415780f0" scoped=""/>
+        <function-ref name="getDefaultRoute" ref="0x415781d0" scoped=""/>
+        <function-ref name="cancelRoot" ref="0x41578330" scoped=""/>
+      </interface-functions>
+    </interface><interface loc="60:/home/jumbo/tinyos-main/tos/lib/net/rpl/RPLRoutingEngineP.nc" name="Leds" provided="0" ref="0x41578e38">
+      <component-ref nicename="tos.lib.net.rpl.RPLRoutingEngineP" qname="RPLRoutingEngineP"/>
+      <type-interface alignment="I:2" size="I:2"><interface-ref name="Leds" ref="0x41578e38" scoped=""/></type-interface>
+      <instance>
+        <interfacedef-ref nicename="tos.interfaces.Leds" qname="Leds"/>
+      </instance>
+      <interface-functions>
+        <function-ref name="led0Off" ref="0x41577050" scoped=""/>
+        <function-ref name="led0Toggle" ref="0x41577130" scoped=""/>
+        <function-ref name="led1On" ref="0x41577210" scoped=""/>
+        <function-ref name="led1Toggle" ref="0x415772f0" scoped=""/>
+        <function-ref name="led2Toggle" ref="0x415773d0" scoped=""/>
+        <function-ref name="get" ref="0x415774b0" scoped=""/>
+        <function-ref name="led1Off" ref="0x41577590" scoped=""/>
+        <function-ref name="led2Off" ref="0x41577910" scoped=""/>
+        <function-ref name="set" ref="0x41577670" scoped=""/>
+        <function-ref name="led0On" ref="0x41577750" scoped=""/>
+        <function-ref name="led2On" ref="0x41577830" scoped=""/>
+      </interface-functions>
+    </interface><interface loc="122:/home/jumbo/tinyos-main/tos/lib/net/rpl/RPLRoutingEngineP.nc" name="initDIO" provided="0" ref="0x415b9808">
+      <component-ref nicename="tos.lib.net.rpl.RPLRoutingEngineP" qname="RPLRoutingEngineP"/>
+      <type-interface alignment="I:2" size="I:2"><interface-ref name="initDIO" ref="0x415b9808" scoped=""/></type-interface>
+      <instance>
+        <interfacedef-ref nicename="tos.interfaces.TaskBasic" qname="TaskBasic"/>
+      </instance>
+      <interface-functions>
+        <function-ref name="postTask" ref="0x415b99e0" scoped=""/>
+        <function-ref name="runTask" ref="0x415b9ac0" scoped=""/>
+      </interface-functions>
+    </interface><interface loc="119:/home/jumbo/tinyos-main/tos/lib/net/rpl/RPLRoutingEngineP.nc" name="sendDIOTask" provided="0" ref="0x4156b080">
+      <component-ref nicename="tos.lib.net.rpl.RPLRoutingEngineP" qname="RPLRoutingEngineP"/>
+      <type-interface alignment="I:2" size="I:2"><interface-ref name="sendDIOTask" ref="0x4156b080" scoped=""/></type-interface>
+      <instance>
+        <interfacedef-ref nicename="tos.interfaces.TaskBasic" qname="TaskBasic"/>
+      </instance>
+      <interface-functions>
+        <function-ref name="postTask" ref="0x4156b258" scoped=""/>
+        <function-ref name="runTask" ref="0x4156b338" scoped=""/>
+      </interface-functions>
+    </interface><interface loc="56:/home/jumbo/tinyos-main/tos/lib/net/rpl/RPLRoutingEngineP.nc" name="IncreaseVersionTimer" provided="0" ref="0x4157dd80">
+      <component-ref nicename="tos.lib.net.rpl.RPLRoutingEngineP" qname="RPLRoutingEngineP"/>
+      <type-interface alignment="I:2" size="I:2"><interface-ref name="IncreaseVersionTimer" ref="0x4157dd80" scoped=""/></type-interface>
+      <instance>
+        <interfacedef-ref nicename="tos.lib.timer.Timer" qname="Timer"/>
+        <arguments>
+          <type-tag alignment="I:2" size="I:2"><struct-ref ref="0x40648d90"/>
+            <typename><typedef-ref name="TMilli" ref="0x4064d010"/></typename>
+          </type-tag>
+        </arguments>
+      </instance>
+      <interface-functions>
+        <function-ref name="getNow" ref="0x4157b8a8" scoped=""/>
+        <function-ref name="fired" ref="0x4157cb18" scoped=""/>
+        <function-ref name="startPeriodicAt" ref="0x4157b268" scoped=""/>
+        <function-ref name="isOneShot" ref="0x4157b010" scoped=""/>
+        <function-ref name="getdt" ref="0x4157bd58" scoped=""/>
+        <function-ref name="gett0" ref="0x4157bb00" scoped=""/>
+        <function-ref name="isRunning" ref="0x4157cd70" scoped=""/>
+        <function-ref name="startPeriodic" ref="0x4157c3c0" scoped=""/>
+        <function-ref name="startOneShotAt" ref="0x4157b588" scoped=""/>
+        <function-ref name="startOneShot" ref="0x4157c640" scoped=""/>
+        <function-ref name="stop" ref="0x4157c8c0" scoped=""/>
+      </interface-functions>
+    </interface><interface loc="48:/home/jumbo/tinyos-main/tos/lib/net/rpl/RPLRoutingEngineP.nc" name="RPLRouteInfo" provided="1" ref="0x41584e10">
+      <component-ref nicename="tos.lib.net.rpl.RPLRoutingEngineP" qname="RPLRoutingEngineP"/>
+      <type-interface alignment="I:2" size="I:2"><interface-ref name="RPLRouteInfo" ref="0x41584e10" scoped=""/></type-interface>
+      <instance>
+        <interfacedef-ref nicename="tos.lib.net.rpl.RPLRoutingEngine" qname="RPLRoutingEngine"/>
+      </instance>
+      <interface-functions>
+        <function-ref name="getMOP" ref="0x41583010" scoped=""/>
+        <function-ref name="getDefaultRoute" ref="0x415838d0" scoped=""/>
+        <function-ref name="resetTrickle" ref="0x415839b0" scoped=""/>
+        <function-ref name="hasDODAG" ref="0x415832b0" scoped=""/>
+        <function-ref name="validInstance" ref="0x41583390" scoped=""/>
+        <function-ref name="inconsistency" ref="0x41583470" scoped=""/>
+        <function-ref name="getRank" ref="0x41583550" scoped=""/>
+        <function-ref name="getDodagId" ref="0x41583630" scoped=""/>
+        <function-ref name="getDTSN" ref="0x415831d0" scoped=""/>
+        <function-ref name="setDODAGConfig" ref="0x41583710" scoped=""/>
+        <function-ref name="getInstanceID" ref="0x415837f0" scoped=""/>
+        <function-ref name="setDTSN" ref="0x415830f0" scoped=""/>
+      </interface-functions>
+    </interface><interface loc="61:/home/jumbo/tinyos-main/tos/lib/net/rpl/RPLRoutingEngineP.nc" name="RankControl" provided="0" ref="0x41577b48">
+      <component-ref nicename="tos.lib.net.rpl.RPLRoutingEngineP" qname="RPLRoutingEngineP"/>
+      <type-interface alignment="I:2" size="I:2"><interface-ref name="RankControl" ref="0x41577b48" scoped=""/></type-interface>
+      <instance>
+        <interfacedef-ref nicename="tos.interfaces.StdControl" qname="StdControl"/>
+      </instance>
+      <interface-functions>
+        <function-ref name="start" ref="0x41577da0" scoped=""/>
+        <function-ref name="stop" ref="0x41577e80" scoped=""/>
+      </interface-functions>
+    </interface><interface loc="47:/home/jumbo/tinyos-main/tos/lib/net/rpl/RPLRoutingEngineP.nc" name="StdControl" provided="1" ref="0x415848d0">
+      <component-ref nicename="tos.lib.net.rpl.RPLRoutingEngineP" qname="RPLRoutingEngineP"/>
+      <type-interface alignment="I:2" size="I:2"><interface-ref name="StdControl" ref="0x415848d0" scoped=""/></type-interface>
+      <instance>
+        <interfacedef-ref nicename="tos.interfaces.StdControl" qname="StdControl"/>
+      </instance>
+      <interface-functions>
+        <function-ref name="start" ref="0x41584aa8" scoped=""/>
+        <function-ref name="stop" ref="0x41584b88" scoped=""/>
+      </interface-functions>
+    </interface></specification><referenced/></component>

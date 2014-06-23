@@ -1,0 +1,24 @@
+<?xml version="1.0" ?><interfacedef loc="1:/home/jumbo/tinyos-main/tos/lib/net/rpl/RPLParentTable.nc" nicename="tos.lib.net.rpl.RPLParentTable" qname="RPLParentTable">
+      <function command="" loc="2:/home/jumbo/tinyos-main/tos/lib/net/rpl/RPLParentTable.nc" name="get" provided="0" ref="0x414dfc20">
+        <interfacedef-ref nicename="tos.lib.net.rpl.RPLParentTable" qname="RPLParentTable"/>
+        <type-function alignment="I:1" size="I:1">
+          <type-pointer alignment="I:2" size="I:2">
+            <type-tag alignment="I:2" size="I:24"><struct-ref ref="0x414e2e90"/>
+              <typename><typedef-ref name="parent_t" ref="0x414e11f0"/></typename>
+            </type-tag>
+          </type-pointer>
+          <function-parameters>
+            <type-int alignment="I:1" cname="unsigned char" size="I:1" unsigned="">
+              <typename><typedef-ref name="uint8_t" ref="0x4003bdc8"/></typename>
+            </type-int>
+          </function-parameters>
+        </type-function>
+        <parameters>
+          <variable loc="2:/home/jumbo/tinyos-main/tos/lib/net/rpl/RPLParentTable.nc" name="parent_index" ref="0x414dfaa8">
+            <type-int alignment="I:1" cname="unsigned char" size="I:1" unsigned="">
+              <typename><typedef-ref name="uint8_t" ref="0x4003bdc8"/></typename>
+            </type-int>
+          </variable>
+        </parameters>
+      </function>
+    </interfacedef>

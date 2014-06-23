@@ -1,0 +1,33 @@
+<html>
+  <head>
+    <LINK rel="stylesheet" href="nesdoc.css" type="text/css" media="screen"><title>Interface: tos.lib.net.blip.interfaces.UDP</title>
+  </head>
+  <body>
+    <h2>Interface: tos.lib.net.blip.interfaces.UDP</h2>
+    <b>interface UDP</b><p><p><div id=heading>Commands</div><div id=funcsig><span id=funcnameshort>command error_t <a href="#bind">bind</a>(uint16_t port)
+      </span></div><div id=funcsig><span id=funcnameshort>command error_t <a href="#sendto">sendto</a>(struct sockaddr_in6 *dest, void *payload, uint16_t len)
+      </span></div><div id=funcsig><span id=funcnameshort>command error_t <a href="#sendtov">sendtov</a>(struct sockaddr_in6 *dest, struct ip_iovec *iov)
+      </span></div><p><div id=heading>Events</div><div id=funcsig><span id=funcnameshort>event void <a href="#recvfrom">recvfrom</a>(struct sockaddr_in6 *src, void *payload, uint16_t len, struct ip6_metadata *meta)
+      </span></div><p><div id=heading>Commands - Details</div>
+    <a name="bind"></a>
+    <h4>bind
+    </h4>
+    <span id=funcnameshort>command error_t <b>bind</b>(uint16_t port)
+    </span><hr>
+    <a name="sendto"></a>
+    <h4>sendto
+    </h4>
+    <span id=funcnameshort>command error_t <b>sendto</b>(struct sockaddr_in6 *dest, void *payload, uint16_t len)
+    </span><hr>
+    <a name="sendtov"></a>
+    <h4>sendtov
+    </h4>
+    <span id=funcnameshort>command error_t <b>sendtov</b>(struct sockaddr_in6 *dest, struct ip_iovec *iov)
+    </span><p><div id=heading>Events - Details</div>
+    <a name="recvfrom"></a>
+    <h4>recvfrom
+    </h4>
+    <span id=funcnameshort>event void <b>recvfrom</b>(struct sockaddr_in6 *src, void *payload, uint16_t len, struct ip6_metadata *meta)
+    </span>
+  </body>
+</html>

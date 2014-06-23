@@ -1,0 +1,71 @@
+<?xml version="1.0" ?><component abstract="" loc="37:/home/jumbo/tinyos-main/tos/chips/msp430/usart/Msp430UsartShareP.nc" nicename="tos.chips.msp430.usart.Msp430UsartShareP" qname="Msp430UsartShareP" safe="">
+      <documentation loc="32:/home/jumbo/tinyos-main/tos/chips/msp430/usart/Msp430UsartShareP.nc">
+        <short>
+ </short>
+        <long>
+ @author Jonathan Hui &lt;jhui@archrock.com&gt;
+ @version $Revision: 1.5 $ $Date: 2008-06-26 04:39:08 $
+</long>
+      </documentation>
+      <parameters>
+      </parameters>
+      <module/>
+    <specification><interface loc="43:/home/jumbo/tinyos-main/tos/chips/msp430/usart/Msp430UsartShareP.nc" name="ArbiterInfo" provided="0" ref="0x40e8e880">
+      <component-ref nicename="tos.chips.msp430.usart.Msp430UsartShareP" qname="Msp430UsartShareP"/>
+      <type-interface alignment="I:2" size="I:2"><interface-ref name="ArbiterInfo" ref="0x40e8e880" scoped=""/></type-interface>
+      <instance>
+        <interfacedef-ref nicename="tos.interfaces.ArbiterInfo" qname="ArbiterInfo"/>
+      </instance>
+      <interface-functions>
+        <function-ref name="inUse" ref="0x40e8ea58" scoped=""/>
+        <function-ref name="userId" ref="0x40e8eb38" scoped=""/>
+      </interface-functions>
+    </interface><interface loc="39:/home/jumbo/tinyos-main/tos/chips/msp430/usart/Msp430UsartShareP.nc" name="Interrupts" provided="1" ref="0x40e8f1b0">
+      <component-ref nicename="tos.chips.msp430.usart.Msp430UsartShareP" qname="Msp430UsartShareP"/>
+      <type-interface alignment="I:2" size="I:2"><interface-ref name="Interrupts" ref="0x40e8f1b0" scoped=""/></type-interface>
+      <instance>
+        <interfacedef-ref nicename="tos.chips.msp430.usart.HplMsp430UsartInterrupts" qname="HplMsp430UsartInterrupts"/>
+      </instance>
+      <interface-parameters>
+        <type-int alignment="I:1" cname="unsigned char" size="I:1" unsigned="">
+          <typename><typedef-ref name="uint8_t" ref="0x4003bdc8"/></typename>
+        </type-int>
+      </interface-parameters>
+      <interface-functions>
+        <function-ref name="rxDone" ref="0x40e8f388" scoped=""/>
+        <function-ref name="txDone" ref="0x40e8f468" scoped=""/>
+      </interface-functions>
+    </interface><interface loc="42:/home/jumbo/tinyos-main/tos/chips/msp430/usart/Msp430UsartShareP.nc" name="RawI2CInterrupts" provided="0" ref="0x40e8e4d8">
+      <component-ref nicename="tos.chips.msp430.usart.Msp430UsartShareP" qname="Msp430UsartShareP"/>
+      <type-interface alignment="I:2" size="I:2"><interface-ref name="RawI2CInterrupts" ref="0x40e8e4d8" scoped=""/></type-interface>
+      <instance>
+        <interfacedef-ref nicename="tos.chips.msp430.usart.HplMsp430I2CInterrupts" qname="HplMsp430I2CInterrupts"/>
+      </instance>
+      <interface-functions>
+        <function-ref name="fired" ref="0x40e8e6b0" scoped=""/>
+      </interface-functions>
+    </interface><interface loc="40:/home/jumbo/tinyos-main/tos/chips/msp430/usart/Msp430UsartShareP.nc" name="I2CInterrupts" provided="1" ref="0x40e8fa30">
+      <component-ref nicename="tos.chips.msp430.usart.Msp430UsartShareP" qname="Msp430UsartShareP"/>
+      <type-interface alignment="I:2" size="I:2"><interface-ref name="I2CInterrupts" ref="0x40e8fa30" scoped=""/></type-interface>
+      <instance>
+        <interfacedef-ref nicename="tos.chips.msp430.usart.HplMsp430I2CInterrupts" qname="HplMsp430I2CInterrupts"/>
+      </instance>
+      <interface-parameters>
+        <type-int alignment="I:1" cname="unsigned char" size="I:1" unsigned="">
+          <typename><typedef-ref name="uint8_t" ref="0x4003bdc8"/></typename>
+        </type-int>
+      </interface-parameters>
+      <interface-functions>
+        <function-ref name="fired" ref="0x40e8fc08" scoped=""/>
+      </interface-functions>
+    </interface><interface loc="41:/home/jumbo/tinyos-main/tos/chips/msp430/usart/Msp430UsartShareP.nc" name="RawInterrupts" provided="0" ref="0x40e8ff08">
+      <component-ref nicename="tos.chips.msp430.usart.Msp430UsartShareP" qname="Msp430UsartShareP"/>
+      <type-interface alignment="I:2" size="I:2"><interface-ref name="RawInterrupts" ref="0x40e8ff08" scoped=""/></type-interface>
+      <instance>
+        <interfacedef-ref nicename="tos.chips.msp430.usart.HplMsp430UsartInterrupts" qname="HplMsp430UsartInterrupts"/>
+      </instance>
+      <interface-functions>
+        <function-ref name="rxDone" ref="0x40e8e0f0" scoped=""/>
+        <function-ref name="txDone" ref="0x40e8e1d0" scoped=""/>
+      </interface-functions>
+    </interface></specification><referenced/></component>

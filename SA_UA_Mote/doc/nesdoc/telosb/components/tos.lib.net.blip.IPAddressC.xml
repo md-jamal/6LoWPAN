@@ -1,0 +1,93 @@
+<?xml version="1.0" ?><component loc="24:/home/jumbo/tinyos-main/tos/lib/net/blip/IPAddressC.nc" nicename="tos.lib.net.blip.IPAddressC" qname="IPAddressC">
+      <configuration/>
+      <wiring>
+        <wire loc="30:/home/jumbo/tinyos-main/tos/lib/net/blip/IPAddressC.nc">
+          <from><interface-ref name="IPAddress" ref="0x40a51ce0" scoped=""/></from>
+          <to><interface-ref name="IPAddress" ref="0x40a9c0d0" scoped=""/></to>
+        </wire>
+        <wire loc="31:/home/jumbo/tinyos-main/tos/lib/net/blip/IPAddressC.nc">
+          <from><interface-ref name="Ieee154Address" ref="0x40a9cad8" scoped=""/></from>
+          <to><interface-ref name="Ieee154Address" ref="0x40abd010" scoped=""/></to>
+        </wire>
+      </wiring>
+    <specification><interface loc="25:/home/jumbo/tinyos-main/tos/lib/net/blip/IPAddressC.nc" name="IPAddress" provided="1" ref="0x40a51ce0">
+      <component-ref nicename="tos.lib.net.blip.IPAddressC" qname="IPAddressC"/>
+      <type-interface alignment="I:2" size="I:2"><interface-ref name="IPAddress" ref="0x40a51ce0" scoped=""/></type-interface>
+      <instance>
+        <interfacedef-ref nicename="tos.lib.net.blip.interfaces.IPAddress" qname="IPAddress"/>
+      </instance>
+      <interface-functions>
+        <function-ref name="getLLAddr" ref="0x40a51eb8" scoped=""/>
+        <function-ref name="changed" ref="0x40a74010" scoped=""/>
+        <function-ref name="isLocalAddress" ref="0x40a740f0" scoped=""/>
+        <function-ref name="getGlobalAddr" ref="0x40a741d0" scoped=""/>
+        <function-ref name="setSource" ref="0x40a742b0" scoped=""/>
+        <function-ref name="removeAddress" ref="0x40a74390" scoped=""/>
+        <function-ref name="setAddress" ref="0x40a74470" scoped=""/>
+        <function-ref name="isLLAddress" ref="0x40a74550" scoped=""/>
+      </interface-functions>
+    </interface></specification><referenced><interface loc="3:/home/jumbo/tinyos-main/tos/lib/net/blip/Ieee154AddressC.nc" name="Ieee154Address" provided="1" ref="0x40abd010">
+      <component-ref nicename="tos.lib.net.blip.Ieee154AddressC" qname="Ieee154AddressC"/>
+      <type-interface alignment="I:2" size="I:2"><interface-ref name="Ieee154Address" ref="0x40abd010" scoped=""/></type-interface>
+      <instance>
+        <interfacedef-ref nicename="tos.lib.net.blip.interfaces.Ieee154Address" qname="Ieee154Address"/>
+      </instance>
+      <interface-functions>
+        <function-ref name="getPanId" ref="0x40abd1e8" scoped=""/>
+        <function-ref name="changed" ref="0x40abd2c8" scoped=""/>
+        <function-ref name="setShortAddr" ref="0x40abd3a8" scoped=""/>
+        <function-ref name="getExtAddr" ref="0x40abd488" scoped=""/>
+        <function-ref name="getShortAddr" ref="0x40abd568" scoped=""/>
+      </interface-functions>
+    </interface><interface loc="31:/home/jumbo/tinyos-main/tos/lib/net/blip/IPAddressP.nc" name="Ieee154Address" provided="0" ref="0x40a9cad8">
+      <component-ref nicename="tos.lib.net.blip.IPAddressP" qname="IPAddressP"/>
+      <type-interface alignment="I:2" size="I:2"><interface-ref name="Ieee154Address" ref="0x40a9cad8" scoped=""/></type-interface>
+      <instance>
+        <interfacedef-ref nicename="tos.lib.net.blip.interfaces.Ieee154Address" qname="Ieee154Address"/>
+      </instance>
+      <interface-functions>
+        <function-ref name="getPanId" ref="0x40a9ccb0" scoped=""/>
+        <function-ref name="changed" ref="0x40a9cd90" scoped=""/>
+        <function-ref name="setShortAddr" ref="0x40a9ce70" scoped=""/>
+        <function-ref name="getExtAddr" ref="0x40a9b010" scoped=""/>
+        <function-ref name="getShortAddr" ref="0x40a9b0f0" scoped=""/>
+      </interface-functions>
+    </interface><interface loc="28:/home/jumbo/tinyos-main/tos/lib/net/blip/IPAddressP.nc" name="IPAddress" provided="1" ref="0x40a9c0d0">
+      <component-ref nicename="tos.lib.net.blip.IPAddressP" qname="IPAddressP"/>
+      <type-interface alignment="I:2" size="I:2"><interface-ref name="IPAddress" ref="0x40a9c0d0" scoped=""/></type-interface>
+      <instance>
+        <interfacedef-ref nicename="tos.lib.net.blip.interfaces.IPAddress" qname="IPAddress"/>
+      </instance>
+      <interface-functions>
+        <function-ref name="getLLAddr" ref="0x40a9c2a8" scoped=""/>
+        <function-ref name="changed" ref="0x40a9c388" scoped=""/>
+        <function-ref name="isLocalAddress" ref="0x40a9c468" scoped=""/>
+        <function-ref name="getGlobalAddr" ref="0x40a9c548" scoped=""/>
+        <function-ref name="setSource" ref="0x40a9c628" scoped=""/>
+        <function-ref name="removeAddress" ref="0x40a9c708" scoped=""/>
+        <function-ref name="setAddress" ref="0x40a9c7e8" scoped=""/>
+        <function-ref name="isLLAddress" ref="0x40a9c8c8" scoped=""/>
+      </interface-functions>
+    </interface><component loc="26:/home/jumbo/tinyos-main/tos/lib/net/blip/IPAddressP.nc" nicename="tos.lib.net.blip.IPAddressP" qname="IPAddressP">
+      <module/>
+    </component><component loc="2:/home/jumbo/tinyos-main/tos/lib/net/blip/Ieee154AddressC.nc" nicename="tos.lib.net.blip.Ieee154AddressC" qname="Ieee154AddressC">
+      <configuration/>
+      <wiring>
+        <wire loc="9:/home/jumbo/tinyos-main/tos/lib/net/blip/Ieee154AddressC.nc">
+          <from><interface-ref name="Ieee154Address" ref="0x40abd010" scoped=""/></from>
+          <to><interface-ref name="Ieee154Address" ref="0x40aba010" scoped=""/></to>
+        </wire>
+        <wire loc="11:/home/jumbo/tinyos-main/tos/lib/net/blip/Ieee154AddressC.nc">
+          <from><interface-ref name="SoftwareInit" ref="0x40692258" scoped=""/></from>
+          <to><interface-ref name="Init" ref="0x40abdba0" scoped=""/></to>
+        </wire>
+        <wire loc="12:/home/jumbo/tinyos-main/tos/lib/net/blip/Ieee154AddressC.nc">
+          <from><interface-ref name="LocalIeeeEui64" ref="0x40ab9010" scoped=""/></from>
+          <to><interface-ref name="LocalIeeeEui64" ref="0x40abb2f0" scoped=""/></to>
+        </wire>
+        <wire loc="16:/home/jumbo/tinyos-main/tos/lib/net/blip/Ieee154AddressC.nc">
+          <from><interface-ref name="CC2420Config" ref="0x40ad5d18" scoped=""/></from>
+          <to><interface-ref name="CC2420Config" ref="0x40b2c8c8" scoped=""/></to>
+        </wire>
+      </wiring>
+    </component></referenced></component>

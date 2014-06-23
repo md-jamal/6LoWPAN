@@ -1,0 +1,44 @@
+<?xml version="1.0" ?><component loc="45:/home/jumbo/tinyos-main/tos/system/NoLedsC.nc" nicename="tos.system.NoLedsC" qname="NoLedsC">
+      <documentation loc="35:/home/jumbo/tinyos-main/tos/system/NoLedsC.nc">
+        <short>
+ A null operation replacement for the LedsC component.</short>
+        <long>
+ A null operation replacement for the LedsC component. As many
+ components might concurrently signal information through LEDs,
+ using LedsC and NoLedsC allows an application builder to select
+ which components control the LEDs.
+
+ @author Philip Levis
+ @date   March 19, 2005
+</long>
+      </documentation>
+      <module/>
+    <specification><interface loc="46:/home/jumbo/tinyos-main/tos/system/NoLedsC.nc" name="Init" provided="1" ref="0x4162e618">
+      <component-ref nicename="tos.system.NoLedsC" qname="NoLedsC"/>
+      <type-interface alignment="I:2" size="I:2"><interface-ref name="Init" ref="0x4162e618" scoped=""/></type-interface>
+      <instance>
+        <interfacedef-ref nicename="tos.interfaces.Init" qname="Init"/>
+      </instance>
+      <interface-functions>
+        <function-ref name="init" ref="0x4162e7f0" scoped=""/>
+      </interface-functions>
+    </interface><interface loc="47:/home/jumbo/tinyos-main/tos/system/NoLedsC.nc" name="Leds" provided="1" ref="0x4162e980">
+      <component-ref nicename="tos.system.NoLedsC" qname="NoLedsC"/>
+      <type-interface alignment="I:2" size="I:2"><interface-ref name="Leds" ref="0x4162e980" scoped=""/></type-interface>
+      <instance>
+        <interfacedef-ref nicename="tos.interfaces.Leds" qname="Leds"/>
+      </instance>
+      <interface-functions>
+        <function-ref name="led0Off" ref="0x4162eb58" scoped=""/>
+        <function-ref name="led0Toggle" ref="0x4162ec38" scoped=""/>
+        <function-ref name="led1On" ref="0x4162ed18" scoped=""/>
+        <function-ref name="led1Toggle" ref="0x4162edf8" scoped=""/>
+        <function-ref name="led2Toggle" ref="0x4162eed8" scoped=""/>
+        <function-ref name="get" ref="0x4162b010" scoped=""/>
+        <function-ref name="led1Off" ref="0x4162b0f0" scoped=""/>
+        <function-ref name="led2Off" ref="0x4162b470" scoped=""/>
+        <function-ref name="set" ref="0x4162b1d0" scoped=""/>
+        <function-ref name="led0On" ref="0x4162b2b0" scoped=""/>
+        <function-ref name="led2On" ref="0x4162b390" scoped=""/>
+      </interface-functions>
+    </interface></specification><referenced/></component>

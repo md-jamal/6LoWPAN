@@ -1,0 +1,237 @@
+<?xml version="1.0" ?><component abstract="" loc="41:/home/jumbo/tinyos-main/tos/chips/msp430/timer/Alarm32khz16C.nc" nicename="tos.chips.msp430.timer.Alarm32khz16C" qname="Alarm32khz16C">
+      <documentation loc="33:/home/jumbo/tinyos-main/tos/chips/msp430/timer/Alarm32khz16C.nc">
+        <short>
+ Alarm32khzC is the alarm for async 32khz alarms
+
+ </short>
+        <long>
+ Alarm32khzC is the alarm for async 32khz alarms
+
+ @author Cory Sharp &lt;cssharp@eecs.berkeley.edu&gt;
+ @see  Please refer to TEP 102 for more information about this component and its
+          intended use.
+</long>
+      </documentation>
+      <parameters>
+      </parameters>
+      <configuration/>
+      <wiring>
+        <wire loc="52:/home/jumbo/tinyos-main/tos/chips/msp430/timer/Alarm32khz16C.nc">
+          <from><interface-ref name="Alarm" ref="0x40bbedd8" scoped=""/></from>
+          <to><interface-ref name="Alarm" ref="0x40bcae68" scoped=""/></to>
+        </wire>
+        <wire loc="51:/home/jumbo/tinyos-main/tos/chips/msp430/timer/Alarm32khz16C.nc">
+          <from><interface-ref name="Init" ref="0x40bbe8b0" scoped=""/></from>
+          <to><interface-ref name="Init" ref="0x40bca9f0" scoped=""/></to>
+        </wire>
+        <wire loc="54:/home/jumbo/tinyos-main/tos/chips/msp430/timer/Alarm32khz16C.nc">
+          <from><interface-ref name="Msp430Timer" ref="0x40bdf7f8" scoped=""/></from>
+          <to><interface-ref name="Msp430Timer" ref="0x40bcd010" scoped=""/></to>
+        </wire>
+        <wire loc="55:/home/jumbo/tinyos-main/tos/chips/msp430/timer/Alarm32khz16C.nc">
+          <from><interface-ref name="Msp430TimerControl" ref="0x40bde410" scoped=""/></from>
+          <to><interface-ref name="Msp430TimerControl" ref="0x40bcdc08" scoped=""/></to>
+        </wire>
+        <wire loc="56:/home/jumbo/tinyos-main/tos/chips/msp430/timer/Alarm32khz16C.nc">
+          <from><interface-ref name="Msp430Compare" ref="0x40bdee48" scoped=""/></from>
+          <to><interface-ref name="Msp430Compare" ref="0x40bcc6b0" scoped=""/></to>
+        </wire>
+      </wiring>
+    <specification><interface loc="44:/home/jumbo/tinyos-main/tos/chips/msp430/timer/Alarm32khz16C.nc" name="Alarm" provided="1" ref="0x40bbedd8">
+      <component-ref nicename="tos.chips.msp430.timer.Alarm32khz16C" qname="Alarm32khz16C"/>
+      <type-interface alignment="I:2" size="I:2"><interface-ref name="Alarm" ref="0x40bbedd8" scoped=""/></type-interface>
+      <instance>
+        <interfacedef-ref nicename="tos.lib.timer.Alarm" qname="Alarm"/>
+        <arguments>
+          <type-tag alignment="I:2" size="I:2"><struct-ref ref="0x4064d288"/>
+            <typename><typedef-ref name="T32khz" ref="0x4064d450"/></typename>
+          </type-tag>
+          <type-int alignment="I:2" cname="unsigned int" size="I:2" unsigned="">
+            <typename><typedef-ref name="uint16_t" ref="0x4003c010"/></typename>
+          </type-int>
+        </arguments>
+      </instance>
+      <interface-functions>
+        <function-ref name="getNow" ref="0x40bba350" scoped=""/>
+        <function-ref name="fired" ref="0x40bbba88" scoped=""/>
+        <function-ref name="startAt" ref="0x40bba010" scoped=""/>
+        <function-ref name="isRunning" ref="0x40bbbd00" scoped=""/>
+        <function-ref name="getAlarm" ref="0x40bba5c8" scoped=""/>
+        <function-ref name="start" ref="0x40bbb570" scoped=""/>
+        <function-ref name="stop" ref="0x40bbb810" scoped=""/>
+      </interface-functions>
+    </interface><interface loc="43:/home/jumbo/tinyos-main/tos/chips/msp430/timer/Alarm32khz16C.nc" name="Init" provided="1" ref="0x40bbe8b0">
+      <component-ref nicename="tos.chips.msp430.timer.Alarm32khz16C" qname="Alarm32khz16C"/>
+      <type-interface alignment="I:2" size="I:2"><interface-ref name="Init" ref="0x40bbe8b0" scoped=""/></type-interface>
+      <instance>
+        <interfacedef-ref nicename="tos.interfaces.Init" qname="Init"/>
+      </instance>
+      <interface-functions>
+        <function-ref name="init" ref="0x40bbea88" scoped=""/>
+      </interface-functions>
+    </interface></specification><referenced><interface loc="41:/home/jumbo/tinyos-main/tos/chips/msp430/timer/Msp430Timer32khzC.nc" name="Msp430Compare" provided="1" ref="0x40bcc6b0">
+      <component-ref nicename="tos.chips.msp430.timer.Msp430Timer32khzC" qname="Alarm32khz16C.Msp430Timer"/>
+      <type-interface alignment="I:2" size="I:2"><interface-ref name="Msp430Compare" ref="0x40bcc6b0" scoped=""/></type-interface>
+      <instance>
+        <interfacedef-ref nicename="tos.chips.msp430.timer.Msp430Compare" qname="Msp430Compare"/>
+      </instance>
+      <interface-functions>
+        <function-ref name="getEvent" ref="0x40bcc888" scoped=""/>
+        <function-ref name="setEvent" ref="0x40bcc968" scoped=""/>
+        <function-ref name="setEventFromPrev" ref="0x40bcca48" scoped=""/>
+        <function-ref name="setEventFromNow" ref="0x40bccb28" scoped=""/>
+        <function-ref name="fired" ref="0x40bccc08" scoped=""/>
+      </interface-functions>
+    </interface><interface loc="45:/home/jumbo/tinyos-main/tos/chips/msp430/timer/Msp430AlarmC.nc" name="Init" provided="1" ref="0x40bca9f0">
+      <component-ref nicename="tos.chips.msp430.timer.Msp430AlarmC" qname="Alarm32khz16C.Msp430Alarm"/>
+      <type-interface alignment="I:2" size="I:2"><interface-ref name="Init" ref="0x40bca9f0" scoped=""/></type-interface>
+      <instance>
+        <interfacedef-ref nicename="tos.interfaces.Init" qname="Init"/>
+      </instance>
+      <interface-functions>
+        <function-ref name="init" ref="0x40bcabc8" scoped=""/>
+      </interface-functions>
+    </interface><interface loc="48:/home/jumbo/tinyos-main/tos/chips/msp430/timer/Msp430AlarmC.nc" name="Msp430TimerControl" provided="0" ref="0x40bde410">
+      <component-ref nicename="tos.chips.msp430.timer.Msp430AlarmC" qname="Alarm32khz16C.Msp430Alarm"/>
+      <type-interface alignment="I:2" size="I:2"><interface-ref name="Msp430TimerControl" ref="0x40bde410" scoped=""/></type-interface>
+      <instance>
+        <interfacedef-ref nicename="tos.chips.msp430.timer.Msp430TimerControl" qname="Msp430TimerControl"/>
+      </instance>
+      <interface-functions>
+        <function-ref name="setControlAsCapture" ref="0x40bde5e8" scoped=""/>
+        <function-ref name="getControl" ref="0x40bde6c8" scoped=""/>
+        <function-ref name="enableEvents" ref="0x40bde7a8" scoped=""/>
+        <function-ref name="areEventsEnabled" ref="0x40bde888" scoped=""/>
+        <function-ref name="setControlAsCompare" ref="0x40bde968" scoped=""/>
+        <function-ref name="disableEvents" ref="0x40bdea48" scoped=""/>
+        <function-ref name="isInterruptPending" ref="0x40bdeb28" scoped=""/>
+        <function-ref name="clearPendingInterrupt" ref="0x40bdec08" scoped=""/>
+        <function-ref name="setControl" ref="0x40bdece8" scoped=""/>
+      </interface-functions>
+    </interface><interface loc="49:/home/jumbo/tinyos-main/tos/chips/msp430/timer/Msp430AlarmC.nc" name="Msp430Compare" provided="0" ref="0x40bdee48">
+      <component-ref nicename="tos.chips.msp430.timer.Msp430AlarmC" qname="Alarm32khz16C.Msp430Alarm"/>
+      <type-interface alignment="I:2" size="I:2"><interface-ref name="Msp430Compare" ref="0x40bdee48" scoped=""/></type-interface>
+      <instance>
+        <interfacedef-ref nicename="tos.chips.msp430.timer.Msp430Compare" qname="Msp430Compare"/>
+      </instance>
+      <interface-functions>
+        <function-ref name="getEvent" ref="0x40bdd050" scoped=""/>
+        <function-ref name="setEvent" ref="0x40bdd130" scoped=""/>
+        <function-ref name="setEventFromPrev" ref="0x40bdd210" scoped=""/>
+        <function-ref name="setEventFromNow" ref="0x40bdd2f0" scoped=""/>
+        <function-ref name="fired" ref="0x40bdd3d0" scoped=""/>
+      </interface-functions>
+    </interface><interface loc="46:/home/jumbo/tinyos-main/tos/chips/msp430/timer/Msp430AlarmC.nc" name="Alarm" provided="1" ref="0x40bcae68">
+      <component-ref nicename="tos.chips.msp430.timer.Msp430AlarmC" qname="Alarm32khz16C.Msp430Alarm"/>
+      <type-interface alignment="I:2" size="I:2"><interface-ref name="Alarm" ref="0x40bcae68" scoped=""/></type-interface>
+      <instance>
+        <interfacedef-ref nicename="tos.lib.timer.Alarm" qname="Alarm"/>
+        <arguments>
+          <type-tag alignment="I:2" size="I:2"><struct-ref ref="0x4064d288"/>
+            <typename><typedef-ref name="T32khz" ref="0x4064d450"/></typename>
+          </type-tag>
+          <type-int alignment="I:2" cname="unsigned int" size="I:2" unsigned="">
+            <typename><typedef-ref name="uint16_t" ref="0x4003c010"/></typename>
+          </type-int>
+        </arguments>
+      </instance>
+      <interface-functions>
+        <function-ref name="getNow" ref="0x40bdf350" scoped=""/>
+        <function-ref name="fired" ref="0x40be0af8" scoped=""/>
+        <function-ref name="startAt" ref="0x40bdf010" scoped=""/>
+        <function-ref name="isRunning" ref="0x40be0d70" scoped=""/>
+        <function-ref name="getAlarm" ref="0x40bdf5c8" scoped=""/>
+        <function-ref name="start" ref="0x40be05e0" scoped=""/>
+        <function-ref name="stop" ref="0x40be0880" scoped=""/>
+      </interface-functions>
+    </interface><interface loc="39:/home/jumbo/tinyos-main/tos/chips/msp430/timer/Msp430Timer32khzC.nc" name="Msp430Timer" provided="1" ref="0x40bcd010">
+      <component-ref nicename="tos.chips.msp430.timer.Msp430Timer32khzC" qname="Alarm32khz16C.Msp430Timer"/>
+      <type-interface alignment="I:2" size="I:2"><interface-ref name="Msp430Timer" ref="0x40bcd010" scoped=""/></type-interface>
+      <instance>
+        <interfacedef-ref nicename="tos.chips.msp430.timer.Msp430Timer" qname="Msp430Timer"/>
+      </instance>
+      <interface-functions>
+        <function-ref name="clear" ref="0x40bcd1e8" scoped=""/>
+        <function-ref name="setClockSource" ref="0x40bcd2c8" scoped=""/>
+        <function-ref name="enableEvents" ref="0x40bcd3a8" scoped=""/>
+        <function-ref name="get" ref="0x40bcd488" scoped=""/>
+        <function-ref name="disableEvents" ref="0x40bcd568" scoped=""/>
+        <function-ref name="clearOverflow" ref="0x40bcd648" scoped=""/>
+        <function-ref name="getMode" ref="0x40bcd728" scoped=""/>
+        <function-ref name="isOverflowPending" ref="0x40bcd808" scoped=""/>
+        <function-ref name="overflow" ref="0x40bcd8e8" scoped=""/>
+        <function-ref name="setMode" ref="0x40bcd9c8" scoped=""/>
+        <function-ref name="setInputDivider" ref="0x40bcdaa8" scoped=""/>
+      </interface-functions>
+    </interface><interface loc="40:/home/jumbo/tinyos-main/tos/chips/msp430/timer/Msp430Timer32khzC.nc" name="Msp430TimerControl" provided="1" ref="0x40bcdc08">
+      <component-ref nicename="tos.chips.msp430.timer.Msp430Timer32khzC" qname="Alarm32khz16C.Msp430Timer"/>
+      <type-interface alignment="I:2" size="I:2"><interface-ref name="Msp430TimerControl" ref="0x40bcdc08" scoped=""/></type-interface>
+      <instance>
+        <interfacedef-ref nicename="tos.chips.msp430.timer.Msp430TimerControl" qname="Msp430TimerControl"/>
+      </instance>
+      <interface-functions>
+        <function-ref name="setControlAsCapture" ref="0x40bcdde0" scoped=""/>
+        <function-ref name="getControl" ref="0x40bcdec0" scoped=""/>
+        <function-ref name="enableEvents" ref="0x40bcc010" scoped=""/>
+        <function-ref name="areEventsEnabled" ref="0x40bcc0f0" scoped=""/>
+        <function-ref name="setControlAsCompare" ref="0x40bcc1d0" scoped=""/>
+        <function-ref name="disableEvents" ref="0x40bcc2b0" scoped=""/>
+        <function-ref name="isInterruptPending" ref="0x40bcc390" scoped=""/>
+        <function-ref name="clearPendingInterrupt" ref="0x40bcc470" scoped=""/>
+        <function-ref name="setControl" ref="0x40bcc550" scoped=""/>
+      </interface-functions>
+    </interface><interface loc="47:/home/jumbo/tinyos-main/tos/chips/msp430/timer/Msp430AlarmC.nc" name="Msp430Timer" provided="0" ref="0x40bdf7f8">
+      <component-ref nicename="tos.chips.msp430.timer.Msp430AlarmC" qname="Alarm32khz16C.Msp430Alarm"/>
+      <type-interface alignment="I:2" size="I:2"><interface-ref name="Msp430Timer" ref="0x40bdf7f8" scoped=""/></type-interface>
+      <instance>
+        <interfacedef-ref nicename="tos.chips.msp430.timer.Msp430Timer" qname="Msp430Timer"/>
+      </instance>
+      <interface-functions>
+        <function-ref name="clear" ref="0x40bdf9d0" scoped=""/>
+        <function-ref name="setClockSource" ref="0x40bdfab0" scoped=""/>
+        <function-ref name="enableEvents" ref="0x40bdfb90" scoped=""/>
+        <function-ref name="get" ref="0x40bdfc70" scoped=""/>
+        <function-ref name="disableEvents" ref="0x40bdfd50" scoped=""/>
+        <function-ref name="clearOverflow" ref="0x40bdfe30" scoped=""/>
+        <function-ref name="getMode" ref="0x40bdff10" scoped=""/>
+        <function-ref name="isOverflowPending" ref="0x40bde010" scoped=""/>
+        <function-ref name="overflow" ref="0x40bde0f0" scoped=""/>
+        <function-ref name="setMode" ref="0x40bde1d0" scoped=""/>
+        <function-ref name="setInputDivider" ref="0x40bde2b0" scoped=""/>
+      </interface-functions>
+    </interface><component abstract="" loc="43(Alarm32khz16C.Msp430Alarm):/home/jumbo/tinyos-main/tos/chips/msp430/timer/Msp430AlarmC.nc" nicename="tos.chips.msp430.timer.Msp430AlarmC" qname="Alarm32khz16C.Msp430Alarm">
+      <documentation loc="34:/home/jumbo/tinyos-main/tos/chips/msp430/timer/Msp430AlarmC.nc">
+        <short>
+ Msp430Alarm is a generic component that wraps the MSP430 HPL timers and
+ compares into a TinyOS Alarm.</short>
+        <long>
+ Msp430Alarm is a generic component that wraps the MSP430 HPL timers and
+ compares into a TinyOS Alarm.
+
+ @author Cory Sharp &lt;cssharp@eecs.berkeley.edu&gt;
+ @see  Please refer to TEP 102 for more information about this component and its
+          intended use.
+</long>
+      </documentation>
+      <instance>
+        <component-ref nicename="tos.chips.msp430.timer.Msp430AlarmC" qname="Msp430AlarmC"/>
+        <arguments>
+          <type-tag alignment="I:2" size="I:2"><struct-ref ref="0x4064d288"/>
+            <typename><typedef-ref name="T32khz" ref="0x4064d450"/></typename>
+          </type-tag>
+        </arguments>
+      </instance>
+      <module/>
+    </component><component abstract="" loc="37(Alarm32khz16C.Msp430Timer):/home/jumbo/tinyos-main/tos/chips/msp430/timer/Msp430Timer32khzC.nc" nicename="tos.chips.msp430.timer.Msp430Timer32khzC" qname="Alarm32khz16C.Msp430Timer">
+      <documentation loc="33:/home/jumbo/tinyos-main/tos/chips/msp430/timer/Msp430Timer32khzC.nc">
+        <short>
+ </short>
+        <long>
+ @author Cory Sharp &lt;cssharp@eecs.berkeley.edu&gt;
+</long>
+      </documentation>
+      <instance>
+        <component-ref nicename="tos.chips.msp430.timer.Msp430Timer32khzC" qname="Msp430Timer32khzC"/>
+      </instance>
+      <configuration/>
+    </component></referenced></component>

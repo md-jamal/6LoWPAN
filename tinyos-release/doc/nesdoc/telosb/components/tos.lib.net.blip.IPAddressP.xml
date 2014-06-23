@@ -1,0 +1,32 @@
+<?xml version="1.0" ?><component loc="26:/home/jumbo/jamal/project/CoAP/tinyos-release/tos/lib/net/blip/IPAddressP.nc" nicename="tos.lib.net.blip.IPAddressP" qname="IPAddressP">
+      <module/>
+    <specification><interface loc="31:/home/jumbo/jamal/project/CoAP/tinyos-release/tos/lib/net/blip/IPAddressP.nc" name="Ieee154Address" provided="0" ref="0x409b1300">
+      <component-ref nicename="tos.lib.net.blip.IPAddressP" qname="IPAddressP"/>
+      <type-interface alignment="I:2" size="I:2"><interface-ref name="Ieee154Address" ref="0x409b1300" scoped=""/></type-interface>
+      <instance>
+        <interfacedef-ref nicename="tos.lib.net.blip.interfaces.Ieee154Address" qname="Ieee154Address"/>
+      </instance>
+      <interface-functions>
+        <function-ref name="getPanId" ref="0x409b14d8" scoped=""/>
+        <function-ref name="changed" ref="0x409b15b8" scoped=""/>
+        <function-ref name="setShortAddr" ref="0x409b1698" scoped=""/>
+        <function-ref name="getExtAddr" ref="0x409b1778" scoped=""/>
+        <function-ref name="getShortAddr" ref="0x409b1858" scoped=""/>
+      </interface-functions>
+    </interface><interface loc="28:/home/jumbo/jamal/project/CoAP/tinyos-release/tos/lib/net/blip/IPAddressP.nc" name="IPAddress" provided="1" ref="0x409b2870">
+      <component-ref nicename="tos.lib.net.blip.IPAddressP" qname="IPAddressP"/>
+      <type-interface alignment="I:2" size="I:2"><interface-ref name="IPAddress" ref="0x409b2870" scoped=""/></type-interface>
+      <instance>
+        <interfacedef-ref nicename="tos.lib.net.blip.interfaces.IPAddress" qname="IPAddress"/>
+      </instance>
+      <interface-functions>
+        <function-ref name="getLLAddr" ref="0x409b2a48" scoped=""/>
+        <function-ref name="changed" ref="0x409b2b28" scoped=""/>
+        <function-ref name="isLocalAddress" ref="0x409b2c08" scoped=""/>
+        <function-ref name="getGlobalAddr" ref="0x409b2ce8" scoped=""/>
+        <function-ref name="setSource" ref="0x409b2dc8" scoped=""/>
+        <function-ref name="removeAddress" ref="0x409b2ea8" scoped=""/>
+        <function-ref name="setAddress" ref="0x409b1010" scoped=""/>
+        <function-ref name="isLLAddress" ref="0x409b10f0" scoped=""/>
+      </interface-functions>
+    </interface></specification><referenced/></component>

@@ -1,0 +1,22 @@
+<?xml version="1.0" ?><component loc="11:/home/jumbo/jamal/project/CoAP/tinyos-release/tos/platforms/epic/chips/ds2411/Ds2411P.nc" nicename="tos.platforms.epic.chips.ds2411.Ds2411P" qname="Ds2411P">
+      <module/>
+    <specification><interface loc="16:/home/jumbo/jamal/project/CoAP/tinyos-release/tos/platforms/epic/chips/ds2411/Ds2411P.nc" name="OneWire" provided="0" ref="0x40a079e8">
+      <component-ref nicename="tos.platforms.epic.chips.ds2411.Ds2411P" qname="Ds2411P"/>
+      <type-interface alignment="I:2" size="I:2"><interface-ref name="OneWire" ref="0x40a079e8" scoped=""/></type-interface>
+      <instance>
+        <interfacedef-ref nicename="tos.platforms.epic.chips.ds2411.OneWireStream" qname="OneWireStream"/>
+      </instance>
+      <interface-functions>
+        <function-ref name="read" ref="0x40a07bc0" scoped=""/>
+        <function-ref name="write" ref="0x40a07ca0" scoped=""/>
+      </interface-functions>
+    </interface><interface loc="13:/home/jumbo/jamal/project/CoAP/tinyos-release/tos/platforms/epic/chips/ds2411/Ds2411P.nc" name="ReadId48" provided="1" ref="0x409ea1d0">
+      <component-ref nicename="tos.platforms.epic.chips.ds2411.Ds2411P" qname="Ds2411P"/>
+      <type-interface alignment="I:2" size="I:2"><interface-ref name="ReadId48" ref="0x409ea1d0" scoped=""/></type-interface>
+      <instance>
+        <interfacedef-ref nicename="tos.platforms.epic.chips.ds2411.ReadId48" qname="ReadId48"/>
+      </instance>
+      <interface-functions>
+        <function-ref name="read" ref="0x409ea3a8" scoped=""/>
+      </interface-functions>
+    </interface></specification><referenced/></component>

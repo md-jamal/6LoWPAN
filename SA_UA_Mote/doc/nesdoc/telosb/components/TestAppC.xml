@@ -1,0 +1,572 @@
+<?xml version="1.0" ?><component loc="3:TestAppC.nc" nicename="TestAppC" qname="TestAppC">
+      <configuration/>
+      <wiring>
+        <wire loc="13:TestAppC.nc">
+          <from><interface-ref name="Boot" ref="0x40638900" scoped=""/></from>
+          <to><interface-ref name="Boot" ref="0x4060e610" scoped=""/></to>
+        </wire>
+        <wire loc="15:TestAppC.nc">
+          <from><interface-ref name="Leds" ref="0x40642ca8" scoped=""/></from>
+          <to><interface-ref name="Leds" ref="0x40683a90" scoped=""/></to>
+        </wire>
+        <wire loc="18:TestAppC.nc">
+          <from><interface-ref name="Node" ref="0x4066f2d8" scoped=""/></from>
+          <to><interface-ref name="Node" ref="0x40693160" scoped=""/></to>
+        </wire>
+        <wire loc="24:TestAppC.nc">
+          <from><interface-ref name="IPAddress" ref="0x4064fbf8" scoped=""/></from>
+          <to><interface-ref name="IPAddress" ref="0x40a51ce0" scoped=""/></to>
+        </wire>
+        <wire loc="27:TestAppC.nc">
+          <from><interface-ref name="Timer" ref="0x40658210" scoped=""/></from>
+          <to><interface-ref name="Timer" ref="0x408d53b8" scoped=""/></to>
+        </wire>
+        <wire loc="30:TestAppC.nc">
+          <from><interface-ref name="SplitControl" ref="0x40654980" scoped=""/></from>
+          <to><interface-ref name="SplitControl" ref="0x409acc18" scoped=""/></to>
+        </wire>
+        <wire loc="35:TestAppC.nc">
+          <from><interface-ref name="SSLPControl" ref="0x406570a0" scoped=""/></from>
+          <to><interface-ref name="SplitControl" ref="0x408d3970" scoped=""/></to>
+        </wire>
+        <wire loc="36:TestAppC.nc">
+          <from><interface-ref name="ServiceLocation" ref="0x4067d890" scoped=""/></from>
+          <to><interface-ref name="ServiceLocation" ref="0x40937010" scoped=""/></to>
+        </wire>
+      </wiring>
+    <specification/><referenced><interface loc="6:SSLC.nc" name="SplitControl" provided="1" ref="0x408d3970">
+      <component-ref nicename="SSLC" qname="SSLC"/>
+      <type-interface alignment="I:2" size="I:2"><interface-ref name="SplitControl" ref="0x408d3970" scoped=""/></type-interface>
+      <instance>
+        <interfacedef-ref nicename="tos.interfaces.SplitControl" qname="SplitControl"/>
+      </instance>
+      <interface-functions>
+        <function-ref name="startDone" ref="0x408d3b48" scoped=""/>
+        <function-ref name="stopDone" ref="0x408d3c28" scoped=""/>
+        <function-ref name="start" ref="0x408d3d08" scoped=""/>
+        <function-ref name="stop" ref="0x408d3de8" scoped=""/>
+      </interface-functions>
+    </interface><interface loc="13:TestC.nc" name="SplitControl" provided="0" ref="0x40654980">
+      <component-ref nicename="TestC" qname="TestC"/>
+      <type-interface alignment="I:2" size="I:2"><interface-ref name="SplitControl" ref="0x40654980" scoped=""/></type-interface>
+      <instance>
+        <interfacedef-ref nicename="tos.interfaces.SplitControl" qname="SplitControl"/>
+      </instance>
+      <interface-functions>
+        <function-ref name="startDone" ref="0x40654b58" scoped=""/>
+        <function-ref name="stopDone" ref="0x40654c38" scoped=""/>
+        <function-ref name="start" ref="0x40654d18" scoped=""/>
+        <function-ref name="stop" ref="0x40654df8" scoped=""/>
+      </interface-functions>
+    </interface><interface loc="15:TestC.nc" name="Node" provided="0" ref="0x4066f2d8">
+      <component-ref nicename="TestC" qname="TestC"/>
+      <type-interface alignment="I:2" size="I:2"><interface-ref name="Node" ref="0x4066f2d8" scoped=""/></type-interface>
+      <instance>
+        <interfacedef-ref nicename="Node" qname="Node"/>
+      </instance>
+      <interface-functions>
+        <function-ref name="removeService" ref="0x4066f4b0" scoped=""/>
+        <function-ref name="addService" ref="0x4066f590" scoped=""/>
+        <function-ref name="getServices" ref="0x4066f670" scoped=""/>
+        <function-ref name="servicesPresent" ref="0x4066f750" scoped=""/>
+        <function-ref name="getUAState" ref="0x4066f830" scoped=""/>
+        <function-ref name="setSA" ref="0x4066f910" scoped=""/>
+        <function-ref name="getServiceURL" ref="0x4066f9f0" scoped=""/>
+        <function-ref name="changeScope" ref="0x4066fad0" scoped=""/>
+        <function-ref name="findService" ref="0x4066fbb0" scoped=""/>
+        <function-ref name="getSAState" ref="0x4066fc90" scoped=""/>
+        <function-ref name="setUA" ref="0x4066fd70" scoped=""/>
+      </interface-functions>
+    </interface><interface loc="46:/home/jumbo/tinyos-main/tos/system/LedsC.nc" name="Leds" provided="1" ref="0x40683a90">
+      <component-ref nicename="tos.system.LedsC" qname="LedsC"/>
+      <type-interface alignment="I:2" size="I:2"><interface-ref name="Leds" ref="0x40683a90" scoped=""/></type-interface>
+      <instance>
+        <interfacedef-ref nicename="tos.interfaces.Leds" qname="Leds"/>
+      </instance>
+      <interface-functions>
+        <function-ref name="led0Off" ref="0x40683c68" scoped=""/>
+        <function-ref name="led0Toggle" ref="0x40683d48" scoped=""/>
+        <function-ref name="led1On" ref="0x40683e28" scoped=""/>
+        <function-ref name="led1Toggle" ref="0x40683f08" scoped=""/>
+        <function-ref name="led2Toggle" ref="0x4078e010" scoped=""/>
+        <function-ref name="get" ref="0x4078e0f0" scoped=""/>
+        <function-ref name="led1Off" ref="0x4078e1d0" scoped=""/>
+        <function-ref name="led2Off" ref="0x4078e550" scoped=""/>
+        <function-ref name="set" ref="0x4078e2b0" scoped=""/>
+        <function-ref name="led0On" ref="0x4078e390" scoped=""/>
+        <function-ref name="led2On" ref="0x4078e470" scoped=""/>
+      </interface-functions>
+    </interface><interface loc="45:/home/jumbo/tinyos-main/tos/system/TimerMilliC.nc" name="Timer" provided="1" ref="0x408d53b8">
+      <component-ref nicename="tos.system.TimerMilliC" qname="TestAppC.Timer"/>
+      <type-interface alignment="I:2" size="I:2"><interface-ref name="Timer" ref="0x408d53b8" scoped=""/></type-interface>
+      <instance>
+        <interfacedef-ref nicename="tos.lib.timer.Timer" qname="Timer"/>
+        <arguments>
+          <type-tag alignment="I:2" size="I:2"><struct-ref ref="0x40648d90"/>
+            <typename><typedef-ref name="TMilli" ref="0x4064d010"/></typename>
+          </type-tag>
+        </arguments>
+      </instance>
+      <interface-functions>
+        <function-ref name="getNow" ref="0x416afe98" scoped=""/>
+        <function-ref name="fired" ref="0x416af150" scoped=""/>
+        <function-ref name="startPeriodicAt" ref="0x416af858" scoped=""/>
+        <function-ref name="isOneShot" ref="0x416af600" scoped=""/>
+        <function-ref name="getdt" ref="0x41702368" scoped=""/>
+        <function-ref name="gett0" ref="0x41702110" scoped=""/>
+        <function-ref name="isRunning" ref="0x416af3a8" scoped=""/>
+        <function-ref name="startPeriodic" ref="0x408d59e0" scoped=""/>
+        <function-ref name="startOneShotAt" ref="0x416afb78" scoped=""/>
+        <function-ref name="startOneShot" ref="0x408d5c60" scoped=""/>
+        <function-ref name="stop" ref="0x408d5ee0" scoped=""/>
+      </interface-functions>
+    </interface><interface loc="3:NodeC.nc" name="Node" provided="1" ref="0x40693160">
+      <component-ref nicename="NodeC" qname="NodeC"/>
+      <type-interface alignment="I:2" size="I:2"><interface-ref name="Node" ref="0x40693160" scoped=""/></type-interface>
+      <instance>
+        <interfacedef-ref nicename="Node" qname="Node"/>
+      </instance>
+      <interface-functions>
+        <function-ref name="removeService" ref="0x40693338" scoped=""/>
+        <function-ref name="addService" ref="0x40693418" scoped=""/>
+        <function-ref name="getServices" ref="0x406934f8" scoped=""/>
+        <function-ref name="servicesPresent" ref="0x406935d8" scoped=""/>
+        <function-ref name="getUAState" ref="0x406936b8" scoped=""/>
+        <function-ref name="setSA" ref="0x40693798" scoped=""/>
+        <function-ref name="getServiceURL" ref="0x40693878" scoped=""/>
+        <function-ref name="changeScope" ref="0x40693958" scoped=""/>
+        <function-ref name="findService" ref="0x40693a38" scoped=""/>
+        <function-ref name="getSAState" ref="0x40693b18" scoped=""/>
+        <function-ref name="setUA" ref="0x40693bf8" scoped=""/>
+      </interface-functions>
+    </interface><interface loc="10:TestC.nc" name="Leds" provided="0" ref="0x40642ca8">
+      <component-ref nicename="TestC" qname="TestC"/>
+      <type-interface alignment="I:2" size="I:2"><interface-ref name="Leds" ref="0x40642ca8" scoped=""/></type-interface>
+      <instance>
+        <interfacedef-ref nicename="tos.interfaces.Leds" qname="Leds"/>
+      </instance>
+      <interface-functions>
+        <function-ref name="led0Off" ref="0x40642e80" scoped=""/>
+        <function-ref name="led0Toggle" ref="0x40649010" scoped=""/>
+        <function-ref name="led1On" ref="0x406490f0" scoped=""/>
+        <function-ref name="led1Toggle" ref="0x406491d0" scoped=""/>
+        <function-ref name="led2Toggle" ref="0x406492b0" scoped=""/>
+        <function-ref name="get" ref="0x40649390" scoped=""/>
+        <function-ref name="led1Off" ref="0x40649470" scoped=""/>
+        <function-ref name="led2Off" ref="0x406497f0" scoped=""/>
+        <function-ref name="set" ref="0x40649550" scoped=""/>
+        <function-ref name="led0On" ref="0x40649630" scoped=""/>
+        <function-ref name="led2On" ref="0x40649710" scoped=""/>
+      </interface-functions>
+    </interface><interface loc="12:TestC.nc" name="Timer" provided="0" ref="0x40658210">
+      <component-ref nicename="TestC" qname="TestC"/>
+      <type-interface alignment="I:2" size="I:2"><interface-ref name="Timer" ref="0x40658210" scoped=""/></type-interface>
+      <instance>
+        <interfacedef-ref nicename="tos.lib.timer.Timer" qname="Timer"/>
+        <arguments>
+          <type-tag alignment="I:2" size="I:2"><struct-ref ref="0x40648d90"/>
+            <typename><typedef-ref name="TMilli" ref="0x4064d010"/></typename>
+          </type-tag>
+        </arguments>
+      </instance>
+      <interface-functions>
+        <function-ref name="getNow" ref="0x40641d58" scoped=""/>
+        <function-ref name="fired" ref="0x40641010" scoped=""/>
+        <function-ref name="startPeriodicAt" ref="0x40641718" scoped=""/>
+        <function-ref name="isOneShot" ref="0x406414c0" scoped=""/>
+        <function-ref name="getdt" ref="0x4064e268" scoped=""/>
+        <function-ref name="gett0" ref="0x4064e010" scoped=""/>
+        <function-ref name="isRunning" ref="0x40641268" scoped=""/>
+        <function-ref name="startPeriodic" ref="0x40658838" scoped=""/>
+        <function-ref name="startOneShotAt" ref="0x40641a38" scoped=""/>
+        <function-ref name="startOneShot" ref="0x40658ab8" scoped=""/>
+        <function-ref name="stop" ref="0x40658d38" scoped=""/>
+      </interface-functions>
+    </interface><interface loc="9:TestC.nc" name="Boot" provided="0" ref="0x40638900">
+      <component-ref nicename="TestC" qname="TestC"/>
+      <type-interface alignment="I:2" size="I:2"><interface-ref name="Boot" ref="0x40638900" scoped=""/></type-interface>
+      <instance>
+        <interfacedef-ref nicename="tos.interfaces.Boot" qname="Boot"/>
+      </instance>
+      <interface-functions>
+        <function-ref name="booted" ref="0x40638ad8" scoped=""/>
+      </interface-functions>
+    </interface><interface loc="7:SSLC.nc" name="ServiceLocation" provided="1" ref="0x40937010">
+      <component-ref nicename="SSLC" qname="SSLC"/>
+      <type-interface alignment="I:2" size="I:2"><interface-ref name="ServiceLocation" ref="0x40937010" scoped=""/></type-interface>
+      <instance>
+        <interfacedef-ref nicename="ServiceLocation" qname="ServiceLocation"/>
+      </instance>
+      <interface-functions>
+        <function-ref name="receiveServiceTypes" ref="0x409371e8" scoped=""/>
+        <function-ref name="registerService" ref="0x409372c8" scoped=""/>
+        <function-ref name="receiveServices" ref="0x409373a8" scoped=""/>
+        <function-ref name="deregisterService" ref="0x40937488" scoped=""/>
+      </interface-functions>
+    </interface><interface loc="16:TestC.nc" name="ServiceLocation" provided="0" ref="0x4067d890">
+      <component-ref nicename="TestC" qname="TestC"/>
+      <type-interface alignment="I:2" size="I:2"><interface-ref name="ServiceLocation" ref="0x4067d890" scoped=""/></type-interface>
+      <instance>
+        <interfacedef-ref nicename="ServiceLocation" qname="ServiceLocation"/>
+      </instance>
+      <interface-functions>
+        <function-ref name="receiveServiceTypes" ref="0x4067da68" scoped=""/>
+        <function-ref name="registerService" ref="0x4067db48" scoped=""/>
+        <function-ref name="receiveServices" ref="0x4067dc28" scoped=""/>
+        <function-ref name="deregisterService" ref="0x4067dd08" scoped=""/>
+      </interface-functions>
+    </interface><interface loc="31:/home/jumbo/tinyos-main/tos/lib/net/blip/IPStackC.nc" name="SplitControl" provided="1" ref="0x409acc18">
+      <component-ref nicename="tos.lib.net.blip.IPStackC" qname="IPStackC"/>
+      <type-interface alignment="I:2" size="I:2"><interface-ref name="SplitControl" ref="0x409acc18" scoped=""/></type-interface>
+      <instance>
+        <interfacedef-ref nicename="tos.interfaces.SplitControl" qname="SplitControl"/>
+      </instance>
+      <interface-functions>
+        <function-ref name="startDone" ref="0x409acdf0" scoped=""/>
+        <function-ref name="stopDone" ref="0x409aced0" scoped=""/>
+        <function-ref name="start" ref="0x409ab010" scoped=""/>
+        <function-ref name="stop" ref="0x409ab0f0" scoped=""/>
+      </interface-functions>
+    </interface><interface loc="11:TestC.nc" name="IPAddress" provided="0" ref="0x4064fbf8">
+      <component-ref nicename="TestC" qname="TestC"/>
+      <type-interface alignment="I:2" size="I:2"><interface-ref name="IPAddress" ref="0x4064fbf8" scoped=""/></type-interface>
+      <instance>
+        <interfacedef-ref nicename="tos.lib.net.blip.interfaces.IPAddress" qname="IPAddress"/>
+      </instance>
+      <interface-functions>
+        <function-ref name="getLLAddr" ref="0x4064fdd0" scoped=""/>
+        <function-ref name="changed" ref="0x4064feb0" scoped=""/>
+        <function-ref name="isLocalAddress" ref="0x40648010" scoped=""/>
+        <function-ref name="getGlobalAddr" ref="0x406480f0" scoped=""/>
+        <function-ref name="setSource" ref="0x406481d0" scoped=""/>
+        <function-ref name="removeAddress" ref="0x406482b0" scoped=""/>
+        <function-ref name="setAddress" ref="0x40648390" scoped=""/>
+        <function-ref name="isLLAddress" ref="0x40648470" scoped=""/>
+      </interface-functions>
+    </interface><interface loc="25:/home/jumbo/tinyos-main/tos/lib/net/blip/IPAddressC.nc" name="IPAddress" provided="1" ref="0x40a51ce0">
+      <component-ref nicename="tos.lib.net.blip.IPAddressC" qname="IPAddressC"/>
+      <type-interface alignment="I:2" size="I:2"><interface-ref name="IPAddress" ref="0x40a51ce0" scoped=""/></type-interface>
+      <instance>
+        <interfacedef-ref nicename="tos.lib.net.blip.interfaces.IPAddress" qname="IPAddress"/>
+      </instance>
+      <interface-functions>
+        <function-ref name="getLLAddr" ref="0x40a51eb8" scoped=""/>
+        <function-ref name="changed" ref="0x40a74010" scoped=""/>
+        <function-ref name="isLocalAddress" ref="0x40a740f0" scoped=""/>
+        <function-ref name="getGlobalAddr" ref="0x40a741d0" scoped=""/>
+        <function-ref name="setSource" ref="0x40a742b0" scoped=""/>
+        <function-ref name="removeAddress" ref="0x40a74390" scoped=""/>
+        <function-ref name="setAddress" ref="0x40a74470" scoped=""/>
+        <function-ref name="isLLAddress" ref="0x40a74550" scoped=""/>
+      </interface-functions>
+    </interface><interface loc="57:/home/jumbo/tinyos-main/tos/system/MainC.nc" name="Boot" provided="1" ref="0x4060e610">
+      <component-ref nicename="tos.system.MainC" qname="MainC"/>
+      <type-interface alignment="I:2" size="I:2"><interface-ref name="Boot" ref="0x4060e610" scoped=""/></type-interface>
+      <instance>
+        <interfacedef-ref nicename="tos.interfaces.Boot" qname="Boot"/>
+      </instance>
+      <interface-functions>
+        <function-ref name="booted" ref="0x4060e7e8" scoped=""/>
+      </interface-functions>
+    </interface><interface loc="14:TestC.nc" name="SSLPControl" provided="0" ref="0x406570a0">
+      <component-ref nicename="TestC" qname="TestC"/>
+      <type-interface alignment="I:2" size="I:2"><interface-ref name="SSLPControl" ref="0x406570a0" scoped=""/></type-interface>
+      <instance>
+        <interfacedef-ref nicename="tos.interfaces.SplitControl" qname="SplitControl"/>
+      </instance>
+      <interface-functions>
+        <function-ref name="startDone" ref="0x40657278" scoped=""/>
+        <function-ref name="stopDone" ref="0x40657358" scoped=""/>
+        <function-ref name="start" ref="0x40657438" scoped=""/>
+        <function-ref name="stop" ref="0x40657518" scoped=""/>
+      </interface-functions>
+    </interface><component loc="2:NodeC.nc" nicename="NodeC" qname="NodeC">
+      <configuration/>
+      <wiring>
+        <wire loc="10:NodeC.nc">
+          <from><interface-ref name="Node" ref="0x40693160" scoped=""/></from>
+          <to><interface-ref name="Node" ref="0x408ed910" scoped=""/></to>
+        </wire>
+        <wire loc="11:NodeC.nc">
+          <from><interface-ref name="ServiceLocation" ref="0x408ec668" scoped=""/></from>
+          <to><interface-ref name="ServiceLocation" ref="0x40937010" scoped=""/></to>
+        </wire>
+        <wire loc="14:NodeC.nc">
+          <from><interface-ref name="Timer" ref="0x408ecd48" scoped=""/></from>
+          <to><interface-ref name="Timer" ref="0x416b49b8" scoped=""/></to>
+        </wire>
+      </wiring>
+    </component><component loc="29:/home/jumbo/tinyos-main/tos/lib/net/blip/IPStackC.nc" nicename="tos.lib.net.blip.IPStackC" qname="IPStackC">
+      <configuration/>
+      <wiring>
+        <wire loc="50:/home/jumbo/tinyos-main/tos/lib/net/blip/IPStackC.nc">
+          <from><interface-ref name="SplitControl" ref="0x409acc18" scoped=""/></from>
+          <to><interface-ref name="SplitControl" ref="0x41417010" scoped=""/></to>
+        </wire>
+        <wire loc="57:/home/jumbo/tinyos-main/tos/lib/net/blip/IPStackC.nc">
+          <from><interface-ref name="ForwardingEvents" ref="0x409a6228" scoped=""/></from>
+          <to><interface-ref name="ForwardingEvents" ref="0x409fe5e8" scoped=""/></to>
+        </wire>
+        <wire loc="56:/home/jumbo/tinyos-main/tos/lib/net/blip/IPStackC.nc">
+          <from><interface-ref name="ForwardingTableEvents" ref="0x409c0348" scoped=""/></from>
+          <to><interface-ref name="ForwardingTableEvents" ref="0x409f1d80" scoped=""/></to>
+        </wire>
+        <wire loc="66:/home/jumbo/tinyos-main/tos/lib/net/blip/IPStackC.nc">
+          <from><interface-ref name="IPRaw" ref="0x409a7d80" scoped=""/></from>
+          <to><interface-ref name="IPRaw" ref="0x409fc010" scoped=""/></to>
+        </wire>
+        <wire loc="55:/home/jumbo/tinyos-main/tos/lib/net/blip/IPStackC.nc">
+          <from><interface-ref name="ForwardingTable" ref="0x409a4dc0" scoped=""/></from>
+          <to><interface-ref name="ForwardingTable" ref="0x409f1610" scoped=""/></to>
+        </wire>
+        <wire loc="60:/home/jumbo/tinyos-main/tos/lib/net/blip/IPStackC.nc">
+          <from><interface-ref name="IP" ref="0x409a7918" scoped=""/></from>
+          <to><interface-ref name="IP" ref="0x409c1930" scoped=""/></to>
+        </wire>
+        <wire loc="51:/home/jumbo/tinyos-main/tos/lib/net/blip/IPStackC.nc">
+          <from><interface-ref name="StdControl" ref="0x41417660" scoped=""/></from>
+          <to><interface-ref name="StdControl" ref="0x409f07c0" scoped=""/></to>
+        </wire>
+        <wire loc="52:/home/jumbo/tinyos-main/tos/lib/net/blip/IPStackC.nc">
+          <from><interface-ref name="RoutingControl" ref="0x41417b70" scoped=""/></from>
+          <to><interface-ref name="RoutingControl" ref="0x409f0cd0" scoped=""/></to>
+        </wire>
+        <wire loc="53:/home/jumbo/tinyos-main/tos/lib/net/blip/IPStackC.nc">
+          <from><interface-ref name="SubSplitControl" ref="0x414160c8" scoped=""/></from>
+          <to><interface-ref name="SplitControl" ref="0x40f84010" scoped=""/></to>
+        </wire>
+        <wire loc="61:/home/jumbo/tinyos-main/tos/lib/net/blip/IPStackC.nc">
+          <from><interface-ref name="SubIP" ref="0x409ee7e0" scoped=""/></from>
+          <to><interface-ref name="IP" ref="0x409fead8" scoped=""/></to>
+        </wire>
+        <wire loc="63:/home/jumbo/tinyos-main/tos/lib/net/blip/IPStackC.nc">
+          <from><interface-ref name="IPForward" ref="0x40a19798" scoped=""/>
+          <arguments>
+            <value cst="I:1">
+              <type-int alignment="I:2" cname="int" size="I:2"/>
+            </value>
+          </arguments>
+          </from>
+          <to><interface-ref name="IPForward" ref="0x40a53b10" scoped=""/></to>
+        </wire>
+        <wire loc="64:/home/jumbo/tinyos-main/tos/lib/net/blip/IPStackC.nc">
+          <from><interface-ref name="IPLower" ref="0x40a50d20" scoped=""/></from>
+          <to><interface-ref name="IPLower" ref="0x40f84610" scoped=""/></to>
+        </wire>
+        <wire loc="72:/home/jumbo/tinyos-main/tos/lib/net/blip/IPStackC.nc">
+          <from><interface-ref name="IP" ref="0x4144b460" scoped=""/></from>
+          <to><interface-ref name="IP" ref="0x409c1930" scoped=""/>
+          <arguments>
+            <value cst="I:58">
+              <type-int alignment="I:2" cname="int" size="I:2"/>
+            </value>
+          </arguments>
+          </to>
+        </wire>
+        <wire loc="73:/home/jumbo/tinyos-main/tos/lib/net/blip/IPStackC.nc">
+          <from><interface-ref name="Leds" ref="0x4144a260" scoped=""/></from>
+          <to><interface-ref name="Leds" ref="0x40683a90" scoped=""/></to>
+        </wire>
+        <wire loc="74:/home/jumbo/tinyos-main/tos/lib/net/blip/IPStackC.nc">
+          <from><interface-ref name="IPAddress" ref="0x4144b8b8" scoped=""/></from>
+          <to><interface-ref name="IPAddress" ref="0x40a51ce0" scoped=""/></to>
+        </wire>
+        <wire loc="76:/home/jumbo/tinyos-main/tos/lib/net/blip/IPStackC.nc">
+          <from><interface-ref name="IPAddress" ref="0x40a19cd0" scoped=""/></from>
+          <to><interface-ref name="IPAddress" ref="0x40a51ce0" scoped=""/></to>
+        </wire>
+        <wire loc="77:/home/jumbo/tinyos-main/tos/lib/net/blip/IPStackC.nc">
+          <from><interface-ref name="IPPacket" ref="0x409fb6e8" scoped=""/></from>
+          <to><interface-ref name="IPPacket" ref="0x41455a90" scoped=""/></to>
+        </wire>
+        <wire loc="78:/home/jumbo/tinyos-main/tos/lib/net/blip/IPStackC.nc">
+          <from><interface-ref name="IPPacket" ref="0x409e9c50" scoped=""/></from>
+          <to><interface-ref name="IPPacket" ref="0x41455a90" scoped=""/></to>
+        </wire>
+        <wire loc="79:/home/jumbo/tinyos-main/tos/lib/net/blip/IPStackC.nc">
+          <from><interface-ref name="IPAddress" ref="0x414166e0" scoped=""/></from>
+          <to><interface-ref name="IPAddress" ref="0x40a51ce0" scoped=""/></to>
+        </wire>
+        <wire loc="81:/home/jumbo/tinyos-main/tos/lib/net/blip/IPStackC.nc">
+          <from><interface-ref name="Leds" ref="0x409fa9b0" scoped=""/></from>
+          <to><interface-ref name="Leds" ref="0x40683a90" scoped=""/></to>
+        </wire>
+        <wire loc="84:/home/jumbo/tinyos-main/tos/lib/net/blip/IPStackC.nc">
+          <from><interface-ref name="Pool" ref="0x40a144c0" scoped=""/></from>
+          <to><interface-ref name="Pool" ref="0x414823d0" scoped=""/></to>
+        </wire>
+        <wire loc="87:/home/jumbo/tinyos-main/tos/lib/net/blip/IPStackC.nc">
+          <from><interface-ref name="Boot" ref="0x4146f438" scoped=""/></from>
+          <to><interface-ref name="Boot" ref="0x4060e610" scoped=""/></to>
+        </wire>
+        <wire loc="88:/home/jumbo/tinyos-main/tos/lib/net/blip/IPStackC.nc">
+          <from><interface-ref name="IPAddress" ref="0x4146f7b0" scoped=""/></from>
+          <to><interface-ref name="IPAddress" ref="0x40a51ce0" scoped=""/></to>
+        </wire>
+      </wiring>
+    </component><component loc="3:SSLC.nc" nicename="SSLC" qname="SSLC">
+      <configuration/>
+      <wiring>
+        <wire loc="15:SSLC.nc">
+          <from><interface-ref name="SplitControl" ref="0x408d3970" scoped=""/></from>
+          <to><interface-ref name="SplitControl" ref="0x40932298" scoped=""/></to>
+        </wire>
+        <wire loc="16:SSLC.nc">
+          <from><interface-ref name="ServiceLocation" ref="0x40937010" scoped=""/></from>
+          <to><interface-ref name="ServiceLocation" ref="0x40932908" scoped=""/></to>
+        </wire>
+        <wire loc="20:SSLC.nc">
+          <from><interface-ref name="RadioControl" ref="0x40931030" scoped=""/></from>
+          <to><interface-ref name="SplitControl" ref="0x409acc18" scoped=""/></to>
+        </wire>
+        <wire loc="26:SSLC.nc">
+          <from><interface-ref name="UDPSend" ref="0x4092ccb0" scoped=""/></from>
+          <to><interface-ref name="UDP" ref="0x41467840" scoped=""/></to>
+        </wire>
+        <wire loc="27:SSLC.nc">
+          <from><interface-ref name="UDPReceive" ref="0x409303d8" scoped=""/></from>
+          <to><interface-ref name="UDP" ref="0x41466870" scoped=""/></to>
+        </wire>
+        <wire loc="31:SSLC.nc">
+          <from><interface-ref name="PrintTimer" ref="0x4092bf18" scoped=""/></from>
+          <to><interface-ref name="Timer" ref="0x41463d10" scoped=""/></to>
+        </wire>
+        <wire loc="35:SSLC.nc">
+          <from><interface-ref name="RetransmitTimer" ref="0x40930b70" scoped=""/></from>
+          <to><interface-ref name="Timer" ref="0x414c9e58" scoped=""/></to>
+        </wire>
+        <wire loc="43:SSLC.nc">
+          <from><interface-ref name="DelayTimer" ref="0x409452b8" scoped=""/></from>
+          <to><interface-ref name="Timer" ref="0x414c6eb8" scoped=""/></to>
+        </wire>
+        <wire loc="50:SSLC.nc">
+          <from><interface-ref name="Node" ref="0x409424c8" scoped=""/></from>
+          <to><interface-ref name="Node" ref="0x40693160" scoped=""/></to>
+        </wire>
+        <wire loc="54:SSLC.nc">
+          <from><interface-ref name="IPAddress" ref="0x409411d0" scoped=""/></from>
+          <to><interface-ref name="IPAddress" ref="0x40a51ce0" scoped=""/></to>
+        </wire>
+        <wire loc="58:SSLC.nc">
+          <from><interface-ref name="Leds" ref="0x40941b58" scoped=""/></from>
+          <to><interface-ref name="Leds" ref="0x40683a90" scoped=""/></to>
+        </wire>
+        <wire loc="61:SSLC.nc">
+          <from><interface-ref name="Random" ref="0x4093d450" scoped=""/></from>
+          <to><interface-ref name="Random" ref="0x4135a580" scoped=""/></to>
+        </wire>
+      </wiring>
+    </component><component loc="6:TestC.nc" nicename="TestC" qname="TestC">
+      <module/>
+    </component><component loc="44(TestAppC.Timer):/home/jumbo/tinyos-main/tos/system/TimerMilliC.nc" nicename="tos.system.TimerMilliC" qname="TestAppC.Timer">
+      <documentation loc="33:/home/jumbo/tinyos-main/tos/system/TimerMilliC.nc">
+        <short>
+ The virtualized millisecond timer abstraction.</short>
+        <long>
+ The virtualized millisecond timer abstraction. Instantiating this 
+ component gives an independent millisecond granularity timer.
+
+ @author Philip Levis
+ @date   January 16 2006
+ @see    TEP 102: Timers
+</long>
+      </documentation>
+      <instance number="13">
+        <component-ref nicename="tos.system.TimerMilliC" qname="TimerMilliC"/>
+      </instance>
+      <configuration/>
+      <wiring>
+        <wire loc="52:/home/jumbo/tinyos-main/tos/system/TimerMilliC.nc">
+          <from><interface-ref name="Timer" ref="0x408d53b8" scoped=""/></from>
+          <to><interface-ref name="TimerMilli" ref="0x412fd850" scoped=""/>
+          <arguments>
+            <value cst="I:13">
+              <type-int alignment="I:2" cname="unsigned int" size="I:2" unsigned=""/>
+            </value>
+          </arguments>
+          </to>
+        </wire>
+      </wiring>
+    </component><component loc="45:/home/jumbo/tinyos-main/tos/system/LedsC.nc" nicename="tos.system.LedsC" qname="LedsC">
+      <documentation loc="34:/home/jumbo/tinyos-main/tos/system/LedsC.nc">
+        <short>
+
+ The basic TinyOS LEDs abstraction.</short>
+        <long>
+
+ The basic TinyOS LEDs abstraction.
+
+ @author Phil Buonadonna
+ @author David Gay
+ @author Philip Levis
+ @author Joe Polastre
+</long>
+      </documentation>
+      <configuration/>
+      <wiring>
+        <wire loc="51:/home/jumbo/tinyos-main/tos/system/LedsC.nc">
+          <from><interface-ref name="Leds" ref="0x40683a90" scoped=""/></from>
+          <to><interface-ref name="Leds" ref="0x4078b180" scoped=""/></to>
+        </wire>
+        <wire loc="53:/home/jumbo/tinyos-main/tos/system/LedsC.nc">
+          <from><interface-ref name="Init" ref="0x407a6c88" scoped=""/></from>
+          <to><interface-ref name="Init" ref="0x4078edd8" scoped=""/></to>
+        </wire>
+        <wire loc="54:/home/jumbo/tinyos-main/tos/system/LedsC.nc">
+          <from><interface-ref name="Led0" ref="0x4078a010" scoped=""/></from>
+          <to><interface-ref name="Led0" ref="0x4078ddf8" scoped=""/></to>
+        </wire>
+        <wire loc="55:/home/jumbo/tinyos-main/tos/system/LedsC.nc">
+          <from><interface-ref name="Led1" ref="0x4078a9f8" scoped=""/></from>
+          <to><interface-ref name="Led1" ref="0x407a7840" scoped=""/></to>
+        </wire>
+        <wire loc="56:/home/jumbo/tinyos-main/tos/system/LedsC.nc">
+          <from><interface-ref name="Led2" ref="0x407894a0" scoped=""/></from>
+          <to><interface-ref name="Led2" ref="0x407a6300" scoped=""/></to>
+        </wire>
+      </wiring>
+    </component><component loc="24:/home/jumbo/tinyos-main/tos/lib/net/blip/IPAddressC.nc" nicename="tos.lib.net.blip.IPAddressC" qname="IPAddressC">
+      <configuration/>
+      <wiring>
+        <wire loc="30:/home/jumbo/tinyos-main/tos/lib/net/blip/IPAddressC.nc">
+          <from><interface-ref name="IPAddress" ref="0x40a51ce0" scoped=""/></from>
+          <to><interface-ref name="IPAddress" ref="0x40a9c0d0" scoped=""/></to>
+        </wire>
+        <wire loc="31:/home/jumbo/tinyos-main/tos/lib/net/blip/IPAddressC.nc">
+          <from><interface-ref name="Ieee154Address" ref="0x40a9cad8" scoped=""/></from>
+          <to><interface-ref name="Ieee154Address" ref="0x40abd010" scoped=""/></to>
+        </wire>
+      </wiring>
+    </component><component loc="56:/home/jumbo/tinyos-main/tos/system/MainC.nc" nicename="tos.system.MainC" qname="MainC">
+      <documentation loc="45:/home/jumbo/tinyos-main/tos/system/MainC.nc">
+        <short>
+ MainC is the system interface the TinyOS boot sequence.</short>
+        <long>
+ MainC is the system interface the TinyOS boot sequence. It wires the
+ boot sequence implementation to the scheduler and hardware resources.
+
+ @author Philip Levis
+ @date   August 6 2005
+ @see    TEP 107: Boot Sequence
+</long>
+      </documentation>
+      <configuration/>
+      <wiring>
+        <wire loc="72:/home/jumbo/tinyos-main/tos/system/MainC.nc">
+          <from><interface-ref name="Boot" ref="0x4060e610" scoped=""/></from>
+          <to><interface-ref name="Boot" ref="0x4068bdf8" scoped=""/></to>
+        </wire>
+        <wire loc="67:/home/jumbo/tinyos-main/tos/system/MainC.nc">
+          <from><interface-ref name="Scheduler" ref="0x406a61d0" scoped=""/></from>
+          <to><interface-ref name="Scheduler" ref="0x40387010" scoped=""/></to>
+        </wire>
+        <wire loc="68:/home/jumbo/tinyos-main/tos/system/MainC.nc">
+          <from><interface-ref name="PlatformInit" ref="0x406a6798" scoped=""/></from>
+          <to><interface-ref name="Init" ref="0x40692aa0" scoped=""/></to>
+        </wire>
+        <wire loc="71:/home/jumbo/tinyos-main/tos/system/MainC.nc">
+          <from><interface-ref name="SoftwareInit" ref="0x406a6ba0" scoped=""/></from>
+          <to><interface-ref name="SoftwareInit" ref="0x40692258" scoped=""/></to>
+        </wire>
+      </wiring>
+    </component></referenced></component>

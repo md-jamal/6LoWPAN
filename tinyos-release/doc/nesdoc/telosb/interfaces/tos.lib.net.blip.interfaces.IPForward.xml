@@ -1,0 +1,90 @@
+<?xml version="1.0" ?><interfacedef loc="5:/home/jumbo/jamal/project/CoAP/tinyos-release/tos/lib/net/blip/interfaces/IPForward.nc" nicename="tos.lib.net.blip.interfaces.IPForward" qname="IPForward">
+      <function command="" loc="18:/home/jumbo/jamal/project/CoAP/tinyos-release/tos/lib/net/blip/interfaces/IPForward.nc" name="send" provided="0" ref="0x40915d48">
+        <interfacedef-ref nicename="tos.lib.net.blip.interfaces.IPForward" qname="IPForward"/>
+        <type-function alignment="I:1" size="I:1">
+          <type-int alignment="I:1" cname="unsigned char" size="I:1" unsigned="">
+            <typename><typedef-ref name="error_t" ref="0x4038a828"/></typename>
+          </type-int>
+          <function-parameters>
+            <type-pointer alignment="I:2" size="I:2">
+              <type-tag alignment="I:2" size="I:16"><struct-ref name="in6_addr" ref="0x408871e8"/></type-tag>
+            </type-pointer>
+            <type-pointer alignment="I:2" size="I:2">
+              <type-tag alignment="I:2" size="I:44"><struct-ref name="ip6_packet" ref="0x408951c8"/></type-tag>
+            </type-pointer>
+            <type-pointer alignment="I:2" size="I:2">
+              <type-void alignment="I:1" size="I:1"/>
+            </type-pointer>
+          </function-parameters>
+        </type-function>
+        <parameters>
+          <variable loc="18:/home/jumbo/jamal/project/CoAP/tinyos-release/tos/lib/net/blip/interfaces/IPForward.nc" name="next_hop" ref="0x409157a8">
+            <type-pointer alignment="I:2" size="I:2">
+              <type-tag alignment="I:2" size="I:16"><struct-ref name="in6_addr" ref="0x408871e8"/></type-tag>
+            </type-pointer>
+          </variable>
+          <variable loc="19:/home/jumbo/jamal/project/CoAP/tinyos-release/tos/lib/net/blip/interfaces/IPForward.nc" name="msg" ref="0x40915a08">
+            <type-pointer alignment="I:2" size="I:2">
+              <type-tag alignment="I:2" size="I:44"><struct-ref name="ip6_packet" ref="0x408951c8"/></type-tag>
+            </type-pointer>
+          </variable>
+          <variable loc="20:/home/jumbo/jamal/project/CoAP/tinyos-release/tos/lib/net/blip/interfaces/IPForward.nc" name="data" ref="0x40915be0">
+            <type-pointer alignment="I:2" size="I:2">
+              <type-void alignment="I:1" size="I:1"/>
+            </type-pointer>
+          </variable>
+        </parameters>
+      </function>
+      <function event="" loc="28:/home/jumbo/jamal/project/CoAP/tinyos-release/tos/lib/net/blip/interfaces/IPForward.nc" name="recv" provided="0" ref="0x4092fce8">
+        <interfacedef-ref nicename="tos.lib.net.blip.interfaces.IPForward" qname="IPForward"/>
+        <type-function alignment="I:1" size="I:1">
+          <type-void alignment="I:1" size="I:1"/>
+          <function-parameters>
+            <type-pointer alignment="I:2" size="I:2">
+              <type-tag alignment="I:1" size="I:40"><struct-ref name="ip6_hdr" ref="0x40884328"/></type-tag>
+            </type-pointer>
+            <type-pointer alignment="I:2" size="I:2">
+              <type-void alignment="I:1" size="I:1"/>
+            </type-pointer>
+            <type-pointer alignment="I:2" size="I:2">
+              <type-tag alignment="I:2" size="I:12"><struct-ref name="ip6_metadata" ref="0x40897a98"/></type-tag>
+            </type-pointer>
+          </function-parameters>
+        </type-function>
+        <parameters>
+          <variable loc="28:/home/jumbo/jamal/project/CoAP/tinyos-release/tos/lib/net/blip/interfaces/IPForward.nc" name="iph" ref="0x4092f728">
+            <type-pointer alignment="I:2" size="I:2">
+              <type-tag alignment="I:1" size="I:40"><struct-ref name="ip6_hdr" ref="0x40884328"/></type-tag>
+            </type-pointer>
+          </variable>
+          <variable loc="28:/home/jumbo/jamal/project/CoAP/tinyos-release/tos/lib/net/blip/interfaces/IPForward.nc" name="payload" ref="0x4092f908">
+            <type-pointer alignment="I:2" size="I:2">
+              <type-void alignment="I:1" size="I:1"/>
+            </type-pointer>
+          </variable>
+          <variable loc="28:/home/jumbo/jamal/project/CoAP/tinyos-release/tos/lib/net/blip/interfaces/IPForward.nc" name="meta" ref="0x4092fb80">
+            <type-pointer alignment="I:2" size="I:2">
+              <type-tag alignment="I:2" size="I:12"><struct-ref name="ip6_metadata" ref="0x40897a98"/></type-tag>
+            </type-pointer>
+          </variable>
+        </parameters>
+      </function>
+      <function event="" loc="22:/home/jumbo/jamal/project/CoAP/tinyos-release/tos/lib/net/blip/interfaces/IPForward.nc" name="sendDone" provided="0" ref="0x4092f330">
+        <interfacedef-ref nicename="tos.lib.net.blip.interfaces.IPForward" qname="IPForward"/>
+        <type-function alignment="I:1" size="I:1">
+          <type-void alignment="I:1" size="I:1"/>
+          <function-parameters>
+            <type-pointer alignment="I:2" size="I:2">
+              <type-tag alignment="I:2" size="I:8"><struct-ref name="send_info" ref="0x408fb670"/></type-tag>
+            </type-pointer>
+          </function-parameters>
+        </type-function>
+        <parameters>
+          <variable loc="22:/home/jumbo/jamal/project/CoAP/tinyos-release/tos/lib/net/blip/interfaces/IPForward.nc" name="status" ref="0x4092f1d8">
+            <type-pointer alignment="I:2" size="I:2">
+              <type-tag alignment="I:2" size="I:8"><struct-ref name="send_info" ref="0x408fb670"/></type-tag>
+            </type-pointer>
+          </variable>
+        </parameters>
+      </function>
+    </interfacedef>

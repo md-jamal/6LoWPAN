@@ -1,0 +1,139 @@
+<html>
+  <head>
+    <LINK rel="stylesheet" href="nesdoc.css" type="text/css" media="screen"><title>Component: tos.chips.cc2420.CC2420RadioC</title>
+  </head>
+  <body>
+    <h2>Component: tos.chips.cc2420.CC2420RadioC
+    </h2>
+    <b>configuration CC2420RadioC</b>
+    <p>
+ Radio wiring for the CC2420.  This layer seperates the common
+ wiring of the lower-layer components of the CC2420 stack and makes
+ them available to clients like the AM stack and the IEEE802.15.4
+ stack.
+
+ This component provides the highest-level internal interface to
+ other components of the CC2420 stack.
+
+ 
+    <p>
+    <dl>
+      <dt><b>Author:</b>
+      <dd>
+        Philip Levis
+ 
+      </dd>
+      <dd>
+        David Moss
+ 
+      </dd>
+      <dd>
+        Stephen Dawson-Haggerty
+ 
+      </dd>
+      <dt><b>Version:</b>
+      <dd>
+        $Revision: 1.2 $ $Date: 2009/08/20 01:37:44 $
+
+      </dd>
+    </dl>
+    <p><p><div id=heading>Provides</div><div id=funcsig>interface <a href="../ihtml/tos.interfaces.Receive.html">Receive</a> as <b>ActiveReceive</b></div><div id=funcsig>interface <a href="../ihtml/tos.interfaces.Send.html">Send</a> as <b>ActiveSend</b></div><div id=funcsig>interface <a href="../ihtml/tos.interfaces.Packet.html">Packet</a> as <b>BarePacket</b></div><div id=funcsig>interface <a href="../ihtml/tos.interfaces.Receive.html">Receive</a> as <b>BareReceive</b></div><div id=funcsig>interface <a href="../ihtml/tos.interfaces.Send.html">Send</a> as <b>BareSend</b></div><div id=funcsig>interface <a href="../ihtml/tos.chips.cc2420.interfaces.CC2420Packet.html">CC2420Packet</a></div><div id=funcsig>interface <a href="../ihtml/tos.interfaces.LinkPacketMetadata.html">LinkPacketMetadata</a></div><div id=funcsig>interface <a href="../ihtml/tos.interfaces.LowPowerListening.html">LowPowerListening</a></div><div id=funcsig>interface <a href="../ihtml/tos.interfaces.PacketAcknowledgements.html">PacketAcknowledgements</a></div><div id=funcsig>interface <a href="../ihtml/tos.interfaces.PacketLink.html">PacketLink</a></div><div id=funcsig>interface <a href="../ihtml/tos.interfaces.Resource.html">Resource</a>[uint8_t]</div><div id=funcsig>interface <a href="../ihtml/tos.interfaces.SplitControl.html">SplitControl</a></div><p><div id=heading>Wiring</div><p>
+    <map name="comp">
+      <area shape="rect" id="node2" href="../chtml/tos.chips.cc2420.lpl.DummyLplC.html" title="DummyLplC" alt="" coords="401,496,527,555">
+
+      <area shape="poly" id="edge2" href="../ihtml/tos.interfaces.SplitControl.html" title="SplitControl" alt="" coords="274,420 351,470 390,490 388,495 348,474 271,424">
+
+      <area shape="rect" id="edge2" href="../ihtml/tos.interfaces.SplitControl.html" title="SplitControl" alt="" coords="349,454,424,471">
+
+      <area shape="rect" id="node17" href="../chtml/tos.chips.cc2420.csma.CC2420CsmaC.html" title="CC2420CsmaC" alt="" coords="389,747,539,805">
+
+      <area shape="poly" id="edge26" href="../ihtml/tos.interfaces.SplitControl.html" title="SplitControl" alt="" coords="419,557 387,586 362,622 355,651 362,679 382,710 408,736 404,740 378,713 358,681 349,651 358,620 383,582 415,553">
+
+      <area shape="rect" id="edge26" href="../ihtml/tos.interfaces.SplitControl.html" title="SplitControl" alt="" coords="360,642,435,659">
+
+      <area shape="poly" id="edge34" href="../ihtml/tos.interfaces.Send.html" title="Send" alt="" coords="467,555 467,733 461,733 461,555">
+
+      <area shape="rect" id="edge34" href="../ihtml/tos.interfaces.Send.html" title="Send" alt="" coords="464,642,497,659">
+
+      <area shape="rect" id="node19" href="../chtml/tos.chips.cc2420.unique.UniqueReceiveC.html" title="UniqueReceiveC" alt="" coords="521,621,676,680">
+
+      <area shape="poly" id="edge38" href="../ihtml/tos.interfaces.Receive.html" title="Receive" alt="" coords="497,553 559,610 555,614 494,557">
+
+      <area shape="rect" id="edge38" href="../ihtml/tos.interfaces.Receive.html" title="Receive" alt="" coords="540,579,589,597">
+
+      <area shape="rect" id="node4" href="../chtml/tos.chips.cc2420.packet.CC2420PacketC.html" title="CC2420PacketC" alt="" coords="1247,120,1401,179">
+
+      <area shape="poly" id="edge4" href="../ihtml/tos.interfaces.LinkPacketMetadata.html" title="LinkPacketMetadata" alt="" coords="1129,50 1191,94 1235,115 1233,120 1188,98 1126,55">
+
+      <area shape="rect" id="edge4" href="../ihtml/tos.interfaces.LinkPacketMetadata.html" title="LinkPacketMetadata" alt="" coords="1189,78,1319,95">
+
+      <area shape="rect" id="node6" href="../chtml/tos.chips.cc2420.link.PacketLinkC.html" title="PacketLinkC" alt="" coords="339,371,464,429">
+
+      <area shape="poly" id="edge6" href="../ihtml/tos.interfaces.PacketLink.html" title="PacketLink" alt="" coords="267,295 328,345 349,360 346,365 325,349 264,299">
+
+      <area shape="rect" id="edge6" href="../ihtml/tos.interfaces.PacketLink.html" title="PacketLink" alt="" coords="327,329,395,346">
+
+      <area shape="poly" id="edge32" href="../ihtml/tos.interfaces.Send.html" title="Send" alt="" coords="419,429 445,482 441,485 414,431">
+
+      <area shape="rect" id="edge32" href="../ihtml/tos.interfaces.Send.html" title="Send" alt="" coords="437,454,471,471">
+
+      <area shape="poly" id="edge8" href="../ihtml/tos.chips.cc2420.interfaces.CC2420Packet.html" title="CC2420Packet" alt="" coords="1327,54 1327,106 1321,106 1321,54">
+
+      <area shape="rect" id="edge8" href="../ihtml/tos.chips.cc2420.interfaces.CC2420Packet.html" title="CC2420Packet" alt="" coords="1324,78,1417,95">
+
+      <area shape="rect" id="node9" href="../chtml/tos.chips.cc2420.lowpan.CC2420TinyosNetworkC.html" title="CC2420TinyosNetworkC" alt="" coords="365,120,587,179">
+
+      <area shape="poly" id="edge10" href="../ihtml/tos.interfaces.Send.html" title="Send" alt="" coords="125,44 278,93 352,115 351,120 277,99 123,49">
+
+      <area shape="rect" id="edge10" href="../ihtml/tos.interfaces.Send.html" title="Send" alt="" coords="277,78,311,95">
+
+      <area shape="poly" id="edge36" href="../ihtml/tos.interfaces.Receive.html" title="Receive" alt="" coords="482,179 484,203 484,221 486,347 485,402 479,472 477,483 472,482 473,472 480,402 481,347 479,221 479,203 477,179">
+
+      <area shape="rect" id="edge36" href="../ihtml/tos.interfaces.Receive.html" title="Receive" alt="" coords="484,329,533,346">
+
+      <area shape="rect" id="node18" href="../chtml/tos.chips.cc2420.unique.UniqueSendC.html" title="UniqueSendC" alt="" coords="331,245,467,304">
+
+      <area shape="poly" id="edge28" href="../ihtml/tos.interfaces.Send.html" title="Send" alt="" coords="460,180 426,235 422,232 455,178">
+
+      <area shape="rect" id="edge28" href="../ihtml/tos.interfaces.Send.html" title="Send" alt="" coords="443,203,476,221">
+
+      <area shape="poly" id="edge12" href="../ihtml/tos.interfaces.LowPowerListening.html" title="LowPowerListening" alt="" coords="619,425 521,491 518,486 616,421">
+
+      <area shape="rect" id="edge12" href="../ihtml/tos.interfaces.LowPowerListening.html" title="LowPowerListening" alt="" coords="569,454,689,471">
+
+      <area shape="poly" id="edge14" href="../ihtml/tos.interfaces.Receive.html" title="Receive" alt="" coords="275,49 349,94 388,112 386,117 347,98 273,53">
+
+      <area shape="rect" id="edge14" href="../ihtml/tos.interfaces.Receive.html" title="Receive" alt="" coords="348,78,397,95">
+
+      <area shape="poly" id="edge16" href="../ihtml/tos.interfaces.PacketAcknowledgements.html" title="PacketAcknowledgements" alt="" coords="1532,55 1400,117 1398,112 1530,50">
+
+      <area shape="rect" id="edge16" href="../ihtml/tos.interfaces.PacketAcknowledgements.html" title="PacketAcknowledgements" alt="" coords="1475,78,1641,95">
+
+      <area shape="poly" id="edge18" href="../ihtml/tos.interfaces.Resource.html" title="Resource[uint8_t]" alt="" coords="403,53 404,74 410,95 420,109 416,112 406,97 399,75 397,54">
+
+      <area shape="rect" id="edge18" href="../ihtml/tos.interfaces.Resource.html" title="Resource[uint8_t]" alt="" coords="408,78,521,95">
+
+      <area shape="poly" id="edge20" href="../ihtml/tos.interfaces.Send.html" title="Send" alt="" coords="544,55 524,97 515,110 510,107 519,95 540,52">
+
+      <area shape="rect" id="edge20" href="../ihtml/tos.interfaces.Send.html" title="Send" alt="" coords="532,78,565,95">
+
+      <area shape="poly" id="edge22" href="../ihtml/tos.interfaces.Packet.html" title="Packet" alt="" coords="669,52 546,116 543,111 667,47">
+
+      <area shape="rect" id="edge22" href="../ihtml/tos.interfaces.Packet.html" title="Packet" alt="" coords="611,78,653,95">
+
+      <area shape="poly" id="edge24" href="../ihtml/tos.interfaces.Receive.html" title="Receive" alt="" coords="825,49 659,99 591,119 589,114 658,93 823,44">
+
+      <area shape="rect" id="edge24" href="../ihtml/tos.interfaces.Receive.html" title="Receive" alt="" coords="719,78,768,95">
+
+      <area shape="poly" id="edge30" href="../ihtml/tos.interfaces.Send.html" title="Send" alt="" coords="402,304 403,357 398,357 397,304">
+
+      <area shape="rect" id="edge30" href="../ihtml/tos.interfaces.Send.html" title="Send" alt="" coords="401,329,435,346">
+
+      <area shape="poly" id="edge40" href="../ihtml/tos.interfaces.Receive.html" title="Receive" alt="" coords="569,682 508,739 504,735 565,678">
+
+      <area shape="rect" id="edge40" href="../ihtml/tos.interfaces.Receive.html" title="Receive" alt="" coords="540,705,589,722">
+
+    </map>
+    <img src="tos.chips.cc2420.CC2420RadioC.png" usemap="#comp" id=imgwiring>
+  </body>
+</html>

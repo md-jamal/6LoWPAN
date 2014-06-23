@@ -1,0 +1,87 @@
+<?xml version="1.0" ?><component loc="20:/home/jumbo/tinyos-main/tos/lib/net/blip/IPNeighborDiscoveryP.nc" nicename="tos.lib.net.blip.IPNeighborDiscoveryP" qname="IPNeighborDiscoveryP">
+      <documentation loc="1:/home/jumbo/tinyos-main/tos/lib/net/blip/IPNeighborDiscoveryP.nc">
+        <short>
+ Neighbor Discovery for blip
+
+ In IPv6, neighbor discovery resolves IPv6 addresses which have been
+ determined to be on-link to their associated link-layer addresses.</short>
+        <long>
+ Neighbor Discovery for blip
+
+ In IPv6, neighbor discovery resolves IPv6 addresses which have been
+ determined to be on-link to their associated link-layer addresses.
+ This simple component follows the advice of 6lowpan-nd, which
+ states that link-local addresses are derived from the associated
+ link-layer addressed deterministically.  Therefore, we can do a
+ very simple translation between the two types of addresses.
+
+ In the future, implementors could consider adding more complicated
+ address resolution mechanisms here.
+
+ @author Stephen Dawson-Haggerty &lt;stevedh@eecs.berkeley.edu&gt;
+</long>
+      </documentation>
+      <module/>
+    <specification><interface loc="22:/home/jumbo/tinyos-main/tos/lib/net/blip/IPNeighborDiscoveryP.nc" name="IPForward" provided="1" ref="0x40a55af8">
+      <component-ref nicename="tos.lib.net.blip.IPNeighborDiscoveryP" qname="IPNeighborDiscoveryP"/>
+      <type-interface alignment="I:2" size="I:2"><interface-ref name="IPForward" ref="0x40a55af8" scoped=""/></type-interface>
+      <instance>
+        <interfacedef-ref nicename="tos.lib.net.blip.interfaces.IPForward" qname="IPForward"/>
+      </instance>
+      <interface-functions>
+        <function-ref name="send" ref="0x40a55cd0" scoped=""/>
+        <function-ref name="recv" ref="0x40a55db0" scoped=""/>
+        <function-ref name="sendDone" ref="0x40a55e90" scoped=""/>
+      </interface-functions>
+    </interface><interface loc="28:/home/jumbo/tinyos-main/tos/lib/net/blip/IPNeighborDiscoveryP.nc" name="Ieee154Address" provided="0" ref="0x40a6e010">
+      <component-ref nicename="tos.lib.net.blip.IPNeighborDiscoveryP" qname="IPNeighborDiscoveryP"/>
+      <type-interface alignment="I:2" size="I:2"><interface-ref name="Ieee154Address" ref="0x40a6e010" scoped=""/></type-interface>
+      <instance>
+        <interfacedef-ref nicename="tos.lib.net.blip.interfaces.Ieee154Address" qname="Ieee154Address"/>
+      </instance>
+      <interface-functions>
+        <function-ref name="getPanId" ref="0x40a6e1e8" scoped=""/>
+        <function-ref name="changed" ref="0x40a6e2c8" scoped=""/>
+        <function-ref name="setShortAddr" ref="0x40a6e3a8" scoped=""/>
+        <function-ref name="getExtAddr" ref="0x40a6e488" scoped=""/>
+        <function-ref name="getShortAddr" ref="0x40a6e568" scoped=""/>
+      </interface-functions>
+    </interface><interface loc="26:/home/jumbo/tinyos-main/tos/lib/net/blip/IPNeighborDiscoveryP.nc" name="IPLower" provided="0" ref="0x40a4e670">
+      <component-ref nicename="tos.lib.net.blip.IPNeighborDiscoveryP" qname="IPNeighborDiscoveryP"/>
+      <type-interface alignment="I:2" size="I:2"><interface-ref name="IPLower" ref="0x40a4e670" scoped=""/></type-interface>
+      <instance>
+        <interfacedef-ref nicename="tos.lib.net.blip.interfaces.IPLower" qname="IPLower"/>
+      </instance>
+      <interface-functions>
+        <function-ref name="send" ref="0x40a4e848" scoped=""/>
+        <function-ref name="recv" ref="0x40a4e928" scoped=""/>
+        <function-ref name="sendDone" ref="0x40a4ea08" scoped=""/>
+      </interface-functions>
+    </interface><interface loc="27:/home/jumbo/tinyos-main/tos/lib/net/blip/IPNeighborDiscoveryP.nc" name="IPAddress" provided="0" ref="0x40a4eba8">
+      <component-ref nicename="tos.lib.net.blip.IPNeighborDiscoveryP" qname="IPNeighborDiscoveryP"/>
+      <type-interface alignment="I:2" size="I:2"><interface-ref name="IPAddress" ref="0x40a4eba8" scoped=""/></type-interface>
+      <instance>
+        <interfacedef-ref nicename="tos.lib.net.blip.interfaces.IPAddress" qname="IPAddress"/>
+      </instance>
+      <interface-functions>
+        <function-ref name="getLLAddr" ref="0x40a4ed80" scoped=""/>
+        <function-ref name="changed" ref="0x40a4ee60" scoped=""/>
+        <function-ref name="isLocalAddress" ref="0x40a4d010" scoped=""/>
+        <function-ref name="getGlobalAddr" ref="0x40a4d0f0" scoped=""/>
+        <function-ref name="setSource" ref="0x40a4d1d0" scoped=""/>
+        <function-ref name="removeAddress" ref="0x40a4d2b0" scoped=""/>
+        <function-ref name="setAddress" ref="0x40a4d390" scoped=""/>
+        <function-ref name="isLLAddress" ref="0x40a4d470" scoped=""/>
+      </interface-functions>
+    </interface><interface loc="23:/home/jumbo/tinyos-main/tos/lib/net/blip/IPNeighborDiscoveryP.nc" name="NeighborDiscovery" provided="1" ref="0x40a4e110">
+      <component-ref nicename="tos.lib.net.blip.IPNeighborDiscoveryP" qname="IPNeighborDiscoveryP"/>
+      <type-interface alignment="I:2" size="I:2"><interface-ref name="NeighborDiscovery" ref="0x40a4e110" scoped=""/></type-interface>
+      <instance>
+        <interfacedef-ref nicename="tos.lib.net.blip.interfaces.NeighborDiscovery" qname="NeighborDiscovery"/>
+      </instance>
+      <interface-functions>
+        <function-ref name="resolveAddress" ref="0x40a4e2e8" scoped=""/>
+        <function-ref name="matchContext" ref="0x40a4e3c8" scoped=""/>
+        <function-ref name="getContext" ref="0x40a4e4a8" scoped=""/>
+      </interface-functions>
+    </interface></specification><referenced/></component>

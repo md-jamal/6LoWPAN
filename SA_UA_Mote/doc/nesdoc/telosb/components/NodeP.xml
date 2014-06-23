@@ -1,0 +1,58 @@
+<?xml version="1.0" ?><component loc="4:NodeP.nc" nicename="NodeP" qname="NodeP">
+      <module/>
+    <specification><interface loc="6:NodeP.nc" name="Node" provided="1" ref="0x408ed910">
+      <component-ref nicename="NodeP" qname="NodeP"/>
+      <type-interface alignment="I:2" size="I:2"><interface-ref name="Node" ref="0x408ed910" scoped=""/></type-interface>
+      <instance>
+        <interfacedef-ref nicename="Node" qname="Node"/>
+      </instance>
+      <interface-functions>
+        <function-ref name="removeService" ref="0x408edae8" scoped=""/>
+        <function-ref name="addService" ref="0x408edbc8" scoped=""/>
+        <function-ref name="getServices" ref="0x408edca8" scoped=""/>
+        <function-ref name="servicesPresent" ref="0x408edd88" scoped=""/>
+        <function-ref name="getUAState" ref="0x408ede68" scoped=""/>
+        <function-ref name="setSA" ref="0x408ec010" scoped=""/>
+        <function-ref name="getServiceURL" ref="0x408ec0f0" scoped=""/>
+        <function-ref name="changeScope" ref="0x408ec1d0" scoped=""/>
+        <function-ref name="findService" ref="0x408ec2b0" scoped=""/>
+        <function-ref name="getSAState" ref="0x408ec390" scoped=""/>
+        <function-ref name="setUA" ref="0x408ec470" scoped=""/>
+      </interface-functions>
+    </interface><interface loc="7:NodeP.nc" name="ServiceLocation" provided="0" ref="0x408ec668">
+      <component-ref nicename="NodeP" qname="NodeP"/>
+      <type-interface alignment="I:2" size="I:2"><interface-ref name="ServiceLocation" ref="0x408ec668" scoped=""/></type-interface>
+      <instance>
+        <interfacedef-ref nicename="ServiceLocation" qname="ServiceLocation"/>
+      </instance>
+      <interface-functions>
+        <function-ref name="receiveServiceTypes" ref="0x408ec840" scoped=""/>
+        <function-ref name="registerService" ref="0x408ec920" scoped=""/>
+        <function-ref name="receiveServices" ref="0x408eca00" scoped=""/>
+        <function-ref name="deregisterService" ref="0x408ecae0" scoped=""/>
+      </interface-functions>
+    </interface><interface loc="8:NodeP.nc" name="Timer" provided="0" ref="0x408ecd48">
+      <component-ref nicename="NodeP" qname="NodeP"/>
+      <type-interface alignment="I:2" size="I:2"><interface-ref name="Timer" ref="0x408ecd48" scoped=""/></type-interface>
+      <instance>
+        <interfacedef-ref nicename="tos.lib.timer.Timer" qname="Timer"/>
+        <arguments>
+          <type-tag alignment="I:2" size="I:2"><struct-ref ref="0x40648d90"/>
+            <typename><typedef-ref name="TMilli" ref="0x4064d010"/></typename>
+          </type-tag>
+        </arguments>
+      </instance>
+      <interface-functions>
+        <function-ref name="getNow" ref="0x408e98a8" scoped=""/>
+        <function-ref name="fired" ref="0x408ebb18" scoped=""/>
+        <function-ref name="startPeriodicAt" ref="0x408e9268" scoped=""/>
+        <function-ref name="isOneShot" ref="0x408e9010" scoped=""/>
+        <function-ref name="getdt" ref="0x408e9d58" scoped=""/>
+        <function-ref name="gett0" ref="0x408e9b00" scoped=""/>
+        <function-ref name="isRunning" ref="0x408ebd70" scoped=""/>
+        <function-ref name="startPeriodic" ref="0x408eb3c0" scoped=""/>
+        <function-ref name="startOneShotAt" ref="0x408e9588" scoped=""/>
+        <function-ref name="startOneShot" ref="0x408eb640" scoped=""/>
+        <function-ref name="stop" ref="0x408eb8c0" scoped=""/>
+      </interface-functions>
+    </interface></specification><referenced/></component>

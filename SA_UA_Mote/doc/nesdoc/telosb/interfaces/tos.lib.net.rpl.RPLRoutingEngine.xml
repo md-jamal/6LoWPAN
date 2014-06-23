@@ -1,0 +1,211 @@
+<?xml version="1.0" ?><interfacedef loc="40:/home/jumbo/tinyos-main/tos/lib/net/rpl/RPLRoutingEngine.nc" nicename="tos.lib.net.rpl.RPLRoutingEngine" qname="RPLRoutingEngine">
+      <documentation loc="32:/home/jumbo/tinyos-main/tos/lib/net/rpl/RPLRoutingEngine.nc">
+        <short>
+ RPLRoutingEngine.nc
+ </short>
+        <long>
+ RPLRoutingEngine.nc
+ @ author JeongGil Ko (John) &lt;jgko@cs.jhu.edu&gt;
+</long>
+      </documentation>
+      <function command="" loc="52:/home/jumbo/tinyos-main/tos/lib/net/rpl/RPLRoutingEngine.nc" name="getMOP" provided="0" ref="0x414d5138">
+        <interfacedef-ref nicename="tos.lib.net.rpl.RPLRoutingEngine" qname="RPLRoutingEngine"/>
+        <type-function alignment="I:1" size="I:1">
+          <type-int alignment="I:1" cname="unsigned char" size="I:1" unsigned="">
+            <typename><typedef-ref name="uint8_t" ref="0x4003bdc8"/></typename>
+          </type-int>
+          <function-parameters>
+          </function-parameters>
+        </type-function>
+        <parameters>
+        </parameters>
+      </function>
+      <function command="" loc="53:/home/jumbo/tinyos-main/tos/lib/net/rpl/RPLRoutingEngine.nc" name="setDTSN" provided="0" ref="0x414d5650">
+        <interfacedef-ref nicename="tos.lib.net.rpl.RPLRoutingEngine" qname="RPLRoutingEngine"/>
+        <type-function alignment="I:1" size="I:1">
+          <type-void alignment="I:1" size="I:1"/>
+          <function-parameters>
+            <type-int alignment="I:1" cname="unsigned char" size="I:1" unsigned="">
+              <typename><typedef-ref name="uint8_t" ref="0x4003bdc8"/></typename>
+            </type-int>
+          </function-parameters>
+        </type-function>
+        <parameters>
+          <variable loc="53:/home/jumbo/tinyos-main/tos/lib/net/rpl/RPLRoutingEngine.nc" name="dtsn" ref="0x414d54f8">
+            <type-int alignment="I:1" cname="unsigned char" size="I:1" unsigned="">
+              <typename><typedef-ref name="uint8_t" ref="0x4003bdc8"/></typename>
+            </type-int>
+          </variable>
+        </parameters>
+      </function>
+      <function command="" loc="54:/home/jumbo/tinyos-main/tos/lib/net/rpl/RPLRoutingEngine.nc" name="getDTSN" provided="0" ref="0x414d5a30">
+        <interfacedef-ref nicename="tos.lib.net.rpl.RPLRoutingEngine" qname="RPLRoutingEngine"/>
+        <type-function alignment="I:1" size="I:1">
+          <type-int alignment="I:1" cname="unsigned char" size="I:1" unsigned="">
+            <typename><typedef-ref name="uint8_t" ref="0x4003bdc8"/></typename>
+          </type-int>
+          <function-parameters>
+          </function-parameters>
+        </type-function>
+        <parameters>
+        </parameters>
+      </function>
+      <function command="" loc="42:/home/jumbo/tinyos-main/tos/lib/net/rpl/RPLRoutingEngine.nc" name="hasDODAG" provided="0" ref="0x414d9580">
+        <interfacedef-ref nicename="tos.lib.net.rpl.RPLRoutingEngine" qname="RPLRoutingEngine"/>
+        <type-function alignment="I:1" size="I:1">
+          <type-int alignment="I:1" cname="unsigned char" size="I:1" unsigned="">
+            <typename><typedef-ref name="bool" ref="0x4037f928"/></typename>
+          </type-int>
+          <function-parameters>
+          </function-parameters>
+        </type-function>
+        <parameters>
+        </parameters>
+      </function>
+      <function command="" loc="46:/home/jumbo/tinyos-main/tos/lib/net/rpl/RPLRoutingEngine.nc" name="validInstance" provided="0" ref="0x414d89f0">
+        <interfacedef-ref nicename="tos.lib.net.rpl.RPLRoutingEngine" qname="RPLRoutingEngine"/>
+        <type-function alignment="I:1" size="I:1">
+          <type-int alignment="I:1" cname="unsigned char" size="I:1" unsigned="">
+            <typename><typedef-ref name="bool" ref="0x4037f928"/></typename>
+          </type-int>
+          <function-parameters>
+            <type-int alignment="I:1" cname="unsigned char" size="I:1" unsigned="">
+              <typename><typedef-ref name="uint8_t" ref="0x4003bdc8"/></typename>
+            </type-int>
+          </function-parameters>
+        </type-function>
+        <parameters>
+          <variable loc="46:/home/jumbo/tinyos-main/tos/lib/net/rpl/RPLRoutingEngine.nc" name="instanceID" ref="0x414d8898">
+            <type-int alignment="I:1" cname="unsigned char" size="I:1" unsigned="">
+              <typename><typedef-ref name="uint8_t" ref="0x4003bdc8"/></typename>
+            </type-int>
+          </variable>
+        </parameters>
+      </function>
+      <function command="" loc="56:/home/jumbo/tinyos-main/tos/lib/net/rpl/RPLRoutingEngine.nc" name="inconsistency" provided="0" ref="0x414d5e08">
+        <interfacedef-ref nicename="tos.lib.net.rpl.RPLRoutingEngine" qname="RPLRoutingEngine"/>
+        <type-function alignment="I:1" size="I:1">
+          <type-void alignment="I:1" size="I:1"/>
+          <function-parameters>
+          </function-parameters>
+        </type-function>
+        <parameters>
+        </parameters>
+      </function>
+      <function command="" loc="44:/home/jumbo/tinyos-main/tos/lib/net/rpl/RPLRoutingEngine.nc" name="getRank" provided="0" ref="0x414d8010">
+        <interfacedef-ref nicename="tos.lib.net.rpl.RPLRoutingEngine" qname="RPLRoutingEngine"/>
+        <type-function alignment="I:1" size="I:1">
+          <type-int alignment="I:2" cname="unsigned int" size="I:2" unsigned="">
+            <typename><typedef-ref name="uint16_t" ref="0x4003c010"/></typename>
+          </type-int>
+          <function-parameters>
+          </function-parameters>
+        </type-function>
+        <parameters>
+        </parameters>
+      </function>
+      <function command="" loc="47:/home/jumbo/tinyos-main/tos/lib/net/rpl/RPLRoutingEngine.nc" name="getDodagId" provided="0" ref="0x414d8e50">
+        <interfacedef-ref nicename="tos.lib.net.rpl.RPLRoutingEngine" qname="RPLRoutingEngine"/>
+        <type-function alignment="I:1" size="I:1">
+          <type-pointer alignment="I:2" size="I:2">
+            <type-tag alignment="I:2" size="I:16"><struct-ref name="in6_addr" ref="0x40635908"/></type-tag>
+          </type-pointer>
+          <function-parameters>
+          </function-parameters>
+        </type-function>
+        <parameters>
+        </parameters>
+      </function>
+      <function command="" loc="49:/home/jumbo/tinyos-main/tos/lib/net/rpl/RPLRoutingEngine.nc" name="setDODAGConfig" provided="0" ref="0x414d7d48">
+        <interfacedef-ref nicename="tos.lib.net.rpl.RPLRoutingEngine" qname="RPLRoutingEngine"/>
+        <type-function alignment="I:1" size="I:1">
+          <type-void alignment="I:1" size="I:1"/>
+          <function-parameters>
+            <type-int alignment="I:1" cname="unsigned char" size="I:1" unsigned="">
+              <typename><typedef-ref name="uint8_t" ref="0x4003bdc8"/></typename>
+            </type-int>
+            <type-int alignment="I:1" cname="unsigned char" size="I:1" unsigned="">
+              <typename><typedef-ref name="uint8_t" ref="0x4003bdc8"/></typename>
+            </type-int>
+            <type-int alignment="I:1" cname="unsigned char" size="I:1" unsigned="">
+              <typename><typedef-ref name="uint8_t" ref="0x4003bdc8"/></typename>
+            </type-int>
+            <type-int alignment="I:1" cname="unsigned char" size="I:1" unsigned="">
+              <typename><typedef-ref name="uint8_t" ref="0x4003bdc8"/></typename>
+            </type-int>
+            <type-int alignment="I:1" cname="unsigned char" size="I:1" unsigned="">
+              <typename><typedef-ref name="uint8_t" ref="0x4003bdc8"/></typename>
+            </type-int>
+          </function-parameters>
+        </type-function>
+        <parameters>
+          <variable loc="49:/home/jumbo/tinyos-main/tos/lib/net/rpl/RPLRoutingEngine.nc" name="DIOIntDouble" ref="0x414d7318">
+            <type-int alignment="I:1" cname="unsigned char" size="I:1" unsigned="">
+              <typename><typedef-ref name="uint8_t" ref="0x4003bdc8"/></typename>
+            </type-int>
+          </variable>
+          <variable loc="49:/home/jumbo/tinyos-main/tos/lib/net/rpl/RPLRoutingEngine.nc" name="DIOIntMin" ref="0x414d7538">
+            <type-int alignment="I:1" cname="unsigned char" size="I:1" unsigned="">
+              <typename><typedef-ref name="uint8_t" ref="0x4003bdc8"/></typename>
+            </type-int>
+          </variable>
+          <variable loc="50:/home/jumbo/tinyos-main/tos/lib/net/rpl/RPLRoutingEngine.nc" name="DIORedun" ref="0x414d7760">
+            <type-int alignment="I:1" cname="unsigned char" size="I:1" unsigned="">
+              <typename><typedef-ref name="uint8_t" ref="0x4003bdc8"/></typename>
+            </type-int>
+          </variable>
+          <variable loc="50:/home/jumbo/tinyos-main/tos/lib/net/rpl/RPLRoutingEngine.nc" name="MaxRankInc" ref="0x414d7988">
+            <type-int alignment="I:1" cname="unsigned char" size="I:1" unsigned="">
+              <typename><typedef-ref name="uint8_t" ref="0x4003bdc8"/></typename>
+            </type-int>
+          </variable>
+          <variable loc="50:/home/jumbo/tinyos-main/tos/lib/net/rpl/RPLRoutingEngine.nc" name="MinHopRankInc" ref="0x414d7bd0">
+            <type-int alignment="I:1" cname="unsigned char" size="I:1" unsigned="">
+              <typename><typedef-ref name="uint8_t" ref="0x4003bdc8"/></typename>
+            </type-int>
+          </variable>
+        </parameters>
+      </function>
+      <function command="" loc="45:/home/jumbo/tinyos-main/tos/lib/net/rpl/RPLRoutingEngine.nc" name="getInstanceID" provided="0" ref="0x414d8430">
+        <interfacedef-ref nicename="tos.lib.net.rpl.RPLRoutingEngine" qname="RPLRoutingEngine"/>
+        <type-function alignment="I:1" size="I:1">
+          <type-int alignment="I:1" cname="unsigned char" size="I:1" unsigned="">
+            <typename><typedef-ref name="uint8_t" ref="0x4003bdc8"/></typename>
+          </type-int>
+          <function-parameters>
+          </function-parameters>
+        </type-function>
+        <parameters>
+        </parameters>
+      </function>
+      <function command="" loc="43:/home/jumbo/tinyos-main/tos/lib/net/rpl/RPLRoutingEngine.nc" name="getDefaultRoute" provided="0" ref="0x414d9bb8">
+        <interfacedef-ref nicename="tos.lib.net.rpl.RPLRoutingEngine" qname="RPLRoutingEngine"/>
+        <type-function alignment="I:1" size="I:1">
+          <type-int alignment="I:1" cname="unsigned char" size="I:1" unsigned="">
+            <typename><typedef-ref name="error_t" ref="0x4038a718"/></typename>
+          </type-int>
+          <function-parameters>
+            <type-pointer alignment="I:2" size="I:2">
+              <type-tag alignment="I:2" size="I:16"><struct-ref name="in6_addr" ref="0x40635908"/></type-tag>
+            </type-pointer>
+          </function-parameters>
+        </type-function>
+        <parameters>
+          <variable loc="43:/home/jumbo/tinyos-main/tos/lib/net/rpl/RPLRoutingEngine.nc" name="next_hop" ref="0x414d9a60">
+            <type-pointer alignment="I:2" size="I:2">
+              <type-tag alignment="I:2" size="I:16"><struct-ref name="in6_addr" ref="0x40635908"/></type-tag>
+            </type-pointer>
+          </variable>
+        </parameters>
+      </function>
+      <function command="" loc="41:/home/jumbo/tinyos-main/tos/lib/net/rpl/RPLRoutingEngine.nc" name="resetTrickle" provided="0" ref="0x414d91a8">
+        <interfacedef-ref nicename="tos.lib.net.rpl.RPLRoutingEngine" qname="RPLRoutingEngine"/>
+        <type-function alignment="I:1" size="I:1">
+          <type-void alignment="I:1" size="I:1"/>
+          <function-parameters>
+          </function-parameters>
+        </type-function>
+        <parameters>
+        </parameters>
+      </function>
+    </interfacedef>

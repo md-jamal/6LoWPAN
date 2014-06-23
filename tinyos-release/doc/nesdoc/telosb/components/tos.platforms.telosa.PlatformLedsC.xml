@@ -1,0 +1,662 @@
+<?xml version="1.0" ?><component loc="40:/home/jumbo/jamal/project/CoAP/tinyos-release/tos/platforms/telosa/PlatformLedsC.nc" nicename="tos.platforms.telosa.PlatformLedsC" qname="PlatformLedsC">
+      <documentation loc="34:/home/jumbo/jamal/project/CoAP/tinyos-release/tos/platforms/telosa/PlatformLedsC.nc">
+        <short>
+ </short>
+        <long>
+ @author Joe Polastre
+ @version $Revision: 1.5 $ $Date: 2010-06-29 22:07:55 $
+</long>
+      </documentation>
+      <configuration/>
+      <wiring>
+        <wire loc="58:/home/jumbo/jamal/project/CoAP/tinyos-release/tos/platforms/telosa/PlatformLedsC.nc">
+          <from><interface-ref name="Led0" ref="0x40724e10" scoped=""/></from>
+          <to><interface-ref name="GeneralIO" ref="0x408641f0" scoped=""/></to>
+        </wire>
+        <wire loc="61:/home/jumbo/jamal/project/CoAP/tinyos-release/tos/platforms/telosa/PlatformLedsC.nc">
+          <from><interface-ref name="Led1" ref="0x40733840" scoped=""/></from>
+          <to><interface-ref name="GeneralIO" ref="0x40859990" scoped=""/></to>
+        </wire>
+        <wire loc="64:/home/jumbo/jamal/project/CoAP/tinyos-release/tos/platforms/telosa/PlatformLedsC.nc">
+          <from><interface-ref name="Led2" ref="0x40732300" scoped=""/></from>
+          <to><interface-ref name="GeneralIO" ref="0x408701a8" scoped=""/></to>
+        </wire>
+        <wire loc="56:/home/jumbo/jamal/project/CoAP/tinyos-release/tos/platforms/telosa/PlatformLedsC.nc">
+          <from><interface-ref name="LedsInit" ref="0x40617410" scoped=""/></from>
+          <to><interface-ref name="Init" ref="0x40732c88" scoped=""/></to>
+        </wire>
+        <wire loc="59:/home/jumbo/jamal/project/CoAP/tinyos-release/tos/platforms/telosa/PlatformLedsC.nc">
+          <from><interface-ref name="HplGeneralIO" ref="0x40864b68" scoped=""/></from>
+          <to><interface-ref name="Port54" ref="0x4076fd88" scoped=""/></to>
+        </wire>
+        <wire loc="62:/home/jumbo/jamal/project/CoAP/tinyos-release/tos/platforms/telosa/PlatformLedsC.nc">
+          <from><interface-ref name="HplGeneralIO" ref="0x40872350" scoped=""/></from>
+          <to><interface-ref name="Port55" ref="0x4076d010" scoped=""/></to>
+        </wire>
+        <wire loc="65:/home/jumbo/jamal/project/CoAP/tinyos-release/tos/platforms/telosa/PlatformLedsC.nc">
+          <from><interface-ref name="HplGeneralIO" ref="0x40870b20" scoped=""/></from>
+          <to><interface-ref name="Port56" ref="0x4076c178" scoped=""/></to>
+        </wire>
+      </wiring>
+    <specification><interface loc="41:/home/jumbo/jamal/project/CoAP/tinyos-release/tos/platforms/telosa/PlatformLedsC.nc" name="Led0" provided="1" ref="0x40724e10">
+      <component-ref nicename="tos.platforms.telosa.PlatformLedsC" qname="PlatformLedsC"/>
+      <type-interface alignment="I:2" size="I:2"><interface-ref name="Led0" ref="0x40724e10" scoped=""/></type-interface>
+      <instance>
+        <interfacedef-ref nicename="tos.interfaces.GeneralIO" qname="GeneralIO"/>
+      </instance>
+      <interface-functions>
+        <function-ref name="makeInput" ref="0x40733010" scoped=""/>
+        <function-ref name="isInput" ref="0x407330f0" scoped=""/>
+        <function-ref name="toggle" ref="0x407331d0" scoped=""/>
+        <function-ref name="isOutput" ref="0x407332b0" scoped=""/>
+        <function-ref name="get" ref="0x40733390" scoped=""/>
+        <function-ref name="makeOutput" ref="0x40733470" scoped=""/>
+        <function-ref name="set" ref="0x40733550" scoped=""/>
+        <function-ref name="clr" ref="0x40733630" scoped=""/>
+      </interface-functions>
+    </interface><interface loc="42:/home/jumbo/jamal/project/CoAP/tinyos-release/tos/platforms/telosa/PlatformLedsC.nc" name="Led1" provided="1" ref="0x40733840">
+      <component-ref nicename="tos.platforms.telosa.PlatformLedsC" qname="PlatformLedsC"/>
+      <type-interface alignment="I:2" size="I:2"><interface-ref name="Led1" ref="0x40733840" scoped=""/></type-interface>
+      <instance>
+        <interfacedef-ref nicename="tos.interfaces.GeneralIO" qname="GeneralIO"/>
+      </instance>
+      <interface-functions>
+        <function-ref name="makeInput" ref="0x40733a18" scoped=""/>
+        <function-ref name="isInput" ref="0x40733af8" scoped=""/>
+        <function-ref name="toggle" ref="0x40733bd8" scoped=""/>
+        <function-ref name="isOutput" ref="0x40733cb8" scoped=""/>
+        <function-ref name="get" ref="0x40733d98" scoped=""/>
+        <function-ref name="makeOutput" ref="0x40733e78" scoped=""/>
+        <function-ref name="set" ref="0x40732010" scoped=""/>
+        <function-ref name="clr" ref="0x407320f0" scoped=""/>
+      </interface-functions>
+    </interface><interface loc="44:/home/jumbo/jamal/project/CoAP/tinyos-release/tos/platforms/telosa/PlatformLedsC.nc" name="Init" provided="0" ref="0x40732c88">
+      <component-ref nicename="tos.platforms.telosa.PlatformLedsC" qname="PlatformLedsC"/>
+      <type-interface alignment="I:2" size="I:2"><interface-ref name="Init" ref="0x40732c88" scoped=""/></type-interface>
+      <instance>
+        <interfacedef-ref nicename="tos.interfaces.Init" qname="Init"/>
+      </instance>
+      <interface-functions>
+        <function-ref name="init" ref="0x40732e60" scoped=""/>
+      </interface-functions>
+    </interface><interface loc="43:/home/jumbo/jamal/project/CoAP/tinyos-release/tos/platforms/telosa/PlatformLedsC.nc" name="Led2" provided="1" ref="0x40732300">
+      <component-ref nicename="tos.platforms.telosa.PlatformLedsC" qname="PlatformLedsC"/>
+      <type-interface alignment="I:2" size="I:2"><interface-ref name="Led2" ref="0x40732300" scoped=""/></type-interface>
+      <instance>
+        <interfacedef-ref nicename="tos.interfaces.GeneralIO" qname="GeneralIO"/>
+      </instance>
+      <interface-functions>
+        <function-ref name="makeInput" ref="0x407324d8" scoped=""/>
+        <function-ref name="isInput" ref="0x407325b8" scoped=""/>
+        <function-ref name="toggle" ref="0x40732698" scoped=""/>
+        <function-ref name="isOutput" ref="0x40732778" scoped=""/>
+        <function-ref name="get" ref="0x40732858" scoped=""/>
+        <function-ref name="makeOutput" ref="0x40732938" scoped=""/>
+        <function-ref name="set" ref="0x40732a18" scoped=""/>
+        <function-ref name="clr" ref="0x40732af8" scoped=""/>
+      </interface-functions>
+    </interface></specification><referenced><interface loc="98:/home/jumbo/jamal/project/CoAP/tinyos-release/tos/chips/msp430/pins/HplMsp430GeneralIOC.nc" name="Port55" provided="1" ref="0x4076d010">
+      <component-ref nicename="tos.chips.msp430.pins.HplMsp430GeneralIOC" qname="HplMsp430GeneralIOC"/>
+      <type-interface alignment="I:2" size="I:2"><interface-ref name="Port55" ref="0x4076d010" scoped=""/></type-interface>
+      <instance>
+        <interfacedef-ref nicename="tos.chips.msp430.pins.HplMsp430GeneralIO" qname="HplMsp430GeneralIO"/>
+      </instance>
+      <interface-functions>
+        <function-ref name="makeInput" ref="0x4076d1e8" scoped=""/>
+        <function-ref name="isInput" ref="0x4076d2c8" scoped=""/>
+        <function-ref name="setResistor" ref="0x4076d3a8" scoped=""/>
+        <function-ref name="toggle" ref="0x4076d488" scoped=""/>
+        <function-ref name="isOutput" ref="0x4076d568" scoped=""/>
+        <function-ref name="getResistor" ref="0x4076d648" scoped=""/>
+        <function-ref name="makeOutput" ref="0x4076d728" scoped=""/>
+        <function-ref name="get" ref="0x4076d808" scoped=""/>
+        <function-ref name="selectIOFunc" ref="0x4076d8e8" scoped=""/>
+        <function-ref name="getRaw" ref="0x4076d9c8" scoped=""/>
+        <function-ref name="set" ref="0x4076daa8" scoped=""/>
+        <function-ref name="selectModuleFunc" ref="0x4076db88" scoped=""/>
+        <function-ref name="isIOFunc" ref="0x4076dc68" scoped=""/>
+        <function-ref name="isModuleFunc" ref="0x4076ddc8" scoped=""/>
+        <function-ref name="clr" ref="0x4076dea8" scoped=""/>
+      </interface-functions>
+    </interface><interface loc="43:/home/jumbo/jamal/project/CoAP/tinyos-release/tos/chips/msp430/pins/Msp430GpioC.nc" name="GeneralIO" provided="1" ref="0x408641f0">
+      <component-ref nicename="tos.chips.msp430.pins.Msp430GpioC" qname="PlatformLedsC.Led0Impl"/>
+      <type-interface alignment="I:2" size="I:2"><interface-ref name="GeneralIO" ref="0x408641f0" scoped=""/></type-interface>
+      <instance>
+        <interfacedef-ref nicename="tos.interfaces.GeneralIO" qname="GeneralIO"/>
+      </instance>
+      <interface-functions>
+        <function-ref name="makeInput" ref="0x408643c8" scoped=""/>
+        <function-ref name="isInput" ref="0x408644a8" scoped=""/>
+        <function-ref name="toggle" ref="0x40864588" scoped=""/>
+        <function-ref name="isOutput" ref="0x40864668" scoped=""/>
+        <function-ref name="get" ref="0x40864748" scoped=""/>
+        <function-ref name="makeOutput" ref="0x40864828" scoped=""/>
+        <function-ref name="set" ref="0x40864908" scoped=""/>
+        <function-ref name="clr" ref="0x408649e8" scoped=""/>
+      </interface-functions>
+    </interface><interface loc="44:/home/jumbo/jamal/project/CoAP/tinyos-release/tos/chips/msp430/pins/Msp430GpioC.nc" name="HplGeneralIO" provided="0" ref="0x40864b68">
+      <component-ref nicename="tos.chips.msp430.pins.Msp430GpioC" qname="PlatformLedsC.Led0Impl"/>
+      <type-interface alignment="I:2" size="I:2"><interface-ref name="HplGeneralIO" ref="0x40864b68" scoped=""/></type-interface>
+      <instance>
+        <interfacedef-ref nicename="tos.chips.msp430.pins.HplMsp430GeneralIO" qname="HplMsp430GeneralIO"/>
+      </instance>
+      <interface-functions>
+        <function-ref name="makeInput" ref="0x40864d40" scoped=""/>
+        <function-ref name="isInput" ref="0x40864e20" scoped=""/>
+        <function-ref name="setResistor" ref="0x40864f00" scoped=""/>
+        <function-ref name="toggle" ref="0x40863010" scoped=""/>
+        <function-ref name="isOutput" ref="0x408630f0" scoped=""/>
+        <function-ref name="getResistor" ref="0x408631d0" scoped=""/>
+        <function-ref name="makeOutput" ref="0x408632b0" scoped=""/>
+        <function-ref name="get" ref="0x40863390" scoped=""/>
+        <function-ref name="selectIOFunc" ref="0x40863470" scoped=""/>
+        <function-ref name="getRaw" ref="0x40863550" scoped=""/>
+        <function-ref name="set" ref="0x40863630" scoped=""/>
+        <function-ref name="selectModuleFunc" ref="0x40863710" scoped=""/>
+        <function-ref name="isIOFunc" ref="0x408637f0" scoped=""/>
+        <function-ref name="isModuleFunc" ref="0x40863950" scoped=""/>
+        <function-ref name="clr" ref="0x40863a30" scoped=""/>
+      </interface-functions>
+    </interface><interface loc="43:/home/jumbo/jamal/project/CoAP/tinyos-release/tos/chips/msp430/pins/Msp430GpioC.nc" name="GeneralIO" provided="1" ref="0x40859990">
+      <component-ref nicename="tos.chips.msp430.pins.Msp430GpioC" qname="PlatformLedsC.Led1Impl"/>
+      <type-interface alignment="I:2" size="I:2"><interface-ref name="GeneralIO" ref="0x40859990" scoped=""/></type-interface>
+      <instance>
+        <interfacedef-ref nicename="tos.interfaces.GeneralIO" qname="GeneralIO"/>
+      </instance>
+      <interface-functions>
+        <function-ref name="makeInput" ref="0x40859b68" scoped=""/>
+        <function-ref name="isInput" ref="0x40859c48" scoped=""/>
+        <function-ref name="toggle" ref="0x40859d28" scoped=""/>
+        <function-ref name="isOutput" ref="0x40859e08" scoped=""/>
+        <function-ref name="get" ref="0x40859ee8" scoped=""/>
+        <function-ref name="makeOutput" ref="0x40872010" scoped=""/>
+        <function-ref name="set" ref="0x408720f0" scoped=""/>
+        <function-ref name="clr" ref="0x408721d0" scoped=""/>
+      </interface-functions>
+    </interface><interface loc="7:/home/jumbo/jamal/project/CoAP/tinyos-release/tos/platforms/telosa/PlatformP.nc" name="LedsInit" provided="0" ref="0x40617410">
+      <component-ref nicename="tos.platforms.telosa.PlatformP" qname="PlatformP"/>
+      <type-interface alignment="I:2" size="I:2"><interface-ref name="LedsInit" ref="0x40617410" scoped=""/></type-interface>
+      <instance>
+        <interfacedef-ref nicename="tos.interfaces.Init" qname="Init"/>
+      </instance>
+      <interface-functions>
+        <function-ref name="init" ref="0x406175e8" scoped=""/>
+      </interface-functions>
+    </interface><interface loc="99:/home/jumbo/jamal/project/CoAP/tinyos-release/tos/chips/msp430/pins/HplMsp430GeneralIOC.nc" name="Port56" provided="1" ref="0x4076c178">
+      <component-ref nicename="tos.chips.msp430.pins.HplMsp430GeneralIOC" qname="HplMsp430GeneralIOC"/>
+      <type-interface alignment="I:2" size="I:2"><interface-ref name="Port56" ref="0x4076c178" scoped=""/></type-interface>
+      <instance>
+        <interfacedef-ref nicename="tos.chips.msp430.pins.HplMsp430GeneralIO" qname="HplMsp430GeneralIO"/>
+      </instance>
+      <interface-functions>
+        <function-ref name="makeInput" ref="0x4076c350" scoped=""/>
+        <function-ref name="isInput" ref="0x4076c430" scoped=""/>
+        <function-ref name="setResistor" ref="0x4076c510" scoped=""/>
+        <function-ref name="toggle" ref="0x4076c5f0" scoped=""/>
+        <function-ref name="isOutput" ref="0x4076c6d0" scoped=""/>
+        <function-ref name="getResistor" ref="0x4076c7b0" scoped=""/>
+        <function-ref name="makeOutput" ref="0x4076c890" scoped=""/>
+        <function-ref name="get" ref="0x4076c970" scoped=""/>
+        <function-ref name="selectIOFunc" ref="0x4076ca50" scoped=""/>
+        <function-ref name="getRaw" ref="0x4076cb30" scoped=""/>
+        <function-ref name="set" ref="0x4076cc10" scoped=""/>
+        <function-ref name="selectModuleFunc" ref="0x4076ccf0" scoped=""/>
+        <function-ref name="isIOFunc" ref="0x4076cdd0" scoped=""/>
+        <function-ref name="isModuleFunc" ref="0x4076b010" scoped=""/>
+        <function-ref name="clr" ref="0x4076b0f0" scoped=""/>
+      </interface-functions>
+    </interface><interface loc="44:/home/jumbo/jamal/project/CoAP/tinyos-release/tos/chips/msp430/pins/Msp430GpioC.nc" name="HplGeneralIO" provided="0" ref="0x40870b20">
+      <component-ref nicename="tos.chips.msp430.pins.Msp430GpioC" qname="PlatformLedsC.Led2Impl"/>
+      <type-interface alignment="I:2" size="I:2"><interface-ref name="HplGeneralIO" ref="0x40870b20" scoped=""/></type-interface>
+      <instance>
+        <interfacedef-ref nicename="tos.chips.msp430.pins.HplMsp430GeneralIO" qname="HplMsp430GeneralIO"/>
+      </instance>
+      <interface-functions>
+        <function-ref name="makeInput" ref="0x40870cf8" scoped=""/>
+        <function-ref name="isInput" ref="0x40870dd8" scoped=""/>
+        <function-ref name="setResistor" ref="0x40870eb8" scoped=""/>
+        <function-ref name="toggle" ref="0x4086f010" scoped=""/>
+        <function-ref name="isOutput" ref="0x4086f0f0" scoped=""/>
+        <function-ref name="getResistor" ref="0x4086f1d0" scoped=""/>
+        <function-ref name="makeOutput" ref="0x4086f2b0" scoped=""/>
+        <function-ref name="get" ref="0x4086f390" scoped=""/>
+        <function-ref name="selectIOFunc" ref="0x4086f470" scoped=""/>
+        <function-ref name="getRaw" ref="0x4086f550" scoped=""/>
+        <function-ref name="set" ref="0x4086f630" scoped=""/>
+        <function-ref name="selectModuleFunc" ref="0x4086f710" scoped=""/>
+        <function-ref name="isIOFunc" ref="0x4086f7f0" scoped=""/>
+        <function-ref name="isModuleFunc" ref="0x4086f950" scoped=""/>
+        <function-ref name="clr" ref="0x4086fa30" scoped=""/>
+      </interface-functions>
+    </interface><interface loc="44:/home/jumbo/jamal/project/CoAP/tinyos-release/tos/chips/msp430/pins/Msp430GpioC.nc" name="HplGeneralIO" provided="0" ref="0x40872350">
+      <component-ref nicename="tos.chips.msp430.pins.Msp430GpioC" qname="PlatformLedsC.Led1Impl"/>
+      <type-interface alignment="I:2" size="I:2"><interface-ref name="HplGeneralIO" ref="0x40872350" scoped=""/></type-interface>
+      <instance>
+        <interfacedef-ref nicename="tos.chips.msp430.pins.HplMsp430GeneralIO" qname="HplMsp430GeneralIO"/>
+      </instance>
+      <interface-functions>
+        <function-ref name="makeInput" ref="0x40872528" scoped=""/>
+        <function-ref name="isInput" ref="0x40872608" scoped=""/>
+        <function-ref name="setResistor" ref="0x408726e8" scoped=""/>
+        <function-ref name="toggle" ref="0x408727c8" scoped=""/>
+        <function-ref name="isOutput" ref="0x408728a8" scoped=""/>
+        <function-ref name="getResistor" ref="0x40872988" scoped=""/>
+        <function-ref name="makeOutput" ref="0x40872a68" scoped=""/>
+        <function-ref name="get" ref="0x40872b48" scoped=""/>
+        <function-ref name="selectIOFunc" ref="0x40872c28" scoped=""/>
+        <function-ref name="getRaw" ref="0x40872d08" scoped=""/>
+        <function-ref name="set" ref="0x40872de8" scoped=""/>
+        <function-ref name="selectModuleFunc" ref="0x40872ec8" scoped=""/>
+        <function-ref name="isIOFunc" ref="0x40871010" scoped=""/>
+        <function-ref name="isModuleFunc" ref="0x40871170" scoped=""/>
+        <function-ref name="clr" ref="0x40871250" scoped=""/>
+      </interface-functions>
+    </interface><interface loc="97:/home/jumbo/jamal/project/CoAP/tinyos-release/tos/chips/msp430/pins/HplMsp430GeneralIOC.nc" name="Port54" provided="1" ref="0x4076fd88">
+      <component-ref nicename="tos.chips.msp430.pins.HplMsp430GeneralIOC" qname="HplMsp430GeneralIOC"/>
+      <type-interface alignment="I:2" size="I:2"><interface-ref name="Port54" ref="0x4076fd88" scoped=""/></type-interface>
+      <instance>
+        <interfacedef-ref nicename="tos.chips.msp430.pins.HplMsp430GeneralIO" qname="HplMsp430GeneralIO"/>
+      </instance>
+      <interface-functions>
+        <function-ref name="makeInput" ref="0x4076e010" scoped=""/>
+        <function-ref name="isInput" ref="0x4076e0f0" scoped=""/>
+        <function-ref name="setResistor" ref="0x4076e1d0" scoped=""/>
+        <function-ref name="toggle" ref="0x4076e2b0" scoped=""/>
+        <function-ref name="isOutput" ref="0x4076e390" scoped=""/>
+        <function-ref name="getResistor" ref="0x4076e470" scoped=""/>
+        <function-ref name="makeOutput" ref="0x4076e550" scoped=""/>
+        <function-ref name="get" ref="0x4076e630" scoped=""/>
+        <function-ref name="selectIOFunc" ref="0x4076e710" scoped=""/>
+        <function-ref name="getRaw" ref="0x4076e7f0" scoped=""/>
+        <function-ref name="set" ref="0x4076e8d0" scoped=""/>
+        <function-ref name="selectModuleFunc" ref="0x4076e9b0" scoped=""/>
+        <function-ref name="isIOFunc" ref="0x4076ea90" scoped=""/>
+        <function-ref name="isModuleFunc" ref="0x4076ebf0" scoped=""/>
+        <function-ref name="clr" ref="0x4076ecd0" scoped=""/>
+      </interface-functions>
+    </interface><interface loc="43:/home/jumbo/jamal/project/CoAP/tinyos-release/tos/chips/msp430/pins/Msp430GpioC.nc" name="GeneralIO" provided="1" ref="0x408701a8">
+      <component-ref nicename="tos.chips.msp430.pins.Msp430GpioC" qname="PlatformLedsC.Led2Impl"/>
+      <type-interface alignment="I:2" size="I:2"><interface-ref name="GeneralIO" ref="0x408701a8" scoped=""/></type-interface>
+      <instance>
+        <interfacedef-ref nicename="tos.interfaces.GeneralIO" qname="GeneralIO"/>
+      </instance>
+      <interface-functions>
+        <function-ref name="makeInput" ref="0x40870380" scoped=""/>
+        <function-ref name="isInput" ref="0x40870460" scoped=""/>
+        <function-ref name="toggle" ref="0x40870540" scoped=""/>
+        <function-ref name="isOutput" ref="0x40870620" scoped=""/>
+        <function-ref name="get" ref="0x40870700" scoped=""/>
+        <function-ref name="makeOutput" ref="0x408707e0" scoped=""/>
+        <function-ref name="set" ref="0x408708c0" scoped=""/>
+        <function-ref name="clr" ref="0x408709a0" scoped=""/>
+      </interface-functions>
+    </interface><component loc="42(PlatformLedsC.Led0Impl):/home/jumbo/jamal/project/CoAP/tinyos-release/tos/chips/msp430/pins/Msp430GpioC.nc" nicename="tos.chips.msp430.pins.Msp430GpioC" qname="PlatformLedsC.Led0Impl">
+      <documentation loc="33:/home/jumbo/jamal/project/CoAP/tinyos-release/tos/chips/msp430/pins/Msp430GpioC.nc">
+        <short>
+ Implementation of the general-purpose I/O abstraction
+ for the TI MSP430 microcontroller.</short>
+        <long>
+ Implementation of the general-purpose I/O abstraction
+ for the TI MSP430 microcontroller.
+
+ @author Joe Polastre
+ @see  Please refer to TEP 117 for more information about this component and its
+          intended use.
+</long>
+      </documentation>
+      <instance number="0">
+        <component-ref nicename="tos.chips.msp430.pins.Msp430GpioC" qname="Msp430GpioC"/>
+      </instance>
+      <module/>
+    </component><component loc="3:/home/jumbo/jamal/project/CoAP/tinyos-release/tos/platforms/telosa/PlatformP.nc" nicename="tos.platforms.telosa.PlatformP" qname="PlatformP" safe="">
+      <module/>
+    </component><component loc="42(PlatformLedsC.Led1Impl):/home/jumbo/jamal/project/CoAP/tinyos-release/tos/chips/msp430/pins/Msp430GpioC.nc" nicename="tos.chips.msp430.pins.Msp430GpioC" qname="PlatformLedsC.Led1Impl">
+      <documentation loc="33:/home/jumbo/jamal/project/CoAP/tinyos-release/tos/chips/msp430/pins/Msp430GpioC.nc">
+        <short>
+ Implementation of the general-purpose I/O abstraction
+ for the TI MSP430 microcontroller.</short>
+        <long>
+ Implementation of the general-purpose I/O abstraction
+ for the TI MSP430 microcontroller.
+
+ @author Joe Polastre
+ @see  Please refer to TEP 117 for more information about this component and its
+          intended use.
+</long>
+      </documentation>
+      <instance number="1">
+        <component-ref nicename="tos.chips.msp430.pins.Msp430GpioC" qname="Msp430GpioC"/>
+      </instance>
+      <module/>
+    </component><component loc="45:/home/jumbo/jamal/project/CoAP/tinyos-release/tos/chips/msp430/pins/HplMsp430GeneralIOC.nc" nicename="tos.chips.msp430.pins.HplMsp430GeneralIOC" qname="HplMsp430GeneralIOC">
+      <documentation loc="35:/home/jumbo/jamal/project/CoAP/tinyos-release/tos/chips/msp430/pins/HplMsp430GeneralIOC.nc">
+        <short>
+ HPL for the TI MSP430 family of microprocessors.</short>
+        <long>
+ HPL for the TI MSP430 family of microprocessors. This provides an
+ abstraction for general-purpose I/O.
+
+ @author Joe Polastre
+ @author Xavier Orduna &lt;xorduna@dexmatech.com&gt;
+ @author Peter A. Bigot &lt;pab@peoplepowerco.com&gt;
+ @author Eric B. Decker &lt;cire831@gmail.com&gt;
+</long>
+      </documentation>
+      <configuration/>
+      <wiring>
+        <wire loc="442:/home/jumbo/jamal/project/CoAP/tinyos-release/tos/chips/msp430/pins/HplMsp430GeneralIOC.nc">
+          <from><interface-ref name="Port14" ref="0x4073b4c8" scoped=""/></from>
+          <to><interface-ref name="IO" ref="0x407af5c8" scoped=""/></to>
+        </wire>
+        <wire loc="455:/home/jumbo/jamal/project/CoAP/tinyos-release/tos/chips/msp430/pins/HplMsp430GeneralIOC.nc">
+          <from><interface-ref name="Port26" ref="0x40746768" scoped=""/></from>
+          <to><interface-ref name="IO" ref="0x407c55c8" scoped=""/></to>
+        </wire>
+        <wire loc="531:/home/jumbo/jamal/project/CoAP/tinyos-release/tos/chips/msp430/pins/HplMsp430GeneralIOC.nc">
+          <from><interface-ref name="SDA" ref="0x40775908" scoped=""/></from>
+          <to><interface-ref name="IO" ref="0x407d6d68" scoped=""/></to>
+        </wire>
+        <wire loc="551:/home/jumbo/jamal/project/CoAP/tinyos-release/tos/chips/msp430/pins/HplMsp430GeneralIOC.nc">
+          <from><interface-ref name="ADC6" ref="0x4078f598" scoped=""/></from>
+          <to><interface-ref name="IO" ref="0x4081f5c8" scoped=""/></to>
+        </wire>
+        <wire loc="532:/home/jumbo/jamal/project/CoAP/tinyos-release/tos/chips/msp430/pins/HplMsp430GeneralIOC.nc">
+          <from><interface-ref name="SOMI0" ref="0x40774ae0" scoped=""/></from>
+          <to><interface-ref name="IO" ref="0x407d35c8" scoped=""/></to>
+        </wire>
+        <wire loc="460:/home/jumbo/jamal/project/CoAP/tinyos-release/tos/chips/msp430/pins/HplMsp430GeneralIOC.nc">
+          <from><interface-ref name="Port30" ref="0x4075aae8" scoped=""/></from>
+          <to><interface-ref name="IO" ref="0x407d85c8" scoped=""/></to>
+        </wire>
+        <wire loc="473:/home/jumbo/jamal/project/CoAP/tinyos-release/tos/chips/msp430/pins/HplMsp430GeneralIOC.nc">
+          <from><interface-ref name="Port42" ref="0x40765ca8" scoped=""/></from>
+          <to><interface-ref name="IO" ref="0x407ee5c8" scoped=""/></to>
+        </wire>
+        <wire loc="486:/home/jumbo/jamal/project/CoAP/tinyos-release/tos/chips/msp430/pins/HplMsp430GeneralIOC.nc">
+          <from><interface-ref name="Port54" ref="0x4076fd88" scoped=""/></from>
+          <to><interface-ref name="IO" ref="0x408055c8" scoped=""/></to>
+        </wire>
+        <wire loc="497:/home/jumbo/jamal/project/CoAP/tinyos-release/tos/chips/msp430/pins/HplMsp430GeneralIOC.nc">
+          <from><interface-ref name="Port64" ref="0x4077cbc8" scoped=""/></from>
+          <to><interface-ref name="IO" ref="0x408255c8" scoped=""/></to>
+        </wire>
+        <wire loc="535:/home/jumbo/jamal/project/CoAP/tinyos-release/tos/chips/msp430/pins/HplMsp430GeneralIOC.nc">
+          <from><interface-ref name="UTXD0" ref="0x40787010" scoped=""/></from>
+          <to><interface-ref name="IO" ref="0x407e55c8" scoped=""/></to>
+        </wire>
+        <wire loc="545:/home/jumbo/jamal/project/CoAP/tinyos-release/tos/chips/msp430/pins/HplMsp430GeneralIOC.nc">
+          <from><interface-ref name="ADC0" ref="0x4077fc98" scoped=""/></from>
+          <to><interface-ref name="IO" ref="0x408155c8" scoped=""/></to>
+        </wire>
+        <wire loc="557:/home/jumbo/jamal/project/CoAP/tinyos-release/tos/chips/msp430/pins/HplMsp430GeneralIOC.nc">
+          <from><interface-ref name="SVSIN" ref="0x4078bca0" scoped=""/></from>
+          <to><interface-ref name="IO" ref="0x4081dd68" scoped=""/></to>
+        </wire>
+        <wire loc="445:/home/jumbo/jamal/project/CoAP/tinyos-release/tos/chips/msp430/pins/HplMsp430GeneralIOC.nc">
+          <from><interface-ref name="Port17" ref="0x4074ea08" scoped=""/></from>
+          <to><interface-ref name="IO" ref="0x407bfd68" scoped=""/></to>
+        </wire>
+        <wire loc="536:/home/jumbo/jamal/project/CoAP/tinyos-release/tos/chips/msp430/pins/HplMsp430GeneralIOC.nc">
+          <from><interface-ref name="URXD0" ref="0x40786170" scoped=""/></from>
+          <to><interface-ref name="IO" ref="0x407e3d68" scoped=""/></to>
+        </wire>
+        <wire loc="450:/home/jumbo/jamal/project/CoAP/tinyos-release/tos/chips/msp430/pins/HplMsp430GeneralIOC.nc">
+          <from><interface-ref name="Port21" ref="0x4074cd88" scoped=""/></from>
+          <to><interface-ref name="IO" ref="0x407bad68" scoped=""/></to>
+        </wire>
+        <wire loc="463:/home/jumbo/jamal/project/CoAP/tinyos-release/tos/chips/msp430/pins/HplMsp430GeneralIOC.nc">
+          <from><interface-ref name="Port33" ref="0x40756010" scoped=""/></from>
+          <to><interface-ref name="IO" ref="0x407e8d68" scoped=""/></to>
+        </wire>
+        <wire loc="476:/home/jumbo/jamal/project/CoAP/tinyos-release/tos/chips/msp430/pins/HplMsp430GeneralIOC.nc">
+          <from><interface-ref name="Port45" ref="0x40760178" scoped=""/></from>
+          <to><interface-ref name="IO" ref="0x407ffd68" scoped=""/></to>
+        </wire>
+        <wire loc="489:/home/jumbo/jamal/project/CoAP/tinyos-release/tos/chips/msp430/pins/HplMsp430GeneralIOC.nc">
+          <from><interface-ref name="Port57" ref="0x4076b368" scoped=""/></from>
+          <to><interface-ref name="IO" ref="0x40818d68" scoped=""/></to>
+        </wire>
+        <wire loc="500:/home/jumbo/jamal/project/CoAP/tinyos-release/tos/chips/msp430/pins/HplMsp430GeneralIOC.nc">
+          <from><interface-ref name="Port67" ref="0x40778178" scoped=""/></from>
+          <to><interface-ref name="IO" ref="0x4081dd68" scoped=""/></to>
+        </wire>
+        <wire loc="440:/home/jumbo/jamal/project/CoAP/tinyos-release/tos/chips/msp430/pins/HplMsp430GeneralIOC.nc">
+          <from><interface-ref name="Port12" ref="0x4073d178" scoped=""/></from>
+          <to><interface-ref name="IO" ref="0x407b45f8" scoped=""/></to>
+        </wire>
+        <wire loc="453:/home/jumbo/jamal/project/CoAP/tinyos-release/tos/chips/msp430/pins/HplMsp430GeneralIOC.nc">
+          <from><interface-ref name="Port24" ref="0x40748368" scoped=""/></from>
+          <to><interface-ref name="IO" ref="0x407ca6f8" scoped=""/></to>
+        </wire>
+        <wire loc="466:/home/jumbo/jamal/project/CoAP/tinyos-release/tos/chips/msp430/pins/HplMsp430GeneralIOC.nc">
+          <from><interface-ref name="Port36" ref="0x407534c8" scoped=""/></from>
+          <to><interface-ref name="IO" ref="0x407e05c8" scoped=""/></to>
+        </wire>
+        <wire loc="530:/home/jumbo/jamal/project/CoAP/tinyos-release/tos/chips/msp430/pins/HplMsp430GeneralIOC.nc">
+          <from><interface-ref name="SIMO0" ref="0x40776760" scoped=""/></from>
+          <to><interface-ref name="IO" ref="0x407d6d68" scoped=""/></to>
+        </wire>
+        <wire loc="548:/home/jumbo/jamal/project/CoAP/tinyos-release/tos/chips/msp430/pins/HplMsp430GeneralIOC.nc">
+          <from><interface-ref name="ADC3" ref="0x40792168" scoped=""/></from>
+          <to><interface-ref name="IO" ref="0x4080ed68" scoped=""/></to>
+        </wire>
+        <wire loc="555:/home/jumbo/jamal/project/CoAP/tinyos-release/tos/chips/msp430/pins/HplMsp430GeneralIOC.nc">
+          <from><interface-ref name="DAC1" ref="0x4078cad8" scoped=""/></from>
+          <to><interface-ref name="IO" ref="0x4081dd68" scoped=""/></to>
+        </wire>
+        <wire loc="541:/home/jumbo/jamal/project/CoAP/tinyos-release/tos/chips/msp430/pins/HplMsp430GeneralIOC.nc">
+          <from><interface-ref name="UCLK1" ref="0x40782760" scoped=""/></from>
+          <to><interface-ref name="IO" ref="0x40808d68" scoped=""/></to>
+        </wire>
+        <wire loc="471:/home/jumbo/jamal/project/CoAP/tinyos-release/tos/chips/msp430/pins/HplMsp430GeneralIOC.nc">
+          <from><interface-ref name="Port40" ref="0x40751848" scoped=""/></from>
+          <to><interface-ref name="IO" ref="0x407f36f8" scoped=""/></to>
+        </wire>
+        <wire loc="484:/home/jumbo/jamal/project/CoAP/tinyos-release/tos/chips/msp430/pins/HplMsp430GeneralIOC.nc">
+          <from><interface-ref name="Port52" ref="0x40771a08" scoped=""/></from>
+          <to><interface-ref name="IO" ref="0x4080a5c8" scoped=""/></to>
+        </wire>
+        <wire loc="495:/home/jumbo/jamal/project/CoAP/tinyos-release/tos/chips/msp430/pins/HplMsp430GeneralIOC.nc">
+          <from><interface-ref name="Port62" ref="0x40768848" scoped=""/></from>
+          <to><interface-ref name="IO" ref="0x408105c8" scoped=""/></to>
+        </wire>
+        <wire loc="549:/home/jumbo/jamal/project/CoAP/tinyos-release/tos/chips/msp430/pins/HplMsp430GeneralIOC.nc">
+          <from><interface-ref name="ADC4" ref="0x40791280" scoped=""/></from>
+          <to><interface-ref name="IO" ref="0x408255c8" scoped=""/></to>
+        </wire>
+        <wire loc="538:/home/jumbo/jamal/project/CoAP/tinyos-release/tos/chips/msp430/pins/HplMsp430GeneralIOC.nc">
+          <from><interface-ref name="STE1" ref="0x40785280" scoped=""/></from>
+          <to><interface-ref name="IO" ref="0x407f65c8" scoped=""/></to>
+        </wire>
+        <wire loc="443:/home/jumbo/jamal/project/CoAP/tinyos-release/tos/chips/msp430/pins/HplMsp430GeneralIOC.nc">
+          <from><interface-ref name="Port15" ref="0x40750688" scoped=""/></from>
+          <to><interface-ref name="IO" ref="0x407add68" scoped=""/></to>
+        </wire>
+        <wire loc="456:/home/jumbo/jamal/project/CoAP/tinyos-release/tos/chips/msp430/pins/HplMsp430GeneralIOC.nc">
+          <from><interface-ref name="Port27" ref="0x4075b928" scoped=""/></from>
+          <to><interface-ref name="IO" ref="0x407dbd68" scoped=""/></to>
+        </wire>
+        <wire loc="493:/home/jumbo/jamal/project/CoAP/tinyos-release/tos/chips/msp430/pins/HplMsp430GeneralIOC.nc">
+          <from><interface-ref name="Port60" ref="0x4076a4c8" scoped=""/></from>
+          <to><interface-ref name="IO" ref="0x408155c8" scoped=""/></to>
+        </wire>
+        <wire loc="461:/home/jumbo/jamal/project/CoAP/tinyos-release/tos/chips/msp430/pins/HplMsp430GeneralIOC.nc">
+          <from><interface-ref name="Port31" ref="0x40759ca8" scoped=""/></from>
+          <to><interface-ref name="IO" ref="0x407d6d68" scoped=""/></to>
+        </wire>
+        <wire loc="474:/home/jumbo/jamal/project/CoAP/tinyos-release/tos/chips/msp430/pins/HplMsp430GeneralIOC.nc">
+          <from><interface-ref name="Port43" ref="0x40763e68" scoped=""/></from>
+          <to><interface-ref name="IO" ref="0x407ecd68" scoped=""/></to>
+        </wire>
+        <wire loc="487:/home/jumbo/jamal/project/CoAP/tinyos-release/tos/chips/msp430/pins/HplMsp430GeneralIOC.nc">
+          <from><interface-ref name="Port55" ref="0x4076d010" scoped=""/></from>
+          <to><interface-ref name="IO" ref="0x40803d68" scoped=""/></to>
+        </wire>
+        <wire loc="498:/home/jumbo/jamal/project/CoAP/tinyos-release/tos/chips/msp430/pins/HplMsp430GeneralIOC.nc">
+          <from><interface-ref name="Port65" ref="0x4077bd88" scoped=""/></from>
+          <to><interface-ref name="IO" ref="0x40822d68" scoped=""/></to>
+        </wire>
+        <wire loc="540:/home/jumbo/jamal/project/CoAP/tinyos-release/tos/chips/msp430/pins/HplMsp430GeneralIOC.nc">
+          <from><interface-ref name="SOMI1" ref="0x407835a0" scoped=""/></from>
+          <to><interface-ref name="IO" ref="0x4080a5c8" scoped=""/></to>
+        </wire>
+        <wire loc="438:/home/jumbo/jamal/project/CoAP/tinyos-release/tos/chips/msp430/pins/HplMsp430GeneralIOC.nc">
+          <from><interface-ref name="Port10" ref="0x4073ee50" scoped=""/></from>
+          <to><interface-ref name="IO" ref="0x4079f7c0" scoped=""/></to>
+        </wire>
+        <wire loc="451:/home/jumbo/jamal/project/CoAP/tinyos-release/tos/chips/msp430/pins/HplMsp430GeneralIOC.nc">
+          <from><interface-ref name="Port22" ref="0x4074a010" scoped=""/></from>
+          <to><interface-ref name="IO" ref="0x407cf5c8" scoped=""/></to>
+        </wire>
+        <wire loc="464:/home/jumbo/jamal/project/CoAP/tinyos-release/tos/chips/msp430/pins/HplMsp430GeneralIOC.nc">
+          <from><interface-ref name="Port34" ref="0x40755178" scoped=""/></from>
+          <to><interface-ref name="IO" ref="0x407e55c8" scoped=""/></to>
+        </wire>
+        <wire loc="477:/home/jumbo/jamal/project/CoAP/tinyos-release/tos/chips/msp430/pins/HplMsp430GeneralIOC.nc">
+          <from><interface-ref name="Port46" ref="0x4075f368" scoped=""/></from>
+          <to><interface-ref name="IO" ref="0x407fc5c8" scoped=""/></to>
+        </wire>
+        <wire loc="542:/home/jumbo/jamal/project/CoAP/tinyos-release/tos/chips/msp430/pins/HplMsp430GeneralIOC.nc">
+          <from><interface-ref name="UTXD1" ref="0x40781920" scoped=""/></from>
+          <to><interface-ref name="IO" ref="0x407e05c8" scoped=""/></to>
+        </wire>
+        <wire loc="546:/home/jumbo/jamal/project/CoAP/tinyos-release/tos/chips/msp430/pins/HplMsp430GeneralIOC.nc">
+          <from><interface-ref name="ADC1" ref="0x4077ee58" scoped=""/></from>
+          <to><interface-ref name="IO" ref="0x40813d68" scoped=""/></to>
+        </wire>
+        <wire loc="552:/home/jumbo/jamal/project/CoAP/tinyos-release/tos/chips/msp430/pins/HplMsp430GeneralIOC.nc">
+          <from><interface-ref name="ADC7" ref="0x4078e758" scoped=""/></from>
+          <to><interface-ref name="IO" ref="0x4081dd68" scoped=""/></to>
+        </wire>
+        <wire loc="482:/home/jumbo/jamal/project/CoAP/tinyos-release/tos/chips/msp430/pins/HplMsp430GeneralIOC.nc">
+          <from><interface-ref name="Port50" ref="0x4075d688" scoped=""/></from>
+          <to><interface-ref name="IO" ref="0x407f65c8" scoped=""/></to>
+        </wire>
+        <wire loc="543:/home/jumbo/jamal/project/CoAP/tinyos-release/tos/chips/msp430/pins/HplMsp430GeneralIOC.nc">
+          <from><interface-ref name="URXD1" ref="0x40780ae0" scoped=""/></from>
+          <to><interface-ref name="IO" ref="0x407ded68" scoped=""/></to>
+        </wire>
+        <wire loc="441:/home/jumbo/jamal/project/CoAP/tinyos-release/tos/chips/msp430/pins/HplMsp430GeneralIOC.nc">
+          <from><interface-ref name="Port13" ref="0x4073c368" scoped=""/></from>
+          <to><interface-ref name="IO" ref="0x407b2d68" scoped=""/></to>
+        </wire>
+        <wire loc="454:/home/jumbo/jamal/project/CoAP/tinyos-release/tos/chips/msp430/pins/HplMsp430GeneralIOC.nc">
+          <from><interface-ref name="Port25" ref="0x407475a8" scoped=""/></from>
+          <to><interface-ref name="IO" ref="0x407c8df8" scoped=""/></to>
+        </wire>
+        <wire loc="467:/home/jumbo/jamal/project/CoAP/tinyos-release/tos/chips/msp430/pins/HplMsp430GeneralIOC.nc">
+          <from><interface-ref name="Port37" ref="0x40752688" scoped=""/></from>
+          <to><interface-ref name="IO" ref="0x407ded68" scoped=""/></to>
+        </wire>
+        <wire loc="539:/home/jumbo/jamal/project/CoAP/tinyos-release/tos/chips/msp430/pins/HplMsp430GeneralIOC.nc">
+          <from><interface-ref name="SIMO1" ref="0x407843e0" scoped=""/></from>
+          <to><interface-ref name="IO" ref="0x4080dd68" scoped=""/></to>
+        </wire>
+        <wire loc="550:/home/jumbo/jamal/project/CoAP/tinyos-release/tos/chips/msp430/pins/HplMsp430GeneralIOC.nc">
+          <from><interface-ref name="ADC5" ref="0x407903d8" scoped=""/></from>
+          <to><interface-ref name="IO" ref="0x40822d68" scoped=""/></to>
+        </wire>
+        <wire loc="472:/home/jumbo/jamal/project/CoAP/tinyos-release/tos/chips/msp430/pins/HplMsp430GeneralIOC.nc">
+          <from><interface-ref name="Port41" ref="0x40766ae8" scoped=""/></from>
+          <to><interface-ref name="IO" ref="0x407f1df8" scoped=""/></to>
+        </wire>
+        <wire loc="485:/home/jumbo/jamal/project/CoAP/tinyos-release/tos/chips/msp430/pins/HplMsp430GeneralIOC.nc">
+          <from><interface-ref name="Port53" ref="0x40770bc8" scoped=""/></from>
+          <to><interface-ref name="IO" ref="0x40808d68" scoped=""/></to>
+        </wire>
+        <wire loc="496:/home/jumbo/jamal/project/CoAP/tinyos-release/tos/chips/msp430/pins/HplMsp430GeneralIOC.nc">
+          <from><interface-ref name="Port63" ref="0x40767a08" scoped=""/></from>
+          <to><interface-ref name="IO" ref="0x4080ed68" scoped=""/></to>
+        </wire>
+        <wire loc="444:/home/jumbo/jamal/project/CoAP/tinyos-release/tos/chips/msp430/pins/HplMsp430GeneralIOC.nc">
+          <from><interface-ref name="Port16" ref="0x4074f848" scoped=""/></from>
+          <to><interface-ref name="IO" ref="0x407c15c8" scoped=""/></to>
+        </wire>
+        <wire loc="494:/home/jumbo/jamal/project/CoAP/tinyos-release/tos/chips/msp430/pins/HplMsp430GeneralIOC.nc">
+          <from><interface-ref name="Port61" ref="0x40769688" scoped=""/></from>
+          <to><interface-ref name="IO" ref="0x40813d68" scoped=""/></to>
+        </wire>
+        <wire loc="449:/home/jumbo/jamal/project/CoAP/tinyos-release/tos/chips/msp430/pins/HplMsp430GeneralIOC.nc">
+          <from><interface-ref name="Port20" ref="0x4074dbc8" scoped=""/></from>
+          <to><interface-ref name="IO" ref="0x407bc5c8" scoped=""/></to>
+        </wire>
+        <wire loc="462:/home/jumbo/jamal/project/CoAP/tinyos-release/tos/chips/msp430/pins/HplMsp430GeneralIOC.nc">
+          <from><interface-ref name="Port32" ref="0x40758e68" scoped=""/></from>
+          <to><interface-ref name="IO" ref="0x407d35c8" scoped=""/></to>
+        </wire>
+        <wire loc="475:/home/jumbo/jamal/project/CoAP/tinyos-release/tos/chips/msp430/pins/HplMsp430GeneralIOC.nc">
+          <from><interface-ref name="Port44" ref="0x40761010" scoped=""/></from>
+          <to><interface-ref name="IO" ref="0x407e95c8" scoped=""/></to>
+        </wire>
+        <wire loc="488:/home/jumbo/jamal/project/CoAP/tinyos-release/tos/chips/msp430/pins/HplMsp430GeneralIOC.nc">
+          <from><interface-ref name="Port56" ref="0x4076c178" scoped=""/></from>
+          <to><interface-ref name="IO" ref="0x4081a5c8" scoped=""/></to>
+        </wire>
+        <wire loc="499:/home/jumbo/jamal/project/CoAP/tinyos-release/tos/chips/msp430/pins/HplMsp430GeneralIOC.nc">
+          <from><interface-ref name="Port66" ref="0x40779010" scoped=""/></from>
+          <to><interface-ref name="IO" ref="0x4081f5c8" scoped=""/></to>
+        </wire>
+        <wire loc="439:/home/jumbo/jamal/project/CoAP/tinyos-release/tos/chips/msp430/pins/HplMsp430GeneralIOC.nc">
+          <from><interface-ref name="Port11" ref="0x40743010" scoped=""/></from>
+          <to><interface-ref name="IO" ref="0x407b7ee8" scoped=""/></to>
+        </wire>
+        <wire loc="452:/home/jumbo/jamal/project/CoAP/tinyos-release/tos/chips/msp430/pins/HplMsp430GeneralIOC.nc">
+          <from><interface-ref name="Port23" ref="0x40749178" scoped=""/></from>
+          <to><interface-ref name="IO" ref="0x407cdd68" scoped=""/></to>
+        </wire>
+        <wire loc="465:/home/jumbo/jamal/project/CoAP/tinyos-release/tos/chips/msp430/pins/HplMsp430GeneralIOC.nc">
+          <from><interface-ref name="Port35" ref="0x40754368" scoped=""/></from>
+          <to><interface-ref name="IO" ref="0x407e3d68" scoped=""/></to>
+        </wire>
+        <wire loc="478:/home/jumbo/jamal/project/CoAP/tinyos-release/tos/chips/msp430/pins/HplMsp430GeneralIOC.nc">
+          <from><interface-ref name="Port47" ref="0x4075e4c8" scoped=""/></from>
+          <to><interface-ref name="IO" ref="0x407fad68" scoped=""/></to>
+        </wire>
+        <wire loc="534:/home/jumbo/jamal/project/CoAP/tinyos-release/tos/chips/msp430/pins/HplMsp430GeneralIOC.nc">
+          <from><interface-ref name="SCL" ref="0x40772e48" scoped=""/></from>
+          <to><interface-ref name="IO" ref="0x407e8d68" scoped=""/></to>
+        </wire>
+        <wire loc="547:/home/jumbo/jamal/project/CoAP/tinyos-release/tos/chips/msp430/pins/HplMsp430GeneralIOC.nc">
+          <from><interface-ref name="ADC2" ref="0x40794010" scoped=""/></from>
+          <to><interface-ref name="IO" ref="0x408105c8" scoped=""/></to>
+        </wire>
+        <wire loc="533:/home/jumbo/jamal/project/CoAP/tinyos-release/tos/chips/msp430/pins/HplMsp430GeneralIOC.nc">
+          <from><interface-ref name="UCLK0" ref="0x40773ca0" scoped=""/></from>
+          <to><interface-ref name="IO" ref="0x407e8d68" scoped=""/></to>
+        </wire>
+        <wire loc="483:/home/jumbo/jamal/project/CoAP/tinyos-release/tos/chips/msp430/pins/HplMsp430GeneralIOC.nc">
+          <from><interface-ref name="Port51" ref="0x4075c848" scoped=""/></from>
+          <to><interface-ref name="IO" ref="0x4080dd68" scoped=""/></to>
+        </wire>
+        <wire loc="554:/home/jumbo/jamal/project/CoAP/tinyos-release/tos/chips/msp430/pins/HplMsp430GeneralIOC.nc">
+          <from><interface-ref name="DAC0" ref="0x4078d918" scoped=""/></from>
+          <to><interface-ref name="IO" ref="0x4081f5c8" scoped=""/></to>
+        </wire>
+        <wire loc="558:/home/jumbo/jamal/project/CoAP/tinyos-release/tos/chips/msp430/pins/HplMsp430GeneralIOC.nc">
+          <from><interface-ref name="SVSOUT" ref="0x4078ae68" scoped=""/></from>
+          <to><interface-ref name="IO" ref="0x40818d68" scoped=""/></to>
+        </wire>
+        <wire loc="529:/home/jumbo/jamal/project/CoAP/tinyos-release/tos/chips/msp430/pins/HplMsp430GeneralIOC.nc">
+          <from><interface-ref name="STE0" ref="0x40777388" scoped=""/></from>
+          <to><interface-ref name="IO" ref="0x407d85c8" scoped=""/></to>
+        </wire>
+      </wiring>
+    </component><component loc="42(PlatformLedsC.Led2Impl):/home/jumbo/jamal/project/CoAP/tinyos-release/tos/chips/msp430/pins/Msp430GpioC.nc" nicename="tos.chips.msp430.pins.Msp430GpioC" qname="PlatformLedsC.Led2Impl">
+      <documentation loc="33:/home/jumbo/jamal/project/CoAP/tinyos-release/tos/chips/msp430/pins/Msp430GpioC.nc">
+        <short>
+ Implementation of the general-purpose I/O abstraction
+ for the TI MSP430 microcontroller.</short>
+        <long>
+ Implementation of the general-purpose I/O abstraction
+ for the TI MSP430 microcontroller.
+
+ @author Joe Polastre
+ @see  Please refer to TEP 117 for more information about this component and its
+          intended use.
+</long>
+      </documentation>
+      <instance number="2">
+        <component-ref nicename="tos.chips.msp430.pins.Msp430GpioC" qname="Msp430GpioC"/>
+      </instance>
+      <module/>
+    </component></referenced></component>

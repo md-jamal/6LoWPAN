@@ -1,0 +1,210 @@
+<?xml version="1.0" ?><component loc="2:NodeC.nc" nicename="NodeC" qname="NodeC">
+      <configuration/>
+      <wiring>
+        <wire loc="10:NodeC.nc">
+          <from><interface-ref name="Node" ref="0x40693160" scoped=""/></from>
+          <to><interface-ref name="Node" ref="0x408ed910" scoped=""/></to>
+        </wire>
+        <wire loc="11:NodeC.nc">
+          <from><interface-ref name="ServiceLocation" ref="0x408ec668" scoped=""/></from>
+          <to><interface-ref name="ServiceLocation" ref="0x40937010" scoped=""/></to>
+        </wire>
+        <wire loc="14:NodeC.nc">
+          <from><interface-ref name="Timer" ref="0x408ecd48" scoped=""/></from>
+          <to><interface-ref name="Timer" ref="0x416b49b8" scoped=""/></to>
+        </wire>
+      </wiring>
+    <specification><interface loc="3:NodeC.nc" name="Node" provided="1" ref="0x40693160">
+      <component-ref nicename="NodeC" qname="NodeC"/>
+      <type-interface alignment="I:2" size="I:2"><interface-ref name="Node" ref="0x40693160" scoped=""/></type-interface>
+      <instance>
+        <interfacedef-ref nicename="Node" qname="Node"/>
+      </instance>
+      <interface-functions>
+        <function-ref name="removeService" ref="0x40693338" scoped=""/>
+        <function-ref name="addService" ref="0x40693418" scoped=""/>
+        <function-ref name="getServices" ref="0x406934f8" scoped=""/>
+        <function-ref name="servicesPresent" ref="0x406935d8" scoped=""/>
+        <function-ref name="getUAState" ref="0x406936b8" scoped=""/>
+        <function-ref name="setSA" ref="0x40693798" scoped=""/>
+        <function-ref name="getServiceURL" ref="0x40693878" scoped=""/>
+        <function-ref name="changeScope" ref="0x40693958" scoped=""/>
+        <function-ref name="findService" ref="0x40693a38" scoped=""/>
+        <function-ref name="getSAState" ref="0x40693b18" scoped=""/>
+        <function-ref name="setUA" ref="0x40693bf8" scoped=""/>
+      </interface-functions>
+    </interface></specification><referenced><interface loc="45:/home/jumbo/tinyos-main/tos/system/TimerMilliC.nc" name="Timer" provided="1" ref="0x416b49b8">
+      <component-ref nicename="tos.system.TimerMilliC" qname="NodeC.Timer"/>
+      <type-interface alignment="I:2" size="I:2"><interface-ref name="Timer" ref="0x416b49b8" scoped=""/></type-interface>
+      <instance>
+        <interfacedef-ref nicename="tos.lib.timer.Timer" qname="Timer"/>
+        <arguments>
+          <type-tag alignment="I:2" size="I:2"><struct-ref ref="0x40648d90"/>
+            <typename><typedef-ref name="TMilli" ref="0x4064d010"/></typename>
+          </type-tag>
+        </arguments>
+      </instance>
+      <interface-functions>
+        <function-ref name="getNow" ref="0x416b14c8" scoped=""/>
+        <function-ref name="fired" ref="0x416b3768" scoped=""/>
+        <function-ref name="startPeriodicAt" ref="0x416b3e70" scoped=""/>
+        <function-ref name="isOneShot" ref="0x416b3c18" scoped=""/>
+        <function-ref name="getdt" ref="0x416b1978" scoped=""/>
+        <function-ref name="gett0" ref="0x416b1720" scoped=""/>
+        <function-ref name="isRunning" ref="0x416b39c0" scoped=""/>
+        <function-ref name="startPeriodic" ref="0x416b3010" scoped=""/>
+        <function-ref name="startOneShotAt" ref="0x416b11a8" scoped=""/>
+        <function-ref name="startOneShot" ref="0x416b3290" scoped=""/>
+        <function-ref name="stop" ref="0x416b3510" scoped=""/>
+      </interface-functions>
+    </interface><interface loc="8:NodeP.nc" name="Timer" provided="0" ref="0x408ecd48">
+      <component-ref nicename="NodeP" qname="NodeP"/>
+      <type-interface alignment="I:2" size="I:2"><interface-ref name="Timer" ref="0x408ecd48" scoped=""/></type-interface>
+      <instance>
+        <interfacedef-ref nicename="tos.lib.timer.Timer" qname="Timer"/>
+        <arguments>
+          <type-tag alignment="I:2" size="I:2"><struct-ref ref="0x40648d90"/>
+            <typename><typedef-ref name="TMilli" ref="0x4064d010"/></typename>
+          </type-tag>
+        </arguments>
+      </instance>
+      <interface-functions>
+        <function-ref name="getNow" ref="0x408e98a8" scoped=""/>
+        <function-ref name="fired" ref="0x408ebb18" scoped=""/>
+        <function-ref name="startPeriodicAt" ref="0x408e9268" scoped=""/>
+        <function-ref name="isOneShot" ref="0x408e9010" scoped=""/>
+        <function-ref name="getdt" ref="0x408e9d58" scoped=""/>
+        <function-ref name="gett0" ref="0x408e9b00" scoped=""/>
+        <function-ref name="isRunning" ref="0x408ebd70" scoped=""/>
+        <function-ref name="startPeriodic" ref="0x408eb3c0" scoped=""/>
+        <function-ref name="startOneShotAt" ref="0x408e9588" scoped=""/>
+        <function-ref name="startOneShot" ref="0x408eb640" scoped=""/>
+        <function-ref name="stop" ref="0x408eb8c0" scoped=""/>
+      </interface-functions>
+    </interface><interface loc="7:SSLC.nc" name="ServiceLocation" provided="1" ref="0x40937010">
+      <component-ref nicename="SSLC" qname="SSLC"/>
+      <type-interface alignment="I:2" size="I:2"><interface-ref name="ServiceLocation" ref="0x40937010" scoped=""/></type-interface>
+      <instance>
+        <interfacedef-ref nicename="ServiceLocation" qname="ServiceLocation"/>
+      </instance>
+      <interface-functions>
+        <function-ref name="receiveServiceTypes" ref="0x409371e8" scoped=""/>
+        <function-ref name="registerService" ref="0x409372c8" scoped=""/>
+        <function-ref name="receiveServices" ref="0x409373a8" scoped=""/>
+        <function-ref name="deregisterService" ref="0x40937488" scoped=""/>
+      </interface-functions>
+    </interface><interface loc="6:NodeP.nc" name="Node" provided="1" ref="0x408ed910">
+      <component-ref nicename="NodeP" qname="NodeP"/>
+      <type-interface alignment="I:2" size="I:2"><interface-ref name="Node" ref="0x408ed910" scoped=""/></type-interface>
+      <instance>
+        <interfacedef-ref nicename="Node" qname="Node"/>
+      </instance>
+      <interface-functions>
+        <function-ref name="removeService" ref="0x408edae8" scoped=""/>
+        <function-ref name="addService" ref="0x408edbc8" scoped=""/>
+        <function-ref name="getServices" ref="0x408edca8" scoped=""/>
+        <function-ref name="servicesPresent" ref="0x408edd88" scoped=""/>
+        <function-ref name="getUAState" ref="0x408ede68" scoped=""/>
+        <function-ref name="setSA" ref="0x408ec010" scoped=""/>
+        <function-ref name="getServiceURL" ref="0x408ec0f0" scoped=""/>
+        <function-ref name="changeScope" ref="0x408ec1d0" scoped=""/>
+        <function-ref name="findService" ref="0x408ec2b0" scoped=""/>
+        <function-ref name="getSAState" ref="0x408ec390" scoped=""/>
+        <function-ref name="setUA" ref="0x408ec470" scoped=""/>
+      </interface-functions>
+    </interface><interface loc="7:NodeP.nc" name="ServiceLocation" provided="0" ref="0x408ec668">
+      <component-ref nicename="NodeP" qname="NodeP"/>
+      <type-interface alignment="I:2" size="I:2"><interface-ref name="ServiceLocation" ref="0x408ec668" scoped=""/></type-interface>
+      <instance>
+        <interfacedef-ref nicename="ServiceLocation" qname="ServiceLocation"/>
+      </instance>
+      <interface-functions>
+        <function-ref name="receiveServiceTypes" ref="0x408ec840" scoped=""/>
+        <function-ref name="registerService" ref="0x408ec920" scoped=""/>
+        <function-ref name="receiveServices" ref="0x408eca00" scoped=""/>
+        <function-ref name="deregisterService" ref="0x408ecae0" scoped=""/>
+      </interface-functions>
+    </interface><component loc="4:NodeP.nc" nicename="NodeP" qname="NodeP">
+      <module/>
+    </component><component loc="44(NodeC.Timer):/home/jumbo/tinyos-main/tos/system/TimerMilliC.nc" nicename="tos.system.TimerMilliC" qname="NodeC.Timer">
+      <documentation loc="33:/home/jumbo/tinyos-main/tos/system/TimerMilliC.nc">
+        <short>
+ The virtualized millisecond timer abstraction.</short>
+        <long>
+ The virtualized millisecond timer abstraction. Instantiating this 
+ component gives an independent millisecond granularity timer.
+
+ @author Philip Levis
+ @date   January 16 2006
+ @see    TEP 102: Timers
+</long>
+      </documentation>
+      <instance number="12">
+        <component-ref nicename="tos.system.TimerMilliC" qname="TimerMilliC"/>
+      </instance>
+      <configuration/>
+      <wiring>
+        <wire loc="52:/home/jumbo/tinyos-main/tos/system/TimerMilliC.nc">
+          <from><interface-ref name="Timer" ref="0x416b49b8" scoped=""/></from>
+          <to><interface-ref name="TimerMilli" ref="0x412fd850" scoped=""/>
+          <arguments>
+            <value cst="I:12">
+              <type-int alignment="I:2" cname="unsigned int" size="I:2" unsigned=""/>
+            </value>
+          </arguments>
+          </to>
+        </wire>
+      </wiring>
+    </component><component loc="3:SSLC.nc" nicename="SSLC" qname="SSLC">
+      <configuration/>
+      <wiring>
+        <wire loc="15:SSLC.nc">
+          <from><interface-ref name="SplitControl" ref="0x408d3970" scoped=""/></from>
+          <to><interface-ref name="SplitControl" ref="0x40932298" scoped=""/></to>
+        </wire>
+        <wire loc="16:SSLC.nc">
+          <from><interface-ref name="ServiceLocation" ref="0x40937010" scoped=""/></from>
+          <to><interface-ref name="ServiceLocation" ref="0x40932908" scoped=""/></to>
+        </wire>
+        <wire loc="20:SSLC.nc">
+          <from><interface-ref name="RadioControl" ref="0x40931030" scoped=""/></from>
+          <to><interface-ref name="SplitControl" ref="0x409acc18" scoped=""/></to>
+        </wire>
+        <wire loc="26:SSLC.nc">
+          <from><interface-ref name="UDPSend" ref="0x4092ccb0" scoped=""/></from>
+          <to><interface-ref name="UDP" ref="0x41467840" scoped=""/></to>
+        </wire>
+        <wire loc="27:SSLC.nc">
+          <from><interface-ref name="UDPReceive" ref="0x409303d8" scoped=""/></from>
+          <to><interface-ref name="UDP" ref="0x41466870" scoped=""/></to>
+        </wire>
+        <wire loc="31:SSLC.nc">
+          <from><interface-ref name="PrintTimer" ref="0x4092bf18" scoped=""/></from>
+          <to><interface-ref name="Timer" ref="0x41463d10" scoped=""/></to>
+        </wire>
+        <wire loc="35:SSLC.nc">
+          <from><interface-ref name="RetransmitTimer" ref="0x40930b70" scoped=""/></from>
+          <to><interface-ref name="Timer" ref="0x414c9e58" scoped=""/></to>
+        </wire>
+        <wire loc="43:SSLC.nc">
+          <from><interface-ref name="DelayTimer" ref="0x409452b8" scoped=""/></from>
+          <to><interface-ref name="Timer" ref="0x414c6eb8" scoped=""/></to>
+        </wire>
+        <wire loc="50:SSLC.nc">
+          <from><interface-ref name="Node" ref="0x409424c8" scoped=""/></from>
+          <to><interface-ref name="Node" ref="0x40693160" scoped=""/></to>
+        </wire>
+        <wire loc="54:SSLC.nc">
+          <from><interface-ref name="IPAddress" ref="0x409411d0" scoped=""/></from>
+          <to><interface-ref name="IPAddress" ref="0x40a51ce0" scoped=""/></to>
+        </wire>
+        <wire loc="58:SSLC.nc">
+          <from><interface-ref name="Leds" ref="0x40941b58" scoped=""/></from>
+          <to><interface-ref name="Leds" ref="0x40683a90" scoped=""/></to>
+        </wire>
+        <wire loc="61:SSLC.nc">
+          <from><interface-ref name="Random" ref="0x4093d450" scoped=""/></from>
+          <to><interface-ref name="Random" ref="0x4135a580" scoped=""/></to>
+        </wire>
+      </wiring>
+    </component></referenced></component>

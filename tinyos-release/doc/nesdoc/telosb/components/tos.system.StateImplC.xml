@@ -1,0 +1,117 @@
+<?xml version="1.0" ?><component loc="64:/home/jumbo/jamal/project/CoAP/tinyos-release/tos/system/StateImplC.nc" nicename="tos.system.StateImplC" qname="StateImplC">
+      <documentation loc="32:/home/jumbo/jamal/project/CoAP/tinyos-release/tos/types/State.h">
+        <short>
+ </short>
+        <long>
+ @author David Moss
+</long>
+      </documentation>
+      <configuration/>
+      <wiring>
+        <wire loc="75:/home/jumbo/jamal/project/CoAP/tinyos-release/tos/system/StateImplC.nc">
+          <from><interface-ref name="State" ref="0x40c6ebf8" scoped=""/></from>
+          <to><interface-ref name="State" ref="0x40c682f0" scoped=""/></to>
+        </wire>
+        <wire loc="74:/home/jumbo/jamal/project/CoAP/tinyos-release/tos/system/StateImplC.nc">
+          <from><interface-ref name="SoftwareInit" ref="0x4061b480" scoped=""/></from>
+          <to><interface-ref name="Init" ref="0x40c6bca0" scoped=""/></to>
+        </wire>
+      </wiring>
+    <specification><interface loc="66:/home/jumbo/jamal/project/CoAP/tinyos-release/tos/system/StateImplC.nc" name="State" provided="1" ref="0x40c6ebf8">
+      <component-ref nicename="tos.system.StateImplC" qname="StateImplC"/>
+      <type-interface alignment="I:2" size="I:2"><interface-ref name="State" ref="0x40c6ebf8" scoped=""/></type-interface>
+      <instance>
+        <interfacedef-ref nicename="tos.interfaces.State" qname="State"/>
+      </instance>
+      <interface-parameters>
+        <type-int alignment="I:1" cname="unsigned char" size="I:1" unsigned="">
+          <typename><typedef-ref name="uint8_t" ref="0x4003adc8"/></typename>
+        </type-int>
+      </interface-parameters>
+      <interface-functions>
+        <function-ref name="getState" ref="0x40c6edd0" scoped=""/>
+        <function-ref name="toIdle" ref="0x40c6eeb0" scoped=""/>
+        <function-ref name="isState" ref="0x40c6b010" scoped=""/>
+        <function-ref name="isIdle" ref="0x40c6b0f0" scoped=""/>
+        <function-ref name="requestState" ref="0x40c6b1d0" scoped=""/>
+        <function-ref name="forceState" ref="0x40c6b2b0" scoped=""/>
+      </interface-functions>
+    </interface></specification><referenced><interface loc="58:/home/jumbo/jamal/project/CoAP/tinyos-release/tos/system/MainC.nc" name="SoftwareInit" provided="0" ref="0x4061b480">
+      <component-ref nicename="tos.system.MainC" qname="MainC"/>
+      <type-interface alignment="I:2" size="I:2"><interface-ref name="SoftwareInit" ref="0x4061b480" scoped=""/></type-interface>
+      <instance>
+        <interfacedef-ref nicename="tos.interfaces.Init" qname="Init"/>
+      </instance>
+      <interface-functions>
+        <function-ref name="init" ref="0x4061b658" scoped=""/>
+      </interface-functions>
+    </interface><interface loc="67:/home/jumbo/jamal/project/CoAP/tinyos-release/tos/system/StateImplP.nc" name="State" provided="1" ref="0x40c682f0">
+      <component-ref nicename="tos.system.StateImplP" qname="StateImplP"/>
+      <type-interface alignment="I:2" size="I:2"><interface-ref name="State" ref="0x40c682f0" scoped=""/></type-interface>
+      <instance>
+        <interfacedef-ref nicename="tos.interfaces.State" qname="State"/>
+      </instance>
+      <interface-parameters>
+        <type-int alignment="I:1" cname="unsigned char" size="I:1" unsigned="">
+          <typename><typedef-ref name="uint8_t" ref="0x4003adc8"/></typename>
+        </type-int>
+      </interface-parameters>
+      <interface-functions>
+        <function-ref name="getState" ref="0x40c684c8" scoped=""/>
+        <function-ref name="toIdle" ref="0x40c685a8" scoped=""/>
+        <function-ref name="isState" ref="0x40c68688" scoped=""/>
+        <function-ref name="isIdle" ref="0x40c68768" scoped=""/>
+        <function-ref name="requestState" ref="0x40c68848" scoped=""/>
+        <function-ref name="forceState" ref="0x40c68928" scoped=""/>
+      </interface-functions>
+    </interface><interface loc="66:/home/jumbo/jamal/project/CoAP/tinyos-release/tos/system/StateImplP.nc" name="Init" provided="1" ref="0x40c6bca0">
+      <component-ref nicename="tos.system.StateImplP" qname="StateImplP"/>
+      <type-interface alignment="I:2" size="I:2"><interface-ref name="Init" ref="0x40c6bca0" scoped=""/></type-interface>
+      <instance>
+        <interfacedef-ref nicename="tos.interfaces.Init" qname="Init"/>
+      </instance>
+      <interface-functions>
+        <function-ref name="init" ref="0x40c6be78" scoped=""/>
+      </interface-functions>
+    </interface><component loc="56:/home/jumbo/jamal/project/CoAP/tinyos-release/tos/system/MainC.nc" nicename="tos.system.MainC" qname="MainC">
+      <documentation loc="45:/home/jumbo/jamal/project/CoAP/tinyos-release/tos/system/MainC.nc">
+        <short>
+ MainC is the system interface the TinyOS boot sequence.</short>
+        <long>
+ MainC is the system interface the TinyOS boot sequence. It wires the
+ boot sequence implementation to the scheduler and hardware resources.
+
+ @author Philip Levis
+ @date   August 6 2005
+ @see    TEP 107: Boot Sequence
+</long>
+      </documentation>
+      <configuration/>
+      <wiring>
+        <wire loc="72:/home/jumbo/jamal/project/CoAP/tinyos-release/tos/system/MainC.nc">
+          <from><interface-ref name="Boot" ref="0x4060c800" scoped=""/></from>
+          <to><interface-ref name="Boot" ref="0x40619e10" scoped=""/></to>
+        </wire>
+        <wire loc="67:/home/jumbo/jamal/project/CoAP/tinyos-release/tos/system/MainC.nc">
+          <from><interface-ref name="Scheduler" ref="0x406181d0" scoped=""/></from>
+          <to><interface-ref name="Scheduler" ref="0x40384068" scoped=""/></to>
+        </wire>
+        <wire loc="68:/home/jumbo/jamal/project/CoAP/tinyos-release/tos/system/MainC.nc">
+          <from><interface-ref name="PlatformInit" ref="0x40618798" scoped=""/></from>
+          <to><interface-ref name="Init" ref="0x4061bd58" scoped=""/></to>
+        </wire>
+        <wire loc="71:/home/jumbo/jamal/project/CoAP/tinyos-release/tos/system/MainC.nc">
+          <from><interface-ref name="SoftwareInit" ref="0x40618ba0" scoped=""/></from>
+          <to><interface-ref name="SoftwareInit" ref="0x4061b480" scoped=""/></to>
+        </wire>
+      </wiring>
+    </component><component loc="64:/home/jumbo/jamal/project/CoAP/tinyos-release/tos/system/StateImplP.nc" nicename="tos.system.StateImplP" qname="StateImplP" safe="">
+      <documentation loc="32:/home/jumbo/jamal/project/CoAP/tinyos-release/tos/types/State.h">
+        <short>
+ </short>
+        <long>
+ @author David Moss
+</long>
+      </documentation>
+      <module/>
+    </component></referenced></component>

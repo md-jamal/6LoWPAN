@@ -1,0 +1,76 @@
+<?xml version="1.0" ?><component abstract="" loc="2:/home/jumbo/jamal/project/CoAP/tinyos-release/tos/lib/net/blip/UdpSocketC.nc" nicename="tos.lib.net.blip.UdpSocketC" qname="UdpSocketC">
+      <parameters>
+      </parameters>
+      <configuration/>
+      <wiring>
+        <wire loc="8:/home/jumbo/jamal/project/CoAP/tinyos-release/tos/lib/net/blip/UdpSocketC.nc">
+          <from><interface-ref name="UDP" ref="0x41395100" scoped=""/></from>
+          <to><interface-ref name="UDP" ref="0x41395dd0" scoped=""/>
+          <arguments>
+            <value cst="U:">
+              <type-int alignment="I:2" cname="unsigned int" size="I:2" unsigned=""/>
+            </value>
+          </arguments>
+          </to>
+        </wire>
+      </wiring>
+    <specification><interface loc="3:/home/jumbo/jamal/project/CoAP/tinyos-release/tos/lib/net/blip/UdpSocketC.nc" name="UDP" provided="1" ref="0x41395100">
+      <component-ref nicename="tos.lib.net.blip.UdpSocketC" qname="UdpSocketC"/>
+      <type-interface alignment="I:2" size="I:2"><interface-ref name="UDP" ref="0x41395100" scoped=""/></type-interface>
+      <instance>
+        <interfacedef-ref nicename="tos.lib.net.blip.interfaces.UDP" qname="UDP"/>
+      </instance>
+      <interface-functions>
+        <function-ref name="sendto" ref="0x413952d8" scoped=""/>
+        <function-ref name="bind" ref="0x413953b8" scoped=""/>
+        <function-ref name="sendtov" ref="0x41395498" scoped=""/>
+        <function-ref name="recvfrom" ref="0x41395578" scoped=""/>
+      </interface-functions>
+    </interface></specification><referenced><interface loc="5:/home/jumbo/jamal/project/CoAP/tinyos-release/tos/lib/net/blip/UdpC.nc" name="UDP" provided="1" ref="0x41395dd0">
+      <component-ref nicename="tos.lib.net.blip.UdpC" qname="UdpC"/>
+      <type-interface alignment="I:2" size="I:2"><interface-ref name="UDP" ref="0x41395dd0" scoped=""/></type-interface>
+      <instance>
+        <interfacedef-ref nicename="tos.lib.net.blip.interfaces.UDP" qname="UDP"/>
+      </instance>
+      <interface-parameters>
+        <type-int alignment="I:1" cname="unsigned char" size="I:1" unsigned="">
+          <typename><typedef-ref name="uint8_t" ref="0x4003adc8"/></typename>
+        </type-int>
+      </interface-parameters>
+      <interface-functions>
+        <function-ref name="sendto" ref="0x41391010" scoped=""/>
+        <function-ref name="bind" ref="0x413910f0" scoped=""/>
+        <function-ref name="sendtov" ref="0x413911d0" scoped=""/>
+        <function-ref name="recvfrom" ref="0x413912b0" scoped=""/>
+      </interface-functions>
+    </interface><component loc="4:/home/jumbo/jamal/project/CoAP/tinyos-release/tos/lib/net/blip/UdpC.nc" nicename="tos.lib.net.blip.UdpC" qname="UdpC">
+      <configuration/>
+      <wiring>
+        <wire loc="11:/home/jumbo/jamal/project/CoAP/tinyos-release/tos/lib/net/blip/UdpC.nc">
+          <from><interface-ref name="BlipStatistics" ref="0x413915d8" scoped=""/></from>
+          <to><interface-ref name="BlipStatistics" ref="0x4138c6a0" scoped=""/></to>
+        </wire>
+        <wire loc="10:/home/jumbo/jamal/project/CoAP/tinyos-release/tos/lib/net/blip/UdpC.nc">
+          <from><interface-ref name="UDP" ref="0x41395dd0" scoped=""/></from>
+          <to><interface-ref name="UDP" ref="0x41390ae0" scoped=""/></to>
+        </wire>
+        <wire loc="13:/home/jumbo/jamal/project/CoAP/tinyos-release/tos/lib/net/blip/UdpC.nc">
+          <from><interface-ref name="SoftwareInit" ref="0x4061b480" scoped=""/></from>
+          <to><interface-ref name="Init" ref="0x4138c1a0" scoped=""/></to>
+        </wire>
+        <wire loc="14:/home/jumbo/jamal/project/CoAP/tinyos-release/tos/lib/net/blip/UdpC.nc">
+          <from><interface-ref name="IP" ref="0x4138b258" scoped=""/></from>
+          <to><interface-ref name="IP" ref="0x408c44c0" scoped=""/>
+          <arguments>
+            <value cst="I:17">
+              <type-int alignment="I:2" cname="int" size="I:2"/>
+            </value>
+          </arguments>
+          </to>
+        </wire>
+        <wire loc="15:/home/jumbo/jamal/project/CoAP/tinyos-release/tos/lib/net/blip/UdpC.nc">
+          <from><interface-ref name="IPAddress" ref="0x4138b6d0" scoped=""/></from>
+          <to><interface-ref name="IPAddress" ref="0x409795c8" scoped=""/></to>
+        </wire>
+      </wiring>
+    </component></referenced></component>

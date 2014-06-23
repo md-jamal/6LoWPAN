@@ -1,0 +1,27 @@
+<html>
+  <head>
+    <LINK rel="stylesheet" href="nesdoc.css" type="text/css" media="screen"><title>Interface: tos.lib.net.blip.interfaces.IPPacket</title>
+  </head>
+  <body>
+    <h2>Interface: tos.lib.net.blip.interfaces.IPPacket</h2>
+    <b>interface IPPacket</b><p><p><div id=heading>Commands</div><div id=funcsig><span id=funcnameshort>command void <a href="#delTLV">delTLV</a>(struct ip_iovec *data, int ext_offset, uint8_t type)
+      </span></div><div id=funcsig><span id=funcnameshort>command int <a href="#findHeader">findHeader</a>(struct ip_iovec *payload, uint8_t first_type, uint8_t *search_type)
+      </span></div><div id=funcsig><span id=funcnameshort>command int <a href="#findTLV">findTLV</a>(struct ip_iovec *header, int ext_offset, uint8_t type)
+      </span></div><p><div id=heading>Commands - Details</div>
+    <a name="delTLV"></a>
+    <h4>delTLV
+    </h4>
+    <span id=funcnameshort>command void <b>delTLV</b>(struct ip_iovec *data, int ext_offset, uint8_t type)
+    </span><hr>
+    <a name="findHeader"></a>
+    <h4>findHeader
+    </h4>
+    <span id=funcnameshort>command int <b>findHeader</b>(struct ip_iovec *payload, uint8_t first_type, uint8_t *search_type)
+    </span><hr>
+    <a name="findTLV"></a>
+    <h4>findTLV
+    </h4>
+    <span id=funcnameshort>command int <b>findTLV</b>(struct ip_iovec *header, int ext_offset, uint8_t type)
+    </span>
+  </body>
+</html>

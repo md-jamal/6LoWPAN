@@ -1,0 +1,8 @@
+digraph "tos.lib.net.blip.IPAddressC" {
+  n0x409795c8 [shape=ellipse, style=filled, label="IPAddress", fontsize=12];
+  "IPAddressP" [fontsize=12, shape=box, URL="../chtml/tos.lib.net.blip.IPAddressP.html"];
+  "IPAddressP" [fontsize=12, shape=box, URL="../chtml/tos.lib.net.blip.IPAddressP.html"];
+  "Ieee154AddressC" [fontsize=12, shape=box,peripheries=2, URL="../chtml/tos.lib.net.blip.Ieee154AddressC.html"];
+  "n0x409795c8" -> "IPAddressP" [label="IPAddress", URL="../ihtml/tos.lib.net.blip.interfaces.IPAddress.html", fontsize=10];
+  "IPAddressP" -> "Ieee154AddressC" [label="Ieee154Address", URL="../ihtml/tos.lib.net.blip.interfaces.Ieee154Address.html", fontsize=10];
+}

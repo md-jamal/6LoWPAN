@@ -1,0 +1,82 @@
+<?xml version="1.0" ?><component loc="39:/home/jumbo/tinyos-main/tos/lib/net/rpl/RPLOF0P.nc" nicename="tos.lib.net.rpl.RPLOF0P" qname="RPLOF0P">
+      <documentation loc="32:/home/jumbo/tinyos-main/tos/lib/net/rpl/RPLOF0P.nc">
+        <short>
+ RPLOF0P.nc
+ </short>
+        <long>
+ RPLOF0P.nc
+ @ author JeongGil Ko (John) &lt;jgko@cs.jhu.edu&gt;
+</long>
+      </documentation>
+      <module/>
+    <specification><interface loc="43:/home/jumbo/tinyos-main/tos/lib/net/rpl/RPLOF0P.nc" name="ParentTable" provided="0" ref="0x416d8180">
+      <component-ref nicename="tos.lib.net.rpl.RPLOF0P" qname="RPLOF0P"/>
+      <type-interface alignment="I:2" size="I:2"><interface-ref name="ParentTable" ref="0x416d8180" scoped=""/></type-interface>
+      <instance>
+        <interfacedef-ref nicename="tos.lib.net.rpl.RPLParentTable" qname="RPLParentTable"/>
+      </instance>
+      <interface-functions>
+        <function-ref name="get" ref="0x416d8358" scoped=""/>
+      </interface-functions>
+    </interface><interface loc="44:/home/jumbo/tinyos-main/tos/lib/net/rpl/RPLOF0P.nc" name="RPLDAO" provided="0" ref="0x416d85d8">
+      <component-ref nicename="tos.lib.net.rpl.RPLOF0P" qname="RPLOF0P"/>
+      <type-interface alignment="I:2" size="I:2"><interface-ref name="RPLDAO" ref="0x416d85d8" scoped=""/></type-interface>
+      <instance>
+        <interfacedef-ref nicename="tos.lib.net.rpl.RPLDAORoutingEngine" qname="RPLDAORoutingEngine"/>
+      </instance>
+      <interface-functions>
+        <function-ref name="newParent" ref="0x416d87b0" scoped=""/>
+        <function-ref name="getStoreState" ref="0x416d8890" scoped=""/>
+        <function-ref name="startDAO" ref="0x416d8970" scoped=""/>
+      </interface-functions>
+    </interface><interface loc="40:/home/jumbo/tinyos-main/tos/lib/net/rpl/RPLOF0P.nc" name="RPLOF" provided="1" ref="0x41686010">
+      <component-ref nicename="tos.lib.net.rpl.RPLOF0P" qname="RPLOF0P"/>
+      <type-interface alignment="I:2" size="I:2"><interface-ref name="RPLOF" ref="0x41686010" scoped=""/></type-interface>
+      <instance>
+        <interfacedef-ref nicename="tos.lib.net.rpl.RPLOF" qname="RPLOF"/>
+      </instance>
+      <interface-functions>
+        <function-ref name="recomputeRoutes" ref="0x416861e8" scoped=""/>
+        <function-ref name="OCP" ref="0x416862c8" scoped=""/>
+        <function-ref name="objectSupported" ref="0x416863a8" scoped=""/>
+        <function-ref name="getRank" ref="0x41686488" scoped=""/>
+        <function-ref name="resetRank" ref="0x41686568" scoped=""/>
+        <function-ref name="setMinHopRankIncrease" ref="0x41686648" scoped=""/>
+        <function-ref name="getObjectValue" ref="0x41686728" scoped=""/>
+        <function-ref name="getParent" ref="0x41686808" scoped=""/>
+        <function-ref name="recalculateRank" ref="0x416868e8" scoped=""/>
+      </interface-functions>
+    </interface><interface loc="42:/home/jumbo/tinyos-main/tos/lib/net/rpl/RPLOF0P.nc" name="RPLRoute" provided="0" ref="0x41685370">
+      <component-ref nicename="tos.lib.net.rpl.RPLOF0P" qname="RPLOF0P"/>
+      <type-interface alignment="I:2" size="I:2"><interface-ref name="RPLRoute" ref="0x41685370" scoped=""/></type-interface>
+      <instance>
+        <interfacedef-ref nicename="tos.lib.net.rpl.RPLRoutingEngine" qname="RPLRoutingEngine"/>
+      </instance>
+      <interface-functions>
+        <function-ref name="getMOP" ref="0x41685548" scoped=""/>
+        <function-ref name="getDefaultRoute" ref="0x41685e08" scoped=""/>
+        <function-ref name="resetTrickle" ref="0x41685ee8" scoped=""/>
+        <function-ref name="hasDODAG" ref="0x416857e8" scoped=""/>
+        <function-ref name="validInstance" ref="0x416858c8" scoped=""/>
+        <function-ref name="inconsistency" ref="0x416859a8" scoped=""/>
+        <function-ref name="getRank" ref="0x41685a88" scoped=""/>
+        <function-ref name="getDodagId" ref="0x41685b68" scoped=""/>
+        <function-ref name="getDTSN" ref="0x41685708" scoped=""/>
+        <function-ref name="setDODAGConfig" ref="0x41685c48" scoped=""/>
+        <function-ref name="getInstanceID" ref="0x41685d28" scoped=""/>
+        <function-ref name="setDTSN" ref="0x41685628" scoped=""/>
+      </interface-functions>
+    </interface><interface loc="41:/home/jumbo/tinyos-main/tos/lib/net/rpl/RPLOF0P.nc" name="ForwardingTable" provided="0" ref="0x41686ae0">
+      <component-ref nicename="tos.lib.net.rpl.RPLOF0P" qname="RPLOF0P"/>
+      <type-interface alignment="I:2" size="I:2"><interface-ref name="ForwardingTable" ref="0x41686ae0" scoped=""/></type-interface>
+      <instance>
+        <interfacedef-ref nicename="tos.lib.net.blip.interfaces.ForwardingTable" qname="ForwardingTable"/>
+      </instance>
+      <interface-functions>
+        <function-ref name="getTable" ref="0x41686cb8" scoped=""/>
+        <function-ref name="lookupRoute" ref="0x41686d98" scoped=""/>
+        <function-ref name="delRoute" ref="0x41686e78" scoped=""/>
+        <function-ref name="lookupRouteKey" ref="0x41685010" scoped=""/>
+        <function-ref name="addRoute" ref="0x416850f0" scoped=""/>
+      </interface-functions>
+    </interface></specification><referenced/></component>

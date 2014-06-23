@@ -1,0 +1,68 @@
+<?xml version="1.0" ?><interfacedef loc="4:/home/jumbo/jamal/project/CoAP/tinyos-release/tos/lib/net/blip/interfaces/Ieee154Address.nc" nicename="tos.lib.net.blip.interfaces.Ieee154Address" qname="Ieee154Address">
+      <function command="" loc="5:/home/jumbo/jamal/project/CoAP/tinyos-release/tos/lib/net/blip/interfaces/Ieee154Address.nc" name="getPanId" provided="0" ref="0x4096e400">
+        <interfacedef-ref nicename="tos.lib.net.blip.interfaces.Ieee154Address" qname="Ieee154Address"/>
+        <type-function alignment="I:1" size="I:1">
+          <type-int alignment="I:2" cname="unsigned int" size="I:2" unsigned="">
+            <typename><typedef-ref name="ieee154_panid_t" ref="0x40868068"/></typename>
+          </type-int>
+          <function-parameters>
+          </function-parameters>
+        </type-function>
+        <parameters>
+        </parameters>
+      </function>
+      <function event="" loc="10:/home/jumbo/jamal/project/CoAP/tinyos-release/tos/lib/net/blip/interfaces/Ieee154Address.nc" name="changed" provided="0" ref="0x4096d660">
+        <interfacedef-ref nicename="tos.lib.net.blip.interfaces.Ieee154Address" qname="Ieee154Address"/>
+        <type-function alignment="I:1" size="I:1">
+          <type-void alignment="I:1" size="I:1"/>
+          <function-parameters>
+          </function-parameters>
+        </type-function>
+        <parameters>
+        </parameters>
+      </function>
+      <function command="" loc="8:/home/jumbo/jamal/project/CoAP/tinyos-release/tos/lib/net/blip/interfaces/Ieee154Address.nc" name="setShortAddr" provided="0" ref="0x4096d2c8">
+        <interfacedef-ref nicename="tos.lib.net.blip.interfaces.Ieee154Address" qname="Ieee154Address"/>
+        <type-function alignment="I:1" size="I:1">
+          <type-int alignment="I:1" cname="unsigned char" size="I:1" unsigned="">
+            <typename><typedef-ref name="error_t" ref="0x4038a828"/></typename>
+          </type-int>
+          <function-parameters>
+            <type-int alignment="I:2" cname="unsigned int" size="I:2" unsigned="">
+              <typename><typedef-ref name="ieee154_saddr_t" ref="0x40868300"/></typename>
+            </type-int>
+          </function-parameters>
+        </type-function>
+        <parameters>
+          <variable loc="8:/home/jumbo/jamal/project/CoAP/tinyos-release/tos/lib/net/blip/interfaces/Ieee154Address.nc" name="addr" ref="0x4096d170">
+            <type-int alignment="I:2" cname="unsigned int" size="I:2" unsigned="">
+              <typename><typedef-ref name="ieee154_saddr_t" ref="0x40868300"/></typename>
+            </type-int>
+          </variable>
+        </parameters>
+      </function>
+      <function command="" loc="7:/home/jumbo/jamal/project/CoAP/tinyos-release/tos/lib/net/blip/interfaces/Ieee154Address.nc" name="getExtAddr" provided="0" ref="0x4096ecb8">
+        <interfacedef-ref nicename="tos.lib.net.blip.interfaces.Ieee154Address" qname="Ieee154Address"/>
+        <type-function alignment="I:1" size="I:1">
+          <type-tag alignment="I:1" size="I:8"><struct-ref name="ieee_eui64" ref="0x40869920"/>
+            <typename><typedef-ref name="ieee154_laddr_t" ref="0x408685c0"/></typename>
+          </type-tag>
+          <function-parameters>
+          </function-parameters>
+        </type-function>
+        <parameters>
+        </parameters>
+      </function>
+      <function command="" loc="6:/home/jumbo/jamal/project/CoAP/tinyos-release/tos/lib/net/blip/interfaces/Ieee154Address.nc" name="getShortAddr" provided="0" ref="0x4096e868">
+        <interfacedef-ref nicename="tos.lib.net.blip.interfaces.Ieee154Address" qname="Ieee154Address"/>
+        <type-function alignment="I:1" size="I:1">
+          <type-int alignment="I:2" cname="unsigned int" size="I:2" unsigned="">
+            <typename><typedef-ref name="ieee154_saddr_t" ref="0x40868300"/></typename>
+          </type-int>
+          <function-parameters>
+          </function-parameters>
+        </type-function>
+        <parameters>
+        </parameters>
+      </function>
+    </interfacedef>

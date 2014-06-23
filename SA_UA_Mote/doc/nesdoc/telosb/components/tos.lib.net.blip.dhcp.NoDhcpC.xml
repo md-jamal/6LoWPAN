@@ -1,0 +1,39 @@
+<?xml version="1.0" ?><component loc="42:/home/jumbo/tinyos-main/tos/lib/net/blip/dhcp/NoDhcpC.nc" nicename="tos.lib.net.blip.dhcp.NoDhcpC" qname="NoDhcpC">
+      <documentation loc="33:/home/jumbo/tinyos-main/tos/lib/net/blip/dhcp/NoDhcpC.nc">
+        <short>
+ Component for doing compile-time address allocation.</short>
+        <long>
+ Component for doing compile-time address allocation.  Wired by the
+ stack, sets a static address based on IN6_PREFIX and TOS_NODE_ID on
+ boot.  Useful for development or of you want to hard-code addresses.
+
+ @author Stephen Dawson-Haggerty &lt;stevedh@eecs.berkeley.edu&gt;
+</long>
+      </documentation>
+      <module/>
+    <specification><interface loc="44:/home/jumbo/tinyos-main/tos/lib/net/blip/dhcp/NoDhcpC.nc" name="Boot" provided="0" ref="0x4146f438">
+      <component-ref nicename="tos.lib.net.blip.dhcp.NoDhcpC" qname="NoDhcpC"/>
+      <type-interface alignment="I:2" size="I:2"><interface-ref name="Boot" ref="0x4146f438" scoped=""/></type-interface>
+      <instance>
+        <interfacedef-ref nicename="tos.interfaces.Boot" qname="Boot"/>
+      </instance>
+      <interface-functions>
+        <function-ref name="booted" ref="0x4146f610" scoped=""/>
+      </interface-functions>
+    </interface><interface loc="45:/home/jumbo/tinyos-main/tos/lib/net/blip/dhcp/NoDhcpC.nc" name="IPAddress" provided="0" ref="0x4146f7b0">
+      <component-ref nicename="tos.lib.net.blip.dhcp.NoDhcpC" qname="NoDhcpC"/>
+      <type-interface alignment="I:2" size="I:2"><interface-ref name="IPAddress" ref="0x4146f7b0" scoped=""/></type-interface>
+      <instance>
+        <interfacedef-ref nicename="tos.lib.net.blip.interfaces.IPAddress" qname="IPAddress"/>
+      </instance>
+      <interface-functions>
+        <function-ref name="getLLAddr" ref="0x4146f988" scoped=""/>
+        <function-ref name="changed" ref="0x4146fa68" scoped=""/>
+        <function-ref name="isLocalAddress" ref="0x4146fb48" scoped=""/>
+        <function-ref name="getGlobalAddr" ref="0x4146fc28" scoped=""/>
+        <function-ref name="setSource" ref="0x4146fd08" scoped=""/>
+        <function-ref name="removeAddress" ref="0x4146fde8" scoped=""/>
+        <function-ref name="setAddress" ref="0x4146fec8" scoped=""/>
+        <function-ref name="isLLAddress" ref="0x4146c010" scoped=""/>
+      </interface-functions>
+    </interface></specification><referenced/></component>

@@ -1,0 +1,122 @@
+<?xml version="1.0" ?><interfacedef loc="6:/home/jumbo/jamal/project/CoAP/tinyos-release/tos/lib/net/blip/interfaces/ForwardingEvents.nc" nicename="tos.lib.net.blip.interfaces.ForwardingEvents" qname="ForwardingEvents">
+      <function event="" loc="28:/home/jumbo/jamal/project/CoAP/tinyos-release/tos/lib/net/blip/interfaces/ForwardingEvents.nc" name="approve" provided="0" ref="0x408f9988">
+        <documentation loc="16:/home/jumbo/jamal/project/CoAP/tinyos-release/tos/lib/net/blip/interfaces/ForwardingEvents.nc">
+          <short>
+ Signaled for each packet being forwarded.</short>
+          <long>
+ Signaled for each packet being forwarded.
+
+ For datapath validation.  Allows the routing protocol to look at
+ a packet as it flows through.  If the event returns FALSE the
+ packet is dropped.  The routing protocol may change fields in the
+ packet header such as the flow label.
+
+ @pkt the packet being forwarded
+ @next_hop the ipv6 address of the next hop, as determined by the 
+    forwarding engine.
+</long>
+        </documentation>
+        <interfacedef-ref nicename="tos.lib.net.blip.interfaces.ForwardingEvents" qname="ForwardingEvents"/>
+        <type-function alignment="I:1" size="I:1">
+          <type-int alignment="I:1" cname="unsigned char" size="I:1" unsigned="">
+            <typename><typedef-ref name="bool" ref="0x4037f928"/></typename>
+          </type-int>
+          <function-parameters>
+            <type-pointer alignment="I:2" size="I:2">
+              <type-tag alignment="I:2" size="I:44"><struct-ref name="ip6_packet" ref="0x408951c8"/></type-tag>
+            </type-pointer>
+            <type-pointer alignment="I:2" size="I:2">
+              <type-tag alignment="I:2" size="I:16"><struct-ref name="in6_addr" ref="0x408871e8"/></type-tag>
+            </type-pointer>
+          </function-parameters>
+        </type-function>
+        <parameters>
+          <variable loc="28:/home/jumbo/jamal/project/CoAP/tinyos-release/tos/lib/net/blip/interfaces/ForwardingEvents.nc" name="pkt" ref="0x408f95a0">
+            <type-pointer alignment="I:2" size="I:2">
+              <type-tag alignment="I:2" size="I:44"><struct-ref name="ip6_packet" ref="0x408951c8"/></type-tag>
+            </type-pointer>
+          </variable>
+          <variable loc="29:/home/jumbo/jamal/project/CoAP/tinyos-release/tos/lib/net/blip/interfaces/ForwardingEvents.nc" name="next_hop" ref="0x408f9828">
+            <type-pointer alignment="I:2" size="I:2">
+              <type-tag alignment="I:2" size="I:16"><struct-ref name="in6_addr" ref="0x408871e8"/></type-tag>
+            </type-pointer>
+          </variable>
+        </parameters>
+      </function>
+      <function event="" loc="13:/home/jumbo/jamal/project/CoAP/tinyos-release/tos/lib/net/blip/interfaces/ForwardingEvents.nc" name="initiate" provided="0" ref="0x408f9060">
+        <documentation loc="7:/home/jumbo/jamal/project/CoAP/tinyos-release/tos/lib/net/blip/interfaces/ForwardingEvents.nc">
+          <short>
+ Signaled when initiating a new flow (not forwarding).</short>
+          <long>
+ Signaled when initiating a new flow (not forwarding).
+
+ This allows higher-layer components to modify the payload or
+ insert new headers before the packet is sent.
+</long>
+        </documentation>
+        <interfacedef-ref nicename="tos.lib.net.blip.interfaces.ForwardingEvents" qname="ForwardingEvents"/>
+        <type-function alignment="I:1" size="I:1">
+          <type-int alignment="I:1" cname="unsigned char" size="I:1" unsigned="">
+            <typename><typedef-ref name="bool" ref="0x4037f928"/></typename>
+          </type-int>
+          <function-parameters>
+            <type-pointer alignment="I:2" size="I:2">
+              <type-tag alignment="I:2" size="I:44"><struct-ref name="ip6_packet" ref="0x408951c8"/></type-tag>
+            </type-pointer>
+            <type-pointer alignment="I:2" size="I:2">
+              <type-tag alignment="I:2" size="I:16"><struct-ref name="in6_addr" ref="0x408871e8"/></type-tag>
+            </type-pointer>
+          </function-parameters>
+        </type-function>
+        <parameters>
+          <variable loc="13:/home/jumbo/jamal/project/CoAP/tinyos-release/tos/lib/net/blip/interfaces/ForwardingEvents.nc" name="pkt" ref="0x408fac40">
+            <type-pointer alignment="I:2" size="I:2">
+              <type-tag alignment="I:2" size="I:44"><struct-ref name="ip6_packet" ref="0x408951c8"/></type-tag>
+            </type-pointer>
+          </variable>
+          <variable loc="14:/home/jumbo/jamal/project/CoAP/tinyos-release/tos/lib/net/blip/interfaces/ForwardingEvents.nc" name="next_hop" ref="0x408faec8">
+            <type-pointer alignment="I:2" size="I:2">
+              <type-tag alignment="I:2" size="I:16"><struct-ref name="in6_addr" ref="0x408871e8"/></type-tag>
+            </type-pointer>
+          </variable>
+        </parameters>
+      </function>
+      <function event="" loc="39:/home/jumbo/jamal/project/CoAP/tinyos-release/tos/lib/net/blip/interfaces/ForwardingEvents.nc" name="linkResult" provided="0" ref="0x408f83c8">
+        <documentation loc="31:/home/jumbo/jamal/project/CoAP/tinyos-release/tos/lib/net/blip/interfaces/ForwardingEvents.nc">
+          <short>
+ Signaled once per packet.</short>
+          <long>
+ Signaled once per packet.  The send_info structure allows upper
+ layers to see how many fragments were attempted, and how many
+ transmissions were required.
+
+ Allows a higher-level component to maintain
+ statistics on the link behavior of their routes.
+</long>
+        </documentation>
+        <interfacedef-ref nicename="tos.lib.net.blip.interfaces.ForwardingEvents" qname="ForwardingEvents"/>
+        <type-function alignment="I:1" size="I:1">
+          <type-void alignment="I:1" size="I:1"/>
+          <function-parameters>
+            <type-pointer alignment="I:2" size="I:2">
+              <type-tag alignment="I:2" size="I:16"><struct-ref name="in6_addr" ref="0x408871e8"/></type-tag>
+            </type-pointer>
+            <type-pointer alignment="I:2" size="I:2">
+              <type-tag alignment="I:2" size="I:8"><struct-ref name="send_info" ref="0x408fb670"/></type-tag>
+            </type-pointer>
+          </function-parameters>
+        </type-function>
+        <parameters>
+          <variable loc="39:/home/jumbo/jamal/project/CoAP/tinyos-release/tos/lib/net/blip/interfaces/ForwardingEvents.nc" name="dest" ref="0x408f8010">
+            <type-pointer alignment="I:2" size="I:2">
+              <type-tag alignment="I:2" size="I:16"><struct-ref name="in6_addr" ref="0x408871e8"/></type-tag>
+            </type-pointer>
+          </variable>
+          <variable loc="39:/home/jumbo/jamal/project/CoAP/tinyos-release/tos/lib/net/blip/interfaces/ForwardingEvents.nc" name="info" ref="0x408f8268">
+            <type-pointer alignment="I:2" size="I:2">
+              <type-tag alignment="I:2" size="I:8"><struct-ref name="send_info" ref="0x408fb670"/></type-tag>
+            </type-pointer>
+          </variable>
+        </parameters>
+      </function>
+    </interfacedef>

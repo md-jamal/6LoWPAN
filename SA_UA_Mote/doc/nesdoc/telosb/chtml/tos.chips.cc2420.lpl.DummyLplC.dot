@@ -1,0 +1,17 @@
+digraph "tos.chips.cc2420.lpl.DummyLplC" {
+  n0x413b6e38 [shape=ellipse, style=filled, label="SplitControl", fontsize=12];
+  n0x413b48e0 [shape=ellipse, style=filled, label="SubControl", fontsize=12];
+  n0x41364ca8 [shape=ellipse, style=filled, label="Send", fontsize=12];
+  n0x413b5d38 [shape=ellipse, style=filled, label="SubSend", fontsize=12];
+  n0x413b6800 [shape=ellipse, style=filled, label="LowPowerListening", fontsize=12];
+  "DummyLplP" [fontsize=12, shape=box, URL="../chtml/tos.chips.cc2420.lpl.DummyLplP.html"];
+  n0x413b54e8 [shape=ellipse, style=filled, label="SendState", fontsize=12];
+  "DummyLplC.StateC" [fontsize=12, shape=box,peripheries=2, style=dashed, label="StateC", URL="../chtml/tos.system.StateC.html"];
+  n0x413b6438 [shape=ellipse, style=filled, label="Receive", fontsize=12];
+  n0x413b44c0 [shape=ellipse, style=filled, label="SubReceive", fontsize=12];
+  "n0x413b6e38" -> "n0x413b48e0" [label="SplitControl", URL="../ihtml/tos.interfaces.SplitControl.html", fontsize=10];
+  "n0x41364ca8" -> "n0x413b5d38" [label="Send", URL="../ihtml/tos.interfaces.Send.html", fontsize=10];
+  "n0x413b6800" -> "DummyLplP" [label="LowPowerListening", URL="../ihtml/tos.interfaces.LowPowerListening.html", fontsize=10];
+  "n0x413b54e8" -> "DummyLplC.StateC" [label="State", URL="../ihtml/tos.interfaces.State.html", fontsize=10];
+  "n0x413b6438" -> "n0x413b44c0" [label="Receive", URL="../ihtml/tos.interfaces.Receive.html", fontsize=10];
+}

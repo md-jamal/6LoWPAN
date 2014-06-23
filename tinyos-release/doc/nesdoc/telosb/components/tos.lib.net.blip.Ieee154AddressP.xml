@@ -1,0 +1,57 @@
+<?xml version="1.0" ?><component loc="2:/home/jumbo/jamal/project/CoAP/tinyos-release/tos/lib/net/blip/Ieee154AddressP.nc" nicename="tos.lib.net.blip.Ieee154AddressP" qname="Ieee154AddressP">
+      <module/>
+    <specification><interface loc="8:/home/jumbo/jamal/project/CoAP/tinyos-release/tos/lib/net/blip/Ieee154AddressP.nc" name="LocalIeeeEui64" provided="0" ref="0x409e6648">
+      <component-ref nicename="tos.lib.net.blip.Ieee154AddressP" qname="Ieee154AddressP"/>
+      <type-interface alignment="I:2" size="I:2"><interface-ref name="LocalIeeeEui64" ref="0x409e6648" scoped=""/></type-interface>
+      <instance>
+        <interfacedef-ref nicename="tos.interfaces.LocalIeeeEui64" qname="LocalIeeeEui64"/>
+      </instance>
+      <interface-functions>
+        <function-ref name="getId" ref="0x409e6820" scoped=""/>
+      </interface-functions>
+    </interface><interface loc="9:/home/jumbo/jamal/project/CoAP/tinyos-release/tos/lib/net/blip/Ieee154AddressP.nc" name="CC2420Config" provided="0" ref="0x409de3b0">
+      <component-ref nicename="tos.lib.net.blip.Ieee154AddressP" qname="Ieee154AddressP"/>
+      <type-interface alignment="I:2" size="I:2"><interface-ref name="CC2420Config" ref="0x409de3b0" scoped=""/></type-interface>
+      <instance>
+        <interfacedef-ref nicename="tos.chips.cc2420.interfaces.CC2420Config" qname="CC2420Config"/>
+      </instance>
+      <interface-functions>
+        <function-ref name="setAutoAck" ref="0x409de588" scoped=""/>
+        <function-ref name="isAddressRecognitionEnabled" ref="0x409de668" scoped=""/>
+        <function-ref name="setAddressRecognition" ref="0x409de748" scoped=""/>
+        <function-ref name="syncDone" ref="0x409de828" scoped=""/>
+        <function-ref name="isHwAddressRecognitionDefault" ref="0x409de908" scoped=""/>
+        <function-ref name="setShortAddr" ref="0x409de9e8" scoped=""/>
+        <function-ref name="setChannel" ref="0x409deac8" scoped=""/>
+        <function-ref name="isAutoAckEnabled" ref="0x409deba8" scoped=""/>
+        <function-ref name="setPanAddr" ref="0x409dec88" scoped=""/>
+        <function-ref name="isHwAutoAckDefault" ref="0x409ded68" scoped=""/>
+        <function-ref name="getExtAddr" ref="0x409dee48" scoped=""/>
+        <function-ref name="getShortAddr" ref="0x409def28" scoped=""/>
+        <function-ref name="sync" ref="0x409e8018" scoped=""/>
+        <function-ref name="getChannel" ref="0x409e8178" scoped=""/>
+        <function-ref name="getPanAddr" ref="0x409e8258" scoped=""/>
+      </interface-functions>
+    </interface><interface loc="5:/home/jumbo/jamal/project/CoAP/tinyos-release/tos/lib/net/blip/Ieee154AddressP.nc" name="Ieee154Address" provided="1" ref="0x409cb6d0">
+      <component-ref nicename="tos.lib.net.blip.Ieee154AddressP" qname="Ieee154AddressP"/>
+      <type-interface alignment="I:2" size="I:2"><interface-ref name="Ieee154Address" ref="0x409cb6d0" scoped=""/></type-interface>
+      <instance>
+        <interfacedef-ref nicename="tos.lib.net.blip.interfaces.Ieee154Address" qname="Ieee154Address"/>
+      </instance>
+      <interface-functions>
+        <function-ref name="getPanId" ref="0x409cb8a8" scoped=""/>
+        <function-ref name="changed" ref="0x409cb988" scoped=""/>
+        <function-ref name="setShortAddr" ref="0x409cba68" scoped=""/>
+        <function-ref name="getExtAddr" ref="0x409cbb48" scoped=""/>
+        <function-ref name="getShortAddr" ref="0x409cbc28" scoped=""/>
+      </interface-functions>
+    </interface><interface loc="4:/home/jumbo/jamal/project/CoAP/tinyos-release/tos/lib/net/blip/Ieee154AddressP.nc" name="Init" provided="1" ref="0x409cb328">
+      <component-ref nicename="tos.lib.net.blip.Ieee154AddressP" qname="Ieee154AddressP"/>
+      <type-interface alignment="I:2" size="I:2"><interface-ref name="Init" ref="0x409cb328" scoped=""/></type-interface>
+      <instance>
+        <interfacedef-ref nicename="tos.interfaces.Init" qname="Init"/>
+      </instance>
+      <interface-functions>
+        <function-ref name="init" ref="0x409cb500" scoped=""/>
+      </interface-functions>
+    </interface></specification><referenced/></component>

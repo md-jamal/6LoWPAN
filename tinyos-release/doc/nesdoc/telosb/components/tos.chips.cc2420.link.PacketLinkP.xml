@@ -1,0 +1,122 @@
+<?xml version="1.0" ?><component loc="40:/home/jumbo/jamal/project/CoAP/tinyos-release/tos/chips/cc2420/link/PacketLinkP.nc" nicename="tos.chips.cc2420.link.PacketLinkP" qname="PacketLinkP">
+      <documentation loc="32:/home/jumbo/jamal/project/CoAP/tinyos-release/tos/chips/cc2420/link/PacketLinkP.nc">
+        <short>
+ Reliable Packet Link Functionality
+ </short>
+        <long>
+ Reliable Packet Link Functionality
+ @author David Moss
+ @author Jon Wyant
+</long>
+      </documentation>
+      <module/>
+    <specification><interface loc="47:/home/jumbo/jamal/project/CoAP/tinyos-release/tos/chips/cc2420/link/PacketLinkP.nc" name="SubSend" provided="0" ref="0x412e2bc8">
+      <component-ref nicename="tos.chips.cc2420.link.PacketLinkP" qname="PacketLinkP"/>
+      <type-interface alignment="I:2" size="I:2"><interface-ref name="SubSend" ref="0x412e2bc8" scoped=""/></type-interface>
+      <instance>
+        <interfacedef-ref nicename="tos.interfaces.Send" qname="Send"/>
+      </instance>
+      <interface-functions>
+        <function-ref name="send" ref="0x412e2da0" scoped=""/>
+        <function-ref name="getPayload" ref="0x412e2e80" scoped=""/>
+        <function-ref name="maxPayloadLength" ref="0x412e1010" scoped=""/>
+        <function-ref name="cancel" ref="0x412e10f0" scoped=""/>
+        <function-ref name="sendDone" ref="0x412e11d0" scoped=""/>
+      </interface-functions>
+    </interface><interface loc="77:/home/jumbo/jamal/project/CoAP/tinyos-release/tos/chips/cc2420/link/PacketLinkP.nc" name="send" provided="0" ref="0x412dcbf0">
+      <component-ref nicename="tos.chips.cc2420.link.PacketLinkP" qname="PacketLinkP"/>
+      <type-interface alignment="I:2" size="I:2"><interface-ref name="send" ref="0x412dcbf0" scoped=""/></type-interface>
+      <instance>
+        <interfacedef-ref nicename="tos.interfaces.TaskBasic" qname="TaskBasic"/>
+      </instance>
+      <interface-functions>
+        <function-ref name="postTask" ref="0x412dcdc8" scoped=""/>
+        <function-ref name="runTask" ref="0x412dcea8" scoped=""/>
+      </interface-functions>
+    </interface><interface loc="50:/home/jumbo/jamal/project/CoAP/tinyos-release/tos/chips/cc2420/link/PacketLinkP.nc" name="DelayTimer" provided="0" ref="0x412e02e0">
+      <component-ref nicename="tos.chips.cc2420.link.PacketLinkP" qname="PacketLinkP"/>
+      <type-interface alignment="I:2" size="I:2"><interface-ref name="DelayTimer" ref="0x412e02e0" scoped=""/></type-interface>
+      <instance>
+        <interfacedef-ref nicename="tos.lib.timer.Timer" qname="Timer"/>
+        <arguments>
+          <type-tag alignment="I:2" size="I:2"><struct-ref ref="0x40892a08"/>
+            <typename><typedef-ref name="TMilli" ref="0x40892bd0"/></typename>
+          </type-tag>
+        </arguments>
+      </instance>
+      <interface-functions>
+        <function-ref name="getNow" ref="0x412dfdd0" scoped=""/>
+        <function-ref name="fired" ref="0x412df088" scoped=""/>
+        <function-ref name="startPeriodicAt" ref="0x412df790" scoped=""/>
+        <function-ref name="isOneShot" ref="0x412df538" scoped=""/>
+        <function-ref name="getdt" ref="0x412dd2a0" scoped=""/>
+        <function-ref name="gett0" ref="0x412dd048" scoped=""/>
+        <function-ref name="isRunning" ref="0x412df2e0" scoped=""/>
+        <function-ref name="startPeriodic" ref="0x412e0908" scoped=""/>
+        <function-ref name="startOneShotAt" ref="0x412dfab0" scoped=""/>
+        <function-ref name="startOneShot" ref="0x412e0b88" scoped=""/>
+        <function-ref name="stop" ref="0x412e0e08" scoped=""/>
+      </interface-functions>
+    </interface><interface loc="42:/home/jumbo/jamal/project/CoAP/tinyos-release/tos/chips/cc2420/link/PacketLinkP.nc" name="Send" provided="1" ref="0x412e5d38">
+      <component-ref nicename="tos.chips.cc2420.link.PacketLinkP" qname="PacketLinkP"/>
+      <type-interface alignment="I:2" size="I:2"><interface-ref name="Send" ref="0x412e5d38" scoped=""/></type-interface>
+      <instance>
+        <interfacedef-ref nicename="tos.interfaces.Send" qname="Send"/>
+      </instance>
+      <interface-functions>
+        <function-ref name="send" ref="0x412e5f10" scoped=""/>
+        <function-ref name="getPayload" ref="0x412e2010" scoped=""/>
+        <function-ref name="maxPayloadLength" ref="0x412e20f0" scoped=""/>
+        <function-ref name="cancel" ref="0x412e21d0" scoped=""/>
+        <function-ref name="sendDone" ref="0x412e22b0" scoped=""/>
+      </interface-functions>
+    </interface><interface loc="48:/home/jumbo/jamal/project/CoAP/tinyos-release/tos/chips/cc2420/link/PacketLinkP.nc" name="SendState" provided="0" ref="0x412e13c8">
+      <component-ref nicename="tos.chips.cc2420.link.PacketLinkP" qname="PacketLinkP"/>
+      <type-interface alignment="I:2" size="I:2"><interface-ref name="SendState" ref="0x412e13c8" scoped=""/></type-interface>
+      <instance>
+        <interfacedef-ref nicename="tos.interfaces.State" qname="State"/>
+      </instance>
+      <interface-functions>
+        <function-ref name="getState" ref="0x412e15a0" scoped=""/>
+        <function-ref name="toIdle" ref="0x412e1680" scoped=""/>
+        <function-ref name="isState" ref="0x412e1760" scoped=""/>
+        <function-ref name="isIdle" ref="0x412e1840" scoped=""/>
+        <function-ref name="requestState" ref="0x412e1920" scoped=""/>
+        <function-ref name="forceState" ref="0x412e1a00" scoped=""/>
+      </interface-functions>
+    </interface><interface loc="51:/home/jumbo/jamal/project/CoAP/tinyos-release/tos/chips/cc2420/link/PacketLinkP.nc" name="CC2420PacketBody" provided="0" ref="0x412dd558">
+      <component-ref nicename="tos.chips.cc2420.link.PacketLinkP" qname="PacketLinkP"/>
+      <type-interface alignment="I:2" size="I:2"><interface-ref name="CC2420PacketBody" ref="0x412dd558" scoped=""/></type-interface>
+      <instance>
+        <interfacedef-ref nicename="tos.chips.cc2420.interfaces.CC2420PacketBody" qname="CC2420PacketBody"/>
+      </instance>
+      <interface-functions>
+        <function-ref name="getPayload" ref="0x412dd730" scoped=""/>
+        <function-ref name="getHeader" ref="0x412dd810" scoped=""/>
+        <function-ref name="getMetadata" ref="0x412dd8f0" scoped=""/>
+      </interface-functions>
+    </interface><interface loc="49:/home/jumbo/jamal/project/CoAP/tinyos-release/tos/chips/cc2420/link/PacketLinkP.nc" name="PacketAcknowledgements" provided="0" ref="0x412e1c20">
+      <component-ref nicename="tos.chips.cc2420.link.PacketLinkP" qname="PacketLinkP"/>
+      <type-interface alignment="I:2" size="I:2"><interface-ref name="PacketAcknowledgements" ref="0x412e1c20" scoped=""/></type-interface>
+      <instance>
+        <interfacedef-ref nicename="tos.interfaces.PacketAcknowledgements" qname="PacketAcknowledgements"/>
+      </instance>
+      <interface-functions>
+        <function-ref name="requestAck" ref="0x412e1df8" scoped=""/>
+        <function-ref name="noAck" ref="0x412e1ed8" scoped=""/>
+        <function-ref name="wasAcked" ref="0x412e0010" scoped=""/>
+      </interface-functions>
+    </interface><interface loc="43:/home/jumbo/jamal/project/CoAP/tinyos-release/tos/chips/cc2420/link/PacketLinkP.nc" name="PacketLink" provided="1" ref="0x412e2458">
+      <component-ref nicename="tos.chips.cc2420.link.PacketLinkP" qname="PacketLinkP"/>
+      <type-interface alignment="I:2" size="I:2"><interface-ref name="PacketLink" ref="0x412e2458" scoped=""/></type-interface>
+      <instance>
+        <interfacedef-ref nicename="tos.interfaces.PacketLink" qname="PacketLink"/>
+      </instance>
+      <interface-functions>
+        <function-ref name="getRetryDelay" ref="0x412e2630" scoped=""/>
+        <function-ref name="setRetries" ref="0x412e2710" scoped=""/>
+        <function-ref name="getRetries" ref="0x412e27f0" scoped=""/>
+        <function-ref name="setRetryDelay" ref="0x412e28d0" scoped=""/>
+        <function-ref name="wasDelivered" ref="0x412e29b0" scoped=""/>
+      </interface-functions>
+    </interface></specification><referenced/></component>

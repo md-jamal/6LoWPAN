@@ -1,0 +1,174 @@
+<?xml version="1.0" ?><component loc="18:/home/jumbo/jamal/project/CoAP/tinyos-release/tos/lib/net/blip/IPForwardingEngineP.nc" nicename="tos.lib.net.blip.IPForwardingEngineP" qname="IPForwardingEngineP">
+      <documentation loc="1:/home/jumbo/jamal/project/CoAP/tinyos-release/tos/lib/net/blip/IPForwardingEngineP.nc">
+        <short>
+ Forwarding abstractions for blip IPv6 stack.</short>
+        <long>
+ Forwarding abstractions for blip IPv6 stack.
+
+ Routing protocols can manipulate the forwarding state using the
+ ForwardingTable interface and receive notifications of forwarding
+ events using ForwardingEvents.  In particular, the forwarding
+ events are useful for datapath validation and updating link
+ estimates.
+
+ @author Stephen Dawson-Haggerty &lt;stevedh@eecs.berkeley.edu&gt;
+</long>
+      </documentation>
+      <module/>
+    <specification><interface loc="22:/home/jumbo/jamal/project/CoAP/tinyos-release/tos/lib/net/blip/IPForwardingEngineP.nc" name="ForwardingEvents" provided="1" ref="0x40916010">
+      <component-ref nicename="tos.lib.net.blip.IPForwardingEngineP" qname="IPForwardingEngineP"/>
+      <type-interface alignment="I:2" size="I:2"><interface-ref name="ForwardingEvents" ref="0x40916010" scoped=""/></type-interface>
+      <instance>
+        <interfacedef-ref nicename="tos.lib.net.blip.interfaces.ForwardingEvents" qname="ForwardingEvents"/>
+      </instance>
+      <interface-parameters>
+        <type-int alignment="I:1" cname="unsigned char" size="I:1" unsigned="">
+          <typename><typedef-ref name="uint8_t" ref="0x4003adc8"/></typename>
+        </type-int>
+      </interface-parameters>
+      <interface-functions>
+        <function-ref name="approve" ref="0x409161e8" scoped=""/>
+        <function-ref name="initiate" ref="0x409162c8" scoped=""/>
+        <function-ref name="linkResult" ref="0x409163a8" scoped=""/>
+      </interface-functions>
+    </interface><interface loc="28:/home/jumbo/jamal/project/CoAP/tinyos-release/tos/lib/net/blip/IPForwardingEngineP.nc" name="IPForward" provided="0" ref="0x409141c0">
+      <component-ref nicename="tos.lib.net.blip.IPForwardingEngineP" qname="IPForwardingEngineP"/>
+      <type-interface alignment="I:2" size="I:2"><interface-ref name="IPForward" ref="0x409141c0" scoped=""/></type-interface>
+      <instance>
+        <interfacedef-ref nicename="tos.lib.net.blip.interfaces.IPForward" qname="IPForward"/>
+      </instance>
+      <interface-parameters>
+        <type-int alignment="I:1" cname="unsigned char" size="I:1" unsigned="">
+          <typename><typedef-ref name="uint8_t" ref="0x4003adc8"/></typename>
+        </type-int>
+      </interface-parameters>
+      <interface-functions>
+        <function-ref name="send" ref="0x40914398" scoped=""/>
+        <function-ref name="recv" ref="0x40914478" scoped=""/>
+        <function-ref name="sendDone" ref="0x40914558" scoped=""/>
+      </interface-functions>
+    </interface><interface loc="31:/home/jumbo/jamal/project/CoAP/tinyos-release/tos/lib/net/blip/IPForwardingEngineP.nc" name="Pool" provided="0" ref="0x4092ad00">
+      <component-ref nicename="tos.lib.net.blip.IPForwardingEngineP" qname="IPForwardingEngineP"/>
+      <type-interface alignment="I:2" size="I:2"><interface-ref name="Pool" ref="0x4092ad00" scoped=""/></type-interface>
+      <instance>
+        <interfacedef-ref nicename="tos.interfaces.Pool" qname="Pool"/>
+        <arguments>
+          <type-tag alignment="I:1" size="I:8"><struct-ref name="in6_iid" ref="0x40880010"/></type-tag>
+        </arguments>
+      </instance>
+      <interface-functions>
+        <function-ref name="get" ref="0x4092ede8" scoped=""/>
+        <function-ref name="maxSize" ref="0x4092e800" scoped=""/>
+        <function-ref name="empty" ref="0x4092e350" scoped=""/>
+        <function-ref name="put" ref="0x4092ea58" scoped=""/>
+        <function-ref name="size" ref="0x4092e5a8" scoped=""/>
+      </interface-functions>
+    </interface><interface loc="96:/home/jumbo/jamal/project/CoAP/tinyos-release/tos/lib/net/blip/IPForwardingEngineP.nc" name="defaultRouteAddedTask" provided="0" ref="0x4093e5e0">
+      <component-ref nicename="tos.lib.net.blip.IPForwardingEngineP" qname="IPForwardingEngineP"/>
+      <type-interface alignment="I:2" size="I:2"><interface-ref name="defaultRouteAddedTask" ref="0x4093e5e0" scoped=""/></type-interface>
+      <instance>
+        <interfacedef-ref nicename="tos.interfaces.TaskBasic" qname="TaskBasic"/>
+      </instance>
+      <interface-functions>
+        <function-ref name="postTask" ref="0x4093e7b8" scoped=""/>
+        <function-ref name="runTask" ref="0x4093e898" scoped=""/>
+      </interface-functions>
+    </interface><interface loc="21:/home/jumbo/jamal/project/CoAP/tinyos-release/tos/lib/net/blip/IPForwardingEngineP.nc" name="ForwardingTableEvents" provided="1" ref="0x40917780">
+      <component-ref nicename="tos.lib.net.blip.IPForwardingEngineP" qname="IPForwardingEngineP"/>
+      <type-interface alignment="I:2" size="I:2"><interface-ref name="ForwardingTableEvents" ref="0x40917780" scoped=""/></type-interface>
+      <instance>
+        <interfacedef-ref nicename="tos.lib.net.blip.interfaces.ForwardingTableEvents" qname="ForwardingTableEvents"/>
+      </instance>
+      <interface-functions>
+        <function-ref name="defaultRouteAdded" ref="0x40917958" scoped=""/>
+        <function-ref name="defaultRouteRemoved" ref="0x40917a38" scoped=""/>
+      </interface-functions>
+    </interface><interface loc="24:/home/jumbo/jamal/project/CoAP/tinyos-release/tos/lib/net/blip/IPForwardingEngineP.nc" name="IPRaw" provided="1" ref="0x40916968">
+      <component-ref nicename="tos.lib.net.blip.IPForwardingEngineP" qname="IPForwardingEngineP"/>
+      <type-interface alignment="I:2" size="I:2"><interface-ref name="IPRaw" ref="0x40916968" scoped=""/></type-interface>
+      <instance>
+        <interfacedef-ref nicename="tos.lib.net.blip.interfaces.IP" qname="IP"/>
+      </instance>
+      <interface-functions>
+        <function-ref name="send" ref="0x40916b40" scoped=""/>
+        <function-ref name="recv" ref="0x40916c20" scoped=""/>
+      </interface-functions>
+    </interface><interface loc="25:/home/jumbo/jamal/project/CoAP/tinyos-release/tos/lib/net/blip/IPForwardingEngineP.nc" name="Init" provided="1" ref="0x40916d90">
+      <component-ref nicename="tos.lib.net.blip.IPForwardingEngineP" qname="IPForwardingEngineP"/>
+      <type-interface alignment="I:2" size="I:2"><interface-ref name="Init" ref="0x40916d90" scoped=""/></type-interface>
+      <instance>
+        <interfacedef-ref nicename="tos.interfaces.Init" qname="Init"/>
+      </instance>
+      <interface-functions>
+        <function-ref name="init" ref="0x40915010" scoped=""/>
+      </interface-functions>
+    </interface><interface loc="29:/home/jumbo/jamal/project/CoAP/tinyos-release/tos/lib/net/blip/IPForwardingEngineP.nc" name="IPAddress" provided="0" ref="0x409146f8">
+      <component-ref nicename="tos.lib.net.blip.IPForwardingEngineP" qname="IPForwardingEngineP"/>
+      <type-interface alignment="I:2" size="I:2"><interface-ref name="IPAddress" ref="0x409146f8" scoped=""/></type-interface>
+      <instance>
+        <interfacedef-ref nicename="tos.lib.net.blip.interfaces.IPAddress" qname="IPAddress"/>
+      </instance>
+      <interface-functions>
+        <function-ref name="getLLAddr" ref="0x409148d0" scoped=""/>
+        <function-ref name="changed" ref="0x409149b0" scoped=""/>
+        <function-ref name="isLocalAddress" ref="0x40914a90" scoped=""/>
+        <function-ref name="getGlobalAddr" ref="0x40914b70" scoped=""/>
+        <function-ref name="setSource" ref="0x40914c50" scoped=""/>
+        <function-ref name="removeAddress" ref="0x40914d30" scoped=""/>
+        <function-ref name="setAddress" ref="0x40914e10" scoped=""/>
+        <function-ref name="isLLAddress" ref="0x40914ef0" scoped=""/>
+      </interface-functions>
+    </interface><interface loc="36:/home/jumbo/jamal/project/CoAP/tinyos-release/tos/lib/net/blip/IPForwardingEngineP.nc" name="Leds" provided="0" ref="0x4092d1c0">
+      <component-ref nicename="tos.lib.net.blip.IPForwardingEngineP" qname="IPForwardingEngineP"/>
+      <type-interface alignment="I:2" size="I:2"><interface-ref name="Leds" ref="0x4092d1c0" scoped=""/></type-interface>
+      <instance>
+        <interfacedef-ref nicename="tos.interfaces.Leds" qname="Leds"/>
+      </instance>
+      <interface-functions>
+        <function-ref name="led0Off" ref="0x4092d398" scoped=""/>
+        <function-ref name="led0Toggle" ref="0x4092d478" scoped=""/>
+        <function-ref name="led1On" ref="0x4092d558" scoped=""/>
+        <function-ref name="led1Toggle" ref="0x4092d638" scoped=""/>
+        <function-ref name="led2Toggle" ref="0x4092d718" scoped=""/>
+        <function-ref name="get" ref="0x4092d7f8" scoped=""/>
+        <function-ref name="led1Off" ref="0x4092d8d8" scoped=""/>
+        <function-ref name="led2Off" ref="0x4092dc58" scoped=""/>
+        <function-ref name="set" ref="0x4092d9b8" scoped=""/>
+        <function-ref name="led0On" ref="0x4092da98" scoped=""/>
+        <function-ref name="led2On" ref="0x4092db78" scoped=""/>
+      </interface-functions>
+    </interface><interface loc="20:/home/jumbo/jamal/project/CoAP/tinyos-release/tos/lib/net/blip/IPForwardingEngineP.nc" name="ForwardingTable" provided="1" ref="0x40917010">
+      <component-ref nicename="tos.lib.net.blip.IPForwardingEngineP" qname="IPForwardingEngineP"/>
+      <type-interface alignment="I:2" size="I:2"><interface-ref name="ForwardingTable" ref="0x40917010" scoped=""/></type-interface>
+      <instance>
+        <interfacedef-ref nicename="tos.lib.net.blip.interfaces.ForwardingTable" qname="ForwardingTable"/>
+      </instance>
+      <interface-functions>
+        <function-ref name="getTable" ref="0x409171e8" scoped=""/>
+        <function-ref name="lookupRoute" ref="0x409172c8" scoped=""/>
+        <function-ref name="delRoute" ref="0x409173a8" scoped=""/>
+        <function-ref name="lookupRouteKey" ref="0x40917488" scoped=""/>
+        <function-ref name="addRoute" ref="0x40917568" scoped=""/>
+      </interface-functions>
+    </interface><interface loc="30:/home/jumbo/jamal/project/CoAP/tinyos-release/tos/lib/net/blip/IPForwardingEngineP.nc" name="IPPacket" provided="0" ref="0x409130b8">
+      <component-ref nicename="tos.lib.net.blip.IPForwardingEngineP" qname="IPForwardingEngineP"/>
+      <type-interface alignment="I:2" size="I:2"><interface-ref name="IPPacket" ref="0x409130b8" scoped=""/></type-interface>
+      <instance>
+        <interfacedef-ref nicename="tos.lib.net.blip.interfaces.IPPacket" qname="IPPacket"/>
+      </instance>
+      <interface-functions>
+        <function-ref name="findHeader" ref="0x40913290" scoped=""/>
+        <function-ref name="delTLV" ref="0x40913370" scoped=""/>
+        <function-ref name="findTLV" ref="0x40913450" scoped=""/>
+      </interface-functions>
+    </interface><interface loc="23:/home/jumbo/jamal/project/CoAP/tinyos-release/tos/lib/net/blip/IPForwardingEngineP.nc" name="IP" provided="1" ref="0x40916500">
+      <component-ref nicename="tos.lib.net.blip.IPForwardingEngineP" qname="IPForwardingEngineP"/>
+      <type-interface alignment="I:2" size="I:2"><interface-ref name="IP" ref="0x40916500" scoped=""/></type-interface>
+      <instance>
+        <interfacedef-ref nicename="tos.lib.net.blip.interfaces.IP" qname="IP"/>
+      </instance>
+      <interface-functions>
+        <function-ref name="send" ref="0x409166d8" scoped=""/>
+        <function-ref name="recv" ref="0x409167b8" scoped=""/>
+      </interface-functions>
+    </interface></specification><referenced/></component>

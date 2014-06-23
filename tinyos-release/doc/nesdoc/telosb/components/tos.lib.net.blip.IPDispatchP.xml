@@ -1,0 +1,275 @@
+<?xml version="1.0" ?><component loc="41:/home/jumbo/jamal/project/CoAP/tinyos-release/tos/lib/net/blip/IPDispatchP.nc" nicename="tos.lib.net.blip.IPDispatchP" qname="IPDispatchP">
+      <module/>
+    <specification><interface loc="43:/home/jumbo/jamal/project/CoAP/tinyos-release/tos/lib/net/blip/IPDispatchP.nc" name="SplitControl" provided="1" ref="0x40eae9e8">
+      <component-ref nicename="tos.lib.net.blip.IPDispatchP" qname="IPDispatchP"/>
+      <type-interface alignment="I:2" size="I:2"><interface-ref name="SplitControl" ref="0x40eae9e8" scoped=""/></type-interface>
+      <instance>
+        <interfacedef-ref nicename="tos.interfaces.SplitControl" qname="SplitControl"/>
+      </instance>
+      <interface-functions>
+        <function-ref name="startDone" ref="0x40eaebc0" scoped=""/>
+        <function-ref name="stopDone" ref="0x40eaeca0" scoped=""/>
+        <function-ref name="start" ref="0x40eaed80" scoped=""/>
+        <function-ref name="stop" ref="0x40eaee60" scoped=""/>
+      </interface-functions>
+    </interface><interface loc="51:/home/jumbo/jamal/project/CoAP/tinyos-release/tos/lib/net/blip/IPDispatchP.nc" name="Boot" provided="0" ref="0x40ee0290">
+      <component-ref nicename="tos.lib.net.blip.IPDispatchP" qname="IPDispatchP"/>
+      <type-interface alignment="I:2" size="I:2"><interface-ref name="Boot" ref="0x40ee0290" scoped=""/></type-interface>
+      <instance>
+        <interfacedef-ref nicename="tos.interfaces.Boot" qname="Boot"/>
+      </instance>
+      <interface-functions>
+        <function-ref name="booted" ref="0x40ee0468" scoped=""/>
+      </interface-functions>
+    </interface><interface loc="70:/home/jumbo/jamal/project/CoAP/tinyos-release/tos/lib/net/blip/IPDispatchP.nc" name="SendInfoPool" provided="0" ref="0x40ec9dc8">
+      <component-ref nicename="tos.lib.net.blip.IPDispatchP" qname="IPDispatchP"/>
+      <type-interface alignment="I:2" size="I:2"><interface-ref name="SendInfoPool" ref="0x40ec9dc8" scoped=""/></type-interface>
+      <instance>
+        <interfacedef-ref nicename="tos.interfaces.Pool" qname="Pool"/>
+        <arguments>
+          <type-tag alignment="I:2" size="I:8"><struct-ref name="send_info" ref="0x408fb670"/></type-tag>
+        </arguments>
+      </instance>
+      <interface-functions>
+        <function-ref name="get" ref="0x40efaea0" scoped=""/>
+        <function-ref name="maxSize" ref="0x40efa8b8" scoped=""/>
+        <function-ref name="empty" ref="0x40efa408" scoped=""/>
+        <function-ref name="put" ref="0x40efab10" scoped=""/>
+        <function-ref name="size" ref="0x40efa660" scoped=""/>
+      </interface-functions>
+    </interface><interface loc="47:/home/jumbo/jamal/project/CoAP/tinyos-release/tos/lib/net/blip/IPDispatchP.nc" name="BlipStatistics" provided="1" ref="0x40ead6a0">
+      <component-ref nicename="tos.lib.net.blip.IPDispatchP" qname="IPDispatchP"/>
+      <type-interface alignment="I:2" size="I:2"><interface-ref name="BlipStatistics" ref="0x40ead6a0" scoped=""/></type-interface>
+      <instance>
+        <interfacedef-ref nicename="tos.lib.net.blip.interfaces.BlipStatistics" qname="BlipStatistics"/>
+        <arguments>
+          <type-tag alignment="I:1" size="I:9"><nx_struct-ref ref="0x40e955a0"/>
+            <typename><typedef-ref name="ip_statistics_t" ref="0x40e959a8"/></typename>
+          </type-tag>
+        </arguments>
+      </instance>
+      <interface-functions>
+        <function-ref name="clear" ref="0x40ee0010" scoped=""/>
+        <function-ref name="get" ref="0x40eadcc8" scoped=""/>
+      </interface-functions>
+    </interface><interface loc="55:/home/jumbo/jamal/project/CoAP/tinyos-release/tos/lib/net/blip/IPDispatchP.nc" name="RadioControl" provided="0" ref="0x40ee06d8">
+      <component-ref nicename="tos.lib.net.blip.IPDispatchP" qname="IPDispatchP"/>
+      <type-interface alignment="I:2" size="I:2"><interface-ref name="RadioControl" ref="0x40ee06d8" scoped=""/></type-interface>
+      <instance>
+        <interfacedef-ref nicename="tos.interfaces.SplitControl" qname="SplitControl"/>
+      </instance>
+      <interface-functions>
+        <function-ref name="startDone" ref="0x40ee08b0" scoped=""/>
+        <function-ref name="stopDone" ref="0x40ee0990" scoped=""/>
+        <function-ref name="start" ref="0x40ee0a70" scoped=""/>
+        <function-ref name="stop" ref="0x40ee0b50" scoped=""/>
+      </interface-functions>
+    </interface><interface loc="45:/home/jumbo/jamal/project/CoAP/tinyos-release/tos/lib/net/blip/IPDispatchP.nc" name="IPLower" provided="1" ref="0x40ead010">
+      <component-ref nicename="tos.lib.net.blip.IPDispatchP" qname="IPDispatchP"/>
+      <type-interface alignment="I:2" size="I:2"><interface-ref name="IPLower" ref="0x40ead010" scoped=""/></type-interface>
+      <instance>
+        <interfacedef-ref nicename="tos.lib.net.blip.interfaces.IPLower" qname="IPLower"/>
+      </instance>
+      <interface-functions>
+        <function-ref name="send" ref="0x40ead1e8" scoped=""/>
+        <function-ref name="recv" ref="0x40ead2c8" scoped=""/>
+        <function-ref name="sendDone" ref="0x40ead3a8" scoped=""/>
+      </interface-functions>
+    </interface><interface loc="64:/home/jumbo/jamal/project/CoAP/tinyos-release/tos/lib/net/blip/IPDispatchP.nc" name="ReadLqi" provided="0" ref="0x40ece8d0">
+      <component-ref nicename="tos.lib.net.blip.IPDispatchP" qname="IPDispatchP"/>
+      <type-interface alignment="I:2" size="I:2"><interface-ref name="ReadLqi" ref="0x40ece8d0" scoped=""/></type-interface>
+      <instance>
+        <interfacedef-ref nicename="tos.lib.net.blip.interfaces.ReadLqi" qname="ReadLqi"/>
+      </instance>
+      <interface-functions>
+        <function-ref name="readRssi" ref="0x40eceaa8" scoped=""/>
+        <function-ref name="readLqi" ref="0x40eceb88" scoped=""/>
+      </interface-functions>
+    </interface><interface loc="66:/home/jumbo/jamal/project/CoAP/tinyos-release/tos/lib/net/blip/IPDispatchP.nc" name="LowPowerListening" provided="0" ref="0x40ec7ed0">
+      <component-ref nicename="tos.lib.net.blip.IPDispatchP" qname="IPDispatchP"/>
+      <type-interface alignment="I:2" size="I:2"><interface-ref name="LowPowerListening" ref="0x40ec7ed0" scoped=""/></type-interface>
+      <instance>
+        <interfacedef-ref nicename="tos.interfaces.LowPowerListening" qname="LowPowerListening"/>
+      </instance>
+      <interface-functions>
+        <function-ref name="setRemoteWakeupInterval" ref="0x40ed00c0" scoped=""/>
+        <function-ref name="getRemoteWakeupInterval" ref="0x40ed01a0" scoped=""/>
+        <function-ref name="getLocalWakeupInterval" ref="0x40ed0280" scoped=""/>
+        <function-ref name="setLocalWakeupInterval" ref="0x40ed0360" scoped=""/>
+      </interface-functions>
+    </interface><interface loc="72:/home/jumbo/jamal/project/CoAP/tinyos-release/tos/lib/net/blip/IPDispatchP.nc" name="SendQueue" provided="0" ref="0x40eefd30">
+      <component-ref nicename="tos.lib.net.blip.IPDispatchP" qname="IPDispatchP"/>
+      <type-interface alignment="I:2" size="I:2"><interface-ref name="SendQueue" ref="0x40eefd30" scoped=""/></type-interface>
+      <instance>
+        <interfacedef-ref nicename="tos.interfaces.Queue" qname="Queue"/>
+        <arguments>
+          <type-pointer alignment="I:2" size="I:2">
+            <type-tag alignment="I:2" size="I:4"><struct-ref name="send_entry" ref="0x408fa338"/></type-tag>
+          </type-pointer>
+        </arguments>
+      </instance>
+      <interface-functions>
+        <function-ref name="head" ref="0x40ef5a78" scoped=""/>
+        <function-ref name="enqueue" ref="0x40ef1178" scoped=""/>
+        <function-ref name="element" ref="0x40ef14c8" scoped=""/>
+        <function-ref name="maxSize" ref="0x40ef5820" scoped=""/>
+        <function-ref name="dequeue" ref="0x40ef5de8" scoped=""/>
+        <function-ref name="empty" ref="0x40ef5370" scoped=""/>
+        <function-ref name="size" ref="0x40ef55c8" scoped=""/>
+      </interface-functions>
+    </interface><interface loc="75:/home/jumbo/jamal/project/CoAP/tinyos-release/tos/lib/net/blip/IPDispatchP.nc" name="ExpireTimer" provided="0" ref="0x40ef19c0">
+      <component-ref nicename="tos.lib.net.blip.IPDispatchP" qname="IPDispatchP"/>
+      <type-interface alignment="I:2" size="I:2"><interface-ref name="ExpireTimer" ref="0x40ef19c0" scoped=""/></type-interface>
+      <instance>
+        <interfacedef-ref nicename="tos.lib.timer.Timer" qname="Timer"/>
+        <arguments>
+          <type-tag alignment="I:2" size="I:2"><struct-ref ref="0x40892a08"/>
+            <typename><typedef-ref name="TMilli" ref="0x40892bd0"/></typename>
+          </type-tag>
+        </arguments>
+      </instance>
+      <interface-functions>
+        <function-ref name="getNow" ref="0x40eed4c8" scoped=""/>
+        <function-ref name="fired" ref="0x40eee768" scoped=""/>
+        <function-ref name="startPeriodicAt" ref="0x40eeee70" scoped=""/>
+        <function-ref name="isOneShot" ref="0x40eeec18" scoped=""/>
+        <function-ref name="getdt" ref="0x40eed978" scoped=""/>
+        <function-ref name="gett0" ref="0x40eed720" scoped=""/>
+        <function-ref name="isRunning" ref="0x40eee9c0" scoped=""/>
+        <function-ref name="startPeriodic" ref="0x40eee010" scoped=""/>
+        <function-ref name="startOneShotAt" ref="0x40eed1a8" scoped=""/>
+        <function-ref name="startOneShot" ref="0x40eee290" scoped=""/>
+        <function-ref name="stop" ref="0x40eee510" scoped=""/>
+      </interface-functions>
+    </interface><interface loc="80:/home/jumbo/jamal/project/CoAP/tinyos-release/tos/lib/net/blip/IPDispatchP.nc" name="Init" provided="1" ref="0x40eec8b0">
+      <component-ref nicename="tos.lib.net.blip.IPDispatchP" qname="IPDispatchP"/>
+      <type-interface alignment="I:2" size="I:2"><interface-ref name="Init" ref="0x40eec8b0" scoped=""/></type-interface>
+      <instance>
+        <interfacedef-ref nicename="tos.interfaces.Init" qname="Init"/>
+      </instance>
+      <interface-functions>
+        <function-ref name="init" ref="0x40eeca88" scoped=""/>
+      </interface-functions>
+    </interface><interface loc="431:/home/jumbo/jamal/project/CoAP/tinyos-release/tos/lib/net/blip/IPDispatchP.nc" name="sendTask" provided="0" ref="0x4103abf8">
+      <component-ref nicename="tos.lib.net.blip.IPDispatchP" qname="IPDispatchP"/>
+      <type-interface alignment="I:2" size="I:2"><interface-ref name="sendTask" ref="0x4103abf8" scoped=""/></type-interface>
+      <instance>
+        <interfacedef-ref nicename="tos.interfaces.TaskBasic" qname="TaskBasic"/>
+      </instance>
+      <interface-functions>
+        <function-ref name="postTask" ref="0x4103add0" scoped=""/>
+        <function-ref name="runTask" ref="0x4103aeb0" scoped=""/>
+      </interface-functions>
+    </interface><interface loc="62:/home/jumbo/jamal/project/CoAP/tinyos-release/tos/lib/net/blip/IPDispatchP.nc" name="NeighborDiscovery" provided="0" ref="0x40ecf5e0">
+      <component-ref nicename="tos.lib.net.blip.IPDispatchP" qname="IPDispatchP"/>
+      <type-interface alignment="I:2" size="I:2"><interface-ref name="NeighborDiscovery" ref="0x40ecf5e0" scoped=""/></type-interface>
+      <instance>
+        <interfacedef-ref nicename="tos.lib.net.blip.interfaces.NeighborDiscovery" qname="NeighborDiscovery"/>
+      </instance>
+      <interface-functions>
+        <function-ref name="resolveAddress" ref="0x40ecf7b8" scoped=""/>
+        <function-ref name="matchContext" ref="0x40ecf898" scoped=""/>
+        <function-ref name="getContext" ref="0x40ecf978" scoped=""/>
+      </interface-functions>
+    </interface><interface loc="69:/home/jumbo/jamal/project/CoAP/tinyos-release/tos/lib/net/blip/IPDispatchP.nc" name="FragPool" provided="0" ref="0x40ed0648">
+      <component-ref nicename="tos.lib.net.blip.IPDispatchP" qname="IPDispatchP"/>
+      <type-interface alignment="I:2" size="I:2"><interface-ref name="FragPool" ref="0x40ed0648" scoped=""/></type-interface>
+      <instance>
+        <interfacedef-ref nicename="tos.interfaces.Pool" qname="Pool"/>
+        <arguments>
+          <type-tag alignment="I:1" size="I:140"><nx_struct-ref name="message_t" ref="0x408e2f20"/>
+            <typename><typedef-ref name="message_t" ref="0x408fdcf0"/></typename>
+          </type-tag>
+        </arguments>
+      </instance>
+      <interface-functions>
+        <function-ref name="get" ref="0x40ec9850" scoped=""/>
+        <function-ref name="maxSize" ref="0x40ec9268" scoped=""/>
+        <function-ref name="empty" ref="0x40ed0cf0" scoped=""/>
+        <function-ref name="put" ref="0x40ec94c0" scoped=""/>
+        <function-ref name="size" ref="0x40ec9010" scoped=""/>
+      </interface-functions>
+    </interface><interface loc="77:/home/jumbo/jamal/project/CoAP/tinyos-release/tos/lib/net/blip/IPDispatchP.nc" name="Leds" provided="0" ref="0x40eedbb8">
+      <component-ref nicename="tos.lib.net.blip.IPDispatchP" qname="IPDispatchP"/>
+      <type-interface alignment="I:2" size="I:2"><interface-ref name="Leds" ref="0x40eedbb8" scoped=""/></type-interface>
+      <instance>
+        <interfacedef-ref nicename="tos.interfaces.Leds" qname="Leds"/>
+      </instance>
+      <interface-functions>
+        <function-ref name="led0Off" ref="0x40eedd90" scoped=""/>
+        <function-ref name="led0Toggle" ref="0x40eede70" scoped=""/>
+        <function-ref name="led1On" ref="0x40eec010" scoped=""/>
+        <function-ref name="led1Toggle" ref="0x40eec0f0" scoped=""/>
+        <function-ref name="led2Toggle" ref="0x40eec1d0" scoped=""/>
+        <function-ref name="get" ref="0x40eec2b0" scoped=""/>
+        <function-ref name="led1Off" ref="0x40eec390" scoped=""/>
+        <function-ref name="led2Off" ref="0x40eec710" scoped=""/>
+        <function-ref name="set" ref="0x40eec470" scoped=""/>
+        <function-ref name="led0On" ref="0x40eec550" scoped=""/>
+        <function-ref name="led2On" ref="0x40eec630" scoped=""/>
+      </interface-functions>
+    </interface><interface loc="58:/home/jumbo/jamal/project/CoAP/tinyos-release/tos/lib/net/blip/IPDispatchP.nc" name="Ieee154Send" provided="0" ref="0x40ede010">
+      <component-ref nicename="tos.lib.net.blip.IPDispatchP" qname="IPDispatchP"/>
+      <type-interface alignment="I:2" size="I:2"><interface-ref name="Ieee154Send" ref="0x40ede010" scoped=""/></type-interface>
+      <instance>
+        <interfacedef-ref nicename="tos.interfaces.Send" qname="Send"/>
+      </instance>
+      <interface-functions>
+        <function-ref name="send" ref="0x40ede1e8" scoped=""/>
+        <function-ref name="getPayload" ref="0x40ede2c8" scoped=""/>
+        <function-ref name="maxPayloadLength" ref="0x40ede3a8" scoped=""/>
+        <function-ref name="cancel" ref="0x40ede488" scoped=""/>
+        <function-ref name="sendDone" ref="0x40ede568" scoped=""/>
+      </interface-functions>
+    </interface><interface loc="57:/home/jumbo/jamal/project/CoAP/tinyos-release/tos/lib/net/blip/IPDispatchP.nc" name="BarePacket" provided="0" ref="0x40edaa68">
+      <component-ref nicename="tos.lib.net.blip.IPDispatchP" qname="IPDispatchP"/>
+      <type-interface alignment="I:2" size="I:2"><interface-ref name="BarePacket" ref="0x40edaa68" scoped=""/></type-interface>
+      <instance>
+        <interfacedef-ref nicename="tos.interfaces.Packet" qname="Packet"/>
+      </instance>
+      <interface-functions>
+        <function-ref name="clear" ref="0x40edac40" scoped=""/>
+        <function-ref name="payloadLength" ref="0x40edad20" scoped=""/>
+        <function-ref name="getPayload" ref="0x40edae00" scoped=""/>
+        <function-ref name="maxPayloadLength" ref="0x40edaee0" scoped=""/>
+        <function-ref name="setPayloadLength" ref="0x40edf010" scoped=""/>
+      </interface-functions>
+    </interface><interface loc="65:/home/jumbo/jamal/project/CoAP/tinyos-release/tos/lib/net/blip/IPDispatchP.nc" name="PacketLink" provided="0" ref="0x40ed2040">
+      <component-ref nicename="tos.lib.net.blip.IPDispatchP" qname="IPDispatchP"/>
+      <type-interface alignment="I:2" size="I:2"><interface-ref name="PacketLink" ref="0x40ed2040" scoped=""/></type-interface>
+      <instance>
+        <interfacedef-ref nicename="tos.interfaces.PacketLink" qname="PacketLink"/>
+      </instance>
+      <interface-functions>
+        <function-ref name="getRetryDelay" ref="0x40ed2218" scoped=""/>
+        <function-ref name="setRetries" ref="0x40ed22f8" scoped=""/>
+        <function-ref name="getRetries" ref="0x40ed23d8" scoped=""/>
+        <function-ref name="setRetryDelay" ref="0x40ed24b8" scoped=""/>
+        <function-ref name="wasDelivered" ref="0x40ed2598" scoped=""/>
+      </interface-functions>
+    </interface><interface loc="71:/home/jumbo/jamal/project/CoAP/tinyos-release/tos/lib/net/blip/IPDispatchP.nc" name="SendEntryPool" provided="0" ref="0x40ef7440">
+      <component-ref nicename="tos.lib.net.blip.IPDispatchP" qname="IPDispatchP"/>
+      <type-interface alignment="I:2" size="I:2"><interface-ref name="SendEntryPool" ref="0x40ef7440" scoped=""/></type-interface>
+      <instance>
+        <interfacedef-ref nicename="tos.interfaces.Pool" qname="Pool"/>
+        <arguments>
+          <type-tag alignment="I:2" size="I:4"><struct-ref name="send_entry" ref="0x408fa338"/></type-tag>
+        </arguments>
+      </instance>
+      <interface-functions>
+        <function-ref name="get" ref="0x40ef6518" scoped=""/>
+        <function-ref name="maxSize" ref="0x40ef7f18" scoped=""/>
+        <function-ref name="empty" ref="0x40ef7a68" scoped=""/>
+        <function-ref name="put" ref="0x40ef6188" scoped=""/>
+        <function-ref name="size" ref="0x40ef7cc0" scoped=""/>
+      </interface-functions>
+    </interface><interface loc="59:/home/jumbo/jamal/project/CoAP/tinyos-release/tos/lib/net/blip/IPDispatchP.nc" name="Ieee154Receive" provided="0" ref="0x40ecf208">
+      <component-ref nicename="tos.lib.net.blip.IPDispatchP" qname="IPDispatchP"/>
+      <type-interface alignment="I:2" size="I:2"><interface-ref name="Ieee154Receive" ref="0x40ecf208" scoped=""/></type-interface>
+      <instance>
+        <interfacedef-ref nicename="tos.interfaces.Receive" qname="Receive"/>
+      </instance>
+      <interface-functions>
+        <function-ref name="receive" ref="0x40ecf3e0" scoped=""/>
+      </interface-functions>
+    </interface></specification><referenced/></component>

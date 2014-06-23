@@ -1,0 +1,49 @@
+<html>
+  <head>
+    <LINK rel="stylesheet" href="nesdoc.css" type="text/css" media="screen"><title>Interface: tos.lib.net.blip.interfaces.ForwardingTableEvents</title>
+  </head>
+  <body>
+    <h2>Interface: tos.lib.net.blip.interfaces.ForwardingTableEvents</h2>
+    <b>interface ForwardingTableEvents</b><p><p><div id=heading>Events</div><div id=funcsig><span id=funcnameshort>event void <a href="#defaultRouteAdded">defaultRouteAdded</a>()
+      </span><menu>
+ Signaled when a default route is added to the table; that is,
+ when the stack transitions from not having a default route to
+ having one.
+      </menu>
+    </div><div id=funcsig><span id=funcnameshort>event void <a href="#defaultRouteRemoved">defaultRouteRemoved</a>()
+      </span><menu>
+ Signaled when the default route is removed from the routing
+ table.
+      </menu>
+    </div><p><div id=heading>Events - Details</div>
+    <a name="defaultRouteAdded"></a>
+    <h4>defaultRouteAdded
+    </h4>
+    <span id=funcnameshort>event void <b>defaultRouteAdded</b>()
+    </span>
+    <p>
+    <menu>
+      
+ Signaled when a default route is added to the table; that is,
+ when the stack transitions from not having a default route to
+ having one.
+
+ This event is not signaled again if the default route changes.
+
+    </menu>
+    <hr>
+    <a name="defaultRouteRemoved"></a>
+    <h4>defaultRouteRemoved
+    </h4>
+    <span id=funcnameshort>event void <b>defaultRouteRemoved</b>()
+    </span>
+    <p>
+    <menu>
+      
+ Signaled when the default route is removed from the routing
+ table.  If the route is removed, defaultRouteAdded() be signeled
+ when the route is re-added.
+
+    </menu>
+  </body>
+</html>

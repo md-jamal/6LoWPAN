@@ -1,0 +1,98 @@
+<html>
+  <head>
+    <LINK rel="stylesheet" href="nesdoc.css" type="text/css" media="screen"><title>Interface: tos.lib.net.rpl.RPLRank</title>
+  </head>
+  <body>
+    <h2>Interface: tos.lib.net.rpl.RPLRank</h2>
+    <b>interface RPLRank</b><p>
+ @ author Yiwei Yao &lt;yaoyiwei@stanford.edu&gt;
+
+    <p><p><div id=heading>Commands</div><div id=funcsig><span id=funcnameshort>command void <a href="#cancelRoot">cancelRoot</a>()
+      </span></div><div id=funcsig><span id=funcnameshort>command bool <a href="#compareAddr">compareAddr</a>(struct in6_addr *node1, struct in6_addr *node2)
+      </span></div><div id=funcsig><span id=funcnameshort>command void <a href="#declareRoot">declareRoot</a>()
+      </span></div><div id=funcsig><span id=funcnameshort>command error_t <a href="#getDefaultRoute">getDefaultRoute</a>(struct in6_addr *next_hop)
+      </span></div><div id=funcsig><span id=funcnameshort>command uint16_t <a href="#getEtx">getEtx</a>()
+      </span></div><div id=funcsig><span id=funcnameshort>command uint16_t <a href="#getRank">getRank</a>(struct in6_addr *node)
+      </span></div><div id=funcsig><span id=funcnameshort>command uint8_t <a href="#hasParent">hasParent</a>()
+      </span></div><div id=funcsig><span id=funcnameshort>command void <a href="#inconsistencyDetected">inconsistencyDetected</a>()
+      </span></div><div id=funcsig><span id=funcnameshort>command bool <a href="#isLeaf">isLeaf</a>()
+      </span></div><div id=funcsig><span id=funcnameshort>command bool <a href="#isParent">isParent</a>(struct in6_addr *node)
+      </span></div><div id=funcsig><span id=funcnameshort>command bool <a href="#isRoot">isRoot</a>()
+      </span></div><div id=funcsig><span id=funcnameshort>command void <a href="#setQueuingDelay">setQueuingDelay</a>(uint32_t delay)
+      </span><menu>
+      </menu>
+    </div><div id=funcsig><span id=funcnameshort>command bool <a href="#validInstance">validInstance</a>(uint8_t instanceID)
+      </span></div><p><div id=heading>Events</div><div id=funcsig><span id=funcnameshort>event void <a href="#parentRankChange">parentRankChange</a>()
+      </span></div><p><div id=heading>Commands - Details</div>
+    <a name="cancelRoot"></a>
+    <h4>cancelRoot
+    </h4>
+    <span id=funcnameshort>command void <b>cancelRoot</b>()
+    </span><hr>
+    <a name="compareAddr"></a>
+    <h4>compareAddr
+    </h4>
+    <span id=funcnameshort>command bool <b>compareAddr</b>(struct in6_addr *node1, struct in6_addr *node2)
+    </span><hr>
+    <a name="declareRoot"></a>
+    <h4>declareRoot
+    </h4>
+    <span id=funcnameshort>command void <b>declareRoot</b>()
+    </span><hr>
+    <a name="getDefaultRoute"></a>
+    <h4>getDefaultRoute
+    </h4>
+    <span id=funcnameshort>command error_t <b>getDefaultRoute</b>(struct in6_addr *next_hop)
+    </span><hr>
+    <a name="getEtx"></a>
+    <h4>getEtx
+    </h4>
+    <span id=funcnameshort>command uint16_t <b>getEtx</b>()
+    </span><hr>
+    <a name="getRank"></a>
+    <h4>getRank
+    </h4>
+    <span id=funcnameshort>command uint16_t <b>getRank</b>(struct in6_addr *node)
+    </span><hr>
+    <a name="hasParent"></a>
+    <h4>hasParent
+    </h4>
+    <span id=funcnameshort>command uint8_t <b>hasParent</b>()
+    </span><hr>
+    <a name="inconsistencyDetected"></a>
+    <h4>inconsistencyDetected
+    </h4>
+    <span id=funcnameshort>command void <b>inconsistencyDetected</b>()
+    </span><hr>
+    <a name="isLeaf"></a>
+    <h4>isLeaf
+    </h4>
+    <span id=funcnameshort>command bool <b>isLeaf</b>()
+    </span><hr>
+    <a name="isParent"></a>
+    <h4>isParent
+    </h4>
+    <span id=funcnameshort>command bool <b>isParent</b>(struct in6_addr *node)
+    </span><hr>
+    <a name="isRoot"></a>
+    <h4>isRoot
+    </h4>
+    <span id=funcnameshort>command bool <b>isRoot</b>()
+    </span><hr>
+    <a name="setQueuingDelay"></a>
+    <h4>setQueuingDelay
+    </h4>
+    <span id=funcnameshort>command void <b>setQueuingDelay</b>(uint32_t delay)
+    </span><hr>
+    <a name="validInstance"></a>
+    <h4>validInstance
+    </h4>
+    <span id=funcnameshort>command bool <b>validInstance</b>(uint8_t instanceID)
+    </span><p><div id=heading>Events - Details</div>
+    <a name="parentRankChange"></a>
+    <h4>parentRankChange
+    </h4>
+    <span id=funcnameshort>event void <b>parentRankChange</b>()
+    </span>
+  </body>
+</html>

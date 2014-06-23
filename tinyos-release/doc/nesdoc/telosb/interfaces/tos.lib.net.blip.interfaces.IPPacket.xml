@@ -1,0 +1,100 @@
+<?xml version="1.0" ?><interfacedef loc="2:/home/jumbo/jamal/project/CoAP/tinyos-release/tos/lib/net/blip/interfaces/IPPacket.nc" nicename="tos.lib.net.blip.interfaces.IPPacket" qname="IPPacket">
+      <function command="" loc="14:/home/jumbo/jamal/project/CoAP/tinyos-release/tos/lib/net/blip/interfaces/IPPacket.nc" name="findHeader" provided="0" ref="0x40900030">
+        <interfacedef-ref nicename="tos.lib.net.blip.interfaces.IPPacket" qname="IPPacket"/>
+        <type-function alignment="I:1" size="I:1">
+          <type-int alignment="I:2" cname="int" size="I:2"/>
+          <function-parameters>
+            <type-pointer alignment="I:2" size="I:2">
+              <type-tag alignment="I:2" size="I:6"><struct-ref name="ip_iovec" ref="0x4087c6c8"/></type-tag>
+            </type-pointer>
+            <type-int alignment="I:1" cname="unsigned char" size="I:1" unsigned="">
+              <typename><typedef-ref name="uint8_t" ref="0x4003adc8"/></typename>
+            </type-int>
+            <type-pointer alignment="I:2" size="I:2">
+              <type-int alignment="I:1" cname="unsigned char" size="I:1" unsigned="">
+                <typename><typedef-ref name="uint8_t" ref="0x4003adc8"/></typename>
+              </type-int>
+            </type-pointer>
+          </function-parameters>
+        </type-function>
+        <parameters>
+          <variable loc="14:/home/jumbo/jamal/project/CoAP/tinyos-release/tos/lib/net/blip/interfaces/IPPacket.nc" name="payload" ref="0x40907a28">
+            <type-pointer alignment="I:2" size="I:2">
+              <type-tag alignment="I:2" size="I:6"><struct-ref name="ip_iovec" ref="0x4087c6c8"/></type-tag>
+            </type-pointer>
+          </variable>
+          <variable loc="15:/home/jumbo/jamal/project/CoAP/tinyos-release/tos/lib/net/blip/interfaces/IPPacket.nc" name="first_type" ref="0x40907c60">
+            <type-int alignment="I:1" cname="unsigned char" size="I:1" unsigned="">
+              <typename><typedef-ref name="uint8_t" ref="0x4003adc8"/></typename>
+            </type-int>
+          </variable>
+          <variable loc="15:/home/jumbo/jamal/project/CoAP/tinyos-release/tos/lib/net/blip/interfaces/IPPacket.nc" name="search_type" ref="0x40907eb0">
+            <type-pointer alignment="I:2" size="I:2">
+              <type-int alignment="I:1" cname="unsigned char" size="I:1" unsigned="">
+                <typename><typedef-ref name="uint8_t" ref="0x4003adc8"/></typename>
+              </type-int>
+            </type-pointer>
+          </variable>
+        </parameters>
+      </function>
+      <function command="" loc="20:/home/jumbo/jamal/project/CoAP/tinyos-release/tos/lib/net/blip/interfaces/IPPacket.nc" name="delTLV" provided="0" ref="0x408fe378">
+        <interfacedef-ref nicename="tos.lib.net.blip.interfaces.IPPacket" qname="IPPacket"/>
+        <type-function alignment="I:1" size="I:1">
+          <type-void alignment="I:1" size="I:1"/>
+          <function-parameters>
+            <type-pointer alignment="I:2" size="I:2">
+              <type-tag alignment="I:2" size="I:6"><struct-ref name="ip_iovec" ref="0x4087c6c8"/></type-tag>
+            </type-pointer>
+            <type-int alignment="I:2" cname="int" size="I:2"/>
+            <type-int alignment="I:1" cname="unsigned char" size="I:1" unsigned="">
+              <typename><typedef-ref name="uint8_t" ref="0x4003adc8"/></typename>
+            </type-int>
+          </function-parameters>
+        </type-function>
+        <parameters>
+          <variable loc="20:/home/jumbo/jamal/project/CoAP/tinyos-release/tos/lib/net/blip/interfaces/IPPacket.nc" name="data" ref="0x40900dd0">
+            <type-pointer alignment="I:2" size="I:2">
+              <type-tag alignment="I:2" size="I:6"><struct-ref name="ip_iovec" ref="0x4087c6c8"/></type-tag>
+            </type-pointer>
+          </variable>
+          <variable loc="21:/home/jumbo/jamal/project/CoAP/tinyos-release/tos/lib/net/blip/interfaces/IPPacket.nc" name="ext_offset" ref="0x408fe010">
+            <type-int alignment="I:2" cname="int" size="I:2"/>
+          </variable>
+          <variable loc="22:/home/jumbo/jamal/project/CoAP/tinyos-release/tos/lib/net/blip/interfaces/IPPacket.nc" name="type" ref="0x408fe210">
+            <type-int alignment="I:1" cname="unsigned char" size="I:1" unsigned="">
+              <typename><typedef-ref name="uint8_t" ref="0x4003adc8"/></typename>
+            </type-int>
+          </variable>
+        </parameters>
+      </function>
+      <function command="" loc="17:/home/jumbo/jamal/project/CoAP/tinyos-release/tos/lib/net/blip/interfaces/IPPacket.nc" name="findTLV" provided="0" ref="0x409009b8">
+        <interfacedef-ref nicename="tos.lib.net.blip.interfaces.IPPacket" qname="IPPacket"/>
+        <type-function alignment="I:1" size="I:1">
+          <type-int alignment="I:2" cname="int" size="I:2"/>
+          <function-parameters>
+            <type-pointer alignment="I:2" size="I:2">
+              <type-tag alignment="I:2" size="I:6"><struct-ref name="ip_iovec" ref="0x4087c6c8"/></type-tag>
+            </type-pointer>
+            <type-int alignment="I:2" cname="int" size="I:2"/>
+            <type-int alignment="I:1" cname="unsigned char" size="I:1" unsigned="">
+              <typename><typedef-ref name="uint8_t" ref="0x4003adc8"/></typename>
+            </type-int>
+          </function-parameters>
+        </type-function>
+        <parameters>
+          <variable loc="17:/home/jumbo/jamal/project/CoAP/tinyos-release/tos/lib/net/blip/interfaces/IPPacket.nc" name="header" ref="0x40900460">
+            <type-pointer alignment="I:2" size="I:2">
+              <type-tag alignment="I:2" size="I:6"><struct-ref name="ip_iovec" ref="0x4087c6c8"/></type-tag>
+            </type-pointer>
+          </variable>
+          <variable loc="18:/home/jumbo/jamal/project/CoAP/tinyos-release/tos/lib/net/blip/interfaces/IPPacket.nc" name="ext_offset" ref="0x40900650">
+            <type-int alignment="I:2" cname="int" size="I:2"/>
+          </variable>
+          <variable loc="19:/home/jumbo/jamal/project/CoAP/tinyos-release/tos/lib/net/blip/interfaces/IPPacket.nc" name="type" ref="0x40900850">
+            <type-int alignment="I:1" cname="unsigned char" size="I:1" unsigned="">
+              <typename><typedef-ref name="uint8_t" ref="0x4003adc8"/></typename>
+            </type-int>
+          </variable>
+        </parameters>
+      </function>
+    </interfacedef>

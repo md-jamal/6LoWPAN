@@ -1,0 +1,61 @@
+<html>
+  <head>
+    <LINK rel="stylesheet" href="nesdoc.css" type="text/css" media="screen"><title>Interface: tos.lib.net.blip.interfaces.ForwardingTable</title>
+  </head>
+  <body>
+    <h2>Interface: tos.lib.net.blip.interfaces.ForwardingTable</h2>
+    <b>interface ForwardingTable</b><p><p><div id=heading>Commands</div><div id=funcsig><span id=funcnameshort>command route_key_t <a href="#addRoute">addRoute</a>(uint8_t *prefix, int prefix_len_bits, struct in6_addr *next_hop, uint8_t ifindex)
+      </span><menu>
+ Insert a forwarding-table mapping for the given prefix, with the
+ given next-hop.
+      </menu>
+    </div><div id=funcsig><span id=funcnameshort>command error_t <a href="#delRoute">delRoute</a>(route_key_t key)
+      </span><menu>
+ Remove a routing table entry previously inserted using addRoute
+
+      </menu>
+    </div><div id=funcsig><span id=funcnameshort>command struct route_entry *<a href="#getTable">getTable</a>(int *size)
+      </span></div><div id=funcsig><span id=funcnameshort>command struct route_entry *<a href="#lookupRoute">lookupRoute</a>(uint8_t *prefix, int prefix_len_bits)
+      </span></div><div id=funcsig><span id=funcnameshort>command struct route_entry *<a href="#lookupRouteKey">lookupRouteKey</a>(route_key_t key)
+      </span></div><p><div id=heading>Commands - Details</div>
+    <a name="addRoute"></a>
+    <h4>addRoute
+    </h4>
+    <span id=funcnameshort>command route_key_t <b>addRoute</b>(uint8_t *prefix, int prefix_len_bits, struct in6_addr *next_hop, uint8_t ifindex)
+    </span>
+    <p>
+    <menu>
+      
+ Insert a forwarding-table mapping for the given prefix, with the
+ given next-hop.
+    </menu>
+    <hr>
+    <a name="delRoute"></a>
+    <h4>delRoute
+    </h4>
+    <span id=funcnameshort>command error_t <b>delRoute</b>(route_key_t key)
+    </span>
+    <p>
+    <menu>
+      
+ Remove a routing table entry previously inserted using addRoute
+
+    </menu>
+    <hr>
+    <a name="getTable"></a>
+    <h4>getTable
+    </h4>
+    <span id=funcnameshort>command struct route_entry *<b>getTable</b>(int *size)
+    </span><hr>
+    <a name="lookupRoute"></a>
+    <h4>lookupRoute
+    </h4>
+    <span id=funcnameshort>command struct route_entry *<b>lookupRoute</b>(uint8_t *prefix, int prefix_len_bits)
+    </span><hr>
+    <a name="lookupRouteKey"></a>
+    <h4>lookupRouteKey
+    </h4>
+    <span id=funcnameshort>command struct route_entry *<b>lookupRouteKey</b>(route_key_t key)
+    </span>
+  </body>
+</html>

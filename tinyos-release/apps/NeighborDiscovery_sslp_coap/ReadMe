@@ -1,0 +1,19 @@
+
+Test for Neighbor Discovery Protocol
+Procedure for Testing
+
+In order to set the node as a LBR define  "NODE_LBR" in the Makefile
+In order to set the node as a Router define "NODE_ROUTER" in the Makefile
+In order to set the node as a Host define "NODE_HOST" in the Makefile
+
+
+To test this application you require a minimum of three nodes , out of one node should be acting as LBR and the remaining nodes can be combination of Router and Host.
+
+Let us assign a Node id of 2 to LBR and Node id 0f 5 and 6 to other two nodes
+
+
+Here in the application both the nodes are sending packets to each other with the global ip address assigned after Duplicate Address Detection . 
+
+
+Whenever they receive the packet Led1 Will Toggle. Led1 should toggle for every 5 seconds
+

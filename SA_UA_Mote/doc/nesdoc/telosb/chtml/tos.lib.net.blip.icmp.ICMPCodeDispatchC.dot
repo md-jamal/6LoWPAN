@@ -1,0 +1,8 @@
+digraph "tos.lib.net.blip.icmp.ICMPCodeDispatchC" {
+  n0x4169aab8 [shape=ellipse, style=filled, label="IP", fontsize=12];
+  "ICMPCodeDispatchC.ICMPCodeDispatchP" [fontsize=12, shape=box, style=dashed, label="ICMPCodeDispatchP", URL="../chtml/tos.lib.net.blip.icmp.ICMPCodeDispatchP.html"];
+  "ICMPCodeDispatchC.ICMPCodeDispatchP" [fontsize=12, shape=box, style=dashed, label="ICMPCodeDispatchP", URL="../chtml/tos.lib.net.blip.icmp.ICMPCodeDispatchP.html"];
+  "ICMPCoreP" [fontsize=12, shape=box, URL="../chtml/tos.lib.net.blip.icmp.ICMPCoreP.html"];
+  "n0x4169aab8" -> "ICMPCodeDispatchC.ICMPCodeDispatchP" [label="IP[uint8_t]", style=bold, URL="../ihtml/tos.lib.net.blip.interfaces.IP.html", fontsize=10];
+  "ICMPCodeDispatchC.ICMPCodeDispatchP" -> "ICMPCoreP" [label="IP", URL="../ihtml/tos.lib.net.blip.interfaces.IP.html", fontsize=10];
+}

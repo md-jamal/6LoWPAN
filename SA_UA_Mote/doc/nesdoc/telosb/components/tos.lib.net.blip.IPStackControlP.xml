@@ -1,0 +1,63 @@
+<?xml version="1.0" ?><component loc="2:/home/jumbo/tinyos-main/tos/lib/net/blip/IPStackControlP.nc" nicename="tos.lib.net.blip.IPStackControlP" qname="IPStackControlP">
+      <module/>
+    <specification><interface loc="3:/home/jumbo/tinyos-main/tos/lib/net/blip/IPStackControlP.nc" name="SplitControl" provided="1" ref="0x41417010">
+      <component-ref nicename="tos.lib.net.blip.IPStackControlP" qname="IPStackControlP"/>
+      <type-interface alignment="I:2" size="I:2"><interface-ref name="SplitControl" ref="0x41417010" scoped=""/></type-interface>
+      <instance>
+        <interfacedef-ref nicename="tos.interfaces.SplitControl" qname="SplitControl"/>
+      </instance>
+      <interface-functions>
+        <function-ref name="startDone" ref="0x414171e8" scoped=""/>
+        <function-ref name="stopDone" ref="0x414172c8" scoped=""/>
+        <function-ref name="start" ref="0x414173a8" scoped=""/>
+        <function-ref name="stop" ref="0x41417488" scoped=""/>
+      </interface-functions>
+    </interface><interface loc="7:/home/jumbo/tinyos-main/tos/lib/net/blip/IPStackControlP.nc" name="SubSplitControl" provided="0" ref="0x414160c8">
+      <component-ref nicename="tos.lib.net.blip.IPStackControlP" qname="IPStackControlP"/>
+      <type-interface alignment="I:2" size="I:2"><interface-ref name="SubSplitControl" ref="0x414160c8" scoped=""/></type-interface>
+      <instance>
+        <interfacedef-ref nicename="tos.interfaces.SplitControl" qname="SplitControl"/>
+      </instance>
+      <interface-functions>
+        <function-ref name="startDone" ref="0x414162a0" scoped=""/>
+        <function-ref name="stopDone" ref="0x41416380" scoped=""/>
+        <function-ref name="start" ref="0x41416460" scoped=""/>
+        <function-ref name="stop" ref="0x41416540" scoped=""/>
+      </interface-functions>
+    </interface><interface loc="8:/home/jumbo/tinyos-main/tos/lib/net/blip/IPStackControlP.nc" name="IPAddress" provided="0" ref="0x414166e0">
+      <component-ref nicename="tos.lib.net.blip.IPStackControlP" qname="IPStackControlP"/>
+      <type-interface alignment="I:2" size="I:2"><interface-ref name="IPAddress" ref="0x414166e0" scoped=""/></type-interface>
+      <instance>
+        <interfacedef-ref nicename="tos.lib.net.blip.interfaces.IPAddress" qname="IPAddress"/>
+      </instance>
+      <interface-functions>
+        <function-ref name="getLLAddr" ref="0x414168b8" scoped=""/>
+        <function-ref name="changed" ref="0x41416998" scoped=""/>
+        <function-ref name="isLocalAddress" ref="0x41416a78" scoped=""/>
+        <function-ref name="getGlobalAddr" ref="0x41416b58" scoped=""/>
+        <function-ref name="setSource" ref="0x41416c38" scoped=""/>
+        <function-ref name="removeAddress" ref="0x41416d18" scoped=""/>
+        <function-ref name="setAddress" ref="0x41416df8" scoped=""/>
+        <function-ref name="isLLAddress" ref="0x41416ed8" scoped=""/>
+      </interface-functions>
+    </interface><interface loc="6:/home/jumbo/tinyos-main/tos/lib/net/blip/IPStackControlP.nc" name="RoutingControl" provided="0" ref="0x41417b70">
+      <component-ref nicename="tos.lib.net.blip.IPStackControlP" qname="IPStackControlP"/>
+      <type-interface alignment="I:2" size="I:2"><interface-ref name="RoutingControl" ref="0x41417b70" scoped=""/></type-interface>
+      <instance>
+        <interfacedef-ref nicename="tos.interfaces.StdControl" qname="StdControl"/>
+      </instance>
+      <interface-functions>
+        <function-ref name="start" ref="0x41417d48" scoped=""/>
+        <function-ref name="stop" ref="0x41417e28" scoped=""/>
+      </interface-functions>
+    </interface><interface loc="5:/home/jumbo/tinyos-main/tos/lib/net/blip/IPStackControlP.nc" name="StdControl" provided="0" ref="0x41417660">
+      <component-ref nicename="tos.lib.net.blip.IPStackControlP" qname="IPStackControlP"/>
+      <type-interface alignment="I:2" size="I:2"><interface-ref name="StdControl" ref="0x41417660" scoped=""/></type-interface>
+      <instance>
+        <interfacedef-ref nicename="tos.interfaces.StdControl" qname="StdControl"/>
+      </instance>
+      <interface-functions>
+        <function-ref name="start" ref="0x41417838" scoped=""/>
+        <function-ref name="stop" ref="0x41417918" scoped=""/>
+      </interface-functions>
+    </interface></specification><referenced/></component>

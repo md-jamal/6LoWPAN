@@ -1,0 +1,33 @@
+<html>
+  <head>
+    <LINK rel="stylesheet" href="nesdoc.css" type="text/css" media="screen"><title>Interface: ServiceLocation</title>
+  </head>
+  <body>
+    <h2>Interface: ServiceLocation</h2>
+    <b>interface ServiceLocation</b><p><p><div id=heading>Commands</div><div id=funcsig><span id=funcnameshort>command error_t <a href="#deregisterService">deregisterService</a>(servicelocation_entry *location_entry, char *servicetype, char *scope)
+      </span></div><div id=funcsig><span id=funcnameshort>command error_t <a href="#registerService">registerService</a>(servicelocation_entry *location_entry, char *servicetype, char *scope, uint8_t state)
+      </span></div><p><div id=heading>Events</div><div id=funcsig><span id=funcnameshort>event void <a href="#receiveServices">receiveServices</a>(servicelocation_entry *services, uint8_t count)
+      </span></div><div id=funcsig><span id=funcnameshort>event void <a href="#receiveServiceTypes">receiveServiceTypes</a>(char *services)
+      </span></div><p><div id=heading>Commands - Details</div>
+    <a name="deregisterService"></a>
+    <h4>deregisterService
+    </h4>
+    <span id=funcnameshort>command error_t <b>deregisterService</b>(servicelocation_entry *location_entry, char *servicetype, char *scope)
+    </span><hr>
+    <a name="registerService"></a>
+    <h4>registerService
+    </h4>
+    <span id=funcnameshort>command error_t <b>registerService</b>(servicelocation_entry *location_entry, char *servicetype, char *scope, uint8_t state)
+    </span><p><div id=heading>Events - Details</div>
+    <a name="receiveServices"></a>
+    <h4>receiveServices
+    </h4>
+    <span id=funcnameshort>event void <b>receiveServices</b>(servicelocation_entry *services, uint8_t count)
+    </span><hr>
+    <a name="receiveServiceTypes"></a>
+    <h4>receiveServiceTypes
+    </h4>
+    <span id=funcnameshort>event void <b>receiveServiceTypes</b>(char *services)
+    </span>
+  </body>
+</html>

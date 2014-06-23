@@ -1,0 +1,3 @@
+
+#PFLAGS+=-I$(TOSDIR)/lib/net/jam
+PFLAGS+=-I$(TOSDIR)/lib/net/jam/ip_malloc.c

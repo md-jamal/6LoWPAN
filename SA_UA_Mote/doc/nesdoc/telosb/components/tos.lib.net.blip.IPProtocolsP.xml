@@ -1,0 +1,55 @@
+<?xml version="1.0" ?><component loc="7:/home/jumbo/tinyos-main/tos/lib/net/blip/IPProtocolsP.nc" nicename="tos.lib.net.blip.IPProtocolsP" qname="IPProtocolsP">
+      <module/>
+    <specification><interface loc="12:/home/jumbo/tinyos-main/tos/lib/net/blip/IPProtocolsP.nc" name="IPAddress" provided="0" ref="0x409c1dc8">
+      <component-ref nicename="tos.lib.net.blip.IPProtocolsP" qname="IPProtocolsP"/>
+      <type-interface alignment="I:2" size="I:2"><interface-ref name="IPAddress" ref="0x409c1dc8" scoped=""/></type-interface>
+      <instance>
+        <interfacedef-ref nicename="tos.lib.net.blip.interfaces.IPAddress" qname="IPAddress"/>
+      </instance>
+      <interface-functions>
+        <function-ref name="getLLAddr" ref="0x409ee010" scoped=""/>
+        <function-ref name="changed" ref="0x409ee0f0" scoped=""/>
+        <function-ref name="isLocalAddress" ref="0x409ee1d0" scoped=""/>
+        <function-ref name="getGlobalAddr" ref="0x409ee2b0" scoped=""/>
+        <function-ref name="setSource" ref="0x409ee390" scoped=""/>
+        <function-ref name="removeAddress" ref="0x409ee470" scoped=""/>
+        <function-ref name="setAddress" ref="0x409ee550" scoped=""/>
+        <function-ref name="isLLAddress" ref="0x409ee630" scoped=""/>
+      </interface-functions>
+    </interface><interface loc="13:/home/jumbo/tinyos-main/tos/lib/net/blip/IPProtocolsP.nc" name="SubIP" provided="0" ref="0x409ee7e0">
+      <component-ref nicename="tos.lib.net.blip.IPProtocolsP" qname="IPProtocolsP"/>
+      <type-interface alignment="I:2" size="I:2"><interface-ref name="SubIP" ref="0x409ee7e0" scoped=""/></type-interface>
+      <instance>
+        <interfacedef-ref nicename="tos.lib.net.blip.interfaces.IP" qname="IP"/>
+      </instance>
+      <interface-functions>
+        <function-ref name="send" ref="0x409ee9b8" scoped=""/>
+        <function-ref name="recv" ref="0x409eea98" scoped=""/>
+      </interface-functions>
+    </interface><interface loc="14:/home/jumbo/tinyos-main/tos/lib/net/blip/IPProtocolsP.nc" name="IPPacket" provided="0" ref="0x409e9c50">
+      <component-ref nicename="tos.lib.net.blip.IPProtocolsP" qname="IPProtocolsP"/>
+      <type-interface alignment="I:2" size="I:2"><interface-ref name="IPPacket" ref="0x409e9c50" scoped=""/></type-interface>
+      <instance>
+        <interfacedef-ref nicename="tos.lib.net.blip.interfaces.IPPacket" qname="IPPacket"/>
+      </instance>
+      <interface-functions>
+        <function-ref name="findHeader" ref="0x409e9e28" scoped=""/>
+        <function-ref name="delTLV" ref="0x409e9f08" scoped=""/>
+        <function-ref name="findTLV" ref="0x409ed010" scoped=""/>
+      </interface-functions>
+    </interface><interface loc="9:/home/jumbo/tinyos-main/tos/lib/net/blip/IPProtocolsP.nc" name="IP" provided="1" ref="0x409c1930">
+      <component-ref nicename="tos.lib.net.blip.IPProtocolsP" qname="IPProtocolsP"/>
+      <type-interface alignment="I:2" size="I:2"><interface-ref name="IP" ref="0x409c1930" scoped=""/></type-interface>
+      <instance>
+        <interfacedef-ref nicename="tos.lib.net.blip.interfaces.IP" qname="IP"/>
+      </instance>
+      <interface-parameters>
+        <type-int alignment="I:1" cname="unsigned char" size="I:1" unsigned="">
+          <typename><typedef-ref name="uint8_t" ref="0x4003bdc8"/></typename>
+        </type-int>
+      </interface-parameters>
+      <interface-functions>
+        <function-ref name="send" ref="0x409c1b08" scoped=""/>
+        <function-ref name="recv" ref="0x409c1be8" scoped=""/>
+      </interface-functions>
+    </interface></specification><referenced/></component>

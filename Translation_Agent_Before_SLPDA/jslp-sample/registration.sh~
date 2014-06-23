@@ -1,0 +1,4 @@
+#!/bin/bash
+
+java -Dorg.apache.commons.logging.log=org.apache.commons.logging.impl.SimpleLog  -Dorg.apache.commons.logging.simplelog.defaultlog=trace -Dnet.slp.traceMsg=true -Dnet.slp.interfaces=fe80::222:6bff:fea9:5e7f -Dnet.slp.traceReg=true -cp jslp.jar:commons-logging-1.0.4.jar:bin Registration
+

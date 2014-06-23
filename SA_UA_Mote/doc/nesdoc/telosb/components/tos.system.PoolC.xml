@@ -1,0 +1,153 @@
+<?xml version="1.0" ?><component abstract="" loc="41:/home/jumbo/tinyos-main/tos/system/PoolC.nc" nicename="tos.system.PoolC" qname="PoolC">
+      <documentation loc="33:/home/jumbo/tinyos-main/tos/system/PoolC.nc">
+        <short>
+  A general dynamic memory pool component.</short>
+        <long>
+  A general dynamic memory pool component.
+
+  @author Philip Levis
+  @author Geoffrey Mainland
+  @date   $Date: 2006-12-12 18:23:47 $
+</long>
+      </documentation>
+      <parameters>
+        <typedef loc="41:/home/jumbo/tinyos-main/tos/system/PoolC.nc" name="pool_t" ref="0x413ff0f0">
+          <component-ref nicename="tos.system.PoolC" qname="PoolC"/>
+          <type-var alignment="U:" size="U:"><typedef-ref name="pool_t" ref="0x413ff0f0" scoped=""/></type-var>
+        </typedef>
+        <constant loc="41:/home/jumbo/tinyos-main/tos/system/PoolC.nc" name="POOL_SIZE" ref="0x413ff310">
+          <component-ref nicename="tos.system.PoolC" qname="PoolC"/>
+          <type-int alignment="I:1" cname="unsigned char" size="I:1" unsigned="">
+            <typename><typedef-ref name="uint8_t" ref="0x4003bdc8"/></typename>
+          </type-int>
+        </constant>
+      </parameters>
+      <configuration/>
+      <wiring>
+        <wire loc="49:/home/jumbo/tinyos-main/tos/system/PoolC.nc">
+          <from><interface-ref name="Pool" ref="0x413ff648" scoped=""/></from>
+          <to><interface-ref name="Pool" ref="0x413fcc48" scoped=""/></to>
+        </wire>
+        <wire loc="48:/home/jumbo/tinyos-main/tos/system/PoolC.nc">
+          <from><interface-ref name="SoftwareInit" ref="0x40692258" scoped=""/></from>
+          <to><interface-ref name="Init" ref="0x413fc8a0" scoped=""/></to>
+        </wire>
+      </wiring>
+    <specification><interface loc="42:/home/jumbo/tinyos-main/tos/system/PoolC.nc" name="Pool" provided="1" ref="0x413ff648">
+      <component-ref nicename="tos.system.PoolC" qname="PoolC"/>
+      <type-interface alignment="I:2" size="I:2"><interface-ref name="Pool" ref="0x413ff648" scoped=""/></type-interface>
+      <instance>
+        <interfacedef-ref nicename="tos.interfaces.Pool" qname="Pool"/>
+        <arguments>
+          <type-var alignment="U:" size="U:"><typedef-ref name="pool_t" ref="0x413ff0f0" scoped=""/></type-var>
+        </arguments>
+      </instance>
+      <interface-functions>
+        <function-ref name="get" ref="0x413fe738" scoped=""/>
+        <function-ref name="maxSize" ref="0x413fe150" scoped=""/>
+        <function-ref name="empty" ref="0x413ffc70" scoped=""/>
+        <function-ref name="put" ref="0x413fe3a8" scoped=""/>
+        <function-ref name="size" ref="0x413ffec8" scoped=""/>
+      </interface-functions>
+    </interface></specification><referenced><interface loc="58:/home/jumbo/tinyos-main/tos/system/MainC.nc" name="SoftwareInit" provided="0" ref="0x40692258">
+      <component-ref nicename="tos.system.MainC" qname="MainC"/>
+      <type-interface alignment="I:2" size="I:2"><interface-ref name="SoftwareInit" ref="0x40692258" scoped=""/></type-interface>
+      <instance>
+        <interfacedef-ref nicename="tos.interfaces.Init" qname="Init"/>
+      </instance>
+      <interface-functions>
+        <function-ref name="init" ref="0x40692430" scoped=""/>
+      </interface-functions>
+    </interface><interface loc="56:/home/jumbo/tinyos-main/tos/system/PoolP.nc" name="Pool" provided="1" ref="0x413fcc48">
+      <component-ref nicename="tos.system.PoolP" qname="PoolC.PoolP"/>
+      <type-interface alignment="I:2" size="I:2"><interface-ref name="Pool" ref="0x413fcc48" scoped=""/></type-interface>
+      <instance>
+        <interfacedef-ref nicename="tos.interfaces.Pool" qname="Pool"/>
+        <arguments>
+          <type-var alignment="U:" size="U:"><typedef-ref name="pool_t" ref="0x413ff0f0" scoped=""/></type-var>
+        </arguments>
+      </instance>
+      <interface-functions>
+        <function-ref name="get" ref="0x413fbd20" scoped=""/>
+        <function-ref name="maxSize" ref="0x413fb738" scoped=""/>
+        <function-ref name="empty" ref="0x413fb288" scoped=""/>
+        <function-ref name="put" ref="0x413fb990" scoped=""/>
+        <function-ref name="size" ref="0x413fb4e0" scoped=""/>
+      </interface-functions>
+    </interface><interface loc="55:/home/jumbo/tinyos-main/tos/system/PoolP.nc" name="Init" provided="1" ref="0x413fc8a0">
+      <component-ref nicename="tos.system.PoolP" qname="PoolC.PoolP"/>
+      <type-interface alignment="I:2" size="I:2"><interface-ref name="Init" ref="0x413fc8a0" scoped=""/></type-interface>
+      <instance>
+        <interfacedef-ref nicename="tos.interfaces.Init" qname="Init"/>
+      </instance>
+      <interface-functions>
+        <function-ref name="init" ref="0x413fca78" scoped=""/>
+      </interface-functions>
+    </interface><component abstract="" loc="53(PoolC.PoolP):/home/jumbo/tinyos-main/tos/system/PoolP.nc" nicename="tos.system.PoolP" qname="PoolC.PoolP">
+      <documentation loc="34:/home/jumbo/tinyos-main/tos/system/PoolP.nc">
+        <short>
+  Implementation of a general dynamic memory pool component.</short>
+        <long>
+  Implementation of a general dynamic memory pool component.
+  Note that the allocation/deallocation policies are 
+  different than traditional dynamic allocators such as
+  malloc or slab allocators. When initialized, the Pool
+  contains &lt;code&gt;size&lt;/code&gt; items of type &lt;code&gt;pool_t&lt;/code&gt;.
+  These elements can be removed from the pool for use with 
+  &lt;code&gt;Pool.get&lt;/code&gt;, and new elements can be placed in
+  the pool with &lt;code&gt;Pool.put&lt;/code&gt;. The pool allows 
+  components to &lt;code&gt;put&lt;/code&gt; elements besides those which
+  were obtained with &lt;code&gt;get&lt;/code&gt;. The pool can never have
+  more than &lt;code&gt;size&lt;/code&gt; elements in it.
+
+  @author Philip Levis
+  @author Kyle Jamieson
+  @author Geoffrey Mainland
+  @date   $Date: 2010-01-20 19:59:07 $
+</long>
+      </documentation>
+      <instance>
+        <component-ref nicename="tos.system.PoolP" qname="PoolP"/>
+        <arguments>
+          <type-var alignment="U:" size="U:"><typedef-ref name="pool_t" ref="0x413ff0f0" scoped=""/></type-var>
+          <value cst="U:">
+            <type-int alignment="I:1" cname="unsigned char" size="I:1" unsigned="">
+              <typename><typedef-ref name="uint8_t" ref="0x4003bdc8"/></typename>
+            </type-int>
+          </value>
+        </arguments>
+      </instance>
+      <module/>
+    </component><component loc="56:/home/jumbo/tinyos-main/tos/system/MainC.nc" nicename="tos.system.MainC" qname="MainC">
+      <documentation loc="45:/home/jumbo/tinyos-main/tos/system/MainC.nc">
+        <short>
+ MainC is the system interface the TinyOS boot sequence.</short>
+        <long>
+ MainC is the system interface the TinyOS boot sequence. It wires the
+ boot sequence implementation to the scheduler and hardware resources.
+
+ @author Philip Levis
+ @date   August 6 2005
+ @see    TEP 107: Boot Sequence
+</long>
+      </documentation>
+      <configuration/>
+      <wiring>
+        <wire loc="72:/home/jumbo/tinyos-main/tos/system/MainC.nc">
+          <from><interface-ref name="Boot" ref="0x4060e610" scoped=""/></from>
+          <to><interface-ref name="Boot" ref="0x4068bdf8" scoped=""/></to>
+        </wire>
+        <wire loc="67:/home/jumbo/tinyos-main/tos/system/MainC.nc">
+          <from><interface-ref name="Scheduler" ref="0x406a61d0" scoped=""/></from>
+          <to><interface-ref name="Scheduler" ref="0x40387010" scoped=""/></to>
+        </wire>
+        <wire loc="68:/home/jumbo/tinyos-main/tos/system/MainC.nc">
+          <from><interface-ref name="PlatformInit" ref="0x406a6798" scoped=""/></from>
+          <to><interface-ref name="Init" ref="0x40692aa0" scoped=""/></to>
+        </wire>
+        <wire loc="71:/home/jumbo/tinyos-main/tos/system/MainC.nc">
+          <from><interface-ref name="SoftwareInit" ref="0x406a6ba0" scoped=""/></from>
+          <to><interface-ref name="SoftwareInit" ref="0x40692258" scoped=""/></to>
+        </wire>
+      </wiring>
+    </component></referenced></component>

@@ -1,0 +1,57 @@
+<?xml version="1.0" ?><component loc="2:/home/jumbo/tinyos-main/tos/lib/net/blip/Ieee154AddressP.nc" nicename="tos.lib.net.blip.Ieee154AddressP" qname="Ieee154AddressP">
+      <module/>
+    <specification><interface loc="8:/home/jumbo/tinyos-main/tos/lib/net/blip/Ieee154AddressP.nc" name="LocalIeeeEui64" provided="0" ref="0x40ab9010">
+      <component-ref nicename="tos.lib.net.blip.Ieee154AddressP" qname="Ieee154AddressP"/>
+      <type-interface alignment="I:2" size="I:2"><interface-ref name="LocalIeeeEui64" ref="0x40ab9010" scoped=""/></type-interface>
+      <instance>
+        <interfacedef-ref nicename="tos.interfaces.LocalIeeeEui64" qname="LocalIeeeEui64"/>
+      </instance>
+      <interface-functions>
+        <function-ref name="getId" ref="0x40ab91e8" scoped=""/>
+      </interface-functions>
+    </interface><interface loc="9:/home/jumbo/tinyos-main/tos/lib/net/blip/Ieee154AddressP.nc" name="CC2420Config" provided="0" ref="0x40ad5d18">
+      <component-ref nicename="tos.lib.net.blip.Ieee154AddressP" qname="Ieee154AddressP"/>
+      <type-interface alignment="I:2" size="I:2"><interface-ref name="CC2420Config" ref="0x40ad5d18" scoped=""/></type-interface>
+      <instance>
+        <interfacedef-ref nicename="tos.chips.cc2420.interfaces.CC2420Config" qname="CC2420Config"/>
+      </instance>
+      <interface-functions>
+        <function-ref name="setAutoAck" ref="0x40ad5ef0" scoped=""/>
+        <function-ref name="isAddressRecognitionEnabled" ref="0x40ab8010" scoped=""/>
+        <function-ref name="setAddressRecognition" ref="0x40ab80f0" scoped=""/>
+        <function-ref name="syncDone" ref="0x40ab81d0" scoped=""/>
+        <function-ref name="isHwAddressRecognitionDefault" ref="0x40ab82b0" scoped=""/>
+        <function-ref name="setShortAddr" ref="0x40ab8390" scoped=""/>
+        <function-ref name="setChannel" ref="0x40ab8470" scoped=""/>
+        <function-ref name="isAutoAckEnabled" ref="0x40ab8550" scoped=""/>
+        <function-ref name="setPanAddr" ref="0x40ab8630" scoped=""/>
+        <function-ref name="isHwAutoAckDefault" ref="0x40ab8710" scoped=""/>
+        <function-ref name="getExtAddr" ref="0x40ab87f0" scoped=""/>
+        <function-ref name="getShortAddr" ref="0x40ab88d0" scoped=""/>
+        <function-ref name="sync" ref="0x40ab89b0" scoped=""/>
+        <function-ref name="getChannel" ref="0x40ab8b10" scoped=""/>
+        <function-ref name="getPanAddr" ref="0x40ab8bf0" scoped=""/>
+      </interface-functions>
+    </interface><interface loc="5:/home/jumbo/tinyos-main/tos/lib/net/blip/Ieee154AddressP.nc" name="Ieee154Address" provided="1" ref="0x40aba010">
+      <component-ref nicename="tos.lib.net.blip.Ieee154AddressP" qname="Ieee154AddressP"/>
+      <type-interface alignment="I:2" size="I:2"><interface-ref name="Ieee154Address" ref="0x40aba010" scoped=""/></type-interface>
+      <instance>
+        <interfacedef-ref nicename="tos.lib.net.blip.interfaces.Ieee154Address" qname="Ieee154Address"/>
+      </instance>
+      <interface-functions>
+        <function-ref name="getPanId" ref="0x40aba1e8" scoped=""/>
+        <function-ref name="changed" ref="0x40aba2c8" scoped=""/>
+        <function-ref name="setShortAddr" ref="0x40aba3a8" scoped=""/>
+        <function-ref name="getExtAddr" ref="0x40aba488" scoped=""/>
+        <function-ref name="getShortAddr" ref="0x40aba568" scoped=""/>
+      </interface-functions>
+    </interface><interface loc="4:/home/jumbo/tinyos-main/tos/lib/net/blip/Ieee154AddressP.nc" name="Init" provided="1" ref="0x40abdba0">
+      <component-ref nicename="tos.lib.net.blip.Ieee154AddressP" qname="Ieee154AddressP"/>
+      <type-interface alignment="I:2" size="I:2"><interface-ref name="Init" ref="0x40abdba0" scoped=""/></type-interface>
+      <instance>
+        <interfacedef-ref nicename="tos.interfaces.Init" qname="Init"/>
+      </instance>
+      <interface-functions>
+        <function-ref name="init" ref="0x40abdd78" scoped=""/>
+      </interface-functions>
+    </interface></specification><referenced/></component>

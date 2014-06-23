@@ -1,0 +1,193 @@
+<?xml version="1.0" ?><component loc="41:/home/jumbo/tinyos-main/tos/chips/cc2420/lpl/DummyLplC.nc" nicename="tos.chips.cc2420.lpl.DummyLplC" qname="DummyLplC">
+      <documentation loc="32:/home/jumbo/tinyos-main/tos/chips/cc2420/lpl/DummyLplC.nc">
+        <short>
+ Dummy low power listening interface used when LowPowerListening is not
+ compiled in with the application.</short>
+        <long>
+ Dummy low power listening interface used when LowPowerListening is not
+ compiled in with the application.
+ Sleep interval is always 0, and duty cycle is always 100%
+ @author David Moss
+</long>
+      </documentation>
+      <configuration/>
+      <wiring>
+        <wire loc="63:/home/jumbo/tinyos-main/tos/chips/cc2420/lpl/DummyLplC.nc">
+          <from><interface-ref name="SplitControl" ref="0x413b6e38" scoped=""/></from>
+          <to><interface-ref name="SubControl" ref="0x413b48e0" scoped=""/></to>
+        </wire>
+        <wire loc="61:/home/jumbo/tinyos-main/tos/chips/cc2420/lpl/DummyLplC.nc">
+          <from><interface-ref name="Send" ref="0x41364ca8" scoped=""/></from>
+          <to><interface-ref name="SubSend" ref="0x413b5d38" scoped=""/></to>
+        </wire>
+        <wire loc="64:/home/jumbo/tinyos-main/tos/chips/cc2420/lpl/DummyLplC.nc">
+          <from><interface-ref name="LowPowerListening" ref="0x413b6800" scoped=""/></from>
+          <to><interface-ref name="LowPowerListening" ref="0x413b3548" scoped=""/></to>
+        </wire>
+        <wire loc="65:/home/jumbo/tinyos-main/tos/chips/cc2420/lpl/DummyLplC.nc">
+          <from><interface-ref name="SendState" ref="0x413b54e8" scoped=""/></from>
+          <to><interface-ref name="State" ref="0x413b2558" scoped=""/></to>
+        </wire>
+        <wire loc="62:/home/jumbo/tinyos-main/tos/chips/cc2420/lpl/DummyLplC.nc">
+          <from><interface-ref name="Receive" ref="0x413b6438" scoped=""/></from>
+          <to><interface-ref name="SubReceive" ref="0x413b44c0" scoped=""/></to>
+        </wire>
+      </wiring>
+    <specification><interface loc="46:/home/jumbo/tinyos-main/tos/chips/cc2420/lpl/DummyLplC.nc" name="SplitControl" provided="1" ref="0x413b6e38">
+      <component-ref nicename="tos.chips.cc2420.lpl.DummyLplC" qname="DummyLplC"/>
+      <type-interface alignment="I:2" size="I:2"><interface-ref name="SplitControl" ref="0x413b6e38" scoped=""/></type-interface>
+      <instance>
+        <interfacedef-ref nicename="tos.interfaces.SplitControl" qname="SplitControl"/>
+      </instance>
+      <interface-functions>
+        <function-ref name="startDone" ref="0x413b5050" scoped=""/>
+        <function-ref name="stopDone" ref="0x413b5130" scoped=""/>
+        <function-ref name="start" ref="0x413b5210" scoped=""/>
+        <function-ref name="stop" ref="0x413b52f0" scoped=""/>
+      </interface-functions>
+    </interface><interface loc="51:/home/jumbo/tinyos-main/tos/chips/cc2420/lpl/DummyLplC.nc" name="SubSend" provided="0" ref="0x413b5d38">
+      <component-ref nicename="tos.chips.cc2420.lpl.DummyLplC" qname="DummyLplC"/>
+      <type-interface alignment="I:2" size="I:2"><interface-ref name="SubSend" ref="0x413b5d38" scoped=""/></type-interface>
+      <instance>
+        <interfacedef-ref nicename="tos.interfaces.Send" qname="Send"/>
+      </instance>
+      <interface-functions>
+        <function-ref name="send" ref="0x413b5f10" scoped=""/>
+        <function-ref name="getPayload" ref="0x413b4010" scoped=""/>
+        <function-ref name="maxPayloadLength" ref="0x413b40f0" scoped=""/>
+        <function-ref name="cancel" ref="0x413b41d0" scoped=""/>
+        <function-ref name="sendDone" ref="0x413b42b0" scoped=""/>
+      </interface-functions>
+    </interface><interface loc="52:/home/jumbo/tinyos-main/tos/chips/cc2420/lpl/DummyLplC.nc" name="SubReceive" provided="0" ref="0x413b44c0">
+      <component-ref nicename="tos.chips.cc2420.lpl.DummyLplC" qname="DummyLplC"/>
+      <type-interface alignment="I:2" size="I:2"><interface-ref name="SubReceive" ref="0x413b44c0" scoped=""/></type-interface>
+      <instance>
+        <interfacedef-ref nicename="tos.interfaces.Receive" qname="Receive"/>
+      </instance>
+      <interface-functions>
+        <function-ref name="receive" ref="0x413b4698" scoped=""/>
+      </interface-functions>
+    </interface><interface loc="43:/home/jumbo/tinyos-main/tos/chips/cc2420/lpl/DummyLplC.nc" name="Send" provided="1" ref="0x41364ca8">
+      <component-ref nicename="tos.chips.cc2420.lpl.DummyLplC" qname="DummyLplC"/>
+      <type-interface alignment="I:2" size="I:2"><interface-ref name="Send" ref="0x41364ca8" scoped=""/></type-interface>
+      <instance>
+        <interfacedef-ref nicename="tos.interfaces.Send" qname="Send"/>
+      </instance>
+      <interface-functions>
+        <function-ref name="send" ref="0x41364e80" scoped=""/>
+        <function-ref name="getPayload" ref="0x413b6010" scoped=""/>
+        <function-ref name="maxPayloadLength" ref="0x413b60f0" scoped=""/>
+        <function-ref name="cancel" ref="0x413b61d0" scoped=""/>
+        <function-ref name="sendDone" ref="0x413b62b0" scoped=""/>
+      </interface-functions>
+    </interface><interface loc="45:/home/jumbo/tinyos-main/tos/chips/cc2420/lpl/DummyLplC.nc" name="LowPowerListening" provided="1" ref="0x413b6800">
+      <component-ref nicename="tos.chips.cc2420.lpl.DummyLplC" qname="DummyLplC"/>
+      <type-interface alignment="I:2" size="I:2"><interface-ref name="LowPowerListening" ref="0x413b6800" scoped=""/></type-interface>
+      <instance>
+        <interfacedef-ref nicename="tos.interfaces.LowPowerListening" qname="LowPowerListening"/>
+      </instance>
+      <interface-functions>
+        <function-ref name="setRemoteWakeupInterval" ref="0x413b69d8" scoped=""/>
+        <function-ref name="getRemoteWakeupInterval" ref="0x413b6ab8" scoped=""/>
+        <function-ref name="getLocalWakeupInterval" ref="0x413b6b98" scoped=""/>
+        <function-ref name="setLocalWakeupInterval" ref="0x413b6c78" scoped=""/>
+      </interface-functions>
+    </interface><interface loc="47:/home/jumbo/tinyos-main/tos/chips/cc2420/lpl/DummyLplC.nc" name="SendState" provided="1" ref="0x413b54e8">
+      <component-ref nicename="tos.chips.cc2420.lpl.DummyLplC" qname="DummyLplC"/>
+      <type-interface alignment="I:2" size="I:2"><interface-ref name="SendState" ref="0x413b54e8" scoped=""/></type-interface>
+      <instance>
+        <interfacedef-ref nicename="tos.interfaces.State" qname="State"/>
+      </instance>
+      <interface-functions>
+        <function-ref name="getState" ref="0x413b56c0" scoped=""/>
+        <function-ref name="toIdle" ref="0x413b57a0" scoped=""/>
+        <function-ref name="isState" ref="0x413b5880" scoped=""/>
+        <function-ref name="isIdle" ref="0x413b5960" scoped=""/>
+        <function-ref name="requestState" ref="0x413b5a40" scoped=""/>
+        <function-ref name="forceState" ref="0x413b5b20" scoped=""/>
+      </interface-functions>
+    </interface><interface loc="53:/home/jumbo/tinyos-main/tos/chips/cc2420/lpl/DummyLplC.nc" name="SubControl" provided="0" ref="0x413b48e0">
+      <component-ref nicename="tos.chips.cc2420.lpl.DummyLplC" qname="DummyLplC"/>
+      <type-interface alignment="I:2" size="I:2"><interface-ref name="SubControl" ref="0x413b48e0" scoped=""/></type-interface>
+      <instance>
+        <interfacedef-ref nicename="tos.interfaces.SplitControl" qname="SplitControl"/>
+      </instance>
+      <interface-functions>
+        <function-ref name="startDone" ref="0x413b4ab8" scoped=""/>
+        <function-ref name="stopDone" ref="0x413b4b98" scoped=""/>
+        <function-ref name="start" ref="0x413b4c78" scoped=""/>
+        <function-ref name="stop" ref="0x413b4d58" scoped=""/>
+      </interface-functions>
+    </interface><interface loc="44:/home/jumbo/tinyos-main/tos/chips/cc2420/lpl/DummyLplC.nc" name="Receive" provided="1" ref="0x413b6438">
+      <component-ref nicename="tos.chips.cc2420.lpl.DummyLplC" qname="DummyLplC"/>
+      <type-interface alignment="I:2" size="I:2"><interface-ref name="Receive" ref="0x413b6438" scoped=""/></type-interface>
+      <instance>
+        <interfacedef-ref nicename="tos.interfaces.Receive" qname="Receive"/>
+      </instance>
+      <interface-functions>
+        <function-ref name="receive" ref="0x413b6610" scoped=""/>
+      </interface-functions>
+    </interface></specification><referenced><interface loc="41:/home/jumbo/tinyos-main/tos/chips/cc2420/lpl/DummyLplP.nc" name="LowPowerListening" provided="1" ref="0x413b3548">
+      <component-ref nicename="tos.chips.cc2420.lpl.DummyLplP" qname="DummyLplP"/>
+      <type-interface alignment="I:2" size="I:2"><interface-ref name="LowPowerListening" ref="0x413b3548" scoped=""/></type-interface>
+      <instance>
+        <interfacedef-ref nicename="tos.interfaces.LowPowerListening" qname="LowPowerListening"/>
+      </instance>
+      <interface-functions>
+        <function-ref name="setRemoteWakeupInterval" ref="0x413b3720" scoped=""/>
+        <function-ref name="getRemoteWakeupInterval" ref="0x413b3800" scoped=""/>
+        <function-ref name="getLocalWakeupInterval" ref="0x413b38e0" scoped=""/>
+        <function-ref name="setLocalWakeupInterval" ref="0x413b39c0" scoped=""/>
+      </interface-functions>
+    </interface><interface loc="67:/home/jumbo/tinyos-main/tos/system/StateC.nc" name="State" provided="1" ref="0x413b2558">
+      <component-ref nicename="tos.system.StateC" qname="DummyLplC.StateC"/>
+      <type-interface alignment="I:2" size="I:2"><interface-ref name="State" ref="0x413b2558" scoped=""/></type-interface>
+      <instance>
+        <interfacedef-ref nicename="tos.interfaces.State" qname="State"/>
+      </instance>
+      <interface-functions>
+        <function-ref name="getState" ref="0x413b2730" scoped=""/>
+        <function-ref name="toIdle" ref="0x413b2810" scoped=""/>
+        <function-ref name="isState" ref="0x413b28f0" scoped=""/>
+        <function-ref name="isIdle" ref="0x413b29d0" scoped=""/>
+        <function-ref name="requestState" ref="0x413b2ab0" scoped=""/>
+        <function-ref name="forceState" ref="0x413b2b90" scoped=""/>
+      </interface-functions>
+    </interface><component loc="65(DummyLplC.StateC):/home/jumbo/tinyos-main/tos/system/StateC.nc" nicename="tos.system.StateC" qname="DummyLplC.StateC">
+      <documentation loc="32:/home/jumbo/tinyos-main/tos/types/State.h">
+        <short>
+ </short>
+        <long>
+ @author David Moss
+</long>
+      </documentation>
+      <instance number="3">
+        <component-ref nicename="tos.system.StateC" qname="StateC"/>
+      </instance>
+      <configuration/>
+      <wiring>
+        <wire loc="74:/home/jumbo/tinyos-main/tos/system/StateC.nc">
+          <from><interface-ref name="State" ref="0x413b2558" scoped=""/></from>
+          <to><interface-ref name="State" ref="0x40d3fb08" scoped=""/>
+          <arguments>
+            <value cst="I:3">
+              <type-int alignment="I:2" cname="unsigned int" size="I:2" unsigned=""/>
+            </value>
+          </arguments>
+          </to>
+        </wire>
+      </wiring>
+    </component><component loc="39:/home/jumbo/tinyos-main/tos/chips/cc2420/lpl/DummyLplP.nc" nicename="tos.chips.cc2420.lpl.DummyLplP" qname="DummyLplP">
+      <documentation loc="32:/home/jumbo/tinyos-main/tos/chips/cc2420/lpl/DummyLplP.nc">
+        <short>
+ Dummy low power listening interface used when LowPowerListening is not
+ compiled in with the application.</short>
+        <long>
+ Dummy low power listening interface used when LowPowerListening is not
+ compiled in with the application.
+ Wakeup interval is always 0 (always on)
+ @author David Moss
+</long>
+      </documentation>
+      <module/>
+    </component></referenced></component>

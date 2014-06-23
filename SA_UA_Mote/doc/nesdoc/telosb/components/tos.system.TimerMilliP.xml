@@ -1,0 +1,178 @@
+<?xml version="1.0" ?><component loc="48:/home/jumbo/tinyos-main/tos/system/TimerMilliP.nc" nicename="tos.system.TimerMilliP" qname="TimerMilliP">
+      <documentation loc="34:/home/jumbo/tinyos-main/tos/system/TimerMilliP.nc">
+        <short>
+ Components should never wire to this component.</short>
+        <long>
+ Components should never wire to this component. This is the
+ underlying configuration of virtualized millisecond timers. 
+ It auto-wires wires the timer
+ implementation (TimerC) to the boot sequence and exports the
+ various Timer interfaces.
+
+ @author Philip Levis
+ @author Cory Sharp
+ @date   May 16 2005
+</long>
+      </documentation>
+      <configuration/>
+      <wiring>
+        <wire loc="54:/home/jumbo/tinyos-main/tos/system/TimerMilliP.nc">
+          <from><interface-ref name="TimerMilli" ref="0x412fd850" scoped=""/></from>
+          <to><interface-ref name="TimerMilli" ref="0x412a1100" scoped=""/></to>
+        </wire>
+        <wire loc="53:/home/jumbo/tinyos-main/tos/system/TimerMilliP.nc">
+          <from><interface-ref name="SoftwareInit" ref="0x40692258" scoped=""/></from>
+          <to><interface-ref name="Init" ref="0x412a58f8" scoped=""/></to>
+        </wire>
+      </wiring>
+    <specification><interface loc="49:/home/jumbo/tinyos-main/tos/system/TimerMilliP.nc" name="TimerMilli" provided="1" ref="0x412fd850">
+      <component-ref nicename="tos.system.TimerMilliP" qname="TimerMilliP"/>
+      <type-interface alignment="I:2" size="I:2"><interface-ref name="TimerMilli" ref="0x412fd850" scoped=""/></type-interface>
+      <instance>
+        <interfacedef-ref nicename="tos.lib.timer.Timer" qname="Timer"/>
+        <arguments>
+          <type-tag alignment="I:2" size="I:2"><struct-ref ref="0x40648d90"/>
+            <typename><typedef-ref name="TMilli" ref="0x4064d010"/></typename>
+          </type-tag>
+        </arguments>
+      </instance>
+      <interface-parameters>
+        <type-int alignment="I:1" cname="unsigned char" size="I:1" unsigned="">
+          <typename><typedef-ref name="uint8_t" ref="0x4003bdc8"/></typename>
+        </type-int>
+      </interface-parameters>
+      <interface-functions>
+        <function-ref name="getNow" ref="0x4133e368" scoped=""/>
+        <function-ref name="fired" ref="0x4133f5e8" scoped=""/>
+        <function-ref name="startPeriodicAt" ref="0x4133fcf0" scoped=""/>
+        <function-ref name="isOneShot" ref="0x4133fa98" scoped=""/>
+        <function-ref name="getdt" ref="0x4133e818" scoped=""/>
+        <function-ref name="gett0" ref="0x4133e5c0" scoped=""/>
+        <function-ref name="isRunning" ref="0x4133f840" scoped=""/>
+        <function-ref name="startPeriodic" ref="0x412fde78" scoped=""/>
+        <function-ref name="startOneShotAt" ref="0x4133e048" scoped=""/>
+        <function-ref name="startOneShot" ref="0x4133f110" scoped=""/>
+        <function-ref name="stop" ref="0x4133f390" scoped=""/>
+      </interface-functions>
+    </interface></specification><referenced><interface loc="45:/home/jumbo/tinyos-main/tos/chips/msp430/timer/HilTimerMilliC.nc" name="Init" provided="1" ref="0x412a58f8">
+      <component-ref nicename="tos.chips.msp430.timer.HilTimerMilliC" qname="HilTimerMilliC"/>
+      <type-interface alignment="I:2" size="I:2"><interface-ref name="Init" ref="0x412a58f8" scoped=""/></type-interface>
+      <instance>
+        <interfacedef-ref nicename="tos.interfaces.Init" qname="Init"/>
+      </instance>
+      <interface-functions>
+        <function-ref name="init" ref="0x412a5ad0" scoped=""/>
+      </interface-functions>
+    </interface><interface loc="58:/home/jumbo/tinyos-main/tos/system/MainC.nc" name="SoftwareInit" provided="0" ref="0x40692258">
+      <component-ref nicename="tos.system.MainC" qname="MainC"/>
+      <type-interface alignment="I:2" size="I:2"><interface-ref name="SoftwareInit" ref="0x40692258" scoped=""/></type-interface>
+      <instance>
+        <interfacedef-ref nicename="tos.interfaces.Init" qname="Init"/>
+      </instance>
+      <interface-functions>
+        <function-ref name="init" ref="0x40692430" scoped=""/>
+      </interface-functions>
+    </interface><interface loc="46:/home/jumbo/tinyos-main/tos/chips/msp430/timer/HilTimerMilliC.nc" name="TimerMilli" provided="1" ref="0x412a1100">
+      <component-ref nicename="tos.chips.msp430.timer.HilTimerMilliC" qname="HilTimerMilliC"/>
+      <type-interface alignment="I:2" size="I:2"><interface-ref name="TimerMilli" ref="0x412a1100" scoped=""/></type-interface>
+      <instance>
+        <interfacedef-ref nicename="tos.lib.timer.Timer" qname="Timer"/>
+        <arguments>
+          <type-tag alignment="I:2" size="I:2"><struct-ref ref="0x40648d90"/>
+            <typename><typedef-ref name="TMilli" ref="0x4064d010"/></typename>
+          </type-tag>
+        </arguments>
+      </instance>
+      <interface-parameters>
+        <type-int alignment="I:1" cname="unsigned char" size="I:1" unsigned="">
+          <typename><typedef-ref name="uint8_t" ref="0x4003bdc8"/></typename>
+        </type-int>
+      </interface-parameters>
+      <interface-functions>
+        <function-ref name="getNow" ref="0x412a0be0" scoped=""/>
+        <function-ref name="fired" ref="0x412a1e80" scoped=""/>
+        <function-ref name="startPeriodicAt" ref="0x412a05a0" scoped=""/>
+        <function-ref name="isOneShot" ref="0x412a0348" scoped=""/>
+        <function-ref name="getdt" ref="0x4129f0b8" scoped=""/>
+        <function-ref name="gett0" ref="0x412a0e38" scoped=""/>
+        <function-ref name="isRunning" ref="0x412a00f0" scoped=""/>
+        <function-ref name="startPeriodic" ref="0x412a1728" scoped=""/>
+        <function-ref name="startOneShotAt" ref="0x412a08c0" scoped=""/>
+        <function-ref name="startOneShot" ref="0x412a19a8" scoped=""/>
+        <function-ref name="stop" ref="0x412a1c28" scoped=""/>
+      </interface-functions>
+    </interface><component loc="43:/home/jumbo/tinyos-main/tos/chips/msp430/timer/HilTimerMilliC.nc" nicename="tos.chips.msp430.timer.HilTimerMilliC" qname="HilTimerMilliC">
+      <documentation loc="33:/home/jumbo/tinyos-main/tos/chips/msp430/timer/HilTimerMilliC.nc">
+        <short>
+ HilTimerMilliC provides a parameterized interface to a virtualized
+ millisecond timer.</short>
+        <long>
+ HilTimerMilliC provides a parameterized interface to a virtualized
+ millisecond timer.  TimerMilliC in tos/system/ uses this component to
+ allocate new timers.
+
+ @author Cory Sharp &lt;cssharp@eecs.berkeley.edu&gt;
+ @see  Please refer to TEP 102 for more information about this component and its
+          intended use.
+</long>
+      </documentation>
+      <configuration/>
+      <wiring>
+        <wire loc="58:/home/jumbo/tinyos-main/tos/chips/msp430/timer/HilTimerMilliC.nc">
+          <from><interface-ref name="TimerMilli" ref="0x412a1100" scoped=""/></from>
+          <to><interface-ref name="Timer" ref="0x412eff00" scoped=""/></to>
+        </wire>
+        <wire loc="59:/home/jumbo/tinyos-main/tos/chips/msp430/timer/HilTimerMilliC.nc">
+          <from><interface-ref name="LocalTime" ref="0x4129f418" scoped=""/></from>
+          <to><interface-ref name="LocalTime" ref="0x41307a18" scoped=""/></to>
+        </wire>
+        <wire loc="57:/home/jumbo/tinyos-main/tos/chips/msp430/timer/HilTimerMilliC.nc">
+          <from><interface-ref name="Init" ref="0x412a58f8" scoped=""/></from>
+          <to><interface-ref name="Init" ref="0x4129cd98" scoped=""/></to>
+        </wire>
+        <wire loc="61:/home/jumbo/tinyos-main/tos/chips/msp430/timer/HilTimerMilliC.nc">
+          <from><interface-ref name="TimerFrom" ref="0x4130a338" scoped=""/></from>
+          <to><interface-ref name="Timer" ref="0x412c6cb0" scoped=""/></to>
+        </wire>
+        <wire loc="62:/home/jumbo/tinyos-main/tos/chips/msp430/timer/HilTimerMilliC.nc">
+          <from><interface-ref name="Alarm" ref="0x412f2010" scoped=""/></from>
+          <to><interface-ref name="Alarm" ref="0x4129b290" scoped=""/></to>
+        </wire>
+        <wire loc="63:/home/jumbo/tinyos-main/tos/chips/msp430/timer/HilTimerMilliC.nc">
+          <from><interface-ref name="Counter" ref="0x413053d8" scoped=""/></from>
+          <to><interface-ref name="Counter" ref="0x412d7468" scoped=""/></to>
+        </wire>
+      </wiring>
+    </component><component loc="56:/home/jumbo/tinyos-main/tos/system/MainC.nc" nicename="tos.system.MainC" qname="MainC">
+      <documentation loc="45:/home/jumbo/tinyos-main/tos/system/MainC.nc">
+        <short>
+ MainC is the system interface the TinyOS boot sequence.</short>
+        <long>
+ MainC is the system interface the TinyOS boot sequence. It wires the
+ boot sequence implementation to the scheduler and hardware resources.
+
+ @author Philip Levis
+ @date   August 6 2005
+ @see    TEP 107: Boot Sequence
+</long>
+      </documentation>
+      <configuration/>
+      <wiring>
+        <wire loc="72:/home/jumbo/tinyos-main/tos/system/MainC.nc">
+          <from><interface-ref name="Boot" ref="0x4060e610" scoped=""/></from>
+          <to><interface-ref name="Boot" ref="0x4068bdf8" scoped=""/></to>
+        </wire>
+        <wire loc="67:/home/jumbo/tinyos-main/tos/system/MainC.nc">
+          <from><interface-ref name="Scheduler" ref="0x406a61d0" scoped=""/></from>
+          <to><interface-ref name="Scheduler" ref="0x40387010" scoped=""/></to>
+        </wire>
+        <wire loc="68:/home/jumbo/tinyos-main/tos/system/MainC.nc">
+          <from><interface-ref name="PlatformInit" ref="0x406a6798" scoped=""/></from>
+          <to><interface-ref name="Init" ref="0x40692aa0" scoped=""/></to>
+        </wire>
+        <wire loc="71:/home/jumbo/tinyos-main/tos/system/MainC.nc">
+          <from><interface-ref name="SoftwareInit" ref="0x406a6ba0" scoped=""/></from>
+          <to><interface-ref name="SoftwareInit" ref="0x40692258" scoped=""/></to>
+        </wire>
+      </wiring>
+    </component></referenced></component>

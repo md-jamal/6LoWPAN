@@ -1,0 +1,82 @@
+<?xml version="1.0" ?><component loc="26:/home/jumbo/tinyos-main/tos/platforms/epic/chips/ds2411/LocalIeeeEui64C.nc" nicename="tos.platforms.epic.chips.ds2411.LocalIeeeEui64C" qname="LocalIeeeEui64C">
+      <configuration/>
+      <wiring>
+        <wire loc="33:/home/jumbo/tinyos-main/tos/platforms/epic/chips/ds2411/LocalIeeeEui64C.nc">
+          <from><interface-ref name="LocalIeeeEui64" ref="0x40abb2f0" scoped=""/></from>
+          <to><interface-ref name="LocalIeeeEui64" ref="0x40b36860" scoped=""/></to>
+        </wire>
+        <wire loc="34:/home/jumbo/tinyos-main/tos/platforms/epic/chips/ds2411/LocalIeeeEui64C.nc">
+          <from><interface-ref name="ReadId48" ref="0x40b36bf0" scoped=""/></from>
+          <to><interface-ref name="ReadId48" ref="0x40aea3a0" scoped=""/></to>
+        </wire>
+      </wiring>
+    <specification><interface loc="27:/home/jumbo/tinyos-main/tos/platforms/epic/chips/ds2411/LocalIeeeEui64C.nc" name="LocalIeeeEui64" provided="1" ref="0x40abb2f0">
+      <component-ref nicename="tos.platforms.epic.chips.ds2411.LocalIeeeEui64C" qname="LocalIeeeEui64C"/>
+      <type-interface alignment="I:2" size="I:2"><interface-ref name="LocalIeeeEui64" ref="0x40abb2f0" scoped=""/></type-interface>
+      <instance>
+        <interfacedef-ref nicename="tos.interfaces.LocalIeeeEui64" qname="LocalIeeeEui64"/>
+      </instance>
+      <interface-functions>
+        <function-ref name="getId" ref="0x40abb4c8" scoped=""/>
+      </interface-functions>
+    </interface></specification><referenced><interface loc="12:/home/jumbo/tinyos-main/tos/platforms/epic/chips/ds2411/Ds2411C.nc" name="ReadId48" provided="1" ref="0x40aea3a0">
+      <component-ref nicename="tos.platforms.epic.chips.ds2411.Ds2411C" qname="Ds2411C"/>
+      <type-interface alignment="I:2" size="I:2"><interface-ref name="ReadId48" ref="0x40aea3a0" scoped=""/></type-interface>
+      <instance>
+        <interfacedef-ref nicename="tos.platforms.epic.chips.ds2411.ReadId48" qname="ReadId48"/>
+      </instance>
+      <interface-functions>
+        <function-ref name="read" ref="0x40aea578" scoped=""/>
+      </interface-functions>
+    </interface><interface loc="6:/home/jumbo/tinyos-main/tos/platforms/epic/chips/ds2411/DallasId48ToIeeeEui64C.nc" name="ReadId48" provided="0" ref="0x40b36bf0">
+      <component-ref nicename="tos.platforms.epic.chips.ds2411.DallasId48ToIeeeEui64C" qname="DallasId48ToIeeeEui64C"/>
+      <type-interface alignment="I:2" size="I:2"><interface-ref name="ReadId48" ref="0x40b36bf0" scoped=""/></type-interface>
+      <instance>
+        <interfacedef-ref nicename="tos.platforms.epic.chips.ds2411.ReadId48" qname="ReadId48"/>
+      </instance>
+      <interface-functions>
+        <function-ref name="read" ref="0x40b36dc8" scoped=""/>
+      </interface-functions>
+    </interface><interface loc="5:/home/jumbo/tinyos-main/tos/platforms/epic/chips/ds2411/DallasId48ToIeeeEui64C.nc" name="LocalIeeeEui64" provided="1" ref="0x40b36860">
+      <component-ref nicename="tos.platforms.epic.chips.ds2411.DallasId48ToIeeeEui64C" qname="DallasId48ToIeeeEui64C"/>
+      <type-interface alignment="I:2" size="I:2"><interface-ref name="LocalIeeeEui64" ref="0x40b36860" scoped=""/></type-interface>
+      <instance>
+        <interfacedef-ref nicename="tos.interfaces.LocalIeeeEui64" qname="LocalIeeeEui64"/>
+      </instance>
+      <interface-functions>
+        <function-ref name="getId" ref="0x40b36a38" scoped=""/>
+      </interface-functions>
+    </interface><component loc="11:/home/jumbo/tinyos-main/tos/platforms/epic/chips/ds2411/Ds2411C.nc" nicename="tos.platforms.epic.chips.ds2411.Ds2411C" qname="Ds2411C">
+      <documentation loc="5:/home/jumbo/tinyos-main/tos/platforms/epic/chips/ds2411/Ds2411C.nc">
+        <short>
+ </short>
+        <long>
+ @author: Andreas Koepke (koepke@tkn.tu-berlin.de)
+</long>
+      </documentation>
+      <configuration/>
+      <wiring>
+        <wire loc="25:/home/jumbo/tinyos-main/tos/platforms/epic/chips/ds2411/Ds2411C.nc">
+          <from><interface-ref name="ReadId48" ref="0x40aea3a0" scoped=""/></from>
+          <to><interface-ref name="ReadId48" ref="0x40ae5c58" scoped=""/></to>
+        </wire>
+        <wire loc="23:/home/jumbo/tinyos-main/tos/platforms/epic/chips/ds2411/Ds2411C.nc">
+          <from><interface-ref name="HplGeneralIO" ref="0x40afb988" scoped=""/></from>
+          <to><interface-ref name="Port24" ref="0x407bf368" scoped=""/></to>
+        </wire>
+        <wire loc="26:/home/jumbo/tinyos-main/tos/platforms/epic/chips/ds2411/Ds2411C.nc">
+          <from><interface-ref name="OneWire" ref="0x40ae0530" scoped=""/></from>
+          <to><interface-ref name="OneWire" ref="0x40adc450" scoped=""/></to>
+        </wire>
+        <wire loc="27:/home/jumbo/tinyos-main/tos/platforms/epic/chips/ds2411/Ds2411C.nc">
+          <from><interface-ref name="Pin" ref="0x40adc928" scoped=""/></from>
+          <to><interface-ref name="GeneralIO" ref="0x40afb010" scoped=""/></to>
+        </wire>
+        <wire loc="28:/home/jumbo/tinyos-main/tos/platforms/epic/chips/ds2411/Ds2411C.nc">
+          <from><interface-ref name="BusyWait" ref="0x40af7588" scoped=""/></from>
+          <to><interface-ref name="BusyWait" ref="0x40b0a010" scoped=""/></to>
+        </wire>
+      </wiring>
+    </component><component loc="4:/home/jumbo/tinyos-main/tos/platforms/epic/chips/ds2411/DallasId48ToIeeeEui64C.nc" nicename="tos.platforms.epic.chips.ds2411.DallasId48ToIeeeEui64C" qname="DallasId48ToIeeeEui64C">
+      <module/>
+    </component></referenced></component>

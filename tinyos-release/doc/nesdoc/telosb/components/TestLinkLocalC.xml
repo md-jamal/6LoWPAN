@@ -1,0 +1,79 @@
+<?xml version="1.0" ?><component loc="5:TestLinkLocalC.nc" nicename="TestLinkLocalC" qname="TestLinkLocalC">
+      <module/>
+    <specification><interface loc="8:TestLinkLocalC.nc" name="SplitControl" provided="0" ref="0x40890e68">
+      <component-ref nicename="TestLinkLocalC" qname="TestLinkLocalC"/>
+      <type-interface alignment="I:2" size="I:2"><interface-ref name="SplitControl" ref="0x40890e68" scoped=""/></type-interface>
+      <instance>
+        <interfacedef-ref nicename="tos.interfaces.SplitControl" qname="SplitControl"/>
+      </instance>
+      <interface-functions>
+        <function-ref name="startDone" ref="0x40893050" scoped=""/>
+        <function-ref name="stopDone" ref="0x40893130" scoped=""/>
+        <function-ref name="start" ref="0x40893210" scoped=""/>
+        <function-ref name="stop" ref="0x408932f0" scoped=""/>
+      </interface-functions>
+    </interface><interface loc="7:TestLinkLocalC.nc" name="Boot" provided="0" ref="0x40894a18">
+      <component-ref nicename="TestLinkLocalC" qname="TestLinkLocalC"/>
+      <type-interface alignment="I:2" size="I:2"><interface-ref name="Boot" ref="0x40894a18" scoped=""/></type-interface>
+      <instance>
+        <interfacedef-ref nicename="tos.interfaces.Boot" qname="Boot"/>
+      </instance>
+      <interface-functions>
+        <function-ref name="booted" ref="0x40894bf0" scoped=""/>
+      </interface-functions>
+    </interface><interface loc="9:TestLinkLocalC.nc" name="Sock" provided="0" ref="0x408a8b98">
+      <component-ref nicename="TestLinkLocalC" qname="TestLinkLocalC"/>
+      <type-interface alignment="I:2" size="I:2"><interface-ref name="Sock" ref="0x408a8b98" scoped=""/></type-interface>
+      <instance>
+        <interfacedef-ref nicename="tos.lib.net.blip.interfaces.UDP" qname="UDP"/>
+      </instance>
+      <interface-functions>
+        <function-ref name="sendto" ref="0x408a8d70" scoped=""/>
+        <function-ref name="bind" ref="0x408a8e50" scoped=""/>
+        <function-ref name="sendtov" ref="0x40892010" scoped=""/>
+        <function-ref name="recvfrom" ref="0x408920f0" scoped=""/>
+      </interface-functions>
+    </interface><interface loc="11:TestLinkLocalC.nc" name="Leds" provided="0" ref="0x4089e090">
+      <component-ref nicename="TestLinkLocalC" qname="TestLinkLocalC"/>
+      <type-interface alignment="I:2" size="I:2"><interface-ref name="Leds" ref="0x4089e090" scoped=""/></type-interface>
+      <instance>
+        <interfacedef-ref nicename="tos.interfaces.Leds" qname="Leds"/>
+      </instance>
+      <interface-functions>
+        <function-ref name="led0Off" ref="0x4089e268" scoped=""/>
+        <function-ref name="led0Toggle" ref="0x4089e348" scoped=""/>
+        <function-ref name="led1On" ref="0x4089e428" scoped=""/>
+        <function-ref name="led1Toggle" ref="0x4089e508" scoped=""/>
+        <function-ref name="led2Toggle" ref="0x4089e5e8" scoped=""/>
+        <function-ref name="get" ref="0x4089e6c8" scoped=""/>
+        <function-ref name="led1Off" ref="0x4089e7a8" scoped=""/>
+        <function-ref name="led2Off" ref="0x4089eb28" scoped=""/>
+        <function-ref name="set" ref="0x4089e888" scoped=""/>
+        <function-ref name="led0On" ref="0x4089e968" scoped=""/>
+        <function-ref name="led2On" ref="0x4089ea48" scoped=""/>
+      </interface-functions>
+    </interface><interface loc="10:TestLinkLocalC.nc" name="Timer" provided="0" ref="0x408a0e40">
+      <component-ref nicename="TestLinkLocalC" qname="TestLinkLocalC"/>
+      <type-interface alignment="I:2" size="I:2"><interface-ref name="Timer" ref="0x408a0e40" scoped=""/></type-interface>
+      <instance>
+        <interfacedef-ref nicename="tos.lib.timer.Timer" qname="Timer"/>
+        <arguments>
+          <type-tag alignment="I:2" size="I:2"><struct-ref ref="0x40892a08"/>
+            <typename><typedef-ref name="TMilli" ref="0x40892bd0"/></typename>
+          </type-tag>
+        </arguments>
+      </instance>
+      <interface-functions>
+        <function-ref name="getNow" ref="0x408a7988" scoped=""/>
+        <function-ref name="fired" ref="0x4088ec10" scoped=""/>
+        <function-ref name="startPeriodicAt" ref="0x408a7348" scoped=""/>
+        <function-ref name="isOneShot" ref="0x408a70f0" scoped=""/>
+        <function-ref name="getdt" ref="0x408a7e38" scoped=""/>
+        <function-ref name="gett0" ref="0x408a7be0" scoped=""/>
+        <function-ref name="isRunning" ref="0x4088ee68" scoped=""/>
+        <function-ref name="startPeriodic" ref="0x4088e4b8" scoped=""/>
+        <function-ref name="startOneShotAt" ref="0x408a7668" scoped=""/>
+        <function-ref name="startOneShot" ref="0x4088e738" scoped=""/>
+        <function-ref name="stop" ref="0x4088e9b8" scoped=""/>
+      </interface-functions>
+    </interface></specification><referenced/></component>

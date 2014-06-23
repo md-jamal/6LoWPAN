@@ -1,0 +1,791 @@
+<?xml version="1.0" ?><component loc="73:/home/jumbo/tinyos-main/tos/lib/net/rpl/RPLRankC.nc" nicename="tos.lib.net.rpl.RPLRankC" qname="RPLRankC">
+      <documentation loc="68:/home/jumbo/tinyos-main/tos/lib/net/rpl/RPLRankC.nc">
+        <short>
+ </short>
+        <long>
+ @ author Yiwei Yao &lt;yaoyiwei@stanford.edu&gt;
+</long>
+      </documentation>
+      <configuration/>
+      <wiring>
+        <wire loc="89:/home/jumbo/tinyos-main/tos/lib/net/rpl/RPLRankC.nc">
+          <from><interface-ref name="RPLRank" ref="0x414b3838" scoped=""/></from>
+          <to><interface-ref name="RPLRankInfo" ref="0x414e1c30" scoped=""/></to>
+        </wire>
+        <wire loc="90:/home/jumbo/tinyos-main/tos/lib/net/rpl/RPLRankC.nc">
+          <from><interface-ref name="StdControl" ref="0x414ba858" scoped=""/></from>
+          <to><interface-ref name="StdControl" ref="0x414e0bd8" scoped=""/></to>
+        </wire>
+        <wire loc="91:/home/jumbo/tinyos-main/tos/lib/net/rpl/RPLRankC.nc">
+          <from><interface-ref name="IP_DIO_Filter" ref="0x414bea70" scoped=""/></from>
+          <to><interface-ref name="IP_DIO_Filter" ref="0x414df0b8" scoped=""/></to>
+        </wire>
+        <wire loc="92:/home/jumbo/tinyos-main/tos/lib/net/rpl/RPLRankC.nc">
+          <from><interface-ref name="IP_DIO" ref="0x414de208" scoped=""/></from>
+          <to><interface-ref name="ICMP_RA" ref="0x414b9020" scoped=""/>
+          <arguments>
+            <value cst="I:1">
+              <type-int alignment="I:2" cname="int" size="I:2"/>
+            </value>
+          </arguments>
+          </to>
+        </wire>
+        <wire loc="94:/home/jumbo/tinyos-main/tos/lib/net/rpl/RPLRankC.nc">
+          <from><interface-ref name="Leds" ref="0x414dcd18" scoped=""/></from>
+          <to><interface-ref name="Leds" ref="0x40683a90" scoped=""/></to>
+        </wire>
+        <wire loc="95:/home/jumbo/tinyos-main/tos/lib/net/rpl/RPLRankC.nc">
+          <from><interface-ref name="RouteInfo" ref="0x414dc030" scoped=""/></from>
+          <to><interface-ref name="RPLRoutingEngine" ref="0x4158aef0" scoped=""/></to>
+        </wire>
+        <wire loc="96:/home/jumbo/tinyos-main/tos/lib/net/rpl/RPLRankC.nc">
+          <from><interface-ref name="IPAddress" ref="0x414da990" scoped=""/></from>
+          <to><interface-ref name="IPAddress" ref="0x40a51ce0" scoped=""/></to>
+        </wire>
+        <wire loc="98:/home/jumbo/tinyos-main/tos/lib/net/rpl/RPLRankC.nc">
+          <from><interface-ref name="ForwardingEvents" ref="0x414d4ae8" scoped=""/></from>
+          <to><interface-ref name="ForwardingEvents" ref="0x409a6228" scoped=""/>
+          <arguments>
+            <value cst="I:1">
+              <type-int alignment="I:2" cname="int" size="I:2"/>
+            </value>
+          </arguments>
+          </to>
+        </wire>
+        <wire loc="99:/home/jumbo/tinyos-main/tos/lib/net/rpl/RPLRankC.nc">
+          <from><interface-ref name="IPPacket" ref="0x414de658" scoped=""/></from>
+          <to><interface-ref name="IPPacket" ref="0x41455a90" scoped=""/></to>
+        </wire>
+        <wire loc="111:/home/jumbo/tinyos-main/tos/lib/net/rpl/RPLRankC.nc">
+          <from><interface-ref name="RPLOF" ref="0x4151ac00" scoped=""/></from>
+          <to><interface-ref name="RPLOF" ref="0x41686010" scoped=""/></to>
+        </wire>
+        <wire loc="112:/home/jumbo/tinyos-main/tos/lib/net/rpl/RPLRankC.nc">
+          <from><interface-ref name="ForwardingTable" ref="0x41686ae0" scoped=""/></from>
+          <to><interface-ref name="ForwardingTable" ref="0x409a4dc0" scoped=""/></to>
+        </wire>
+        <wire loc="113:/home/jumbo/tinyos-main/tos/lib/net/rpl/RPLRankC.nc">
+          <from><interface-ref name="RPLRoute" ref="0x41685370" scoped=""/></from>
+          <to><interface-ref name="RPLRoutingEngine" ref="0x4158aef0" scoped=""/></to>
+        </wire>
+        <wire loc="114:/home/jumbo/tinyos-main/tos/lib/net/rpl/RPLRankC.nc">
+          <from><interface-ref name="ParentTable" ref="0x416d8180" scoped=""/></from>
+          <to><interface-ref name="RPLParentTable" ref="0x414dfd88" scoped=""/></to>
+        </wire>
+        <wire loc="115:/home/jumbo/tinyos-main/tos/lib/net/rpl/RPLRankC.nc">
+          <from><interface-ref name="RPLDAO" ref="0x416d85d8" scoped=""/></from>
+          <to><interface-ref name="RPLDAORoutingEngine" ref="0x4162dd00" scoped=""/></to>
+        </wire>
+      </wiring>
+    <specification><interface loc="76:/home/jumbo/tinyos-main/tos/lib/net/rpl/RPLRankC.nc" name="RPLRank" provided="1" ref="0x414b3838">
+      <component-ref nicename="tos.lib.net.rpl.RPLRankC" qname="RPLRankC"/>
+      <type-interface alignment="I:2" size="I:2"><interface-ref name="RPLRank" ref="0x414b3838" scoped=""/></type-interface>
+      <instance>
+        <interfacedef-ref nicename="tos.lib.net.rpl.RPLRank" qname="RPLRank"/>
+      </instance>
+      <interface-functions>
+        <function-ref name="parentRankChange" ref="0x414b3a10" scoped=""/>
+        <function-ref name="isRoot" ref="0x414b3af0" scoped=""/>
+        <function-ref name="setQueuingDelay" ref="0x414b3bd0" scoped=""/>
+        <function-ref name="hasParent" ref="0x414b3cb0" scoped=""/>
+        <function-ref name="validInstance" ref="0x414b3d90" scoped=""/>
+        <function-ref name="declareRoot" ref="0x414b3e70" scoped=""/>
+        <function-ref name="getRank" ref="0x414ba010" scoped=""/>
+        <function-ref name="getEtx" ref="0x414ba0f0" scoped=""/>
+        <function-ref name="isLeaf" ref="0x414ba1d0" scoped=""/>
+        <function-ref name="compareAddr" ref="0x414ba2b0" scoped=""/>
+        <function-ref name="isParent" ref="0x414ba390" scoped=""/>
+        <function-ref name="inconsistencyDetected" ref="0x414ba470" scoped=""/>
+        <function-ref name="getDefaultRoute" ref="0x414ba550" scoped=""/>
+        <function-ref name="cancelRoot" ref="0x414ba6b0" scoped=""/>
+      </interface-functions>
+    </interface><interface loc="80:/home/jumbo/tinyos-main/tos/lib/net/rpl/RPLRankC.nc" name="ICMP_RA" provided="0" ref="0x414b9020">
+      <component-ref nicename="tos.lib.net.rpl.RPLRankC" qname="RPLRankC"/>
+      <type-interface alignment="I:2" size="I:2"><interface-ref name="ICMP_RA" ref="0x414b9020" scoped=""/></type-interface>
+      <instance>
+        <interfacedef-ref nicename="tos.lib.net.blip.interfaces.IP" qname="IP"/>
+      </instance>
+      <interface-parameters>
+        <type-int alignment="I:1" cname="unsigned char" size="I:1" unsigned="">
+          <typename><typedef-ref name="uint8_t" ref="0x4003bdc8"/></typename>
+        </type-int>
+      </interface-parameters>
+      <interface-functions>
+        <function-ref name="send" ref="0x414b91f8" scoped=""/>
+        <function-ref name="recv" ref="0x414b92d8" scoped=""/>
+      </interface-functions>
+    </interface><interface loc="77:/home/jumbo/tinyos-main/tos/lib/net/rpl/RPLRankC.nc" name="StdControl" provided="1" ref="0x414ba858">
+      <component-ref nicename="tos.lib.net.rpl.RPLRankC" qname="RPLRankC"/>
+      <type-interface alignment="I:2" size="I:2"><interface-ref name="StdControl" ref="0x414ba858" scoped=""/></type-interface>
+      <instance>
+        <interfacedef-ref nicename="tos.interfaces.StdControl" qname="StdControl"/>
+      </instance>
+      <interface-functions>
+        <function-ref name="start" ref="0x414baa30" scoped=""/>
+        <function-ref name="stop" ref="0x414bab10" scoped=""/>
+      </interface-functions>
+    </interface><interface loc="75:/home/jumbo/tinyos-main/tos/lib/net/rpl/RPLRankC.nc" name="IP_DIO_Filter" provided="1" ref="0x414bea70">
+      <component-ref nicename="tos.lib.net.rpl.RPLRankC" qname="RPLRankC"/>
+      <type-interface alignment="I:2" size="I:2"><interface-ref name="IP_DIO_Filter" ref="0x414bea70" scoped=""/></type-interface>
+      <instance>
+        <interfacedef-ref nicename="tos.lib.net.blip.interfaces.IP" qname="IP"/>
+      </instance>
+      <interface-functions>
+        <function-ref name="send" ref="0x414bec48" scoped=""/>
+        <function-ref name="recv" ref="0x414bed28" scoped=""/>
+      </interface-functions>
+    </interface></specification><referenced><interface loc="92:/home/jumbo/tinyos-main/tos/lib/net/rpl/RPLRankP.nc" name="Leds" provided="0" ref="0x414dcd18">
+      <component-ref nicename="tos.lib.net.rpl.RPLRankP" qname="RPLRankP"/>
+      <type-interface alignment="I:2" size="I:2"><interface-ref name="Leds" ref="0x414dcd18" scoped=""/></type-interface>
+      <instance>
+        <interfacedef-ref nicename="tos.interfaces.Leds" qname="Leds"/>
+      </instance>
+      <interface-functions>
+        <function-ref name="led0Off" ref="0x414dcef0" scoped=""/>
+        <function-ref name="led0Toggle" ref="0x414da010" scoped=""/>
+        <function-ref name="led1On" ref="0x414da0f0" scoped=""/>
+        <function-ref name="led1Toggle" ref="0x414da1d0" scoped=""/>
+        <function-ref name="led2Toggle" ref="0x414da2b0" scoped=""/>
+        <function-ref name="get" ref="0x414da390" scoped=""/>
+        <function-ref name="led1Off" ref="0x414da470" scoped=""/>
+        <function-ref name="led2Off" ref="0x414da7f0" scoped=""/>
+        <function-ref name="set" ref="0x414da550" scoped=""/>
+        <function-ref name="led0On" ref="0x414da630" scoped=""/>
+        <function-ref name="led2On" ref="0x414da710" scoped=""/>
+      </interface-functions>
+    </interface><interface loc="95:/home/jumbo/tinyos-main/tos/lib/net/rpl/RPLRankP.nc" name="ForwardingEvents" provided="0" ref="0x414d4ae8">
+      <component-ref nicename="tos.lib.net.rpl.RPLRankP" qname="RPLRankP"/>
+      <type-interface alignment="I:2" size="I:2"><interface-ref name="ForwardingEvents" ref="0x414d4ae8" scoped=""/></type-interface>
+      <instance>
+        <interfacedef-ref nicename="tos.lib.net.blip.interfaces.ForwardingEvents" qname="ForwardingEvents"/>
+      </instance>
+      <interface-functions>
+        <function-ref name="approve" ref="0x414d4cc0" scoped=""/>
+        <function-ref name="initiate" ref="0x414d4da0" scoped=""/>
+        <function-ref name="linkResult" ref="0x414d4e80" scoped=""/>
+      </interface-functions>
+    </interface><interface loc="89:/home/jumbo/tinyos-main/tos/lib/net/rpl/RPLRankP.nc" name="IP_DIO" provided="0" ref="0x414de208">
+      <component-ref nicename="tos.lib.net.rpl.RPLRankP" qname="RPLRankP"/>
+      <type-interface alignment="I:2" size="I:2"><interface-ref name="IP_DIO" ref="0x414de208" scoped=""/></type-interface>
+      <instance>
+        <interfacedef-ref nicename="tos.lib.net.blip.interfaces.IP" qname="IP"/>
+      </instance>
+      <interface-functions>
+        <function-ref name="send" ref="0x414de3e0" scoped=""/>
+        <function-ref name="recv" ref="0x414de4c0" scoped=""/>
+      </interface-functions>
+    </interface><interface loc="34:/home/jumbo/tinyos-main/tos/lib/net/blip/IPStackC.nc" name="ForwardingTable" provided="1" ref="0x409a4dc0">
+      <component-ref nicename="tos.lib.net.blip.IPStackC" qname="IPStackC"/>
+      <type-interface alignment="I:2" size="I:2"><interface-ref name="ForwardingTable" ref="0x409a4dc0" scoped=""/></type-interface>
+      <instance>
+        <interfacedef-ref nicename="tos.lib.net.blip.interfaces.ForwardingTable" qname="ForwardingTable"/>
+      </instance>
+      <interface-functions>
+        <function-ref name="getTable" ref="0x409a9010" scoped=""/>
+        <function-ref name="lookupRoute" ref="0x409a90f0" scoped=""/>
+        <function-ref name="delRoute" ref="0x409a91d0" scoped=""/>
+        <function-ref name="lookupRouteKey" ref="0x409a92b0" scoped=""/>
+        <function-ref name="addRoute" ref="0x409a9390" scoped=""/>
+      </interface-functions>
+    </interface><interface loc="83:/home/jumbo/tinyos-main/tos/lib/net/rpl/RPLRankP.nc" name="RPLRankInfo" provided="1" ref="0x414e1c30">
+      <component-ref nicename="tos.lib.net.rpl.RPLRankP" qname="RPLRankP"/>
+      <type-interface alignment="I:2" size="I:2"><interface-ref name="RPLRankInfo" ref="0x414e1c30" scoped=""/></type-interface>
+      <instance>
+        <interfacedef-ref nicename="tos.lib.net.rpl.RPLRank" qname="RPLRank"/>
+      </instance>
+      <interface-functions>
+        <function-ref name="parentRankChange" ref="0x414e1e08" scoped=""/>
+        <function-ref name="isRoot" ref="0x414e1ee8" scoped=""/>
+        <function-ref name="setQueuingDelay" ref="0x414e0010" scoped=""/>
+        <function-ref name="hasParent" ref="0x414e00f0" scoped=""/>
+        <function-ref name="validInstance" ref="0x414e01d0" scoped=""/>
+        <function-ref name="declareRoot" ref="0x414e02b0" scoped=""/>
+        <function-ref name="getRank" ref="0x414e0390" scoped=""/>
+        <function-ref name="getEtx" ref="0x414e0470" scoped=""/>
+        <function-ref name="isLeaf" ref="0x414e0550" scoped=""/>
+        <function-ref name="compareAddr" ref="0x414e0630" scoped=""/>
+        <function-ref name="isParent" ref="0x414e0710" scoped=""/>
+        <function-ref name="inconsistencyDetected" ref="0x414e07f0" scoped=""/>
+        <function-ref name="getDefaultRoute" ref="0x414e08d0" scoped=""/>
+        <function-ref name="cancelRoot" ref="0x414e0a30" scoped=""/>
+      </interface-functions>
+    </interface><interface loc="86:/home/jumbo/tinyos-main/tos/lib/net/rpl/RPLRankP.nc" name="RPLParentTable" provided="1" ref="0x414dfd88">
+      <component-ref nicename="tos.lib.net.rpl.RPLRankP" qname="RPLRankP"/>
+      <type-interface alignment="I:2" size="I:2"><interface-ref name="RPLParentTable" ref="0x414dfd88" scoped=""/></type-interface>
+      <instance>
+        <interfacedef-ref nicename="tos.lib.net.rpl.RPLParentTable" qname="RPLParentTable"/>
+      </instance>
+      <interface-functions>
+        <function-ref name="get" ref="0x414de010" scoped=""/>
+      </interface-functions>
+    </interface><interface loc="46:/home/jumbo/tinyos-main/tos/system/LedsC.nc" name="Leds" provided="1" ref="0x40683a90">
+      <component-ref nicename="tos.system.LedsC" qname="LedsC"/>
+      <type-interface alignment="I:2" size="I:2"><interface-ref name="Leds" ref="0x40683a90" scoped=""/></type-interface>
+      <instance>
+        <interfacedef-ref nicename="tos.interfaces.Leds" qname="Leds"/>
+      </instance>
+      <interface-functions>
+        <function-ref name="led0Off" ref="0x40683c68" scoped=""/>
+        <function-ref name="led0Toggle" ref="0x40683d48" scoped=""/>
+        <function-ref name="led1On" ref="0x40683e28" scoped=""/>
+        <function-ref name="led1Toggle" ref="0x40683f08" scoped=""/>
+        <function-ref name="led2Toggle" ref="0x4078e010" scoped=""/>
+        <function-ref name="get" ref="0x4078e0f0" scoped=""/>
+        <function-ref name="led1Off" ref="0x4078e1d0" scoped=""/>
+        <function-ref name="led2Off" ref="0x4078e550" scoped=""/>
+        <function-ref name="set" ref="0x4078e2b0" scoped=""/>
+        <function-ref name="led0On" ref="0x4078e390" scoped=""/>
+        <function-ref name="led2On" ref="0x4078e470" scoped=""/>
+      </interface-functions>
+    </interface><interface loc="44:/home/jumbo/tinyos-main/tos/lib/net/rpl/RPLOF0P.nc" name="RPLDAO" provided="0" ref="0x416d85d8">
+      <component-ref nicename="tos.lib.net.rpl.RPLOF0P" qname="RPLOF0P"/>
+      <type-interface alignment="I:2" size="I:2"><interface-ref name="RPLDAO" ref="0x416d85d8" scoped=""/></type-interface>
+      <instance>
+        <interfacedef-ref nicename="tos.lib.net.rpl.RPLDAORoutingEngine" qname="RPLDAORoutingEngine"/>
+      </instance>
+      <interface-functions>
+        <function-ref name="newParent" ref="0x416d87b0" scoped=""/>
+        <function-ref name="getStoreState" ref="0x416d8890" scoped=""/>
+        <function-ref name="startDAO" ref="0x416d8970" scoped=""/>
+      </interface-functions>
+    </interface><interface loc="91:/home/jumbo/tinyos-main/tos/lib/net/rpl/RPLRankP.nc" name="RouteInfo" provided="0" ref="0x414dc030">
+      <component-ref nicename="tos.lib.net.rpl.RPLRankP" qname="RPLRankP"/>
+      <type-interface alignment="I:2" size="I:2"><interface-ref name="RouteInfo" ref="0x414dc030" scoped=""/></type-interface>
+      <instance>
+        <interfacedef-ref nicename="tos.lib.net.rpl.RPLRoutingEngine" qname="RPLRoutingEngine"/>
+      </instance>
+      <interface-functions>
+        <function-ref name="getMOP" ref="0x414dc208" scoped=""/>
+        <function-ref name="getDefaultRoute" ref="0x414dcac8" scoped=""/>
+        <function-ref name="resetTrickle" ref="0x414dcba8" scoped=""/>
+        <function-ref name="hasDODAG" ref="0x414dc4a8" scoped=""/>
+        <function-ref name="validInstance" ref="0x414dc588" scoped=""/>
+        <function-ref name="inconsistency" ref="0x414dc668" scoped=""/>
+        <function-ref name="getRank" ref="0x414dc748" scoped=""/>
+        <function-ref name="getDodagId" ref="0x414dc828" scoped=""/>
+        <function-ref name="getDTSN" ref="0x414dc3c8" scoped=""/>
+        <function-ref name="setDODAGConfig" ref="0x414dc908" scoped=""/>
+        <function-ref name="getInstanceID" ref="0x414dc9e8" scoped=""/>
+        <function-ref name="setDTSN" ref="0x414dc2e8" scoped=""/>
+      </interface-functions>
+    </interface><interface loc="85:/home/jumbo/tinyos-main/tos/lib/net/rpl/RPLRankP.nc" name="IP_DIO_Filter" provided="1" ref="0x414df0b8">
+      <component-ref nicename="tos.lib.net.rpl.RPLRankP" qname="RPLRankP"/>
+      <type-interface alignment="I:2" size="I:2"><interface-ref name="IP_DIO_Filter" ref="0x414df0b8" scoped=""/></type-interface>
+      <instance>
+        <interfacedef-ref nicename="tos.lib.net.blip.interfaces.IP" qname="IP"/>
+      </instance>
+      <interface-functions>
+        <function-ref name="send" ref="0x414df290" scoped=""/>
+        <function-ref name="recv" ref="0x414df370" scoped=""/>
+      </interface-functions>
+    </interface><interface loc="9:/home/jumbo/tinyos-main/tos/lib/net/blip/IPPacketC.nc" name="IPPacket" provided="1" ref="0x41455a90">
+      <component-ref nicename="tos.lib.net.blip.IPPacketC" qname="IPPacketC"/>
+      <type-interface alignment="I:2" size="I:2"><interface-ref name="IPPacket" ref="0x41455a90" scoped=""/></type-interface>
+      <instance>
+        <interfacedef-ref nicename="tos.lib.net.blip.interfaces.IPPacket" qname="IPPacket"/>
+      </instance>
+      <interface-functions>
+        <function-ref name="findHeader" ref="0x41455c68" scoped=""/>
+        <function-ref name="delTLV" ref="0x41455d48" scoped=""/>
+        <function-ref name="findTLV" ref="0x41455e28" scoped=""/>
+      </interface-functions>
+    </interface><interface loc="84:/home/jumbo/tinyos-main/tos/lib/net/rpl/RPLRankP.nc" name="StdControl" provided="1" ref="0x414e0bd8">
+      <component-ref nicename="tos.lib.net.rpl.RPLRankP" qname="RPLRankP"/>
+      <type-interface alignment="I:2" size="I:2"><interface-ref name="StdControl" ref="0x414e0bd8" scoped=""/></type-interface>
+      <instance>
+        <interfacedef-ref nicename="tos.interfaces.StdControl" qname="StdControl"/>
+      </instance>
+      <interface-functions>
+        <function-ref name="start" ref="0x414e0db0" scoped=""/>
+        <function-ref name="stop" ref="0x414e0e90" scoped=""/>
+      </interface-functions>
+    </interface><interface loc="41:/home/jumbo/tinyos-main/tos/lib/net/rpl/RPLOF0P.nc" name="ForwardingTable" provided="0" ref="0x41686ae0">
+      <component-ref nicename="tos.lib.net.rpl.RPLOF0P" qname="RPLOF0P"/>
+      <type-interface alignment="I:2" size="I:2"><interface-ref name="ForwardingTable" ref="0x41686ae0" scoped=""/></type-interface>
+      <instance>
+        <interfacedef-ref nicename="tos.lib.net.blip.interfaces.ForwardingTable" qname="ForwardingTable"/>
+      </instance>
+      <interface-functions>
+        <function-ref name="getTable" ref="0x41686cb8" scoped=""/>
+        <function-ref name="lookupRoute" ref="0x41686d98" scoped=""/>
+        <function-ref name="delRoute" ref="0x41686e78" scoped=""/>
+        <function-ref name="lookupRouteKey" ref="0x41685010" scoped=""/>
+        <function-ref name="addRoute" ref="0x416850f0" scoped=""/>
+      </interface-functions>
+    </interface><interface loc="36:/home/jumbo/tinyos-main/tos/lib/net/blip/IPStackC.nc" name="ForwardingEvents" provided="1" ref="0x409a6228">
+      <component-ref nicename="tos.lib.net.blip.IPStackC" qname="IPStackC"/>
+      <type-interface alignment="I:2" size="I:2"><interface-ref name="ForwardingEvents" ref="0x409a6228" scoped=""/></type-interface>
+      <instance>
+        <interfacedef-ref nicename="tos.lib.net.blip.interfaces.ForwardingEvents" qname="ForwardingEvents"/>
+      </instance>
+      <interface-parameters>
+        <type-int alignment="I:1" cname="unsigned char" size="I:1" unsigned="">
+          <typename><typedef-ref name="uint8_t" ref="0x4003bdc8"/></typename>
+        </type-int>
+      </interface-parameters>
+      <interface-functions>
+        <function-ref name="approve" ref="0x409a6400" scoped=""/>
+        <function-ref name="initiate" ref="0x409a64e0" scoped=""/>
+        <function-ref name="linkResult" ref="0x409a65c0" scoped=""/>
+      </interface-functions>
+    </interface><interface loc="40:/home/jumbo/tinyos-main/tos/lib/net/rpl/RPLOF0P.nc" name="RPLOF" provided="1" ref="0x41686010">
+      <component-ref nicename="tos.lib.net.rpl.RPLOF0P" qname="RPLOF0P"/>
+      <type-interface alignment="I:2" size="I:2"><interface-ref name="RPLOF" ref="0x41686010" scoped=""/></type-interface>
+      <instance>
+        <interfacedef-ref nicename="tos.lib.net.rpl.RPLOF" qname="RPLOF"/>
+      </instance>
+      <interface-functions>
+        <function-ref name="recomputeRoutes" ref="0x416861e8" scoped=""/>
+        <function-ref name="OCP" ref="0x416862c8" scoped=""/>
+        <function-ref name="objectSupported" ref="0x416863a8" scoped=""/>
+        <function-ref name="getRank" ref="0x41686488" scoped=""/>
+        <function-ref name="resetRank" ref="0x41686568" scoped=""/>
+        <function-ref name="setMinHopRankIncrease" ref="0x41686648" scoped=""/>
+        <function-ref name="getObjectValue" ref="0x41686728" scoped=""/>
+        <function-ref name="getParent" ref="0x41686808" scoped=""/>
+        <function-ref name="recalculateRank" ref="0x416868e8" scoped=""/>
+      </interface-functions>
+    </interface><interface loc="93:/home/jumbo/tinyos-main/tos/lib/net/rpl/RPLRankP.nc" name="IPAddress" provided="0" ref="0x414da990">
+      <component-ref nicename="tos.lib.net.rpl.RPLRankP" qname="RPLRankP"/>
+      <type-interface alignment="I:2" size="I:2"><interface-ref name="IPAddress" ref="0x414da990" scoped=""/></type-interface>
+      <instance>
+        <interfacedef-ref nicename="tos.lib.net.blip.interfaces.IPAddress" qname="IPAddress"/>
+      </instance>
+      <interface-functions>
+        <function-ref name="getLLAddr" ref="0x414dab68" scoped=""/>
+        <function-ref name="changed" ref="0x414dac48" scoped=""/>
+        <function-ref name="isLocalAddress" ref="0x414dad28" scoped=""/>
+        <function-ref name="getGlobalAddr" ref="0x414dae08" scoped=""/>
+        <function-ref name="setSource" ref="0x414daee8" scoped=""/>
+        <function-ref name="removeAddress" ref="0x414d4010" scoped=""/>
+        <function-ref name="setAddress" ref="0x414d40f0" scoped=""/>
+        <function-ref name="isLLAddress" ref="0x414d41d0" scoped=""/>
+      </interface-functions>
+    </interface><interface loc="96:/home/jumbo/tinyos-main/tos/lib/net/rpl/RPLRankP.nc" name="RPLOF" provided="0" ref="0x4151ac00">
+      <component-ref nicename="tos.lib.net.rpl.RPLRankP" qname="RPLRankP"/>
+      <type-interface alignment="I:2" size="I:2"><interface-ref name="RPLOF" ref="0x4151ac00" scoped=""/></type-interface>
+      <instance>
+        <interfacedef-ref nicename="tos.lib.net.rpl.RPLOF" qname="RPLOF"/>
+      </instance>
+      <interface-functions>
+        <function-ref name="recomputeRoutes" ref="0x4151add8" scoped=""/>
+        <function-ref name="OCP" ref="0x4151aeb8" scoped=""/>
+        <function-ref name="objectSupported" ref="0x414d2010" scoped=""/>
+        <function-ref name="getRank" ref="0x414d20f0" scoped=""/>
+        <function-ref name="resetRank" ref="0x414d21d0" scoped=""/>
+        <function-ref name="setMinHopRankIncrease" ref="0x414d22b0" scoped=""/>
+        <function-ref name="getObjectValue" ref="0x414d2390" scoped=""/>
+        <function-ref name="getParent" ref="0x414d2470" scoped=""/>
+        <function-ref name="recalculateRank" ref="0x414d2550" scoped=""/>
+      </interface-functions>
+    </interface><interface loc="42:/home/jumbo/tinyos-main/tos/lib/net/rpl/RPLOF0P.nc" name="RPLRoute" provided="0" ref="0x41685370">
+      <component-ref nicename="tos.lib.net.rpl.RPLOF0P" qname="RPLOF0P"/>
+      <type-interface alignment="I:2" size="I:2"><interface-ref name="RPLRoute" ref="0x41685370" scoped=""/></type-interface>
+      <instance>
+        <interfacedef-ref nicename="tos.lib.net.rpl.RPLRoutingEngine" qname="RPLRoutingEngine"/>
+      </instance>
+      <interface-functions>
+        <function-ref name="getMOP" ref="0x41685548" scoped=""/>
+        <function-ref name="getDefaultRoute" ref="0x41685e08" scoped=""/>
+        <function-ref name="resetTrickle" ref="0x41685ee8" scoped=""/>
+        <function-ref name="hasDODAG" ref="0x416857e8" scoped=""/>
+        <function-ref name="validInstance" ref="0x416858c8" scoped=""/>
+        <function-ref name="inconsistency" ref="0x416859a8" scoped=""/>
+        <function-ref name="getRank" ref="0x41685a88" scoped=""/>
+        <function-ref name="getDodagId" ref="0x41685b68" scoped=""/>
+        <function-ref name="getDTSN" ref="0x41685708" scoped=""/>
+        <function-ref name="setDODAGConfig" ref="0x41685c48" scoped=""/>
+        <function-ref name="getInstanceID" ref="0x41685d28" scoped=""/>
+        <function-ref name="setDTSN" ref="0x41685628" scoped=""/>
+      </interface-functions>
+    </interface><interface loc="45:/home/jumbo/tinyos-main/tos/lib/net/rpl/RPLDAORoutingEngineC.nc" name="RPLDAORoutingEngine" provided="1" ref="0x4162dd00">
+      <component-ref nicename="tos.lib.net.rpl.RPLDAORoutingEngineC" qname="RPLDAORoutingEngineC"/>
+      <type-interface alignment="I:2" size="I:2"><interface-ref name="RPLDAORoutingEngine" ref="0x4162dd00" scoped=""/></type-interface>
+      <instance>
+        <interfacedef-ref nicename="tos.lib.net.rpl.RPLDAORoutingEngine" qname="RPLDAORoutingEngine"/>
+      </instance>
+      <interface-functions>
+        <function-ref name="newParent" ref="0x4162ded8" scoped=""/>
+        <function-ref name="getStoreState" ref="0x41620010" scoped=""/>
+        <function-ref name="startDAO" ref="0x416200f0" scoped=""/>
+      </interface-functions>
+    </interface><interface loc="44:/home/jumbo/tinyos-main/tos/lib/net/rpl/RPLRoutingEngineC.nc" name="RPLRoutingEngine" provided="1" ref="0x4158aef0">
+      <component-ref nicename="tos.lib.net.rpl.RPLRoutingEngineC" qname="RPLRoutingEngineC"/>
+      <type-interface alignment="I:2" size="I:2"><interface-ref name="RPLRoutingEngine" ref="0x4158aef0" scoped=""/></type-interface>
+      <instance>
+        <interfacedef-ref nicename="tos.lib.net.rpl.RPLRoutingEngine" qname="RPLRoutingEngine"/>
+      </instance>
+      <interface-functions>
+        <function-ref name="getMOP" ref="0x415870e0" scoped=""/>
+        <function-ref name="getDefaultRoute" ref="0x415879a0" scoped=""/>
+        <function-ref name="resetTrickle" ref="0x41587a80" scoped=""/>
+        <function-ref name="hasDODAG" ref="0x41587380" scoped=""/>
+        <function-ref name="validInstance" ref="0x41587460" scoped=""/>
+        <function-ref name="inconsistency" ref="0x41587540" scoped=""/>
+        <function-ref name="getRank" ref="0x41587620" scoped=""/>
+        <function-ref name="getDodagId" ref="0x41587700" scoped=""/>
+        <function-ref name="getDTSN" ref="0x415872a0" scoped=""/>
+        <function-ref name="setDODAGConfig" ref="0x415877e0" scoped=""/>
+        <function-ref name="getInstanceID" ref="0x415878c0" scoped=""/>
+        <function-ref name="setDTSN" ref="0x415871c0" scoped=""/>
+      </interface-functions>
+    </interface><interface loc="90:/home/jumbo/tinyos-main/tos/lib/net/rpl/RPLRankP.nc" name="IPPacket" provided="0" ref="0x414de658">
+      <component-ref nicename="tos.lib.net.rpl.RPLRankP" qname="RPLRankP"/>
+      <type-interface alignment="I:2" size="I:2"><interface-ref name="IPPacket" ref="0x414de658" scoped=""/></type-interface>
+      <instance>
+        <interfacedef-ref nicename="tos.lib.net.blip.interfaces.IPPacket" qname="IPPacket"/>
+      </instance>
+      <interface-functions>
+        <function-ref name="findHeader" ref="0x414de830" scoped=""/>
+        <function-ref name="delTLV" ref="0x414de910" scoped=""/>
+        <function-ref name="findTLV" ref="0x414de9f0" scoped=""/>
+      </interface-functions>
+    </interface><interface loc="43:/home/jumbo/tinyos-main/tos/lib/net/rpl/RPLOF0P.nc" name="ParentTable" provided="0" ref="0x416d8180">
+      <component-ref nicename="tos.lib.net.rpl.RPLOF0P" qname="RPLOF0P"/>
+      <type-interface alignment="I:2" size="I:2"><interface-ref name="ParentTable" ref="0x416d8180" scoped=""/></type-interface>
+      <instance>
+        <interfacedef-ref nicename="tos.lib.net.rpl.RPLParentTable" qname="RPLParentTable"/>
+      </instance>
+      <interface-functions>
+        <function-ref name="get" ref="0x416d8358" scoped=""/>
+      </interface-functions>
+    </interface><interface loc="25:/home/jumbo/tinyos-main/tos/lib/net/blip/IPAddressC.nc" name="IPAddress" provided="1" ref="0x40a51ce0">
+      <component-ref nicename="tos.lib.net.blip.IPAddressC" qname="IPAddressC"/>
+      <type-interface alignment="I:2" size="I:2"><interface-ref name="IPAddress" ref="0x40a51ce0" scoped=""/></type-interface>
+      <instance>
+        <interfacedef-ref nicename="tos.lib.net.blip.interfaces.IPAddress" qname="IPAddress"/>
+      </instance>
+      <interface-functions>
+        <function-ref name="getLLAddr" ref="0x40a51eb8" scoped=""/>
+        <function-ref name="changed" ref="0x40a74010" scoped=""/>
+        <function-ref name="isLocalAddress" ref="0x40a740f0" scoped=""/>
+        <function-ref name="getGlobalAddr" ref="0x40a741d0" scoped=""/>
+        <function-ref name="setSource" ref="0x40a742b0" scoped=""/>
+        <function-ref name="removeAddress" ref="0x40a74390" scoped=""/>
+        <function-ref name="setAddress" ref="0x40a74470" scoped=""/>
+        <function-ref name="isLLAddress" ref="0x40a74550" scoped=""/>
+      </interface-functions>
+    </interface><component loc="39:/home/jumbo/tinyos-main/tos/lib/net/rpl/RPLOF0P.nc" nicename="tos.lib.net.rpl.RPLOF0P" qname="RPLOF0P">
+      <documentation loc="32:/home/jumbo/tinyos-main/tos/lib/net/rpl/RPLOF0P.nc">
+        <short>
+ RPLOF0P.nc
+ </short>
+        <long>
+ RPLOF0P.nc
+ @ author JeongGil Ko (John) &lt;jgko@cs.jhu.edu&gt;
+</long>
+      </documentation>
+      <module/>
+    </component><component loc="29:/home/jumbo/tinyos-main/tos/lib/net/blip/IPStackC.nc" nicename="tos.lib.net.blip.IPStackC" qname="IPStackC">
+      <configuration/>
+      <wiring>
+        <wire loc="50:/home/jumbo/tinyos-main/tos/lib/net/blip/IPStackC.nc">
+          <from><interface-ref name="SplitControl" ref="0x409acc18" scoped=""/></from>
+          <to><interface-ref name="SplitControl" ref="0x41417010" scoped=""/></to>
+        </wire>
+        <wire loc="57:/home/jumbo/tinyos-main/tos/lib/net/blip/IPStackC.nc">
+          <from><interface-ref name="ForwardingEvents" ref="0x409a6228" scoped=""/></from>
+          <to><interface-ref name="ForwardingEvents" ref="0x409fe5e8" scoped=""/></to>
+        </wire>
+        <wire loc="56:/home/jumbo/tinyos-main/tos/lib/net/blip/IPStackC.nc">
+          <from><interface-ref name="ForwardingTableEvents" ref="0x409c0348" scoped=""/></from>
+          <to><interface-ref name="ForwardingTableEvents" ref="0x409f1d80" scoped=""/></to>
+        </wire>
+        <wire loc="66:/home/jumbo/tinyos-main/tos/lib/net/blip/IPStackC.nc">
+          <from><interface-ref name="IPRaw" ref="0x409a7d80" scoped=""/></from>
+          <to><interface-ref name="IPRaw" ref="0x409fc010" scoped=""/></to>
+        </wire>
+        <wire loc="55:/home/jumbo/tinyos-main/tos/lib/net/blip/IPStackC.nc">
+          <from><interface-ref name="ForwardingTable" ref="0x409a4dc0" scoped=""/></from>
+          <to><interface-ref name="ForwardingTable" ref="0x409f1610" scoped=""/></to>
+        </wire>
+        <wire loc="60:/home/jumbo/tinyos-main/tos/lib/net/blip/IPStackC.nc">
+          <from><interface-ref name="IP" ref="0x409a7918" scoped=""/></from>
+          <to><interface-ref name="IP" ref="0x409c1930" scoped=""/></to>
+        </wire>
+        <wire loc="51:/home/jumbo/tinyos-main/tos/lib/net/blip/IPStackC.nc">
+          <from><interface-ref name="StdControl" ref="0x41417660" scoped=""/></from>
+          <to><interface-ref name="StdControl" ref="0x409f07c0" scoped=""/></to>
+        </wire>
+        <wire loc="52:/home/jumbo/tinyos-main/tos/lib/net/blip/IPStackC.nc">
+          <from><interface-ref name="RoutingControl" ref="0x41417b70" scoped=""/></from>
+          <to><interface-ref name="RoutingControl" ref="0x409f0cd0" scoped=""/></to>
+        </wire>
+        <wire loc="53:/home/jumbo/tinyos-main/tos/lib/net/blip/IPStackC.nc">
+          <from><interface-ref name="SubSplitControl" ref="0x414160c8" scoped=""/></from>
+          <to><interface-ref name="SplitControl" ref="0x40f84010" scoped=""/></to>
+        </wire>
+        <wire loc="61:/home/jumbo/tinyos-main/tos/lib/net/blip/IPStackC.nc">
+          <from><interface-ref name="SubIP" ref="0x409ee7e0" scoped=""/></from>
+          <to><interface-ref name="IP" ref="0x409fead8" scoped=""/></to>
+        </wire>
+        <wire loc="63:/home/jumbo/tinyos-main/tos/lib/net/blip/IPStackC.nc">
+          <from><interface-ref name="IPForward" ref="0x40a19798" scoped=""/>
+          <arguments>
+            <value cst="I:1">
+              <type-int alignment="I:2" cname="int" size="I:2"/>
+            </value>
+          </arguments>
+          </from>
+          <to><interface-ref name="IPForward" ref="0x40a53b10" scoped=""/></to>
+        </wire>
+        <wire loc="64:/home/jumbo/tinyos-main/tos/lib/net/blip/IPStackC.nc">
+          <from><interface-ref name="IPLower" ref="0x40a50d20" scoped=""/></from>
+          <to><interface-ref name="IPLower" ref="0x40f84610" scoped=""/></to>
+        </wire>
+        <wire loc="72:/home/jumbo/tinyos-main/tos/lib/net/blip/IPStackC.nc">
+          <from><interface-ref name="IP" ref="0x4144b460" scoped=""/></from>
+          <to><interface-ref name="IP" ref="0x409c1930" scoped=""/>
+          <arguments>
+            <value cst="I:58">
+              <type-int alignment="I:2" cname="int" size="I:2"/>
+            </value>
+          </arguments>
+          </to>
+        </wire>
+        <wire loc="73:/home/jumbo/tinyos-main/tos/lib/net/blip/IPStackC.nc">
+          <from><interface-ref name="Leds" ref="0x4144a260" scoped=""/></from>
+          <to><interface-ref name="Leds" ref="0x40683a90" scoped=""/></to>
+        </wire>
+        <wire loc="74:/home/jumbo/tinyos-main/tos/lib/net/blip/IPStackC.nc">
+          <from><interface-ref name="IPAddress" ref="0x4144b8b8" scoped=""/></from>
+          <to><interface-ref name="IPAddress" ref="0x40a51ce0" scoped=""/></to>
+        </wire>
+        <wire loc="76:/home/jumbo/tinyos-main/tos/lib/net/blip/IPStackC.nc">
+          <from><interface-ref name="IPAddress" ref="0x40a19cd0" scoped=""/></from>
+          <to><interface-ref name="IPAddress" ref="0x40a51ce0" scoped=""/></to>
+        </wire>
+        <wire loc="77:/home/jumbo/tinyos-main/tos/lib/net/blip/IPStackC.nc">
+          <from><interface-ref name="IPPacket" ref="0x409fb6e8" scoped=""/></from>
+          <to><interface-ref name="IPPacket" ref="0x41455a90" scoped=""/></to>
+        </wire>
+        <wire loc="78:/home/jumbo/tinyos-main/tos/lib/net/blip/IPStackC.nc">
+          <from><interface-ref name="IPPacket" ref="0x409e9c50" scoped=""/></from>
+          <to><interface-ref name="IPPacket" ref="0x41455a90" scoped=""/></to>
+        </wire>
+        <wire loc="79:/home/jumbo/tinyos-main/tos/lib/net/blip/IPStackC.nc">
+          <from><interface-ref name="IPAddress" ref="0x414166e0" scoped=""/></from>
+          <to><interface-ref name="IPAddress" ref="0x40a51ce0" scoped=""/></to>
+        </wire>
+        <wire loc="81:/home/jumbo/tinyos-main/tos/lib/net/blip/IPStackC.nc">
+          <from><interface-ref name="Leds" ref="0x409fa9b0" scoped=""/></from>
+          <to><interface-ref name="Leds" ref="0x40683a90" scoped=""/></to>
+        </wire>
+        <wire loc="84:/home/jumbo/tinyos-main/tos/lib/net/blip/IPStackC.nc">
+          <from><interface-ref name="Pool" ref="0x40a144c0" scoped=""/></from>
+          <to><interface-ref name="Pool" ref="0x414823d0" scoped=""/></to>
+        </wire>
+        <wire loc="87:/home/jumbo/tinyos-main/tos/lib/net/blip/IPStackC.nc">
+          <from><interface-ref name="Boot" ref="0x4146f438" scoped=""/></from>
+          <to><interface-ref name="Boot" ref="0x4060e610" scoped=""/></to>
+        </wire>
+        <wire loc="88:/home/jumbo/tinyos-main/tos/lib/net/blip/IPStackC.nc">
+          <from><interface-ref name="IPAddress" ref="0x4146f7b0" scoped=""/></from>
+          <to><interface-ref name="IPAddress" ref="0x40a51ce0" scoped=""/></to>
+        </wire>
+      </wiring>
+    </component><component loc="42:/home/jumbo/tinyos-main/tos/lib/net/rpl/RPLDAORoutingEngineC.nc" nicename="tos.lib.net.rpl.RPLDAORoutingEngineC" qname="RPLDAORoutingEngineC">
+      <documentation loc="68:/home/jumbo/tinyos-main/tos/lib/net/rpl/RPL.h">
+        <short>
+ </short>
+        <long>
+ @author Yiwei Yao &lt;yaoyiwei@stanford.edu&gt;
+</long>
+      </documentation>
+      <configuration/>
+      <wiring>
+        <wire loc="62:/home/jumbo/tinyos-main/tos/lib/net/rpl/RPLDAORoutingEngineC.nc">
+          <from><interface-ref name="RPLDAORoutingEngine" ref="0x4162dd00" scoped=""/></from>
+          <to><interface-ref name="RPLDAORouteInfo" ref="0x41673c88" scoped=""/></to>
+        </wire>
+        <wire loc="61:/home/jumbo/tinyos-main/tos/lib/net/rpl/RPLDAORoutingEngineC.nc">
+          <from><interface-ref name="StdControl" ref="0x4162d848" scoped=""/></from>
+          <to><interface-ref name="StdControl" ref="0x41672230" scoped=""/></to>
+        </wire>
+        <wire loc="63:/home/jumbo/tinyos-main/tos/lib/net/rpl/RPLDAORoutingEngineC.nc">
+          <from><interface-ref name="IP_DAO" ref="0x41669250" scoped=""/></from>
+          <to><interface-ref name="ICMP_RA" ref="0x416205e8" scoped=""/>
+          <arguments>
+            <value cst="I:2">
+              <type-int alignment="I:2" cname="int" size="I:2"/>
+            </value>
+          </arguments>
+          </to>
+        </wire>
+        <wire loc="65:/home/jumbo/tinyos-main/tos/lib/net/rpl/RPLDAORoutingEngineC.nc">
+          <from><interface-ref name="DelayDAOTimer" ref="0x41672708" scoped=""/></from>
+          <to><interface-ref name="Timer" ref="0x4165d030" scoped=""/></to>
+        </wire>
+        <wire loc="66:/home/jumbo/tinyos-main/tos/lib/net/rpl/RPLDAORoutingEngineC.nc">
+          <from><interface-ref name="GenerateDAOTimer" ref="0x4166dc38" scoped=""/></from>
+          <to><interface-ref name="Timer" ref="0x416aee30" scoped=""/></to>
+        </wire>
+        <wire loc="67:/home/jumbo/tinyos-main/tos/lib/net/rpl/RPLDAORoutingEngineC.nc">
+          <from><interface-ref name="RemoveTimer" ref="0x416709b8" scoped=""/></from>
+          <to><interface-ref name="Timer" ref="0x416aac00" scoped=""/></to>
+        </wire>
+        <wire loc="68:/home/jumbo/tinyos-main/tos/lib/net/rpl/RPLDAORoutingEngineC.nc">
+          <from><interface-ref name="Random" ref="0x4166bdf0" scoped=""/></from>
+          <to><interface-ref name="Random" ref="0x4135a580" scoped=""/></to>
+        </wire>
+        <wire loc="69:/home/jumbo/tinyos-main/tos/lib/net/rpl/RPLDAORoutingEngineC.nc">
+          <from><interface-ref name="IPAddress" ref="0x41669648" scoped=""/></from>
+          <to><interface-ref name="IPAddress" ref="0x40a51ce0" scoped=""/></to>
+        </wire>
+        <wire loc="70:/home/jumbo/tinyos-main/tos/lib/net/rpl/RPLDAORoutingEngineC.nc">
+          <from><interface-ref name="RPLRouteInfo" ref="0x416640b0" scoped=""/></from>
+          <to><interface-ref name="RPLRoutingEngine" ref="0x4158aef0" scoped=""/></to>
+        </wire>
+        <wire loc="71:/home/jumbo/tinyos-main/tos/lib/net/rpl/RPLDAORoutingEngineC.nc">
+          <from><interface-ref name="RootControl" ref="0x41664d68" scoped=""/></from>
+          <to><interface-ref name="RootControl" ref="0x4158a510" scoped=""/></to>
+        </wire>
+        <wire loc="72:/home/jumbo/tinyos-main/tos/lib/net/rpl/RPLDAORoutingEngineC.nc">
+          <from><interface-ref name="ForwardingTable" ref="0x41663868" scoped=""/></from>
+          <to><interface-ref name="ForwardingTable" ref="0x409a4dc0" scoped=""/></to>
+        </wire>
+        <wire loc="75:/home/jumbo/tinyos-main/tos/lib/net/rpl/RPLDAORoutingEngineC.nc">
+          <from><interface-ref name="SendQueue" ref="0x41668070" scoped=""/></from>
+          <to><interface-ref name="Queue" ref="0x416a3278" scoped=""/></to>
+        </wire>
+        <wire loc="78:/home/jumbo/tinyos-main/tos/lib/net/rpl/RPLDAORoutingEngineC.nc">
+          <from><interface-ref name="SendPool" ref="0x41667bf0" scoped=""/></from>
+          <to><interface-ref name="Pool" ref="0x416a1eb0" scoped=""/></to>
+        </wire>
+        <wire loc="81:/home/jumbo/tinyos-main/tos/lib/net/rpl/RPLDAORoutingEngineC.nc">
+          <from><interface-ref name="IPPacket" ref="0x41663310" scoped=""/></from>
+          <to><interface-ref name="IPPacket" ref="0x41455a90" scoped=""/></to>
+        </wire>
+        <wire loc="84:/home/jumbo/tinyos-main/tos/lib/net/rpl/RPLDAORoutingEngineC.nc">
+          <from><interface-ref name="Leds" ref="0x41663f00" scoped=""/></from>
+          <to><interface-ref name="Leds" ref="0x40683a90" scoped=""/></to>
+        </wire>
+      </wiring>
+    </component><component loc="45:/home/jumbo/tinyos-main/tos/system/LedsC.nc" nicename="tos.system.LedsC" qname="LedsC">
+      <documentation loc="34:/home/jumbo/tinyos-main/tos/system/LedsC.nc">
+        <short>
+
+ The basic TinyOS LEDs abstraction.</short>
+        <long>
+
+ The basic TinyOS LEDs abstraction.
+
+ @author Phil Buonadonna
+ @author David Gay
+ @author Philip Levis
+ @author Joe Polastre
+</long>
+      </documentation>
+      <configuration/>
+      <wiring>
+        <wire loc="51:/home/jumbo/tinyos-main/tos/system/LedsC.nc">
+          <from><interface-ref name="Leds" ref="0x40683a90" scoped=""/></from>
+          <to><interface-ref name="Leds" ref="0x4078b180" scoped=""/></to>
+        </wire>
+        <wire loc="53:/home/jumbo/tinyos-main/tos/system/LedsC.nc">
+          <from><interface-ref name="Init" ref="0x407a6c88" scoped=""/></from>
+          <to><interface-ref name="Init" ref="0x4078edd8" scoped=""/></to>
+        </wire>
+        <wire loc="54:/home/jumbo/tinyos-main/tos/system/LedsC.nc">
+          <from><interface-ref name="Led0" ref="0x4078a010" scoped=""/></from>
+          <to><interface-ref name="Led0" ref="0x4078ddf8" scoped=""/></to>
+        </wire>
+        <wire loc="55:/home/jumbo/tinyos-main/tos/system/LedsC.nc">
+          <from><interface-ref name="Led1" ref="0x4078a9f8" scoped=""/></from>
+          <to><interface-ref name="Led1" ref="0x407a7840" scoped=""/></to>
+        </wire>
+        <wire loc="56:/home/jumbo/tinyos-main/tos/system/LedsC.nc">
+          <from><interface-ref name="Led2" ref="0x407894a0" scoped=""/></from>
+          <to><interface-ref name="Led2" ref="0x407a6300" scoped=""/></to>
+        </wire>
+      </wiring>
+    </component><component loc="24:/home/jumbo/tinyos-main/tos/lib/net/blip/IPAddressC.nc" nicename="tos.lib.net.blip.IPAddressC" qname="IPAddressC">
+      <configuration/>
+      <wiring>
+        <wire loc="30:/home/jumbo/tinyos-main/tos/lib/net/blip/IPAddressC.nc">
+          <from><interface-ref name="IPAddress" ref="0x40a51ce0" scoped=""/></from>
+          <to><interface-ref name="IPAddress" ref="0x40a9c0d0" scoped=""/></to>
+        </wire>
+        <wire loc="31:/home/jumbo/tinyos-main/tos/lib/net/blip/IPAddressC.nc">
+          <from><interface-ref name="Ieee154Address" ref="0x40a9cad8" scoped=""/></from>
+          <to><interface-ref name="Ieee154Address" ref="0x40abd010" scoped=""/></to>
+        </wire>
+      </wiring>
+    </component><component loc="8:/home/jumbo/tinyos-main/tos/lib/net/blip/IPPacketC.nc" nicename="tos.lib.net.blip.IPPacketC" qname="IPPacketC">
+      <module/>
+    </component><component loc="81:/home/jumbo/tinyos-main/tos/lib/net/rpl/RPLRankP.nc" nicename="tos.lib.net.rpl.RPLRankP" qname="RPLRankP">
+      <module/>
+    </component><component loc="40:/home/jumbo/tinyos-main/tos/lib/net/rpl/RPLRoutingEngineC.nc" nicename="tos.lib.net.rpl.RPLRoutingEngineC" qname="RPLRoutingEngineC">
+      <documentation loc="68:/home/jumbo/tinyos-main/tos/lib/net/rpl/RPL.h">
+        <short>
+ </short>
+        <long>
+ @author Yiwei Yao &lt;yaoyiwei@stanford.edu&gt;
+</long>
+      </documentation>
+      <configuration/>
+      <wiring>
+        <wire loc="60:/home/jumbo/tinyos-main/tos/lib/net/rpl/RPLRoutingEngineC.nc">
+          <from><interface-ref name="RootControl" ref="0x4158a510" scoped=""/></from>
+          <to><interface-ref name="RootControl" ref="0x415fbec0" scoped=""/></to>
+        </wire>
+        <wire loc="62:/home/jumbo/tinyos-main/tos/lib/net/rpl/RPLRoutingEngineC.nc">
+          <from><interface-ref name="RPLRoutingEngine" ref="0x4158aef0" scoped=""/></from>
+          <to><interface-ref name="RPLRouteInfo" ref="0x415fa7d8" scoped=""/></to>
+        </wire>
+        <wire loc="61:/home/jumbo/tinyos-main/tos/lib/net/rpl/RPLRoutingEngineC.nc">
+          <from><interface-ref name="StdControl" ref="0x4158aa50" scoped=""/></from>
+          <to><interface-ref name="StdControl" ref="0x415fa3c0" scoped=""/></to>
+        </wire>
+        <wire loc="64:/home/jumbo/tinyos-main/tos/lib/net/rpl/RPLRoutingEngineC.nc">
+          <from><interface-ref name="IP_DIO" ref="0x415f9520" scoped=""/></from>
+          <to><interface-ref name="IP_DIO_Filter" ref="0x414bea70" scoped=""/></to>
+        </wire>
+        <wire loc="65:/home/jumbo/tinyos-main/tos/lib/net/rpl/RPLRoutingEngineC.nc">
+          <from><interface-ref name="IP_DIS" ref="0x415f9938" scoped=""/></from>
+          <to><interface-ref name="IP" ref="0x416995b0" scoped=""/>
+          <arguments>
+            <value cst="I:0">
+              <type-int alignment="I:2" cname="int" size="I:2"/>
+            </value>
+          </arguments>
+          </to>
+        </wire>
+        <wire loc="66:/home/jumbo/tinyos-main/tos/lib/net/rpl/RPLRoutingEngineC.nc">
+          <from><interface-ref name="TrickleTimer" ref="0x415f9de0" scoped=""/></from>
+          <to><interface-ref name="Timer" ref="0x415e89f8" scoped=""/></to>
+        </wire>
+        <wire loc="67:/home/jumbo/tinyos-main/tos/lib/net/rpl/RPLRoutingEngineC.nc">
+          <from><interface-ref name="InitDISTimer" ref="0x415f50c0" scoped=""/></from>
+          <to><interface-ref name="Timer" ref="0x415e47d0" scoped=""/></to>
+        </wire>
+        <wire loc="68:/home/jumbo/tinyos-main/tos/lib/net/rpl/RPLRoutingEngineC.nc">
+          <from><interface-ref name="Random" ref="0x415f04d0" scoped=""/></from>
+          <to><interface-ref name="Random" ref="0x4135a580" scoped=""/></to>
+        </wire>
+        <wire loc="69:/home/jumbo/tinyos-main/tos/lib/net/rpl/RPLRoutingEngineC.nc">
+          <from><interface-ref name="RPLRankInfo" ref="0x415f08e8" scoped=""/></from>
+          <to><interface-ref name="RPLRank" ref="0x414b3838" scoped=""/></to>
+        </wire>
+        <wire loc="70:/home/jumbo/tinyos-main/tos/lib/net/rpl/RPLRoutingEngineC.nc">
+          <from><interface-ref name="IPAddress" ref="0x415ee7f8" scoped=""/></from>
+          <to><interface-ref name="IPAddress" ref="0x40a51ce0" scoped=""/></to>
+        </wire>
+        <wire loc="71:/home/jumbo/tinyos-main/tos/lib/net/rpl/RPLRoutingEngineC.nc">
+          <from><interface-ref name="Leds" ref="0x415ed150" scoped=""/></from>
+          <to><interface-ref name="Leds" ref="0x40683a90" scoped=""/></to>
+        </wire>
+        <wire loc="72:/home/jumbo/tinyos-main/tos/lib/net/rpl/RPLRoutingEngineC.nc">
+          <from><interface-ref name="RankControl" ref="0x415edd48" scoped=""/></from>
+          <to><interface-ref name="StdControl" ref="0x414ba858" scoped=""/></to>
+        </wire>
+        <wire loc="73:/home/jumbo/tinyos-main/tos/lib/net/rpl/RPLRoutingEngineC.nc">
+          <from><interface-ref name="RPLDAORoutingEngine" ref="0x415ec230" scoped=""/></from>
+          <to><interface-ref name="RPLDAORoutingEngine" ref="0x4162dd00" scoped=""/></to>
+        </wire>
+        <wire loc="74:/home/jumbo/tinyos-main/tos/lib/net/rpl/RPLRoutingEngineC.nc">
+          <from><interface-ref name="IncreaseVersionTimer" ref="0x415f2328" scoped=""/></from>
+          <to><interface-ref name="Timer" ref="0x41632648" scoped=""/></to>
+        </wire>
+      </wiring>
+    </component></referenced></component>

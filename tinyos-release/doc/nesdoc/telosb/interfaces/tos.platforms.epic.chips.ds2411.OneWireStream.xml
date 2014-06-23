@@ -1,0 +1,83 @@
+<?xml version="1.0" ?><interfacedef loc="9:/home/jumbo/jamal/project/CoAP/tinyos-release/tos/platforms/epic/chips/ds2411/OneWireStream.nc" nicename="tos.platforms.epic.chips.ds2411.OneWireStream" qname="OneWireStream">
+      <documentation loc="5:/home/jumbo/jamal/project/CoAP/tinyos-release/tos/platforms/epic/chips/ds2411/OneWireStream.nc">
+        <short>
+ </short>
+        <long>
+ @author: Andreas Koepke (koepke@tkn.tu-berlin.de)
+</long>
+      </documentation>
+      <function command="" loc="10:/home/jumbo/jamal/project/CoAP/tinyos-release/tos/platforms/epic/chips/ds2411/OneWireStream.nc" name="read" provided="0" ref="0x40a070a0">
+        <interfacedef-ref nicename="tos.platforms.epic.chips.ds2411.OneWireStream" qname="OneWireStream"/>
+        <type-function alignment="I:1" size="I:1">
+          <type-int alignment="I:1" cname="unsigned char" size="I:1" unsigned="">
+            <typename><typedef-ref name="error_t" ref="0x4038a828"/></typename>
+          </type-int>
+          <function-parameters>
+            <type-int alignment="I:1" cname="unsigned char" size="I:1" unsigned="">
+              <typename><typedef-ref name="uint8_t" ref="0x4003adc8"/></typename>
+            </type-int>
+            <type-pointer alignment="I:2" size="I:2">
+              <type-int alignment="I:1" cname="unsigned char" size="I:1" unsigned="">
+                <typename><typedef-ref name="uint8_t" ref="0x4003adc8"/></typename>
+              </type-int>
+            </type-pointer>
+            <type-int alignment="I:1" cname="unsigned char" size="I:1" unsigned="">
+              <typename><typedef-ref name="uint8_t" ref="0x4003adc8"/></typename>
+            </type-int>
+          </function-parameters>
+        </type-function>
+        <parameters>
+          <variable loc="10:/home/jumbo/jamal/project/CoAP/tinyos-release/tos/platforms/epic/chips/ds2411/OneWireStream.nc" name="cmd" ref="0x409eab40">
+            <type-int alignment="I:1" cname="unsigned char" size="I:1" unsigned="">
+              <typename><typedef-ref name="uint8_t" ref="0x4003adc8"/></typename>
+            </type-int>
+          </variable>
+          <variable loc="10:/home/jumbo/jamal/project/CoAP/tinyos-release/tos/platforms/epic/chips/ds2411/OneWireStream.nc" name="buf" ref="0x409ead40">
+            <type-pointer alignment="I:2" size="I:2">
+              <type-int alignment="I:1" cname="unsigned char" size="I:1" unsigned="">
+                <typename><typedef-ref name="uint8_t" ref="0x4003adc8"/></typename>
+              </type-int>
+            </type-pointer>
+          </variable>
+          <variable loc="10:/home/jumbo/jamal/project/CoAP/tinyos-release/tos/platforms/epic/chips/ds2411/OneWireStream.nc" name="len" ref="0x409eaf20">
+            <type-int alignment="I:1" cname="unsigned char" size="I:1" unsigned="">
+              <typename><typedef-ref name="uint8_t" ref="0x4003adc8"/></typename>
+            </type-int>
+          </variable>
+        </parameters>
+      </function>
+      <function command="" loc="11:/home/jumbo/jamal/project/CoAP/tinyos-release/tos/platforms/epic/chips/ds2411/OneWireStream.nc" name="write" provided="0" ref="0x40a07808">
+        <interfacedef-ref nicename="tos.platforms.epic.chips.ds2411.OneWireStream" qname="OneWireStream"/>
+        <type-function alignment="I:1" size="I:1">
+          <type-int alignment="I:1" cname="unsigned char" size="I:1" unsigned="">
+            <typename><typedef-ref name="error_t" ref="0x4038a828"/></typename>
+          </type-int>
+          <function-parameters>
+            <type-pointer alignment="I:2" size="I:2">
+              <type-qualified const="">
+                  <typename><typedef-ref name="uint8_t" ref="0x4003adc8"/></typename>
+                <type-int alignment="I:1" cname="unsigned char" size="I:1" unsigned=""/>
+              </type-qualified>
+            </type-pointer>
+            <type-int alignment="I:1" cname="unsigned char" size="I:1" unsigned="">
+              <typename><typedef-ref name="uint8_t" ref="0x4003adc8"/></typename>
+            </type-int>
+          </function-parameters>
+        </type-function>
+        <parameters>
+          <variable loc="11:/home/jumbo/jamal/project/CoAP/tinyos-release/tos/platforms/epic/chips/ds2411/OneWireStream.nc" name="buf" ref="0x40a074c8">
+            <type-pointer alignment="I:2" size="I:2">
+              <type-qualified const="">
+                  <typename><typedef-ref name="uint8_t" ref="0x4003adc8"/></typename>
+                <type-int alignment="I:1" cname="unsigned char" size="I:1" unsigned=""/>
+              </type-qualified>
+            </type-pointer>
+          </variable>
+          <variable loc="11:/home/jumbo/jamal/project/CoAP/tinyos-release/tos/platforms/epic/chips/ds2411/OneWireStream.nc" name="len" ref="0x40a076a8">
+            <type-int alignment="I:1" cname="unsigned char" size="I:1" unsigned="">
+              <typename><typedef-ref name="uint8_t" ref="0x4003adc8"/></typename>
+            </type-int>
+          </variable>
+        </parameters>
+      </function>
+    </interfacedef>

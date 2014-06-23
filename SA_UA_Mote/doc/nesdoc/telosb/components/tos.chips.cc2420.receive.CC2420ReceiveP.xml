@@ -1,0 +1,342 @@
+<?xml version="1.0" ?><component loc="45:/home/jumbo/tinyos-main/tos/chips/cc2420/receive/CC2420ReceiveP.nc" nicename="tos.chips.cc2420.receive.CC2420ReceiveP" qname="CC2420ReceiveP" safe="">
+      <documentation loc="32:/home/jumbo/tinyos-main/tos/chips/cc2420/receive/CC2420ReceiveP.nc">
+        <short>
+ </short>
+        <long>
+ @author Jonathan Hui &lt;jhui@archrock.com&gt;
+ @author David Moss
+ @author Jung Il Choi
+ @author JeongGil Ko
+ @author Razvan Musaloiu-E
+ @version $Revision: 1.21 $ $Date: 2009/09/17 23:36:36 $
+</long>
+      </documentation>
+      <module/>
+    <specification><interface loc="54:/home/jumbo/tinyos-main/tos/chips/cc2420/receive/CC2420ReceiveP.nc" name="FIFO" provided="0" ref="0x4122b4c0">
+      <component-ref nicename="tos.chips.cc2420.receive.CC2420ReceiveP" qname="CC2420ReceiveP"/>
+      <type-interface alignment="I:2" size="I:2"><interface-ref name="FIFO" ref="0x4122b4c0" scoped=""/></type-interface>
+      <instance>
+        <interfacedef-ref nicename="tos.interfaces.GeneralIO" qname="GeneralIO"/>
+      </instance>
+      <interface-functions>
+        <function-ref name="makeInput" ref="0x4122b698" scoped=""/>
+        <function-ref name="isInput" ref="0x4122b778" scoped=""/>
+        <function-ref name="toggle" ref="0x4122b858" scoped=""/>
+        <function-ref name="isOutput" ref="0x4122b938" scoped=""/>
+        <function-ref name="get" ref="0x4122ba18" scoped=""/>
+        <function-ref name="makeOutput" ref="0x4122baf8" scoped=""/>
+        <function-ref name="set" ref="0x4122bbd8" scoped=""/>
+        <function-ref name="clr" ref="0x4122bcb8" scoped=""/>
+      </interface-functions>
+    </interface><interface loc="64:/home/jumbo/tinyos-main/tos/chips/cc2420/receive/CC2420ReceiveP.nc" name="CC2420Config" provided="0" ref="0x41227680">
+      <component-ref nicename="tos.chips.cc2420.receive.CC2420ReceiveP" qname="CC2420ReceiveP"/>
+      <type-interface alignment="I:2" size="I:2"><interface-ref name="CC2420Config" ref="0x41227680" scoped=""/></type-interface>
+      <instance>
+        <interfacedef-ref nicename="tos.chips.cc2420.interfaces.CC2420Config" qname="CC2420Config"/>
+      </instance>
+      <interface-functions>
+        <function-ref name="setAutoAck" ref="0x41227858" scoped=""/>
+        <function-ref name="isAddressRecognitionEnabled" ref="0x41227938" scoped=""/>
+        <function-ref name="setAddressRecognition" ref="0x41227a18" scoped=""/>
+        <function-ref name="syncDone" ref="0x41227af8" scoped=""/>
+        <function-ref name="isHwAddressRecognitionDefault" ref="0x41227bd8" scoped=""/>
+        <function-ref name="setShortAddr" ref="0x41227cb8" scoped=""/>
+        <function-ref name="setChannel" ref="0x41227d98" scoped=""/>
+        <function-ref name="isAutoAckEnabled" ref="0x41227e78" scoped=""/>
+        <function-ref name="setPanAddr" ref="0x41226010" scoped=""/>
+        <function-ref name="isHwAutoAckDefault" ref="0x412260f0" scoped=""/>
+        <function-ref name="getExtAddr" ref="0x412261d0" scoped=""/>
+        <function-ref name="getShortAddr" ref="0x412262b0" scoped=""/>
+        <function-ref name="sync" ref="0x41226390" scoped=""/>
+        <function-ref name="getChannel" ref="0x412264f0" scoped=""/>
+        <function-ref name="getPanAddr" ref="0x412265d0" scoped=""/>
+      </interface-functions>
+    </interface><interface loc="148:/home/jumbo/tinyos-main/tos/chips/cc2420/receive/CC2420ReceiveP.nc" name="receiveDone_task" provided="0" ref="0x4121ab88">
+      <component-ref nicename="tos.chips.cc2420.receive.CC2420ReceiveP" qname="CC2420ReceiveP"/>
+      <type-interface alignment="I:2" size="I:2"><interface-ref name="receiveDone_task" ref="0x4121ab88" scoped=""/></type-interface>
+      <instance>
+        <interfacedef-ref nicename="tos.interfaces.TaskBasic" qname="TaskBasic"/>
+      </instance>
+      <interface-functions>
+        <function-ref name="postTask" ref="0x4121ad60" scoped=""/>
+        <function-ref name="runTask" ref="0x4121ae40" scoped=""/>
+      </interface-functions>
+    </interface><interface loc="65:/home/jumbo/tinyos-main/tos/chips/cc2420/receive/CC2420ReceiveP.nc" name="PacketTimeStamp" provided="0" ref="0x41226980">
+      <component-ref nicename="tos.chips.cc2420.receive.CC2420ReceiveP" qname="CC2420ReceiveP"/>
+      <type-interface alignment="I:2" size="I:2"><interface-ref name="PacketTimeStamp" ref="0x41226980" scoped=""/></type-interface>
+      <instance>
+        <interfacedef-ref nicename="tos.interfaces.PacketTimeStamp" qname="PacketTimeStamp"/>
+        <arguments>
+          <type-tag alignment="I:2" size="I:2"><struct-ref ref="0x4064d288"/>
+            <typename><typedef-ref name="T32khz" ref="0x4064d450"/></typename>
+          </type-tag>
+          <type-int alignment="I:2" cname="unsigned long" size="I:4" unsigned="">
+            <typename><typedef-ref name="uint32_t" ref="0x4003c250"/></typename>
+          </type-int>
+        </arguments>
+      </instance>
+      <interface-functions>
+        <function-ref name="timestamp" ref="0x412244a8" scoped=""/>
+        <function-ref name="clear" ref="0x41224858" scoped=""/>
+        <function-ref name="isValid" ref="0x412240f8" scoped=""/>
+        <function-ref name="set" ref="0x41224c08" scoped=""/>
+      </interface-functions>
+    </interface><interface loc="55:/home/jumbo/tinyos-main/tos/chips/cc2420/receive/CC2420ReceiveP.nc" name="FIFOP" provided="0" ref="0x4122bed0">
+      <component-ref nicename="tos.chips.cc2420.receive.CC2420ReceiveP" qname="CC2420ReceiveP"/>
+      <type-interface alignment="I:2" size="I:2"><interface-ref name="FIFOP" ref="0x4122bed0" scoped=""/></type-interface>
+      <instance>
+        <interfacedef-ref nicename="tos.interfaces.GeneralIO" qname="GeneralIO"/>
+      </instance>
+      <interface-functions>
+        <function-ref name="makeInput" ref="0x4122a0c0" scoped=""/>
+        <function-ref name="isInput" ref="0x4122a1a0" scoped=""/>
+        <function-ref name="toggle" ref="0x4122a280" scoped=""/>
+        <function-ref name="isOutput" ref="0x4122a360" scoped=""/>
+        <function-ref name="get" ref="0x4122a440" scoped=""/>
+        <function-ref name="makeOutput" ref="0x4122a520" scoped=""/>
+        <function-ref name="set" ref="0x4122a600" scoped=""/>
+        <function-ref name="clr" ref="0x4122a6e0" scoped=""/>
+      </interface-functions>
+    </interface><interface loc="69:/home/jumbo/tinyos-main/tos/chips/cc2420/receive/CC2420ReceiveP.nc" name="SECCTRL1" provided="0" ref="0x41223aa0">
+      <component-ref nicename="tos.chips.cc2420.receive.CC2420ReceiveP" qname="CC2420ReceiveP"/>
+      <type-interface alignment="I:2" size="I:2"><interface-ref name="SECCTRL1" ref="0x41223aa0" scoped=""/></type-interface>
+      <instance>
+        <interfacedef-ref nicename="tos.chips.cc2420.interfaces.CC2420Register" qname="CC2420Register"/>
+      </instance>
+      <interface-functions>
+        <function-ref name="read" ref="0x41223c78" scoped=""/>
+        <function-ref name="write" ref="0x41223d58" scoped=""/>
+      </interface-functions>
+    </interface><interface loc="70:/home/jumbo/tinyos-main/tos/chips/cc2420/receive/CC2420ReceiveP.nc" name="KEY0" provided="0" ref="0x41222010">
+      <component-ref nicename="tos.chips.cc2420.receive.CC2420ReceiveP" qname="CC2420ReceiveP"/>
+      <type-interface alignment="I:2" size="I:2"><interface-ref name="KEY0" ref="0x41222010" scoped=""/></type-interface>
+      <instance>
+        <interfacedef-ref nicename="tos.chips.cc2420.interfaces.CC2420Ram" qname="CC2420Ram"/>
+      </instance>
+      <interface-functions>
+        <function-ref name="read" ref="0x412221e8" scoped=""/>
+        <function-ref name="write" ref="0x412222c8" scoped=""/>
+      </interface-functions>
+    </interface><interface loc="72:/home/jumbo/tinyos-main/tos/chips/cc2420/receive/CC2420ReceiveP.nc" name="RXNONCE" provided="0" ref="0x412229b8">
+      <component-ref nicename="tos.chips.cc2420.receive.CC2420ReceiveP" qname="CC2420ReceiveP"/>
+      <type-interface alignment="I:2" size="I:2"><interface-ref name="RXNONCE" ref="0x412229b8" scoped=""/></type-interface>
+      <instance>
+        <interfacedef-ref nicename="tos.chips.cc2420.interfaces.CC2420Ram" qname="CC2420Ram"/>
+      </instance>
+      <interface-functions>
+        <function-ref name="read" ref="0x41222b90" scoped=""/>
+        <function-ref name="write" ref="0x41222c70" scoped=""/>
+      </interface-functions>
+    </interface><interface loc="62:/home/jumbo/tinyos-main/tos/chips/cc2420/receive/CC2420ReceiveP.nc" name="CC2420Packet" provided="0" ref="0x41228878">
+      <component-ref nicename="tos.chips.cc2420.receive.CC2420ReceiveP" qname="CC2420ReceiveP"/>
+      <type-interface alignment="I:2" size="I:2"><interface-ref name="CC2420Packet" ref="0x41228878" scoped=""/></type-interface>
+      <instance>
+        <interfacedef-ref nicename="tos.chips.cc2420.interfaces.CC2420Packet" qname="CC2420Packet"/>
+      </instance>
+      <interface-functions>
+        <function-ref name="setPower" ref="0x41228a50" scoped=""/>
+        <function-ref name="setNetwork" ref="0x41228b30" scoped=""/>
+        <function-ref name="getRssi" ref="0x41228c10" scoped=""/>
+        <function-ref name="getNetwork" ref="0x41228cf0" scoped=""/>
+        <function-ref name="getPower" ref="0x41228dd0" scoped=""/>
+        <function-ref name="getLqi" ref="0x41228eb0" scoped=""/>
+      </interface-functions>
+    </interface><interface loc="49:/home/jumbo/tinyos-main/tos/chips/cc2420/receive/CC2420ReceiveP.nc" name="CC2420Receive" provided="1" ref="0x4122dc70">
+      <component-ref nicename="tos.chips.cc2420.receive.CC2420ReceiveP" qname="CC2420ReceiveP"/>
+      <type-interface alignment="I:2" size="I:2"><interface-ref name="CC2420Receive" ref="0x4122dc70" scoped=""/></type-interface>
+      <instance>
+        <interfacedef-ref nicename="tos.chips.cc2420.interfaces.CC2420Receive" qname="CC2420Receive"/>
+      </instance>
+      <interface-functions>
+        <function-ref name="receive" ref="0x4122de48" scoped=""/>
+        <function-ref name="sfd_dropped" ref="0x4122df28" scoped=""/>
+        <function-ref name="sfd" ref="0x4122c018" scoped=""/>
+      </interface-functions>
+    </interface><interface loc="60:/home/jumbo/tinyos-main/tos/chips/cc2420/receive/CC2420ReceiveP.nc" name="SACK" provided="0" ref="0x41228010">
+      <component-ref nicename="tos.chips.cc2420.receive.CC2420ReceiveP" qname="CC2420ReceiveP"/>
+      <type-interface alignment="I:2" size="I:2"><interface-ref name="SACK" ref="0x41228010" scoped=""/></type-interface>
+      <instance>
+        <interfacedef-ref nicename="tos.chips.cc2420.interfaces.CC2420Strobe" qname="CC2420Strobe"/>
+      </instance>
+      <interface-functions>
+        <function-ref name="strobe" ref="0x412281e8" scoped=""/>
+      </interface-functions>
+    </interface><interface loc="53:/home/jumbo/tinyos-main/tos/chips/cc2420/receive/CC2420ReceiveP.nc" name="CSN" provided="0" ref="0x4122ca30">
+      <component-ref nicename="tos.chips.cc2420.receive.CC2420ReceiveP" qname="CC2420ReceiveP"/>
+      <type-interface alignment="I:2" size="I:2"><interface-ref name="CSN" ref="0x4122ca30" scoped=""/></type-interface>
+      <instance>
+        <interfacedef-ref nicename="tos.interfaces.GeneralIO" qname="GeneralIO"/>
+      </instance>
+      <interface-functions>
+        <function-ref name="makeInput" ref="0x4122cc08" scoped=""/>
+        <function-ref name="isInput" ref="0x4122cce8" scoped=""/>
+        <function-ref name="toggle" ref="0x4122cdc8" scoped=""/>
+        <function-ref name="isOutput" ref="0x4122cea8" scoped=""/>
+        <function-ref name="get" ref="0x4122b010" scoped=""/>
+        <function-ref name="makeOutput" ref="0x4122b0f0" scoped=""/>
+        <function-ref name="set" ref="0x4122b1d0" scoped=""/>
+        <function-ref name="clr" ref="0x4122b2b0" scoped=""/>
+      </interface-functions>
+    </interface><interface loc="73:/home/jumbo/tinyos-main/tos/chips/cc2420/receive/CC2420ReceiveP.nc" name="RXFIFO_RAM" provided="0" ref="0x41222eb8">
+      <component-ref nicename="tos.chips.cc2420.receive.CC2420ReceiveP" qname="CC2420ReceiveP"/>
+      <type-interface alignment="I:2" size="I:2"><interface-ref name="RXFIFO_RAM" ref="0x41222eb8" scoped=""/></type-interface>
+      <instance>
+        <interfacedef-ref nicename="tos.chips.cc2420.interfaces.CC2420Ram" qname="CC2420Ram"/>
+      </instance>
+      <interface-functions>
+        <function-ref name="read" ref="0x412210c0" scoped=""/>
+        <function-ref name="write" ref="0x412211a0" scoped=""/>
+      </interface-functions>
+    </interface><interface loc="47:/home/jumbo/tinyos-main/tos/chips/cc2420/receive/CC2420ReceiveP.nc" name="Init" provided="1" ref="0x4122d430">
+      <component-ref nicename="tos.chips.cc2420.receive.CC2420ReceiveP" qname="CC2420ReceiveP"/>
+      <type-interface alignment="I:2" size="I:2"><interface-ref name="Init" ref="0x4122d430" scoped=""/></type-interface>
+      <instance>
+        <interfacedef-ref nicename="tos.interfaces.Init" qname="Init"/>
+      </instance>
+      <interface-functions>
+        <function-ref name="init" ref="0x4122d608" scoped=""/>
+      </interface-functions>
+    </interface><interface loc="63:/home/jumbo/tinyos-main/tos/chips/cc2420/receive/CC2420ReceiveP.nc" name="CC2420PacketBody" provided="0" ref="0x41227108">
+      <component-ref nicename="tos.chips.cc2420.receive.CC2420ReceiveP" qname="CC2420ReceiveP"/>
+      <type-interface alignment="I:2" size="I:2"><interface-ref name="CC2420PacketBody" ref="0x41227108" scoped=""/></type-interface>
+      <instance>
+        <interfacedef-ref nicename="tos.chips.cc2420.interfaces.CC2420PacketBody" qname="CC2420PacketBody"/>
+      </instance>
+      <interface-functions>
+        <function-ref name="getPayload" ref="0x412272e0" scoped=""/>
+        <function-ref name="getHeader" ref="0x412273c0" scoped=""/>
+        <function-ref name="getMetadata" ref="0x412274a0" scoped=""/>
+      </interface-functions>
+    </interface><interface loc="50:/home/jumbo/tinyos-main/tos/chips/cc2420/receive/CC2420ReceiveP.nc" name="Receive" provided="1" ref="0x4122c1c0">
+      <component-ref nicename="tos.chips.cc2420.receive.CC2420ReceiveP" qname="CC2420ReceiveP"/>
+      <type-interface alignment="I:2" size="I:2"><interface-ref name="Receive" ref="0x4122c1c0" scoped=""/></type-interface>
+      <instance>
+        <interfacedef-ref nicename="tos.interfaces.Receive" qname="Receive"/>
+      </instance>
+      <interface-functions>
+        <function-ref name="receive" ref="0x4122c398" scoped=""/>
+      </interface-functions>
+    </interface><interface loc="58:/home/jumbo/tinyos-main/tos/chips/cc2420/receive/CC2420ReceiveP.nc" name="SpiResource" provided="0" ref="0x412290a0">
+      <component-ref nicename="tos.chips.cc2420.receive.CC2420ReceiveP" qname="CC2420ReceiveP"/>
+      <type-interface alignment="I:2" size="I:2"><interface-ref name="SpiResource" ref="0x412290a0" scoped=""/></type-interface>
+      <instance>
+        <interfacedef-ref nicename="tos.interfaces.Resource" qname="Resource"/>
+      </instance>
+      <interface-functions>
+        <function-ref name="release" ref="0x41229278" scoped=""/>
+        <function-ref name="immediateRequest" ref="0x41229358" scoped=""/>
+        <function-ref name="request" ref="0x41229438" scoped=""/>
+        <function-ref name="granted" ref="0x41229518" scoped=""/>
+        <function-ref name="isOwner" ref="0x412295f8" scoped=""/>
+      </interface-functions>
+    </interface><interface loc="71:/home/jumbo/tinyos-main/tos/chips/cc2420/receive/CC2420ReceiveP.nc" name="KEY1" provided="0" ref="0x412224d8">
+      <component-ref nicename="tos.chips.cc2420.receive.CC2420ReceiveP" qname="CC2420ReceiveP"/>
+      <type-interface alignment="I:2" size="I:2"><interface-ref name="KEY1" ref="0x412224d8" scoped=""/></type-interface>
+      <instance>
+        <interfacedef-ref nicename="tos.chips.cc2420.interfaces.CC2420Ram" qname="CC2420Ram"/>
+      </instance>
+      <interface-functions>
+        <function-ref name="read" ref="0x412226b0" scoped=""/>
+        <function-ref name="write" ref="0x41222790" scoped=""/>
+      </interface-functions>
+    </interface><interface loc="59:/home/jumbo/tinyos-main/tos/chips/cc2420/receive/CC2420ReceiveP.nc" name="RXFIFO" provided="0" ref="0x41229820">
+      <component-ref nicename="tos.chips.cc2420.receive.CC2420ReceiveP" qname="CC2420ReceiveP"/>
+      <type-interface alignment="I:2" size="I:2"><interface-ref name="RXFIFO" ref="0x41229820" scoped=""/></type-interface>
+      <instance>
+        <interfacedef-ref nicename="tos.chips.cc2420.interfaces.CC2420Fifo" qname="CC2420Fifo"/>
+      </instance>
+      <interface-functions>
+        <function-ref name="continueRead" ref="0x412299f8" scoped=""/>
+        <function-ref name="writeDone" ref="0x41229ad8" scoped=""/>
+        <function-ref name="write" ref="0x41229bb8" scoped=""/>
+        <function-ref name="beginRead" ref="0x41229c98" scoped=""/>
+        <function-ref name="readDone" ref="0x41229d78" scoped=""/>
+      </interface-functions>
+    </interface><interface loc="74:/home/jumbo/tinyos-main/tos/chips/cc2420/receive/CC2420ReceiveP.nc" name="SNOP" provided="0" ref="0x412213d0">
+      <component-ref nicename="tos.chips.cc2420.receive.CC2420ReceiveP" qname="CC2420ReceiveP"/>
+      <type-interface alignment="I:2" size="I:2"><interface-ref name="SNOP" ref="0x412213d0" scoped=""/></type-interface>
+      <instance>
+        <interfacedef-ref nicename="tos.chips.cc2420.interfaces.CC2420Strobe" qname="CC2420Strobe"/>
+      </instance>
+      <interface-functions>
+        <function-ref name="strobe" ref="0x412216a8" scoped=""/>
+      </interface-functions>
+    </interface><interface loc="51:/home/jumbo/tinyos-main/tos/chips/cc2420/receive/CC2420ReceiveP.nc" name="PacketIndicator" provided="1" ref="0x4122c658">
+      <component-ref nicename="tos.chips.cc2420.receive.CC2420ReceiveP" qname="CC2420ReceiveP"/>
+      <type-interface alignment="I:2" size="I:2"><interface-ref name="PacketIndicator" ref="0x4122c658" scoped=""/></type-interface>
+      <instance>
+        <interfacedef-ref nicename="tos.chips.cc2420.interfaces.ReceiveIndicator" qname="ReceiveIndicator"/>
+      </instance>
+      <interface-functions>
+        <function-ref name="isReceiving" ref="0x4122c830" scoped=""/>
+      </interface-functions>
+    </interface><interface loc="76:/home/jumbo/tinyos-main/tos/chips/cc2420/receive/CC2420ReceiveP.nc" name="Leds" provided="0" ref="0x41221838">
+      <component-ref nicename="tos.chips.cc2420.receive.CC2420ReceiveP" qname="CC2420ReceiveP"/>
+      <type-interface alignment="I:2" size="I:2"><interface-ref name="Leds" ref="0x41221838" scoped=""/></type-interface>
+      <instance>
+        <interfacedef-ref nicename="tos.interfaces.Leds" qname="Leds"/>
+      </instance>
+      <interface-functions>
+        <function-ref name="led0Off" ref="0x41221a10" scoped=""/>
+        <function-ref name="led0Toggle" ref="0x41221af0" scoped=""/>
+        <function-ref name="led1On" ref="0x41221bd0" scoped=""/>
+        <function-ref name="led1Toggle" ref="0x41221cb0" scoped=""/>
+        <function-ref name="led2Toggle" ref="0x41221d90" scoped=""/>
+        <function-ref name="get" ref="0x41221e70" scoped=""/>
+        <function-ref name="led1Off" ref="0x41220010" scoped=""/>
+        <function-ref name="led2Off" ref="0x41220390" scoped=""/>
+        <function-ref name="set" ref="0x412200f0" scoped=""/>
+        <function-ref name="led0On" ref="0x412201d0" scoped=""/>
+        <function-ref name="led2On" ref="0x412202b0" scoped=""/>
+      </interface-functions>
+    </interface><interface loc="68:/home/jumbo/tinyos-main/tos/chips/cc2420/receive/CC2420ReceiveP.nc" name="SECCTRL0" provided="0" ref="0x41223580">
+      <component-ref nicename="tos.chips.cc2420.receive.CC2420ReceiveP" qname="CC2420ReceiveP"/>
+      <type-interface alignment="I:2" size="I:2"><interface-ref name="SECCTRL0" ref="0x41223580" scoped=""/></type-interface>
+      <instance>
+        <interfacedef-ref nicename="tos.chips.cc2420.interfaces.CC2420Register" qname="CC2420Register"/>
+      </instance>
+      <interface-functions>
+        <function-ref name="read" ref="0x41223758" scoped=""/>
+        <function-ref name="write" ref="0x41223838" scoped=""/>
+      </interface-functions>
+    </interface><interface loc="67:/home/jumbo/tinyos-main/tos/chips/cc2420/receive/CC2420ReceiveP.nc" name="SRXDEC" provided="0" ref="0x41223140">
+      <component-ref nicename="tos.chips.cc2420.receive.CC2420ReceiveP" qname="CC2420ReceiveP"/>
+      <type-interface alignment="I:2" size="I:2"><interface-ref name="SRXDEC" ref="0x41223140" scoped=""/></type-interface>
+      <instance>
+        <interfacedef-ref nicename="tos.chips.cc2420.interfaces.CC2420Strobe" qname="CC2420Strobe"/>
+      </instance>
+      <interface-functions>
+        <function-ref name="strobe" ref="0x41223318" scoped=""/>
+      </interface-functions>
+    </interface><interface loc="56:/home/jumbo/tinyos-main/tos/chips/cc2420/receive/CC2420ReceiveP.nc" name="InterruptFIFOP" provided="0" ref="0x4122a978">
+      <component-ref nicename="tos.chips.cc2420.receive.CC2420ReceiveP" qname="CC2420ReceiveP"/>
+      <type-interface alignment="I:2" size="I:2"><interface-ref name="InterruptFIFOP" ref="0x4122a978" scoped=""/></type-interface>
+      <instance>
+        <interfacedef-ref nicename="tos.interfaces.GpioInterrupt" qname="GpioInterrupt"/>
+      </instance>
+      <interface-functions>
+        <function-ref name="fired" ref="0x4122ab50" scoped=""/>
+        <function-ref name="disable" ref="0x4122ac30" scoped=""/>
+        <function-ref name="enableFallingEdge" ref="0x4122ad10" scoped=""/>
+        <function-ref name="enableRisingEdge" ref="0x4122adf0" scoped=""/>
+      </interface-functions>
+    </interface><interface loc="61:/home/jumbo/tinyos-main/tos/chips/cc2420/receive/CC2420ReceiveP.nc" name="SFLUSHRX" provided="0" ref="0x41228440">
+      <component-ref nicename="tos.chips.cc2420.receive.CC2420ReceiveP" qname="CC2420ReceiveP"/>
+      <type-interface alignment="I:2" size="I:2"><interface-ref name="SFLUSHRX" ref="0x41228440" scoped=""/></type-interface>
+      <instance>
+        <interfacedef-ref nicename="tos.chips.cc2420.interfaces.CC2420Strobe" qname="CC2420Strobe"/>
+      </instance>
+      <interface-functions>
+        <function-ref name="strobe" ref="0x41228698" scoped=""/>
+      </interface-functions>
+    </interface><interface loc="48:/home/jumbo/tinyos-main/tos/chips/cc2420/receive/CC2420ReceiveP.nc" name="StdControl" provided="1" ref="0x4122d7d0">
+      <component-ref nicename="tos.chips.cc2420.receive.CC2420ReceiveP" qname="CC2420ReceiveP"/>
+      <type-interface alignment="I:2" size="I:2"><interface-ref name="StdControl" ref="0x4122d7d0" scoped=""/></type-interface>
+      <instance>
+        <interfacedef-ref nicename="tos.interfaces.StdControl" qname="StdControl"/>
+      </instance>
+      <interface-functions>
+        <function-ref name="start" ref="0x4122d9a8" scoped=""/>
+        <function-ref name="stop" ref="0x4122da88" scoped=""/>
+      </interface-functions>
+    </interface></specification><referenced/></component>

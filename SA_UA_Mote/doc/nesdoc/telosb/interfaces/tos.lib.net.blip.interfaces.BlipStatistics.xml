@@ -1,0 +1,36 @@
+<?xml version="1.0" ?><interfacedef loc="24:/home/jumbo/tinyos-main/tos/lib/net/blip/interfaces/BlipStatistics.nc" nicename="tos.lib.net.blip.interfaces.BlipStatistics" qname="BlipStatistics">
+      <parameters>
+        <typedef loc="24:/home/jumbo/tinyos-main/tos/lib/net/blip/interfaces/BlipStatistics.nc" name="stat_str" ref="0x40f84e38">
+          <interfacedef-ref nicename="tos.lib.net.blip.interfaces.BlipStatistics" qname="BlipStatistics"/>
+          <type-var alignment="U:" size="U:"><typedef-ref name="stat_str" ref="0x40f84e38" scoped=""/></type-var>
+        </typedef>
+      </parameters>
+      <function command="" loc="34:/home/jumbo/tinyos-main/tos/lib/net/blip/interfaces/BlipStatistics.nc" name="clear" provided="0" ref="0x40f80820">
+        <interfacedef-ref nicename="tos.lib.net.blip.interfaces.BlipStatistics" qname="BlipStatistics"/>
+        <type-function alignment="I:1" size="I:1">
+          <type-void alignment="I:1" size="I:1"/>
+          <function-parameters>
+          </function-parameters>
+        </type-function>
+        <parameters>
+        </parameters>
+      </function>
+      <function command="" loc="29:/home/jumbo/tinyos-main/tos/lib/net/blip/interfaces/BlipStatistics.nc" name="get" provided="0" ref="0x40f80488">
+        <interfacedef-ref nicename="tos.lib.net.blip.interfaces.BlipStatistics" qname="BlipStatistics"/>
+        <type-function alignment="I:1" size="I:1">
+          <type-void alignment="I:1" size="I:1"/>
+          <function-parameters>
+            <type-pointer alignment="I:2" size="I:2">
+              <type-var alignment="U:" size="U:"><typedef-ref name="stat_str" ref="0x40f84e38" scoped=""/></type-var>
+            </type-pointer>
+          </function-parameters>
+        </type-function>
+        <parameters>
+          <variable loc="29:/home/jumbo/tinyos-main/tos/lib/net/blip/interfaces/BlipStatistics.nc" name="stats" ref="0x40f80330">
+            <type-pointer alignment="I:2" size="I:2">
+              <type-var alignment="U:" size="U:"><typedef-ref name="stat_str" ref="0x40f84e38" scoped=""/></type-var>
+            </type-pointer>
+          </variable>
+        </parameters>
+      </function>
+    </interfacedef>

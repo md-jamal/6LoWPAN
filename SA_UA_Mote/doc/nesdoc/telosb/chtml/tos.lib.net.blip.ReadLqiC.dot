@@ -1,0 +1,8 @@
+digraph "tos.lib.net.blip.ReadLqiC" {
+  n0x4140e188 [shape=ellipse, style=filled, label="ReadLqi", fontsize=12];
+  "CC2420ReadLqiC" [fontsize=12, shape=box, URL="../chtml/tos.lib.net.blip.platform.CC2420ReadLqiC.html"];
+  "CC2420ReadLqiC" [fontsize=12, shape=box, URL="../chtml/tos.lib.net.blip.platform.CC2420ReadLqiC.html"];
+  "CC2420PacketC" [fontsize=12, shape=box,peripheries=2, URL="../chtml/tos.chips.cc2420.packet.CC2420PacketC.html"];
+  "n0x4140e188" -> "CC2420ReadLqiC" [label="ReadLqi", URL="../ihtml/tos.lib.net.blip.interfaces.ReadLqi.html", fontsize=10];
+  "CC2420ReadLqiC" -> "CC2420PacketC" [label="CC2420Packet", URL="../ihtml/tos.chips.cc2420.interfaces.CC2420Packet.html", fontsize=10];
+}

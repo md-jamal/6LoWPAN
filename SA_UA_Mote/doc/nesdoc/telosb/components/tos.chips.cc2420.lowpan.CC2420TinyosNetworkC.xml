@@ -1,0 +1,480 @@
+<?xml version="1.0" ?><component loc="62:/home/jumbo/tinyos-main/tos/chips/cc2420/lowpan/CC2420TinyosNetworkC.nc" nicename="tos.chips.cc2420.lowpan.CC2420TinyosNetworkC" qname="CC2420TinyosNetworkC">
+      <documentation loc="32:/home/jumbo/tinyos-main/tos/chips/cc2420/lowpan/CC2420TinyosNetworkC.nc">
+        <short>
+ Original TinyOS T-Frames use a packet header that is not compatible with
+ other 6LowPAN networks.</short>
+        <long>
+ Original TinyOS T-Frames use a packet header that is not compatible with
+ other 6LowPAN networks.  They do not include the network byte 
+ responsible for identifying the packing as being sourced from a TinyOS
+ network.
+
+ TinyOS I-Frames are interoperability packets that do include a network
+ byte as defined by 6LowPAN specifications.  The I-Frame header type is
+ the default packet header used in TinyOS networks.
+
+ Since either packet header is acceptable, this layer must do some 
+ preprocessing (sorry) to figure out whether or not it needs to include 
+ the functionality to process I-frames.  If I-Frames are used, then
+ the network byte is added on the way out and checked on the way in.
+ If the packet came from a network different from a TinyOS network, the
+ user may access it through the DispatchP's NonTinyosReceive[] Receive 
+ interface and process it in a different radio stack.
+
+ If T-Frames are used instead, this layer is simply pass-through wiring to the
+ layer beneath.  
+
+ Define &quot;CC2420_IFRAME_TYPE&quot; to use the interoperability frame and 
+ this layer
+ 
+ @author David Moss
+</long>
+      </documentation>
+      <configuration/>
+      <wiring>
+        <wire loc="91:/home/jumbo/tinyos-main/tos/chips/cc2420/lowpan/CC2420TinyosNetworkC.nc">
+          <from><interface-ref name="Send" ref="0x41363180" scoped=""/></from>
+          <to><interface-ref name="BareSend" ref="0x413a3750" scoped=""/></to>
+        </wire>
+        <wire loc="97:/home/jumbo/tinyos-main/tos/chips/cc2420/lowpan/CC2420TinyosNetworkC.nc">
+          <from><interface-ref name="ActiveSend" ref="0x41363c30" scoped=""/></from>
+          <to><interface-ref name="ActiveSend" ref="0x413a22b8" scoped=""/></to>
+        </wire>
+        <wire loc="92:/home/jumbo/tinyos-main/tos/chips/cc2420/lowpan/CC2420TinyosNetworkC.nc">
+          <from><interface-ref name="Receive" ref="0x41363860" scoped=""/></from>
+          <to><interface-ref name="BareReceive" ref="0x413a3ec0" scoped=""/></to>
+        </wire>
+        <wire loc="96:/home/jumbo/tinyos-main/tos/chips/cc2420/lowpan/CC2420TinyosNetworkC.nc">
+          <from><interface-ref name="Resource" ref="0x4134ba90" scoped=""/></from>
+          <to><interface-ref name="Resource" ref="0x413a3010" scoped=""/></to>
+        </wire>
+        <wire loc="98:/home/jumbo/tinyos-main/tos/chips/cc2420/lowpan/CC2420TinyosNetworkC.nc">
+          <from><interface-ref name="ActiveReceive" ref="0x413a8400" scoped=""/></from>
+          <to><interface-ref name="ActiveReceive" ref="0x413a2a40" scoped=""/></to>
+        </wire>
+        <wire loc="93:/home/jumbo/tinyos-main/tos/chips/cc2420/lowpan/CC2420TinyosNetworkC.nc">
+          <from><interface-ref name="BarePacket" ref="0x413a87e0" scoped=""/></from>
+          <to><interface-ref name="BarePacket" ref="0x413a2e20" scoped=""/></to>
+        </wire>
+        <wire loc="94:/home/jumbo/tinyos-main/tos/chips/cc2420/lowpan/CC2420TinyosNetworkC.nc">
+          <from><interface-ref name="SubSend" ref="0x413a15a8" scoped=""/></from>
+          <to><interface-ref name="SubSend" ref="0x413a73c0" scoped=""/></to>
+        </wire>
+        <wire loc="95:/home/jumbo/tinyos-main/tos/chips/cc2420/lowpan/CC2420TinyosNetworkC.nc">
+          <from><interface-ref name="SubReceive" ref="0x413a1d10" scoped=""/></from>
+          <to><interface-ref name="SubReceive" ref="0x413a7010" scoped=""/></to>
+        </wire>
+        <wire loc="100:/home/jumbo/tinyos-main/tos/chips/cc2420/lowpan/CC2420TinyosNetworkC.nc">
+          <from><interface-ref name="CC2420Packet" ref="0x413a00e0" scoped=""/></from>
+          <to><interface-ref name="CC2420Packet" ref="0x412695a0" scoped=""/></to>
+        </wire>
+        <wire loc="101:/home/jumbo/tinyos-main/tos/chips/cc2420/lowpan/CC2420TinyosNetworkC.nc">
+          <from><interface-ref name="CC2420PacketBody" ref="0x413a0900" scoped=""/></from>
+          <to><interface-ref name="CC2420PacketBody" ref="0x412663f8" scoped=""/></to>
+        </wire>
+        <wire loc="102:/home/jumbo/tinyos-main/tos/chips/cc2420/lowpan/CC2420TinyosNetworkC.nc">
+          <from><interface-ref name="Queue" ref="0x413a0eb8" scoped=""/></from>
+          <to><interface-ref name="FcfsQueue" ref="0x413bd538" scoped=""/></to>
+        </wire>
+        <wire loc="104:/home/jumbo/tinyos-main/tos/chips/cc2420/lowpan/CC2420TinyosNetworkC.nc">
+          <from><interface-ref name="SoftwareInit" ref="0x40692258" scoped=""/></from>
+          <to><interface-ref name="Init" ref="0x413bd200" scoped=""/></to>
+        </wire>
+      </wiring>
+    <specification><interface loc="75:/home/jumbo/tinyos-main/tos/chips/cc2420/lowpan/CC2420TinyosNetworkC.nc" name="SubReceive" provided="0" ref="0x413a7010">
+      <component-ref nicename="tos.chips.cc2420.lowpan.CC2420TinyosNetworkC" qname="CC2420TinyosNetworkC"/>
+      <type-interface alignment="I:2" size="I:2"><interface-ref name="SubReceive" ref="0x413a7010" scoped=""/></type-interface>
+      <instance>
+        <interfacedef-ref nicename="tos.interfaces.Receive" qname="Receive"/>
+      </instance>
+      <interface-functions>
+        <function-ref name="receive" ref="0x413a71e8" scoped=""/>
+      </interface-functions>
+    </interface><interface loc="76:/home/jumbo/tinyos-main/tos/chips/cc2420/lowpan/CC2420TinyosNetworkC.nc" name="SubSend" provided="0" ref="0x413a73c0">
+      <component-ref nicename="tos.chips.cc2420.lowpan.CC2420TinyosNetworkC" qname="CC2420TinyosNetworkC"/>
+      <type-interface alignment="I:2" size="I:2"><interface-ref name="SubSend" ref="0x413a73c0" scoped=""/></type-interface>
+      <instance>
+        <interfacedef-ref nicename="tos.interfaces.Send" qname="Send"/>
+      </instance>
+      <interface-functions>
+        <function-ref name="send" ref="0x413a7598" scoped=""/>
+        <function-ref name="getPayload" ref="0x413a7678" scoped=""/>
+        <function-ref name="maxPayloadLength" ref="0x413a7758" scoped=""/>
+        <function-ref name="cancel" ref="0x413a7838" scoped=""/>
+        <function-ref name="sendDone" ref="0x413a7918" scoped=""/>
+      </interface-functions>
+    </interface><interface loc="65:/home/jumbo/tinyos-main/tos/chips/cc2420/lowpan/CC2420TinyosNetworkC.nc" name="Send" provided="1" ref="0x41363180">
+      <component-ref nicename="tos.chips.cc2420.lowpan.CC2420TinyosNetworkC" qname="CC2420TinyosNetworkC"/>
+      <type-interface alignment="I:2" size="I:2"><interface-ref name="Send" ref="0x41363180" scoped=""/></type-interface>
+      <instance>
+        <interfacedef-ref nicename="tos.interfaces.Send" qname="Send"/>
+      </instance>
+      <interface-functions>
+        <function-ref name="send" ref="0x41363358" scoped=""/>
+        <function-ref name="getPayload" ref="0x41363438" scoped=""/>
+        <function-ref name="maxPayloadLength" ref="0x41363518" scoped=""/>
+        <function-ref name="cancel" ref="0x413635f8" scoped=""/>
+        <function-ref name="sendDone" ref="0x413636d8" scoped=""/>
+      </interface-functions>
+    </interface><interface loc="68:/home/jumbo/tinyos-main/tos/chips/cc2420/lowpan/CC2420TinyosNetworkC.nc" name="ActiveSend" provided="1" ref="0x41363c30">
+      <component-ref nicename="tos.chips.cc2420.lowpan.CC2420TinyosNetworkC" qname="CC2420TinyosNetworkC"/>
+      <type-interface alignment="I:2" size="I:2"><interface-ref name="ActiveSend" ref="0x41363c30" scoped=""/></type-interface>
+      <instance>
+        <interfacedef-ref nicename="tos.interfaces.Send" qname="Send"/>
+      </instance>
+      <interface-functions>
+        <function-ref name="send" ref="0x41363e08" scoped=""/>
+        <function-ref name="getPayload" ref="0x41363ee8" scoped=""/>
+        <function-ref name="maxPayloadLength" ref="0x413a8010" scoped=""/>
+        <function-ref name="cancel" ref="0x413a80f0" scoped=""/>
+        <function-ref name="sendDone" ref="0x413a81d0" scoped=""/>
+      </interface-functions>
+    </interface><interface loc="66:/home/jumbo/tinyos-main/tos/chips/cc2420/lowpan/CC2420TinyosNetworkC.nc" name="Receive" provided="1" ref="0x41363860">
+      <component-ref nicename="tos.chips.cc2420.lowpan.CC2420TinyosNetworkC" qname="CC2420TinyosNetworkC"/>
+      <type-interface alignment="I:2" size="I:2"><interface-ref name="Receive" ref="0x41363860" scoped=""/></type-interface>
+      <instance>
+        <interfacedef-ref nicename="tos.interfaces.Receive" qname="Receive"/>
+      </instance>
+      <interface-functions>
+        <function-ref name="receive" ref="0x41363a38" scoped=""/>
+      </interface-functions>
+    </interface><interface loc="64:/home/jumbo/tinyos-main/tos/chips/cc2420/lowpan/CC2420TinyosNetworkC.nc" name="Resource" provided="1" ref="0x4134ba90">
+      <component-ref nicename="tos.chips.cc2420.lowpan.CC2420TinyosNetworkC" qname="CC2420TinyosNetworkC"/>
+      <type-interface alignment="I:2" size="I:2"><interface-ref name="Resource" ref="0x4134ba90" scoped=""/></type-interface>
+      <instance>
+        <interfacedef-ref nicename="tos.interfaces.Resource" qname="Resource"/>
+      </instance>
+      <interface-parameters>
+        <type-int alignment="I:1" cname="unsigned char" size="I:1" unsigned="">
+          <typename><typedef-ref name="uint8_t" ref="0x4003bdc8"/></typename>
+        </type-int>
+      </interface-parameters>
+      <interface-functions>
+        <function-ref name="release" ref="0x4134bc68" scoped=""/>
+        <function-ref name="immediateRequest" ref="0x4134bd48" scoped=""/>
+        <function-ref name="request" ref="0x4134be28" scoped=""/>
+        <function-ref name="granted" ref="0x4134bf08" scoped=""/>
+        <function-ref name="isOwner" ref="0x41363010" scoped=""/>
+      </interface-functions>
+    </interface><interface loc="69:/home/jumbo/tinyos-main/tos/chips/cc2420/lowpan/CC2420TinyosNetworkC.nc" name="ActiveReceive" provided="1" ref="0x413a8400">
+      <component-ref nicename="tos.chips.cc2420.lowpan.CC2420TinyosNetworkC" qname="CC2420TinyosNetworkC"/>
+      <type-interface alignment="I:2" size="I:2"><interface-ref name="ActiveReceive" ref="0x413a8400" scoped=""/></type-interface>
+      <instance>
+        <interfacedef-ref nicename="tos.interfaces.Receive" qname="Receive"/>
+      </instance>
+      <interface-functions>
+        <function-ref name="receive" ref="0x413a85d8" scoped=""/>
+      </interface-functions>
+    </interface><interface loc="71:/home/jumbo/tinyos-main/tos/chips/cc2420/lowpan/CC2420TinyosNetworkC.nc" name="BarePacket" provided="1" ref="0x413a87e0">
+      <component-ref nicename="tos.chips.cc2420.lowpan.CC2420TinyosNetworkC" qname="CC2420TinyosNetworkC"/>
+      <type-interface alignment="I:2" size="I:2"><interface-ref name="BarePacket" ref="0x413a87e0" scoped=""/></type-interface>
+      <instance>
+        <interfacedef-ref nicename="tos.interfaces.Packet" qname="Packet"/>
+      </instance>
+      <interface-functions>
+        <function-ref name="clear" ref="0x413a89b8" scoped=""/>
+        <function-ref name="payloadLength" ref="0x413a8a98" scoped=""/>
+        <function-ref name="getPayload" ref="0x413a8b78" scoped=""/>
+        <function-ref name="maxPayloadLength" ref="0x413a8c58" scoped=""/>
+        <function-ref name="setPayloadLength" ref="0x413a8d38" scoped=""/>
+      </interface-functions>
+    </interface></specification><referenced><interface loc="43:/home/jumbo/tinyos-main/tos/chips/cc2420/packet/CC2420PacketC.nc" name="CC2420PacketBody" provided="1" ref="0x412663f8">
+      <component-ref nicename="tos.chips.cc2420.packet.CC2420PacketC" qname="CC2420PacketC"/>
+      <type-interface alignment="I:2" size="I:2"><interface-ref name="CC2420PacketBody" ref="0x412663f8" scoped=""/></type-interface>
+      <instance>
+        <interfacedef-ref nicename="tos.chips.cc2420.interfaces.CC2420PacketBody" qname="CC2420PacketBody"/>
+      </instance>
+      <interface-functions>
+        <function-ref name="getPayload" ref="0x412665d0" scoped=""/>
+        <function-ref name="getHeader" ref="0x412666b0" scoped=""/>
+        <function-ref name="getMetadata" ref="0x41266790" scoped=""/>
+      </interface-functions>
+    </interface><interface loc="54:/home/jumbo/tinyos-main/tos/chips/cc2420/lowpan/CC2420TinyosNetworkP.nc" name="BarePacket" provided="1" ref="0x413a2e20">
+      <component-ref nicename="tos.chips.cc2420.lowpan.CC2420TinyosNetworkP" qname="CC2420TinyosNetworkP"/>
+      <type-interface alignment="I:2" size="I:2"><interface-ref name="BarePacket" ref="0x413a2e20" scoped=""/></type-interface>
+      <instance>
+        <interfacedef-ref nicename="tos.interfaces.Packet" qname="Packet"/>
+      </instance>
+      <interface-functions>
+        <function-ref name="clear" ref="0x413a1010" scoped=""/>
+        <function-ref name="payloadLength" ref="0x413a10f0" scoped=""/>
+        <function-ref name="getPayload" ref="0x413a11d0" scoped=""/>
+        <function-ref name="maxPayloadLength" ref="0x413a12b0" scoped=""/>
+        <function-ref name="setPayloadLength" ref="0x413a1390" scoped=""/>
+      </interface-functions>
+    </interface><interface loc="49:/home/jumbo/tinyos-main/tos/chips/cc2420/lowpan/CC2420TinyosNetworkP.nc" name="BareReceive" provided="1" ref="0x413a3ec0">
+      <component-ref nicename="tos.chips.cc2420.lowpan.CC2420TinyosNetworkP" qname="CC2420TinyosNetworkP"/>
+      <type-interface alignment="I:2" size="I:2"><interface-ref name="BareReceive" ref="0x413a3ec0" scoped=""/></type-interface>
+      <instance>
+        <interfacedef-ref nicename="tos.interfaces.Receive" qname="Receive"/>
+      </instance>
+      <interface-functions>
+        <function-ref name="receive" ref="0x413a20c0" scoped=""/>
+      </interface-functions>
+    </interface><interface loc="62:/home/jumbo/tinyos-main/tos/chips/cc2420/lowpan/CC2420TinyosNetworkP.nc" name="Queue" provided="0" ref="0x413a0eb8">
+      <component-ref nicename="tos.chips.cc2420.lowpan.CC2420TinyosNetworkP" qname="CC2420TinyosNetworkP"/>
+      <type-interface alignment="I:2" size="I:2"><interface-ref name="Queue" ref="0x413a0eb8" scoped=""/></type-interface>
+      <instance>
+        <interfacedef-ref nicename="tos.interfaces.ResourceQueue" qname="ResourceQueue"/>
+      </instance>
+      <interface-functions>
+        <function-ref name="enqueue" ref="0x4139f0c0" scoped=""/>
+        <function-ref name="isEmpty" ref="0x4139f1a0" scoped=""/>
+        <function-ref name="isEnqueued" ref="0x4139f280" scoped=""/>
+        <function-ref name="dequeue" ref="0x4139f360" scoped=""/>
+      </interface-functions>
+    </interface><interface loc="46:/home/jumbo/tinyos-main/tos/chips/cc2420/lowpan/CC2420TinyosNetworkP.nc" name="Resource" provided="1" ref="0x413a3010">
+      <component-ref nicename="tos.chips.cc2420.lowpan.CC2420TinyosNetworkP" qname="CC2420TinyosNetworkP"/>
+      <type-interface alignment="I:2" size="I:2"><interface-ref name="Resource" ref="0x413a3010" scoped=""/></type-interface>
+      <instance>
+        <interfacedef-ref nicename="tos.interfaces.Resource" qname="Resource"/>
+      </instance>
+      <interface-parameters>
+        <type-int alignment="I:1" cname="unsigned char" size="I:1" unsigned="">
+          <typename><typedef-ref name="uint8_t" ref="0x4003bdc8"/></typename>
+        </type-int>
+      </interface-parameters>
+      <interface-functions>
+        <function-ref name="release" ref="0x413a31e8" scoped=""/>
+        <function-ref name="immediateRequest" ref="0x413a32c8" scoped=""/>
+        <function-ref name="request" ref="0x413a33a8" scoped=""/>
+        <function-ref name="granted" ref="0x413a3488" scoped=""/>
+        <function-ref name="isOwner" ref="0x413a3568" scoped=""/>
+      </interface-functions>
+    </interface><interface loc="61:/home/jumbo/tinyos-main/tos/chips/cc2420/lowpan/CC2420TinyosNetworkP.nc" name="CC2420PacketBody" provided="0" ref="0x413a0900">
+      <component-ref nicename="tos.chips.cc2420.lowpan.CC2420TinyosNetworkP" qname="CC2420TinyosNetworkP"/>
+      <type-interface alignment="I:2" size="I:2"><interface-ref name="CC2420PacketBody" ref="0x413a0900" scoped=""/></type-interface>
+      <instance>
+        <interfacedef-ref nicename="tos.chips.cc2420.interfaces.CC2420PacketBody" qname="CC2420PacketBody"/>
+      </instance>
+      <interface-functions>
+        <function-ref name="getPayload" ref="0x413a0ad8" scoped=""/>
+        <function-ref name="getHeader" ref="0x413a0bb8" scoped=""/>
+        <function-ref name="getMetadata" ref="0x413a0c98" scoped=""/>
+      </interface-functions>
+    </interface><interface loc="45:/home/jumbo/tinyos-main/tos/system/FcfsResourceQueueC.nc" name="FcfsQueue" provided="1" ref="0x413bd538">
+      <component-ref nicename="tos.system.FcfsResourceQueueC" qname="CC2420TinyosNetworkC.FcfsResourceQueueC"/>
+      <type-interface alignment="I:2" size="I:2"><interface-ref name="FcfsQueue" ref="0x413bd538" scoped=""/></type-interface>
+      <instance>
+        <interfacedef-ref nicename="tos.interfaces.ResourceQueue" qname="ResourceQueue"/>
+      </instance>
+      <interface-functions>
+        <function-ref name="enqueue" ref="0x413bd710" scoped=""/>
+        <function-ref name="isEmpty" ref="0x413bd7f0" scoped=""/>
+        <function-ref name="isEnqueued" ref="0x413bd8d0" scoped=""/>
+        <function-ref name="dequeue" ref="0x413bd9b0" scoped=""/>
+      </interface-functions>
+    </interface><interface loc="58:/home/jumbo/tinyos-main/tos/system/MainC.nc" name="SoftwareInit" provided="0" ref="0x40692258">
+      <component-ref nicename="tos.system.MainC" qname="MainC"/>
+      <type-interface alignment="I:2" size="I:2"><interface-ref name="SoftwareInit" ref="0x40692258" scoped=""/></type-interface>
+      <instance>
+        <interfacedef-ref nicename="tos.interfaces.Init" qname="Init"/>
+      </instance>
+      <interface-functions>
+        <function-ref name="init" ref="0x40692430" scoped=""/>
+      </interface-functions>
+    </interface><interface loc="48:/home/jumbo/tinyos-main/tos/chips/cc2420/lowpan/CC2420TinyosNetworkP.nc" name="BareSend" provided="1" ref="0x413a3750">
+      <component-ref nicename="tos.chips.cc2420.lowpan.CC2420TinyosNetworkP" qname="CC2420TinyosNetworkP"/>
+      <type-interface alignment="I:2" size="I:2"><interface-ref name="BareSend" ref="0x413a3750" scoped=""/></type-interface>
+      <instance>
+        <interfacedef-ref nicename="tos.interfaces.Send" qname="Send"/>
+      </instance>
+      <interface-functions>
+        <function-ref name="send" ref="0x413a3928" scoped=""/>
+        <function-ref name="getPayload" ref="0x413a3a08" scoped=""/>
+        <function-ref name="maxPayloadLength" ref="0x413a3ae8" scoped=""/>
+        <function-ref name="cancel" ref="0x413a3bc8" scoped=""/>
+        <function-ref name="sendDone" ref="0x413a3ca8" scoped=""/>
+      </interface-functions>
+    </interface><interface loc="58:/home/jumbo/tinyos-main/tos/chips/cc2420/lowpan/CC2420TinyosNetworkP.nc" name="SubSend" provided="0" ref="0x413a15a8">
+      <component-ref nicename="tos.chips.cc2420.lowpan.CC2420TinyosNetworkP" qname="CC2420TinyosNetworkP"/>
+      <type-interface alignment="I:2" size="I:2"><interface-ref name="SubSend" ref="0x413a15a8" scoped=""/></type-interface>
+      <instance>
+        <interfacedef-ref nicename="tos.interfaces.Send" qname="Send"/>
+      </instance>
+      <interface-functions>
+        <function-ref name="send" ref="0x413a1780" scoped=""/>
+        <function-ref name="getPayload" ref="0x413a1860" scoped=""/>
+        <function-ref name="maxPayloadLength" ref="0x413a1940" scoped=""/>
+        <function-ref name="cancel" ref="0x413a1a20" scoped=""/>
+        <function-ref name="sendDone" ref="0x413a1b00" scoped=""/>
+      </interface-functions>
+    </interface><interface loc="52:/home/jumbo/tinyos-main/tos/chips/cc2420/lowpan/CC2420TinyosNetworkP.nc" name="ActiveReceive" provided="1" ref="0x413a2a40">
+      <component-ref nicename="tos.chips.cc2420.lowpan.CC2420TinyosNetworkP" qname="CC2420TinyosNetworkP"/>
+      <type-interface alignment="I:2" size="I:2"><interface-ref name="ActiveReceive" ref="0x413a2a40" scoped=""/></type-interface>
+      <instance>
+        <interfacedef-ref nicename="tos.interfaces.Receive" qname="Receive"/>
+      </instance>
+      <interface-functions>
+        <function-ref name="receive" ref="0x413a2c18" scoped=""/>
+      </interface-functions>
+    </interface><interface loc="41:/home/jumbo/tinyos-main/tos/chips/cc2420/packet/CC2420PacketC.nc" name="CC2420Packet" provided="1" ref="0x412695a0">
+      <component-ref nicename="tos.chips.cc2420.packet.CC2420PacketC" qname="CC2420PacketC"/>
+      <type-interface alignment="I:2" size="I:2"><interface-ref name="CC2420Packet" ref="0x412695a0" scoped=""/></type-interface>
+      <instance>
+        <interfacedef-ref nicename="tos.chips.cc2420.interfaces.CC2420Packet" qname="CC2420Packet"/>
+      </instance>
+      <interface-functions>
+        <function-ref name="setPower" ref="0x41269778" scoped=""/>
+        <function-ref name="setNetwork" ref="0x41269858" scoped=""/>
+        <function-ref name="getRssi" ref="0x41269938" scoped=""/>
+        <function-ref name="getNetwork" ref="0x41269a18" scoped=""/>
+        <function-ref name="getPower" ref="0x41269af8" scoped=""/>
+        <function-ref name="getLqi" ref="0x41269bd8" scoped=""/>
+      </interface-functions>
+    </interface><interface loc="59:/home/jumbo/tinyos-main/tos/chips/cc2420/lowpan/CC2420TinyosNetworkP.nc" name="SubReceive" provided="0" ref="0x413a1d10">
+      <component-ref nicename="tos.chips.cc2420.lowpan.CC2420TinyosNetworkP" qname="CC2420TinyosNetworkP"/>
+      <type-interface alignment="I:2" size="I:2"><interface-ref name="SubReceive" ref="0x413a1d10" scoped=""/></type-interface>
+      <instance>
+        <interfacedef-ref nicename="tos.interfaces.Receive" qname="Receive"/>
+      </instance>
+      <interface-functions>
+        <function-ref name="receive" ref="0x413a1ee8" scoped=""/>
+      </interface-functions>
+    </interface><interface loc="60:/home/jumbo/tinyos-main/tos/chips/cc2420/lowpan/CC2420TinyosNetworkP.nc" name="CC2420Packet" provided="0" ref="0x413a00e0">
+      <component-ref nicename="tos.chips.cc2420.lowpan.CC2420TinyosNetworkP" qname="CC2420TinyosNetworkP"/>
+      <type-interface alignment="I:2" size="I:2"><interface-ref name="CC2420Packet" ref="0x413a00e0" scoped=""/></type-interface>
+      <instance>
+        <interfacedef-ref nicename="tos.chips.cc2420.interfaces.CC2420Packet" qname="CC2420Packet"/>
+      </instance>
+      <interface-functions>
+        <function-ref name="setPower" ref="0x413a02b8" scoped=""/>
+        <function-ref name="setNetwork" ref="0x413a0398" scoped=""/>
+        <function-ref name="getRssi" ref="0x413a0478" scoped=""/>
+        <function-ref name="getNetwork" ref="0x413a0558" scoped=""/>
+        <function-ref name="getPower" ref="0x413a0638" scoped=""/>
+        <function-ref name="getLqi" ref="0x413a0718" scoped=""/>
+      </interface-functions>
+    </interface><interface loc="44:/home/jumbo/tinyos-main/tos/system/FcfsResourceQueueC.nc" name="Init" provided="1" ref="0x413bd200">
+      <component-ref nicename="tos.system.FcfsResourceQueueC" qname="CC2420TinyosNetworkC.FcfsResourceQueueC"/>
+      <type-interface alignment="I:2" size="I:2"><interface-ref name="Init" ref="0x413bd200" scoped=""/></type-interface>
+      <instance>
+        <interfacedef-ref nicename="tos.interfaces.Init" qname="Init"/>
+      </instance>
+      <interface-functions>
+        <function-ref name="init" ref="0x413bd3d8" scoped=""/>
+      </interface-functions>
+    </interface><interface loc="51:/home/jumbo/tinyos-main/tos/chips/cc2420/lowpan/CC2420TinyosNetworkP.nc" name="ActiveSend" provided="1" ref="0x413a22b8">
+      <component-ref nicename="tos.chips.cc2420.lowpan.CC2420TinyosNetworkP" qname="CC2420TinyosNetworkP"/>
+      <type-interface alignment="I:2" size="I:2"><interface-ref name="ActiveSend" ref="0x413a22b8" scoped=""/></type-interface>
+      <instance>
+        <interfacedef-ref nicename="tos.interfaces.Send" qname="Send"/>
+      </instance>
+      <interface-functions>
+        <function-ref name="send" ref="0x413a2490" scoped=""/>
+        <function-ref name="getPayload" ref="0x413a2570" scoped=""/>
+        <function-ref name="maxPayloadLength" ref="0x413a2650" scoped=""/>
+        <function-ref name="cancel" ref="0x413a2730" scoped=""/>
+        <function-ref name="sendDone" ref="0x413a2810" scoped=""/>
+      </interface-functions>
+    </interface><component loc="44:/home/jumbo/tinyos-main/tos/chips/cc2420/lowpan/CC2420TinyosNetworkP.nc" nicename="tos.chips.cc2420.lowpan.CC2420TinyosNetworkP" qname="CC2420TinyosNetworkP" safe="">
+      <documentation loc="32:/home/jumbo/tinyos-main/tos/chips/cc2420/lowpan/CC2420TinyosNetworkP.nc">
+        <short>
+ Fills in the network ID byte for outgoing packets for compatibility with
+ other 6LowPAN networks.</short>
+        <long>
+ Fills in the network ID byte for outgoing packets for compatibility with
+ other 6LowPAN networks.  Filters incoming packets that are not
+ TinyOS network compatible.  Provides the 6LowpanSnoop interface to
+ sniff for packets that were not originated from TinyOS.
+
+ @author David Moss
+</long>
+      </documentation>
+      <module/>
+    </component><component loc="42(CC2420TinyosNetworkC.FcfsResourceQueueC):/home/jumbo/tinyos-main/tos/system/FcfsResourceQueueC.nc" nicename="tos.system.FcfsResourceQueueC" qname="CC2420TinyosNetworkC.FcfsResourceQueueC">
+      <instance number="0">
+        <component-ref nicename="tos.system.FcfsResourceQueueC" qname="FcfsResourceQueueC"/>
+        <arguments>
+          <value cst="I:0">
+            <type-int alignment="I:2" cname="int" size="I:2"/>
+          </value>
+        </arguments>
+      </instance>
+      <module/>
+    </component><component loc="56:/home/jumbo/tinyos-main/tos/system/MainC.nc" nicename="tos.system.MainC" qname="MainC">
+      <documentation loc="45:/home/jumbo/tinyos-main/tos/system/MainC.nc">
+        <short>
+ MainC is the system interface the TinyOS boot sequence.</short>
+        <long>
+ MainC is the system interface the TinyOS boot sequence. It wires the
+ boot sequence implementation to the scheduler and hardware resources.
+
+ @author Philip Levis
+ @date   August 6 2005
+ @see    TEP 107: Boot Sequence
+</long>
+      </documentation>
+      <configuration/>
+      <wiring>
+        <wire loc="72:/home/jumbo/tinyos-main/tos/system/MainC.nc">
+          <from><interface-ref name="Boot" ref="0x4060e610" scoped=""/></from>
+          <to><interface-ref name="Boot" ref="0x4068bdf8" scoped=""/></to>
+        </wire>
+        <wire loc="67:/home/jumbo/tinyos-main/tos/system/MainC.nc">
+          <from><interface-ref name="Scheduler" ref="0x406a61d0" scoped=""/></from>
+          <to><interface-ref name="Scheduler" ref="0x40387010" scoped=""/></to>
+        </wire>
+        <wire loc="68:/home/jumbo/tinyos-main/tos/system/MainC.nc">
+          <from><interface-ref name="PlatformInit" ref="0x406a6798" scoped=""/></from>
+          <to><interface-ref name="Init" ref="0x40692aa0" scoped=""/></to>
+        </wire>
+        <wire loc="71:/home/jumbo/tinyos-main/tos/system/MainC.nc">
+          <from><interface-ref name="SoftwareInit" ref="0x406a6ba0" scoped=""/></from>
+          <to><interface-ref name="SoftwareInit" ref="0x40692258" scoped=""/></to>
+        </wire>
+      </wiring>
+    </component><component loc="38:/home/jumbo/tinyos-main/tos/chips/cc2420/packet/CC2420PacketC.nc" nicename="tos.chips.cc2420.packet.CC2420PacketC" qname="CC2420PacketC">
+      <documentation loc="32:/home/jumbo/tinyos-main/tos/chips/cc2420/packet/CC2420PacketC.nc">
+        <short>
+ </short>
+        <long>
+ @author Jonathan Hui &lt;jhui@archrock.com&gt;
+ @author David Moss
+ @author Chad Metcalf
+</long>
+      </documentation>
+      <configuration/>
+      <wiring>
+        <wire loc="58:/home/jumbo/tinyos-main/tos/chips/cc2420/packet/CC2420PacketC.nc">
+          <from><interface-ref name="LinkPacketMetadata" ref="0x41266988" scoped=""/></from>
+          <to><interface-ref name="LinkPacketMetadata" ref="0x4125c408" scoped=""/></to>
+        </wire>
+        <wire loc="55:/home/jumbo/tinyos-main/tos/chips/cc2420/packet/CC2420PacketC.nc">
+          <from><interface-ref name="CC2420Packet" ref="0x412695a0" scoped=""/></from>
+          <to><interface-ref name="CC2420Packet" ref="0x4125d010" scoped=""/></to>
+        </wire>
+        <wire loc="59:/home/jumbo/tinyos-main/tos/chips/cc2420/packet/CC2420PacketC.nc">
+          <from><interface-ref name="PacketTimeStamp32khz" ref="0x41265010" scoped=""/></from>
+          <to><interface-ref name="PacketTimeStamp32khz" ref="0x4125ca60" scoped=""/></to>
+        </wire>
+        <wire loc="57:/home/jumbo/tinyos-main/tos/chips/cc2420/packet/CC2420PacketC.nc">
+          <from><interface-ref name="CC2420PacketBody" ref="0x412663f8" scoped=""/></from>
+          <to><interface-ref name="CC2420PacketBody" ref="0x4125de38" scoped=""/></to>
+        </wire>
+        <wire loc="61:/home/jumbo/tinyos-main/tos/chips/cc2420/packet/CC2420PacketC.nc">
+          <from><interface-ref name="PacketTimeSyncOffset" ref="0x41260218" scoped=""/></from>
+          <to><interface-ref name="PacketTimeSyncOffset" ref="0x41258c38" scoped=""/></to>
+        </wire>
+        <wire loc="60:/home/jumbo/tinyos-main/tos/chips/cc2420/packet/CC2420PacketC.nc">
+          <from><interface-ref name="PacketTimeStampMilli" ref="0x412639d8" scoped=""/></from>
+          <to><interface-ref name="PacketTimeStampMilli" ref="0x4125a488" scoped=""/></to>
+        </wire>
+        <wire loc="56:/home/jumbo/tinyos-main/tos/chips/cc2420/packet/CC2420PacketC.nc">
+          <from><interface-ref name="Acks" ref="0x41269e48" scoped=""/></from>
+          <to><interface-ref name="Acks" ref="0x4125d8b8" scoped=""/></to>
+        </wire>
+        <wire loc="64:/home/jumbo/tinyos-main/tos/chips/cc2420/packet/CC2420PacketC.nc">
+          <from><interface-ref name="Counter" ref="0x412ac828" scoped=""/></from>
+          <to><interface-ref name="Counter" ref="0x40bd6368" scoped=""/></to>
+        </wire>
+        <wire loc="65:/home/jumbo/tinyos-main/tos/chips/cc2420/packet/CC2420PacketC.nc">
+          <from><interface-ref name="LocalTime32khz" ref="0x412548a0" scoped=""/></from>
+          <to><interface-ref name="LocalTime" ref="0x412a6e70" scoped=""/></to>
+        </wire>
+        <wire loc="69:/home/jumbo/tinyos-main/tos/chips/cc2420/packet/CC2420PacketC.nc">
+          <from><interface-ref name="LocalTimeMilli" ref="0x41256338" scoped=""/></from>
+          <to><interface-ref name="LocalTime" ref="0x4129f418" scoped=""/></to>
+        </wire>
+      </wiring>
+    </component></referenced></component>

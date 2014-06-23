@@ -1,0 +1,12 @@
+
+
+For compiling the Translation Agent :
+
+ javac -classpath :./jslp.jar *.java
+
+For Running the Translation Agent :
+
+ javac -classpath :./jslp.jar :/commons-logging-1.0.4 Translation
+
+
+

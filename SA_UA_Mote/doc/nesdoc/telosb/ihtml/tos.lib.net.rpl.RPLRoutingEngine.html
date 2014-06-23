@@ -1,0 +1,85 @@
+<html>
+  <head>
+    <LINK rel="stylesheet" href="nesdoc.css" type="text/css" media="screen"><title>Interface: tos.lib.net.rpl.RPLRoutingEngine</title>
+  </head>
+  <body>
+    <h2>Interface: tos.lib.net.rpl.RPLRoutingEngine</h2>
+    <b>interface RPLRoutingEngine</b><p>
+ RPLRoutingEngine.nc
+ @ author JeongGil Ko (John) &lt;jgko@cs.jhu.edu&gt;
+
+    <p><p><div id=heading>Commands</div><div id=funcsig><span id=funcnameshort>command error_t <a href="#getDefaultRoute">getDefaultRoute</a>(struct in6_addr *next_hop)
+      </span></div><div id=funcsig><span id=funcnameshort>command struct in6_addr *<a href="#getDodagId">getDodagId</a>()
+      </span></div><div id=funcsig><span id=funcnameshort>command uint8_t <a href="#getDTSN">getDTSN</a>()
+      </span></div><div id=funcsig><span id=funcnameshort>command uint8_t <a href="#getInstanceID">getInstanceID</a>()
+      </span></div><div id=funcsig><span id=funcnameshort>command uint8_t <a href="#getMOP">getMOP</a>()
+      </span></div><div id=funcsig><span id=funcnameshort>command uint16_t <a href="#getRank">getRank</a>()
+      </span></div><div id=funcsig><span id=funcnameshort>command bool <a href="#hasDODAG">hasDODAG</a>()
+      </span></div><div id=funcsig><span id=funcnameshort>command void <a href="#inconsistency">inconsistency</a>()
+      </span></div><div id=funcsig><span id=funcnameshort>command void <a href="#resetTrickle">resetTrickle</a>()
+      </span></div><div id=funcsig><span id=funcnameshort>command void <a href="#setDODAGConfig">setDODAGConfig</a>(uint8_t DIOIntDouble, uint8_t DIOIntMin, uint8_t DIORedun, uint8_t MaxRankInc, uint8_t MinHopRankInc)
+      </span></div><div id=funcsig><span id=funcnameshort>command void <a href="#setDTSN">setDTSN</a>(uint8_t dtsn)
+      </span></div><div id=funcsig><span id=funcnameshort>command bool <a href="#validInstance">validInstance</a>(uint8_t instanceID)
+      </span></div><p><div id=heading>Commands - Details</div>
+    <a name="getDefaultRoute"></a>
+    <h4>getDefaultRoute
+    </h4>
+    <span id=funcnameshort>command error_t <b>getDefaultRoute</b>(struct in6_addr *next_hop)
+    </span><hr>
+    <a name="getDodagId"></a>
+    <h4>getDodagId
+    </h4>
+    <span id=funcnameshort>command struct in6_addr *<b>getDodagId</b>()
+    </span><hr>
+    <a name="getDTSN"></a>
+    <h4>getDTSN
+    </h4>
+    <span id=funcnameshort>command uint8_t <b>getDTSN</b>()
+    </span><hr>
+    <a name="getInstanceID"></a>
+    <h4>getInstanceID
+    </h4>
+    <span id=funcnameshort>command uint8_t <b>getInstanceID</b>()
+    </span><hr>
+    <a name="getMOP"></a>
+    <h4>getMOP
+    </h4>
+    <span id=funcnameshort>command uint8_t <b>getMOP</b>()
+    </span><hr>
+    <a name="getRank"></a>
+    <h4>getRank
+    </h4>
+    <span id=funcnameshort>command uint16_t <b>getRank</b>()
+    </span><hr>
+    <a name="hasDODAG"></a>
+    <h4>hasDODAG
+    </h4>
+    <span id=funcnameshort>command bool <b>hasDODAG</b>()
+    </span><hr>
+    <a name="inconsistency"></a>
+    <h4>inconsistency
+    </h4>
+    <span id=funcnameshort>command void <b>inconsistency</b>()
+    </span><hr>
+    <a name="resetTrickle"></a>
+    <h4>resetTrickle
+    </h4>
+    <span id=funcnameshort>command void <b>resetTrickle</b>()
+    </span><hr>
+    <a name="setDODAGConfig"></a>
+    <h4>setDODAGConfig
+    </h4>
+    <span id=funcnameshort>command void <b>setDODAGConfig</b>(uint8_t DIOIntDouble, uint8_t DIOIntMin, uint8_t DIORedun, uint8_t MaxRankInc, uint8_t MinHopRankInc)
+    </span><hr>
+    <a name="setDTSN"></a>
+    <h4>setDTSN
+    </h4>
+    <span id=funcnameshort>command void <b>setDTSN</b>(uint8_t dtsn)
+    </span><hr>
+    <a name="validInstance"></a>
+    <h4>validInstance
+    </h4>
+    <span id=funcnameshort>command bool <b>validInstance</b>(uint8_t instanceID)
+    </span>
+  </body>
+</html>
